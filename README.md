@@ -36,7 +36,7 @@
  - Translate general questions to data analysis questions 
  - Explore your data skeptically
  - Select appropriate data analytic tools
- - Combine appropriate data analytic tools
+ - Combine appropriate data analytic tools into pipelines
  - Identify strengths and weaknesses of data pipelines you produce
  - Describe the results of your analysis accurately 
 3. You will be able to produce the components of a data analytic paper:
@@ -54,7 +54,12 @@
  - Simulation sections
  - Applications sections
  - Discussion/limitations sections
-5. You will be able to identify key issues in data analytic relationships. Specifically you will be able to:
+5. You will be able to produce the components of a data analytic presentation for technical and non-technical audiences:
+ - Problem introduction
+ - Methods 
+ - Results 
+ - Conclusions 
+6. You will be able to identify key issues in data analytic relationships. Specifically you will be able to:
  - Elicit objective functions from collaborators
  - Identify types of data analysis relationships (collaboration, consultation, employment) 
  - Identify successful stategies for data analysis based on relationship type
