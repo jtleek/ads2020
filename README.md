@@ -25,17 +25,18 @@
 1. You will be able to critique a data analysis and separate good from bad analysis. Specifically you will be able to: 
  - Identify the underlying question
  - Identify the underlying type of question
+ - Identify the study design 
  - Determine if visualizations are appropriate
  - Determine if methods are appropriate
  - Identify pipeline issues
  - Identify reproducibility issues
  - Identify common fallacies and mistakes
  - Distinguish what is a real problem from what is just hard
- - Evaluate the relationship between claims and data justification
+ - Evaluate the relationship between study design, data, and claims to data justification
 2. You will be able to produce a complete data analysis. Specifically you will learn to:
  - Translate general questions to data analysis questions 
  - Explore your data skeptically
- - Select appropriate data analytic tools
+ - Select appropriate data analytic tools given the study design
  - Combine appropriate data analytic tools into pipelines
  - Identify strengths and weaknesses of data pipelines you produce
  - Describe the results of your analysis accurately 
