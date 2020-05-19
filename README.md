@@ -66,6 +66,7 @@
  - Identify successful stategies for data analysis based on relationship type
  - Identify key ethical issues in data analysis 
  - Understand your responsibility as a data analyst 
+ - Explain the value of data science to non-technical audiences
 
  
  
