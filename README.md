@@ -24,6 +24,7 @@
 
 1. You will be able to critique a data analysis and separate good from bad analysis. Specifically you will be able to: 
  - Identify the underlying question
+ - Evaluate the "arc" of the data analysis
  - Identify the underlying type of question
  - Identify the study design 
  - Determine if visualizations are appropriate
@@ -40,7 +41,10 @@
  - Combine appropriate data analytic tools into pipelines
  - Identify strengths and weaknesses of data pipelines you produce
  - Describe the results of your analysis accurately 
+ - Decide what is and is not relevant to the "arc" of the data analysis
+ - Write the "arc" of the data analysis 
 3. You will be able to produce the components of a data analytic paper:
+ - The "arc" of a data analysis
  - Abstracts
  - Introductions
  - Figures
@@ -48,6 +52,7 @@
  - Methods sections
  - Discussion/limitations sections
 4. You will be able to produce the components of a methods paper:
+ - The "arc" of a methods paper
  - Abstracts
  - Introductions
  - Figures
