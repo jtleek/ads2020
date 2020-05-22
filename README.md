@@ -33,6 +33,7 @@
  - Identify reproducibility issues
  - Identify common fallacies and mistakes
  - Distinguish what is a real problem from what is just hard
+ - Identify common fallacies and mistakes. 
  - Evaluate the relationship between study design, data, and claims to data justification
 2. You will be able to produce a complete data analysis. Specifically you will learn to:
  - Translate general questions to data analysis questions 
@@ -43,6 +44,7 @@
  - Describe the results of your analysis accurately 
  - Decide what is and is not relevant to the "arc" of the data analysis
  - Write the "arc" of the data analysis 
+ - Avoid "reinventing the wheel"
 3. You will be able to produce the components of a data analytic paper:
  - The "arc" of a data analysis
  - Abstracts
