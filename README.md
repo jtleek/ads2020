@@ -4,7 +4,6 @@
 
 1. You know the central dogma of  statistics
  - Basics of statistical inference (estimates, standard errors, basic distributions, etc.)
- - Basics of statistical prediction / machine learning (training/testing/validation, in-sample vs out of sample errors, etc.)
 2. You know how to fit and interpret statistical models
  - Linear Models
  - Generalized Linear Models
@@ -19,7 +18,6 @@
  - You know how to use Github
  - You know how to use R/Rmarkdown 
  
-
 ## Learning Objectives
 
 1. You will be able to critique a data analysis and separate good from bad analysis. Specifically you will be able to: 
