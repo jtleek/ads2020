@@ -1,0 +1,9 @@
+book_filename: "ads2020"
+chapter_name: ""
+repo: https://github.com/jtleek/ads2020/
+rmd_files: ["index.Rmd"]
+new_session: yes
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: ""
