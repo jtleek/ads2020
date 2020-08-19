@@ -1,5 +1,5 @@
 bookdown::gitbook:
-  css: css/style.css
+  css: style.css
   config:
     toc:
       before: |

@@ -9,7 +9,26 @@ description: "This book provides course material for Biostatistics 140.711 at th
 ---
 
 
-# Syllabus
+# Welcome and Syllabus
+
+Welcome! We are very excited to have you in our two-term (one semester) course on Advanced Data Science with course numbers 140.711 and 140.712. 
+
+This course is designed for PhD students at Johns Hopkins Bloomberg School of Public Health. 
+
+> The primary goal of the course is to teach you how to deconstruct, perform, and communicate data analyses at a professional and advanced level.
+
+
+This course will be conducted entirely online and will primarily use three platforms: 
+
+1. Here on the 
+
+
+
+The course assumes that you already have a background in statistics, version control with Github, and the use of the R programming language (or a suitable programming language replacement). If you don't have the background in these materials, we will point to some resources where you can pick them up. The
+
+## About this Course
+
+
 
 ## Assumptions
 
