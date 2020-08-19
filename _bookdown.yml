@@ -1,4 +1,5 @@
 book_filename: "ads2020"
+output_dir: "docs"
 chapter_name: ""
 repo: https://github.com/jtleek/ads2020/
 rmd_files: ["index.Rmd"]

@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
+
+/* -----------div tips------------- */
+
+  div.puzzle, div.fyi, div.demo, div.note {
+    padding: 1em;
+    margin: 1em 0;
+    padding-left: 100px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    min-height: 120px;
+    color: #1f5386;
+    background-color: #bed3ec;
+    border: solid 5px #dfedff;
+  }
+
+
+div.puzzle {
+  background-image: url("Your-turn.png");
+}
+
+div.fyi {
+ background-image: url("key.png");
+}
+
+div.demo {
+  background-image: url("Live-code.png");
+}
+
+div.note {
+  background-image: url("Lightbulb.png");
+}
+
+
+blockquote{
+    padding: 1em;
+    margin: 1em 0;
+    padding-left: 100px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    min-height: 120px;
+    color: #1f5386;
+    background-color: #bed3ec;
+    border: solid 5px #dfedff;  
+}
+
+div.blockquote{
+       background-image: url("Lightbulb.png");    
+}
