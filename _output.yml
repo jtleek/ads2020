@@ -1,9 +1,10 @@
 bookdown::gitbook:
+  toc_depth: 3
   css: style.css
   config:
     toc:
       before: |
-        <li><a href="./">Advanced Data Science</a></li>
+        <img src ="ads2020-small.png" class="center">
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]

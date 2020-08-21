@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 
 
 /* -----------div tips------------- */
 
-  div.puzzle, div.fyi, div.demo, div.note {
+
+  .homework {
     padding: 1em;
     margin: 1em 0;
     padding-left: 100px;
@@ -11,30 +11,29 @@
     background-repeat: no-repeat;
     background-position: 15px center;
     min-height: 120px;
-    color: #1f5386;
-    background-color: #bed3ec;
-    border: solid 5px #dfedff;
+    color: #03537B ;
+    background-color: #68ace5;
+    border: solid 5px #03537B;
+    background-image: url("study.png")
+  }
+  
+  
+   .resources {
+    padding: 1em;
+    margin: 1em 0;
+    padding-left: 100px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    min-height: 120px;
+    color: #443F1F;
+    background-color: #e5d468;
+    border: solid 5px #443F1F;
+    background-image: url("list.png")
   }
 
 
-div.puzzle {
-  background-image: url("Your-turn.png");
-}
-
-div.fyi {
- background-image: url("key.png");
-}
-
-div.demo {
-  background-image: url("Live-code.png");
-}
-
-div.note {
-  background-image: url("Lightbulb.png");
-}
-
-
-blockquote{
+   .keyidea {
     padding: 1em;
     margin: 1em 0;
     padding-left: 100px;
@@ -42,11 +41,30 @@ blockquote{
     background-repeat: no-repeat;
     background-position: 15px center;
     min-height: 120px;
-    color: #1f5386;
-    background-color: #bed3ec;
-    border: solid 5px #dfedff;  
+    color: #443F1F;
+    background-color: #e5d468;
+    border: solid 5px #443F1F;
+    background-image: url("list.png")
+  }
+
+
+.keyidea{
+    padding: 1em;
+    margin: 1em 0;
+    padding-left: 100px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    min-height: 120px;
+    color: #441F29;
+    background-color: #E56889;
+    border: solid 5px #441F29;
+    background-image: url("important.png") 
 }
 
-div.blockquote{
-       background-image: url("Lightbulb.png");    
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

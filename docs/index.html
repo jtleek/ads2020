@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-08-19" />
+<meta name="date" content="2020-08-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 
 
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -68,14 +67,35 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Advanced Data Science</a></li>
+<img src ="ads2020-small.png" class="center">
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="#welcome-and-syllabus"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="#about-this-course"><i class="fa fa-check"></i><b>1.1</b> About this Course</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="#assumptions"><i class="fa fa-check"></i><b>1.2</b> Assumptions</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="#learning-objectives"><i class="fa fa-check"></i><b>1.3</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="#welcome-and-syllabus"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="#assumptions-and-pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Assumptions and pre-requisites</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="#course-staff"><i class="fa fa-check"></i><b>1.3</b> Course Staff</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="#course-logistics"><i class="fa fa-check"></i><b>1.4</b> Course logistics</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="#the-pandemic"><i class="fa fa-check"></i><b>1.5</b> The Pandemic</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="#grading"><i class="fa fa-check"></i><b>1.6</b> Grading</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="#philosophy"><i class="fa fa-check"></i><b>1.6.1</b> Philosophy</a></li>
+<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="#relative-weights"><i class="fa fa-check"></i><b>1.6.2</b> Relative weights</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="#assignments"><i class="fa fa-check"></i><b>1.7</b> Assignments</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="#data-analysis-reviews"><i class="fa fa-check"></i><b>1.7.1</b> Data Analysis Reviews</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="#data-analysis-assignments"><i class="fa fa-check"></i><b>1.7.2</b> Data Analysis Assignments</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="#course-schedule"><i class="fa fa-check"></i><b>1.8</b> Course Schedule</a><ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="#week-1-august-31st"><i class="fa fa-check"></i><b>1.8.1</b> Week 1 (August 31st)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="#reviewer-code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Reviewer Code of Conduct</a></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="#code-of-conduct"><i class="fa fa-check"></i><b>1.10</b> Code of Conduct</a><ul>
+<li class="chapter" data-level="1.10.1" data-path="index.html"><a href="#need-help"><i class="fa fa-check"></i><b>1.10.1</b> Need Help?</a></li>
+<li class="chapter" data-level="1.10.2" data-path="index.html"><a href="#feedback"><i class="fa fa-check"></i><b>1.10.2</b> Feedback</a></li>
+<li class="chapter" data-level="1.10.3" data-path="index.html"><a href="#license-and-attribution"><i class="fa fa-check"></i><b>1.10.3</b> License and attribution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="#email-alerts"><i class="fa fa-check"></i><b>1.11</b> Email alerts</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="#previous-versions-of-the-class"><i class="fa fa-check"></i><b>1.12</b> Previous versions of the class</a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="#typos-and-corrections"><i class="fa fa-check"></i><b>1.13</b> Typos and corrections</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -100,30 +120,26 @@
 <div id="header">
 <h1 class="title">Advanced Data Science 2020</h1>
 <p class="author"><em>Jeff Leek and Roger D. Peng</em></p>
-<p class="date"><em>2020-08-19</em></p>
+<p class="date"><em>2020-08-21</em></p>
 </div>
-<div id="welcome-and-syllabus" class="section level1" number="1">
+<div id="welcome-and-syllabus" class="section level1">
 <h1><span class="header-section-number">1</span> Welcome and Syllabus</h1>
-<p>Welcome! We are very excited to have you in our two-term (one semester) course on Advanced Data Science with course numbers 140.711 and 140.712.</p>
-<p>This course is designed for PhD students at Johns Hopkins Bloomberg School of Public Health.</p>
-<blockquote>
-<p>The primary goal of the course is to teach you how to deconstruct, perform, and communicate data analyses at a professional and advanced level.</p>
-</blockquote>
-<p>This course will be conducted entirely online and will primarily use three platforms:</p>
-<ol style="list-style-type: decimal">
-<li>Here on the</li>
-</ol>
-<p>The course assumes that you already have a background in statistics, version control with Github, and the use of the R programming language (or a suitable programming language replacement). If you don’t have the background in these materials, we will point to some resources where you can pick them up. The</p>
-<div id="about-this-course" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> About this Course</h2>
+<p>Welcome! We are very excited to have you in our two-term (one semester) course on Advanced Data Science with course numbers 140.711 and 140.712 offered by the <a href="https://www.jhsph.edu/departments/biostatistics/">Department of Biostatistics</a> at the <a href="https://www.jhsph.edu/">Johns Hopkins Bloomberg School of Public Health</a>.</p>
+<p>This course is designed for PhD students at Johns Hopkins Bloomberg School of Public Health. We are usually pretty flexible about permitting outside students but we want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.</p>
+<div class="keyidea">
+<p>The primary goal of the course is to teach you how to deconstruct, perform, and communicate professional data analyses across diverse media.</p>
 </div>
-<div id="assumptions" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Assumptions</h2>
+<p>The class is not designed to teach a set of statistical methods or packages - there are a ton of awesome classes, books, and tutorials about those things out there! Rather the goal is to help you to organize your thinking around how to combine the things you have learned about statistics, data manipulation, and visualization into complete data analyses that answer important questions about the world around you.</p>
+<div id="assumptions-and-pre-requisites" class="section level2">
+<h2><span class="header-section-number">1.1</span> Assumptions and pre-requisites</h2>
+<p>The course is designed for PhD students in the Johns Hopkins Biostatistics Masters and PhD programs and assumes significant background in statistics. Specifically we assume:</p>
 <ol style="list-style-type: decimal">
-<li>You know the central dogma of statistics</li>
+<li>You know the basics of statistics</li>
 </ol>
 <ul>
-<li>Basics of statistical inference (estimates, standard errors, basic distributions, etc.)</li>
+<li>The central dogma (estimates, standard errors, basic distributions, etc.)</li>
+<li>Key statistical terms and methods</li>
+<li>Estimtion vs testing vs prediction</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>You know how to fit and interpret statistical models</li>
@@ -150,9 +166,20 @@
 <li>You know how to use Github</li>
 <li>You know how to use R/Rmarkdown</li>
 </ul>
+<p>Since the target audience for this course is advanced students in statistics we will not be able to spend significant time covering these concepts and technologies. To give you some idea about how these prerequisites will impact your experience in the course, we will be turning in all assignments via R markdown documents submitted through Github pull requests. The majority of the assignments will involve critiquing, fitting and interpreting statistical analyses - primarily focused on regression. Data analyses you will perform will also often involve significant data extraction, cleaning, and transformation. Hopefully all of that sounds familiar to you so you can focus on the concepts we will be teaching around deconstructing and constructing data analyses.</p>
+<div class="resources">
+<p>Some resources that may be useful if you feel you may be missing pieces of this background:</p>
+<ul>
+<li><strong>Statistics</strong> - <a href="https://www.coursera.org/learn/biostatistics">Mathematical Biostatistics Bootcamp I (Coursera)</a>; <a href="https://www.coursera.org/learn/biostatistics-2">Mathematical Biostatistics Bootcamp II (Coursera)</a></li>
+<li><strong>Basic Data Science</strong> - <a href="https://leanpub.com/universities/set/jhu/cloud-based-data-science">Cloud Data Science (Leanpub)</a>; <a href="https://www.coursera.org/specializations/jhu-data-science">Data Science Specialization (Coursera)</a></li>
+<li><strong>Version Control</strong> - <a href="https://lab.github.com/">Github Learning Lab</a>; <a href="https://happygitwithr.com/">Happy Git and Github for the useR</a></li>
+<li><strong>Rmarkdown</strong> - <a href="https://rmarkdown.rstudio.com/lesson-1.html">Rmarkdown introduction</a></li>
+</ul>
 </div>
-<div id="learning-objectives" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Learning Objectives</h2>
+</div>
+<div id="learning-objectives" class="section level2">
+<h2><span class="header-section-number">1.2</span> Learning Objectives</h2>
+<p>Our goal is by the end of our class:</p>
 <ol style="list-style-type: decimal">
 <li>You will be able to critique a data analysis and separate good from bad analysis. Specifically you will be able to:</li>
 </ol>
@@ -229,6 +256,149 @@
 <li>Understand your responsibility as a data analyst</li>
 <li>Explain the value of data science to non-technical audiences</li>
 </ul>
+</div>
+<div id="course-staff" class="section level2">
+<h2><span class="header-section-number">1.3</span> Course Staff</h2>
+<p>The course instructors this year are <a href="http://jtleek.com/">Jeff Leek</a> and <a href="http://www.biostat.jhsph.edu/~rpeng/">Roger Peng</a>. We are both professors in the Biostatistics Department at Johns Hopkins and Directors of the <a href="https://jhudatascience.org/">Johns Hopkins Data Science Lab</a>. Jeff’s research focuses on human genomics, meta-research, and edtech for social good. Roger’s research focuses on air pollution, spatial statistics, and reproducibility. We have been friends for about 10 years and are excited to teach you some of the ins and outs of data science.</p>
+<p>We also have a couple of amazing TA’s this year: <a href="http://ericwb.me/">Eric Bridgeford</a> who works on independence testing, manifold embedding, and graph inference; and <a href="https://www.linkedin.com/in/athchen/">Athena Chen</a> work works on developing statistical tools to analyzing proteomic and genomic data to facilitate a deeper understanding of disease.</p>
+</div>
+<div id="course-logistics" class="section level2">
+<h2><span class="header-section-number">1.4</span> Course logistics</h2>
+<p>This is a pretty unusual year because we will be entirely online. So our logistics will be a little different than usual. The course webpage will be here at:</p>
+<ul>
+<li><a href="http://jtleek.com/ads2020/" class="uri">http://jtleek.com/ads2020/</a></li>
+</ul>
+<p>All communication for the course is going to take place on one of four platforms:</p>
+<ul>
+<li><strong>Slack</strong> - for discussion, sharing resources, collaborating, and announcements
+- Course slack channel: jhsph-ads-2020.slack.com</li>
+<li><strong>Github</strong> - for submitting assignments
+- Course Github: <a href="https://github.com/jtleek/ads2020" class="uri">https://github.com/jtleek/ads2020</a></li>
+<li><strong>Zoom</strong> - for live class discussions
+- Course Zoom: <em>Link available on Course Slack</em></li>
+<li><strong>Hypothesis</strong> for annotating/reviewing data analyses</li>
+</ul>
+<p>The primary communication for the class will go through Slack. That is where we will post course announcements, post all assignments, host most of our asynchronous course discussion, and as the primary means of communication between course participants and course instructors.</p>
+<div class="keyidea">
+<p>You should request access to the JHU Advanced Data Science Course Slack immediately. The course TA’s will approve your access. Once you have access you will also be able to find the course Zoom and Zoom password.</p>
+</div>
+<p>We will have two synchronous meetings a week for discussion (see section on Discussions below). We need to split the class into two approximately equal sized groups - the available times are these and the TAs will help coordinate getting two approximately equal groups:</p>
+<ul>
+<li><strong>Available Times</strong>:
+- Mondays 9-10AM EST (1-2PM UTC)
+- Mondays 1:30-2:30PM EST (5:30-6:50PM UTC)
+- Wednesdays 1:30-2:30PM EST (5:30-6:50PM UTC)</li>
+<li><strong>Location</strong>: <em>Zoom - link available on Slack</em></li>
+</ul>
+<p>For people who miss the sessions we will try to have a recap and notes that we will post to Slack so people can read them offline.</p>
+<div class="keyidea">
+<p>Once you have Slack access the TAs will reach out about scheduling the class times, this needs to be done before class starts!</p>
+</div>
+</div>
+<div id="the-pandemic" class="section level2">
+<h2><span class="header-section-number">1.5</span> The Pandemic</h2>
+<p>This is how 2020 feels:</p>
+<p><img src="https://media.giphy.com/media/XdIOEZTt6dL7zTYWIo/giphy.gif" /></p>
+<p>It is super tough to be dealing with a pandemic, an economic crisis, challenges with visas and travel and coordinating school online. Your instructors understand that this is not an ordinary year. We are <em>ultra</em> sympathetic to family challenges and life challenges. We both have small children at home (who may make cameos in class discussions).</p>
+<p>Our goal is to make as much of the class asynchronous as possible so you can work whenever you have time, our plan is to be as understanding as possible when it comes to grading attendance, and any issues that come up with the course. Please don’t hesitate to reach out to us if you are having issues and we will do our best to direct you to whatever resources we have/accomodate you however we can.</p>
+<p>We think the material in this course is important, fun, and this is an opportunity to learn a lot. But life is more important than a course and if there was ever a year that life might get in the way of learning, this is that year. Good enough is the excellence of 2020.</p>
+</div>
+<div id="grading" class="section level2">
+<h2><span class="header-section-number">1.6</span> Grading</h2>
+<div id="philosophy" class="section level3">
+<h3><span class="header-section-number">1.6.1</span> Philosophy</h3>
+<p>We believe the purpose of graduate education is to train you to be able to think for yourself and initiate and complete your own projects. We are super excited to talk to you about ideas, work out solutions with you, and help you to figure out how to produce professional data analyses. We don’t think that graduate school grades are important for this purpose. This means that we don’t care very much about graduate student grades.</p>
+<p>That being said, we have to give you a grade so they will be:</p>
+<p>A - Excellent - 90%+
+B - Passing - 80%+
+C - Needs improvement - 70%+</p>
+<p>We rarely give out grades below a C and if you consistently submit work, participate in discussions, and do your best you are very likely to get an A or a B in the course.</p>
+</div>
+<div id="relative-weights" class="section level3">
+<h3><span class="header-section-number">1.6.2</span> Relative weights</h3>
+<p>This course is primarily focused on deconstructing and constructing data analyses. The grading will be based on your participation in the course and helping each other improve your data analyses. The breakdown of grading will be:</p>
+<ul>
+<li>40% for completing required reviews - see section on reviews below</li>
+<li>40% for completing required data analysis assignments - see section on data analysis assignments below</li>
+<li>20% for course participation on Slack and Zoom - see section on class participation below</li>
+</ul>
+<p>If you submit each review, it is your own work, and it meets a basic level of completeness and effort you will get 100% for that review. If you submit a review but it doesn’t meet basic completeness and effort you will receive 50%. If you do not submit a review you will receive 0%.</p>
+<p>If you submit a data analysis assignment, it is your own work, and it meets a basic level of completeness and effort you will get 100% for that data analysis assignment. If you submit a data analysis assignment but it doesn’t meet basic completeness and effort you will receive 50%. If you do not submit a review you will receive 0%.</p>
+<p>Grading participation is difficult in the best of circumstance and in a pandemic it is basically impossible. If you are at 80% of your assigned discussion sessions and participate in the discussion most of the time and respond to Slack prompts at least 5 times during the course of the term you will receive full participation points. If this level of course participation is challenging for you please reach out to the course instructors and we will work with you to figure out how to ensure you can participate sufficiently to get full points.</p>
+</div>
+</div>
+<div id="assignments" class="section level2">
+<h2><span class="header-section-number">1.7</span> Assignments</h2>
+<div id="data-analysis-reviews" class="section level3">
+<h3><span class="header-section-number">1.7.1</span> Data Analysis Reviews</h3>
+</div>
+<div id="data-analysis-assignments" class="section level3">
+<h3><span class="header-section-number">1.7.2</span> Data Analysis Assignments</h3>
+</div>
+</div>
+<div id="course-schedule" class="section level2">
+<h2><span class="header-section-number">1.8</span> Course Schedule</h2>
+<div id="week-1-august-31st" class="section level3">
+<h3><span class="header-section-number">1.8.1</span> Week 1 (August 31st)</h3>
+</div>
+</div>
+<div id="reviewer-code-of-conduct" class="section level2">
+<h2><span class="header-section-number">1.9</span> Reviewer Code of Conduct</h2>
+</div>
+<div id="code-of-conduct" class="section level2">
+<h2><span class="header-section-number">1.10</span> Code of Conduct</h2>
+<p>We are committed to providing a welcoming, inclusive, and harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), political beliefs/leanings, or technology choices. We do not tolerate harassment of course participants in any form. Sexual language and imagery is not appropriate for any work event, including group meetings, conferences, talks, parties, Twitter and other online media. This code of conduct applies to all course participants, including instructors and TAs, and applies to all modes of interaction, both in-person and online, including GitHub project repos, Slack channels, and Twitter.</p>
+<p>Course participants violating these rules will be referred to leadership of the Department of Biostatistics and the Title IX coordinator at JHU and may face expulsion from the class.</p>
+<p>All class participants agree to:</p>
+<ul>
+<li><strong>Be considerate</strong> in speech and actions, and actively seek to acknowledge and respect the boundaries of other members.</li>
+<li><strong>Be respectful</strong>. Disagreements happen, but do not require poor behavior or poor manners. Frustration is inevitable, but it should never turn into a personal attack. A community where people feel uncomfortable or threatened is not a productive one. Course participants should be respectful both of the other course participants and those outside the course.</li>
+<li><strong>Refrain from demeaning, discriminatory, or harassing behavior and speech</strong>. Harassment includes, but is not limited to: deliberate intimidation; stalking; unwanted photography or recording; sustained or willful disruption of talks or other events; inappropriate physical contact; use of sexual or discriminatory imagery, comments, or jokes; and unwelcome sexual attention. If you feel that someone has harassed you or otherwise treated you inappropriately, please alert Jeff Leek or Roger Peng.</li>
+<li><strong>Take care of each other</strong>. Refrain from advocating for, or encouraging, any of the above behavior. And, if someone asks you to stop, then stop. Alert Jeff Leek or Roger Peng if you notice a dangerous situation, someone in distress, or violations of this code of conduct, even if they seem inconsequential.</li>
+</ul>
+<div id="need-help" class="section level3">
+<h3><span class="header-section-number">1.10.1</span> Need Help?</h3>
+<p>Please speak with Jeff Leek or Roger Peng. You can also reach out to Karen Bandeen-Roche, chair of the department of Biostatistics or Margaret Taub, Ombudsman for the Department of Biostatistics.</p>
+<p>You may also reach out to any Hopkins resource for sexual harassment, discrimination, or misconduct:</p>
+<ul>
+<li>JHU Sexual Assault Helpline, 410-516-7333 (confidential)<br />
+</li>
+<li><a href="http://sexualassault.jhu.edu/?utm_source=JHU+Broadcast+Messages+-+Synced+List&amp;utm_campaign=c9030551f7-EMAIL_CAMPAIGN_2017_12_11&amp;utm_medium=email&amp;utm_term=0_af6859b027-c9030551f7-69248741">University Sexual Assault Response and Prevention website</a></li>
+<li><a href="https://johnshopkinsspeak2us.tnwreports.com/?utm_source=JHU+Broadcast+Messages+-+Synced+List&amp;utm_campaign=c9030551f7-EMAIL_CAMPAIGN_2017_12_11&amp;utm_medium=email&amp;utm_term=0_af6859b027-c9030551f7-69248741">Johns Hopkins Compliance Hotline</a>, 844-SPEAK2US (844-733-2528)</li>
+<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=8a667a12dd&amp;e=b1124f7c17">Hopkins Policies Online</a></li>
+<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=928bcfb8a9&amp;e=b1124f7c17">JHU Office of Institutional Equity</a> 410-516-8075 (nonconfidential)</li>
+<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=98f4091f97&amp;e=b1124f7c17">Johns Hopkins Student Assistance Program</a> (JHSAP), 443-287-7000</li>
+<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=d51077694c&amp;e=b1124f7c17">University Health Services</a>, 410-955-1892</li>
+<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=af1f20bd97&amp;e=b1124f7c17">The Faculty and Staff Assistance Program</a> (FASAP), 443-997-7000</li>
+</ul>
+</div>
+<div id="feedback" class="section level3">
+<h3><span class="header-section-number">1.10.2</span> Feedback</h3>
+<p>We welcome feedback on this Code of Conduct.</p>
+</div>
+<div id="license-and-attribution" class="section level3">
+<h3><span class="header-section-number">1.10.3</span> License and attribution</h3>
+<p>This Code of Conduct is distributed under a CC-BY license. Portions of above text comprised of language from the Codes of Conduct adopted by rOpenSci and Django, which are licensed by CC BY-SA 4.0 and CC BY 3.0. This work was further inspired by Ada Initiative’s “how to design a code of conduct for your community” and Geek Feminism’s Code of conduct evaluations and expanded by Ashley Johnson and Shannon Ellis in the Leek group.</p>
+</div>
+</div>
+<div id="email-alerts" class="section level2">
+<h2><span class="header-section-number">1.11</span> Email alerts</h2>
+<p>The full course content will be available via this website. All assignments will be posted here and on Slack. But we are trying an experiment with Substack and you can sign up here for email alerts when new course chapters are available: <a href="https://jhuadvdatasci.substack.com/" class="uri">https://jhuadvdatasci.substack.com/</a>. If you aren’t at JHU but want to follow along with the content you are welcome to sign up as well!</p>
+</div>
+<div id="previous-versions-of-the-class" class="section level2">
+<h2><span class="header-section-number">1.12</span> Previous versions of the class</h2>
+<ul>
+<li><a href="https://jhu-advdatasci.github.io/2019/" class="uri">https://jhu-advdatasci.github.io/2019/</a></li>
+<li><a href="https://jhu-advdatasci.github.io/2018/" class="uri">https://jhu-advdatasci.github.io/2018/</a></li>
+<li><a href="http://jtleek.com/advdatasci/" class="uri">http://jtleek.com/advdatasci/</a></li>
+<li><a href="http://jtleek.com/advdatasci16/" class="uri">http://jtleek.com/advdatasci16/</a></li>
+<li><a href="http://jtleek.com/advdatasci15/" class="uri">http://jtleek.com/advdatasci15/</a></li>
+<li><a href="https://github.com/jtleek/jhsph753and4" class="uri">https://github.com/jtleek/jhsph753and4</a></li>
+</ul>
+</div>
+<div id="typos-and-corrections" class="section level2">
+<h2><span class="header-section-number">1.13</span> Typos and corrections</h2>
+<p>Feel free to submit typos/errors/etc via the github repository associated with the class: <a href="https://github.com/jtleek/ads2020" class="uri">https://github.com/jtleek/ads2020</a>. You will have the thanks of your grateful instructors!</p>
 
 </div>
 </div>

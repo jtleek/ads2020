@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Advanced Data Science 2020</title>
+  <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Advanced Data Science 2020" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Advanced Data Science 2020" />
+  
+  <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+<meta name="author" content="Jeff Leek and Roger D. Peng" />
+
+
+<meta name="date" content="2020-08-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Advanced Data Science</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="#welcome-and-syllabus"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="#about-this-course"><i class="fa fa-check"></i><b>1.1</b> About this Course</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="#assumptions"><i class="fa fa-check"></i><b>1.2</b> Assumptions</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="#learning-objectives"><i class="fa fa-check"></i><b>1.3</b> Learning Objectives</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Data Science 2020</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Advanced Data Science 2020</h1>
+<p class="author"><em>Jeff Leek and Roger D. Peng</em></p>
+<p class="date"><em>2020-08-19</em></p>
+</div>
+<div id="welcome-and-syllabus" class="section level1">
+<h1><span class="header-section-number">1</span> Welcome and Syllabus</h1>
+<p>Welcome! We are very excited to have you in our two-term (one semester) course on Advanced Data Science with course numbers 140.711 and 140.712.</p>
+<p>This course is designed for PhD students at Johns Hopkins Bloomberg School of Public Health.</p>
+<blockquote>
+<p>The primary goal of the course is to teach you how to deconstruct, perform, and communicate data analyses at a professional and advanced level.</p>
+</blockquote>
+<p>This course will be conducted entirely online and will primarily use three platforms:</p>
+<ol style="list-style-type: decimal">
+<li>Here on the</li>
+</ol>
+<p>The course assumes that you already have a background in statistics, version control with Github, and the use of the R programming language (or a suitable programming language replacement). If you don’t have the background in these materials, we will point to some resources where you can pick them up. The</p>
+<div id="about-this-course" class="section level2">
+<h2><span class="header-section-number">1.1</span> About this Course</h2>
+</div>
+<div id="assumptions" class="section level2">
+<h2><span class="header-section-number">1.2</span> Assumptions</h2>
+<ol style="list-style-type: decimal">
+<li>You know the central dogma of statistics</li>
+</ol>
+<ul>
+<li>Basics of statistical inference (estimates, standard errors, basic distributions, etc.)</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>You know how to fit and interpret statistical models</li>
+</ol>
+<ul>
+<li>Linear Models</li>
+<li>Generalized Linear Models</li>
+<li>Smoothing splines</li>
+<li>Basic mixture models</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>You know the basics of R or Python</li>
+</ol>
+<ul>
+<li>You can read in, clean, tidy data</li>
+<li>You can fit models</li>
+<li>You can make visualizations</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>You know the basics of reproducible research</li>
+</ol>
+<ul>
+<li>You know what version control is</li>
+<li>You know how to use Github</li>
+<li>You know how to use R/Rmarkdown</li>
+</ul>
+</div>
+<div id="learning-objectives" class="section level2">
+<h2><span class="header-section-number">1.3</span> Learning Objectives</h2>
+<ol style="list-style-type: decimal">
+<li>You will be able to critique a data analysis and separate good from bad analysis. Specifically you will be able to:</li>
+</ol>
+<ul>
+<li>Identify the underlying question</li>
+<li>Evaluate the “arc” of the data analysis</li>
+<li>Identify the underlying type of question</li>
+<li>Identify the study design</li>
+<li>Determine if visualizations are appropriate</li>
+<li>Determine if methods are appropriate</li>
+<li>Identify pipeline issues</li>
+<li>Identify reproducibility issues</li>
+<li>Identify common fallacies and mistakes</li>
+<li>Distinguish what is a real problem from what is just hard</li>
+<li>Identify common fallacies and mistakes.</li>
+<li>Evaluate the relationship between study design, data, and claims to data justification</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>You will be able to produce a complete data analysis. Specifically you will learn to:</li>
+</ol>
+<ul>
+<li>Translate general questions to data analysis questions</li>
+<li>Explore your data skeptically</li>
+<li>Select appropriate data analytic tools given the study design</li>
+<li>Combine appropriate data analytic tools into pipelines</li>
+<li>Identify strengths and weaknesses of data pipelines you produce</li>
+<li>Describe the results of your analysis accurately</li>
+<li>Decide what is and is not relevant to the “arc” of the data analysis</li>
+<li>Write the “arc” of the data analysis</li>
+<li>Avoid “reinventing the wheel”</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>You will be able to produce the components of a data analytic paper:</li>
+</ol>
+<ul>
+<li>The “arc” of a data analysis</li>
+<li>Abstracts</li>
+<li>Introductions</li>
+<li>Figures</li>
+<li>Tables</li>
+<li>Methods sections</li>
+<li>Discussion/limitations sections</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>You will be able to produce the components of a methods paper:</li>
+</ol>
+<ul>
+<li>The “arc” of a methods paper</li>
+<li>Abstracts</li>
+<li>Introductions</li>
+<li>Figures</li>
+<li>Tables</li>
+<li>Simulation sections</li>
+<li>Applications sections</li>
+<li>Discussion/limitations sections</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>You will be able to produce the components of a data analytic presentation for technical and non-technical audiences:</li>
+</ol>
+<ul>
+<li>Problem introduction</li>
+<li>Methods</li>
+<li>Results</li>
+<li>Conclusions</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>You will be able to identify key issues in data analytic relationships. Specifically you will be able to:</li>
+</ol>
+<ul>
+<li>Elicit objective functions from collaborators</li>
+<li>Identify types of data analysis relationships (collaboration, consultation, employment)</li>
+<li>Identify successful stategies for data analysis based on relationship type</li>
+<li>Identify key ethical issues in data analysis</li>
+<li>Understand your responsibility as a data analyst</li>
+<li>Explain the value of data science to non-technical audiences</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ads2020.pdf", "ads2020.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
