@@ -1,5 +1,7 @@
 # Advanced Data Science 2020
 
+See the course website live here: www.jtleek.com/ads2020. The live website has the most up-to-date information about the course. 
+
 ## Assumptions
 
 1. You know the central dogma of  statistics

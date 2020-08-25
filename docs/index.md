@@ -145,19 +145,22 @@ You should request access to the JHU Advanced Data Science Course Slack immediat
 :::
 
 
-We will have two synchronous meetings a week for discussion (see section on Discussions below). We need to split the class into two approximately equal sized groups - the available times are these and the TAs will help coordinate getting two approximately equal groups:  
+We will have two synchronous meetings a week for discussion (see section on Discussions below) - the class will be split into two approximately equal groups for these sessions: 
 
 - __Available Times__: 
-        - Mondays 9-10AM EST (1-2PM UTC)
-        - Mondays 1:30-2:30PM EST (5:30-6:50PM UTC)
-        - Wednesdays 1:30-2:30PM EST (5:30-6:50PM UTC)
+        - Mondays 9-10AM Baltimore Time
+        - Mondays 1:30-2:30PM Baltimore Time
 - __Location__: _Zoom - link available on Slack_
 
 For people who miss the sessions we will try to have a recap and notes that we will post to Slack so people can read them offline. 
 
 :::keyidea
-Once you have Slack access the TAs will reach out about scheduling the class times, this needs to be done before class starts! 
+If you haven't already, please fill out the pre-course survey with your information and your preferred discussion time.  
 :::
+
+## Assignment Due Dates
+
+All course assignment due dates will appear on the weekly course chapter. Please refer to these chapters for due dates. 
 
 ## The Pandemic
 
@@ -204,6 +207,19 @@ Grading participation is difficult in the best of circumstance and in a pandemic
 
 ## Assignments
 
+### Submitting assignments 
+
+You will be invited to the JHSPH Advanced Data Science course organization: https://github.com/advdatasci. There will be one repo for each assignment. You will see two copies - the template repository (public) and your assigned homework repo which will be suffixed with your github user name (private). The assignment repos will include an Rmd file each week for you to fill out. 
+
+For each assignment we will provide a time when we will pull your changes from Github. We will assume whatever version we pull at that time is what you are turning in. 
+
+When we start peer reviewing each other's work, after the submission deadline you will also be assigned another repo (private) with a suffix of your github user name and "peer-review". This repo will include your peer's work and a reviewing form which we will ask you to fill out and submit. 
+
+After peer review is completed the feedback will be returned to you and you will be able to pull those changes to your computer, fill out a reviewer feedback form, and push your changes back to Github. 
+
+Instruction submissions will be included with each assignment to remind you of the process you need to take and what dates/times to complete assignments. 
+
+
 
 
 ### Data Analysis Assignments
@@ -244,7 +260,7 @@ The key principles of doing a good job in reviewing and the foundation for our c
 Reviewing each other's work well is a critical challenge. Remember that there is a person behind the data analysis and you want them to improve. It is very easy to be sucked into the temptation to write a review that is entirely critical or even rude. The best reviews follow the guidelines above and are short, percise, documents that politely suggest constructive critiques. It takes practice to produce these kinds of reviews, which we will work on in class! 
 
 
-:::Resource
+:::resources
 Jeff has previously [written a guide](https://github.com/jtleek/reviews) for written reviews of papers. 
 ::: 
 

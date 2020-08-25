@@ -12,7 +12,7 @@
     background-position: 15px center;
     min-height: 120px;
     color: #03537B ;
-    background-color: #68ace5;
+    background-color: #CDE7F5;
     border: solid 5px #03537B;
     background-image: url("study.png")
   }
@@ -32,20 +32,6 @@
     background-image: url("list.png")
   }
 
-
-   .keyidea {
-    padding: 1em;
-    margin: 1em 0;
-    padding-left: 100px;
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: 15px center;
-    min-height: 120px;
-    color: #443F1F;
-    background-color: #e5d468;
-    border: solid 5px #443F1F;
-    background-image: url("list.png")
-  }
 
 
 .keyidea{
