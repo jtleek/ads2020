@@ -204,22 +204,49 @@ Grading participation is difficult in the best of circumstance and in a pandemic
 
 ## Assignments
 
-### Data Analysis Reviews
+
 
 ### Data Analysis Assignments
 
+After we have spent a few weeks reviewing data analytic work written by others, we will begin working on data analyses within 
 
 
-## Course Schedule
+### Data Analysis Reviews
 
-### Week 1 (August 31st)
+In this course we will be reviewing both published data analyses and each other's work. You will review both in writing and orally during course discussions. Reviews in our course will take the following format:
+
+__Written reviews__
+
+For each assigned data analysis you will provide a written review which will include a summary of the data analysis and answers to key questions. At the beginning of the term these reviews will focus on published/public data analyses, but once we begin to turn in data analysis assignments, they will be peer reviews of each other's work. 
+
+__Oral reviews__
+
+The course will be broke up into two groups. Each group will meet once a week to discuss the papers/data analyses for that week. Each week, each group will have 2 discussion leaders: Lead Reviewer 1 and Lead Reviewer 2. We will rotate so each person gets to be a lead reviewer. Your responsibilities as lead reviewer are to:
+
+- _Lead Reviewer 1_: Complete your written review and provide an overall summary of the data analysis and your answers to the questions. You are responsible for leading the discussion of the analysis. 
+- _Lead Reviewer 2_: Complete your written review and provide a second opinon on the data analysis, either supporting or providing new viewpoints of Reviewer 1. 
+
+Both reviewers are encouraged to lead discussion of the data analysis to get feedback from the other participants in the session. 
 
 
+### Reviewing Code of Conduct
 
-## Reviewer Code of Conduct
+We will be reviewing both public work and each other's work in both written and oral form. Reviewing well is an art form and is an important skill to master - and not just for this course! Regardless of where you go after Hopkins, you will be tasked with reviewing the work of others.
+
+The key principles of doing a good job in reviewing and the foundation for our course code of conduct are:
+
+1. __Being concise__ - nothing extraneous
+2. __Being precise__ - stating the specific problems with the manuscript or data analysis
+3. __Being honest__ - stating any real issues you perceive 
+4. __Being constructive__ - stating how the authors could address the problems you have found
+5. __Being polite__ - this helps focus on real issues rather than pet peeves.
+
+Reviewing each other's work well is a critical challenge. Remember that there is a person behind the data analysis and you want them to improve. It is very easy to be sucked into the temptation to write a review that is entirely critical or even rude. The best reviews follow the guidelines above and are short, percise, documents that politely suggest constructive critiques. It takes practice to produce these kinds of reviews, which we will work on in class! 
 
 
-
+:::Resource
+Jeff has previously [written a guide](https://github.com/jtleek/reviews) for written reviews of papers. 
+::: 
 
 ## Code of Conduct 
 
@@ -258,6 +285,18 @@ We welcome feedback on this Code of Conduct.
 ### License and attribution
 
 This Code of Conduct is distributed under a CC-BY license. Portions of above text comprised of language from the Codes of Conduct adopted by rOpenSci and Django, which are licensed by CC BY-SA 4.0 and CC BY 3.0. This work was further inspired by Ada Initiative’s “how to design a code of conduct for your community” and Geek Feminism’s Code of conduct evaluations and expanded by Ashley Johnson and Shannon Ellis in the Leek group. 
+
+## Academic Ethics
+
+Students enrolled in the Bloomberg School of Public Health of The Johns Hopkins University assume an obligation to conduct themselves in a manner appropriate to the University’s mission as an institution of higher education. A student is obligated to refrain from acts which he or she knows, or under the circumstances has reason to know, impair the academic integrity of the University. Violations of academic integrity include, but are not limited to: cheating; plagiarism; knowingly furnishing false information to any agent of the University for inclusion in the academic record; violation of the rights and welfare of animal or human subjects in research; and misconduct as a member of either School or University committees or recognized groups or organizations.
+
+Students should be familiar with the policies and procedures specified under Policy and Procedure Manual Student-01 (Academic Ethics), available on the school’s [portal](https://my.jhsph.edu/Pages/Faculty.aspx).
+
+The faculty, staff and students of the Bloomberg School of Public Health and the Johns Hopkins University have the shared responsibility to conduct themselves in a manner that upholds the law and respects the rights of others. Students enrolled in the School are subject to the Student Conduct Code (detailed in Policy and Procedure Manual Student-06) and assume an obligation to conduct themselves in a manner which upholds the law and respects the rights of others. They are responsible for maintaining the academic integrity of the institution and for preserving an environment conducive to the safe pursuit of the School’s educational, research, and professional practice missions.
+
+## Disability support services
+
+If you are a student with a documented disability who requires an academic accommodation, please contact the Office of Disability Support Services at 410-502-6602 or via email at JHSPH.dss@jhu.edu. Accommodations take effect upon approval and apply to the remainder of the time for which a student is registered and enrolled at the Bloomberg School of Public Health.
 
 ## Email alerts
 
