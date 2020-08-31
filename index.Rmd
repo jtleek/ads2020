@@ -259,6 +259,10 @@ The key principles of doing a good job in reviewing and the foundation for our c
 
 Reviewing each other's work well is a critical challenge. Remember that there is a person behind the data analysis and you want them to improve. It is very easy to be sucked into the temptation to write a review that is entirely critical or even rude. The best reviews follow the guidelines above and are short, percise, documents that politely suggest constructive critiques. It takes practice to produce these kinds of reviews, which we will work on in class! 
 
+One of the biggest privileges is the priveledge to say you don't know or that you need something explained. I use this priveledge all the time and it makes it much easier for me when I'm trying to learn new concepts. I want you all to feel that privilege in this class. It is critical that we are able to have discussions in the class and everyone can voice their opinion without feeling looked down on. So let's work together to allow everyone space to learn maximally. 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">An amazing benefit of my privilege is being able to say &quot;I didn&#39;t understand that. Could you explain it again?&quot; as many times as necessary without having to worry that people will think I&#39;m stupid.</p>&mdash; Arvind Narayanan (@random_walker) <a href="https://twitter.com/random_walker/status/1298666512069337088?ref_src=twsrc%5Etfw">August 26, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 :::resources
 Jeff has previously [written a guide](https://github.com/jtleek/reviews) for written reviews of papers. 
