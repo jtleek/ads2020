@@ -90,6 +90,17 @@ This advanced data science course assumes you have background in statistics, pro
 
 We will instead focus on the "hard" part of data science, which is understanding the way to use data to make generalizable statements about the world and communicating those results to others. 
 
+Data analysis is often (incorrectly) distilled down to the set of claims or a whether a p-value is lower than some threshold. But the tip of this iceberg conceals a large number of analytic choices, human behaviors, biases, and conventions that underly the data analytic process. 
+
+![](https://www.nature.com/news/polopoly_fs/7.25671.1429983882!/image/P1.jpg_gen/derivatives/landscape_300/P1.jpg)
+
+
+This iceberg inspired the ADS 2020 course hex sticker. In this course we will focus on the parts of the data analysis that are often overlooked, but are critical to data analytic success. 
+
+![](https://user-images.githubusercontent.com/1571674/91710624-8fc32d00-eb52-11ea-89b0-08397b02ced8.png)
+
+
+
 ## Types of data analytic questions
 
 
