@@ -240,7 +240,7 @@ For now we will use a basic checklist (adapted from the book [Elements of Data A
 6. Have you eliminated all errors and warnings from R CMD CHECK?
   
 
-## Your first assignment - comparing types of analyses
+## Your first assignment - deconstructing an analysis
 
 Before we leap into doing data analysis we are going to deconstruct some data analyses to help us discover what are the parts that work and don't in different contexts. Your first assignment will be to read [this data analysis](https://www.nejm.org/doi/full/10.1056/NEJMsa1803972) about Mortality in the aftermath of Hurricane Maria. You will answer a series of questions, then we will discuss the analysis during class. 
 
