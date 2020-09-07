@@ -4,7 +4,7 @@ pagetitle: "Week 1"
 
 # Week 1
 
-## Learning objectives
+## Week 1 Learning objectives
 
 :::keyidea
 At the end of this lesson you will:

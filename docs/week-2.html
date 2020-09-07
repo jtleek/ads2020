@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Week 2 | Week 1</title>
+  <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Week 2 | Week 1" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Week 2 | Week 1" />
+  
+  <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+<meta name="author" content="Jeff Leek and Roger D. Peng" />
+
+
+<meta name="date" content="2020-09-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="week-1.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<img src ="ads2020-small.png" class="center">
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#assumptions-and-pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Assumptions and pre-requisites</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#course-staff"><i class="fa fa-check"></i><b>1.3</b> Course Staff</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-logistics"><i class="fa fa-check"></i><b>1.4</b> Course logistics</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment-due-dates"><i class="fa fa-check"></i><b>1.5</b> Assignment Due Dates</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-pandemic"><i class="fa fa-check"></i><b>1.6</b> The Pandemic</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#philosophy"><i class="fa fa-check"></i><b>1.7.1</b> Philosophy</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#relative-weights"><i class="fa fa-check"></i><b>1.7.2</b> Relative weights</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a><ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#submitting-assignments"><i class="fa fa-check"></i><b>1.8.1</b> Submitting assignments</a></li>
+<li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#data-analysis-assignments"><i class="fa fa-check"></i><b>1.8.2</b> Data Analysis Assignments</a></li>
+<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.3</b> Data Analysis Reviews</a></li>
+<li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.4</b> Reviewing Code of Conduct</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i><b>1.9.1</b> Need Help?</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#feedback"><i class="fa fa-check"></i><b>1.9.2</b> Feedback</a></li>
+<li class="chapter" data-level="1.9.3" data-path="index.html"><a href="index.html#license-and-attribution"><i class="fa fa-check"></i><b>1.9.3</b> License and attribution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#academic-ethics"><i class="fa fa-check"></i><b>1.10</b> Academic Ethics</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#disability-support-services"><i class="fa fa-check"></i><b>1.11</b> Disability support services</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#email-alerts"><i class="fa fa-check"></i><b>1.12</b> Email alerts</a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#previous-versions-of-the-class"><i class="fa fa-check"></i><b>1.13</b> Previous versions of the class</a></li>
+<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#typos-and-corrections"><i class="fa fa-check"></i><b>1.14</b> Typos and corrections</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a><ul>
+<li class="chapter" data-level="2.1" data-path="week-1.html"><a href="week-1.html#week-1-learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Week 1 Learning objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="week-1.html"><a href="week-1.html#maybe-we-should-start-by-defining-data-science."><i class="fa fa-check"></i><b>2.2.1</b> Maybe we should start by defining data science….</a></li>
+<li class="chapter" data-level="2.2.2" data-path="week-1.html"><a href="week-1.html#data-science-is-hard-but-not-like-math-is-hard"><i class="fa fa-check"></i><b>2.2.2</b> Data Science is hard, but not like math is hard</a></li>
+<li class="chapter" data-level="2.2.3" data-path="week-1.html"><a href="week-1.html#so-what-is-advanced-data-science"><i class="fa fa-check"></i><b>2.2.3</b> So what is advanced data science?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="week-1.html"><a href="week-1.html#descriptive"><i class="fa fa-check"></i><b>2.3.1</b> Descriptive</a></li>
+<li class="chapter" data-level="2.3.2" data-path="week-1.html"><a href="week-1.html#exploratory"><i class="fa fa-check"></i><b>2.3.2</b> Exploratory</a></li>
+<li class="chapter" data-level="2.3.3" data-path="week-1.html"><a href="week-1.html#inferential"><i class="fa fa-check"></i><b>2.3.3</b> Inferential</a></li>
+<li class="chapter" data-level="2.3.4" data-path="week-1.html"><a href="week-1.html#predictive"><i class="fa fa-check"></i><b>2.3.4</b> Predictive</a></li>
+<li class="chapter" data-level="2.3.5" data-path="week-1.html"><a href="week-1.html#causal"><i class="fa fa-check"></i><b>2.3.5</b> Causal</a></li>
+<li class="chapter" data-level="2.3.6" data-path="week-1.html"><a href="week-1.html#mechanistic"><i class="fa fa-check"></i><b>2.3.6</b> Mechanistic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="week-1.html"><a href="week-1.html#answering-the-question"><i class="fa fa-check"></i><b>2.4.1</b> Answering the question</a></li>
+<li class="chapter" data-level="2.4.2" data-path="week-1.html"><a href="week-1.html#checking-the-data"><i class="fa fa-check"></i><b>2.4.2</b> Checking the data</a></li>
+<li class="chapter" data-level="2.4.3" data-path="week-1.html"><a href="week-1.html#tidying-the-data"><i class="fa fa-check"></i><b>2.4.3</b> Tidying the data</a></li>
+<li class="chapter" data-level="2.4.4" data-path="week-1.html"><a href="week-1.html#exploratory-analysis"><i class="fa fa-check"></i><b>2.4.4</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="2.4.5" data-path="week-1.html"><a href="week-1.html#inference"><i class="fa fa-check"></i><b>2.4.5</b> Inference</a></li>
+<li class="chapter" data-level="2.4.6" data-path="week-1.html"><a href="week-1.html#prediction"><i class="fa fa-check"></i><b>2.4.6</b> Prediction</a></li>
+<li class="chapter" data-level="2.4.7" data-path="week-1.html"><a href="week-1.html#causality"><i class="fa fa-check"></i><b>2.4.7</b> Causality</a></li>
+<li class="chapter" data-level="2.4.8" data-path="week-1.html"><a href="week-1.html#written-analyses"><i class="fa fa-check"></i><b>2.4.8</b> Written analyses</a></li>
+<li class="chapter" data-level="2.4.9" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>2.4.9</b> Figures</a></li>
+<li class="chapter" data-level="2.4.10" data-path="week-1.html"><a href="week-1.html#presentations"><i class="fa fa-check"></i><b>2.4.10</b> Presentations</a></li>
+<li class="chapter" data-level="2.4.11" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
+<li class="chapter" data-level="2.4.12" data-path="week-1.html"><a href="week-1.html#r-packages"><i class="fa fa-check"></i><b>2.4.12</b> R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="week-1.html"><a href="week-1.html#your-first-assignment---deconstructing-an-analysis"><i class="fa fa-check"></i><b>2.5</b> Your first assignment - deconstructing an analysis</a></li>
+<li class="chapter" data-level="2.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>2.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>2.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a><ul>
+<li class="chapter" data-level="3.1" data-path="week-2.html"><a href="week-2.html#week-2-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Week 2 Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="week-2.html"><a href="week-2.html#defining-the-question"><i class="fa fa-check"></i><b>3.2.1</b> Defining the question</a></li>
+<li class="chapter" data-level="3.2.2" data-path="week-2.html"><a href="week-2.html#defining-the-ideal-data-set"><i class="fa fa-check"></i><b>3.2.2</b> Defining the ideal data set</a></li>
+<li class="chapter" data-level="3.2.3" data-path="week-2.html"><a href="week-2.html#determine-the-data-you-can-access"><i class="fa fa-check"></i><b>3.2.3</b> Determine the data you can access</a></li>
+<li class="chapter" data-level="3.2.4" data-path="week-2.html"><a href="week-2.html#obtain-the-data"><i class="fa fa-check"></i><b>3.2.4</b> Obtain the data</a></li>
+<li class="chapter" data-level="3.2.5" data-path="week-2.html"><a href="week-2.html#clean-the-data"><i class="fa fa-check"></i><b>3.2.5</b> Clean the data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="week-2.html"><a href="week-2.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>3.2.6</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="3.2.7" data-path="week-2.html"><a href="week-2.html#statistical-predictionmodeling"><i class="fa fa-check"></i><b>3.2.7</b> Statistical prediction/modeling</a></li>
+<li class="chapter" data-level="3.2.8" data-path="week-2.html"><a href="week-2.html#interpret-results"><i class="fa fa-check"></i><b>3.2.8</b> Interpret results</a></li>
+<li class="chapter" data-level="3.2.9" data-path="week-2.html"><a href="week-2.html#challenge-results"><i class="fa fa-check"></i><b>3.2.9</b> Challenge results</a></li>
+<li class="chapter" data-level="3.2.10" data-path="week-2.html"><a href="week-2.html#synthesizewrite-up-results"><i class="fa fa-check"></i><b>3.2.10</b> Synthesize/write up results</a></li>
+<li class="chapter" data-level="3.2.11" data-path="week-2.html"><a href="week-2.html#create-reproducible-code"><i class="fa fa-check"></i><b>3.2.11</b> Create reproducible code</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="week-2.html"><a href="week-2.html#raw-informal-and-formal-data-science"><i class="fa fa-check"></i><b>3.3</b> Raw, informal, and formal data science</a></li>
+<li class="chapter" data-level="3.4" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.5" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Data Science 2020</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="week-2" class="section level1">
+<h1><span class="header-section-number">3</span> Week 2</h1>
+<div id="week-2-learning-objectives" class="section level2">
+<h2><span class="header-section-number">3.1</span> Week 2 Learning objectives</h2>
+<div class="keyidea">
+<p>At the end of this lesson you will be able to:</p>
+<ul>
+<li>Define the steps in a data analysis</li>
+<li>Structure a data science project</li>
+<li>Identify the difference between the levels of an analysis
+- Raw
+- Informal
+- Formal</li>
+<li>Identify the steps between raw, informal and formal analysis</li>
+</ul>
+</div>
+</div>
+<div id="the-steps-in-a-data-analysis" class="section level2">
+<h2><span class="header-section-number">3.2</span> The steps in a data analysis</h2>
+<p>Recall from week 1 the definition of data science:</p>
+<blockquote>
+<p>Data science is the process of formulating a quantitative question that can be answered with data, collecting and cleaning the data, analyzing the data, and communicating the answer to the question to a relevant audience.</p>
+</blockquote>
+<p>When people talk about data science they often think of big data, or complicated statistical machine learning tools. But <a href="https://simplystatistics.org/2013/12/12/the-key-word-in-data-science-is-not-data-it-is-science/">the key word in data science is not data, it is science</a>. Specifically the fastest way to end up with an unsuccessful data science project is to start with the data or tools. Good data science almost invariably starts with a good question.</p>
+<p>Most data science projects follow a common set of steps:</p>
+<ol style="list-style-type: decimal">
+<li>Define the question</li>
+<li>Define the ideal data set</li>
+<li>Determine what data you can access</li>
+<li>Obtain the data</li>
+<li>Clean the data</li>
+<li>Exploratory data analysis</li>
+<li>Statistical prediction/modeling</li>
+<li>Interpret results</li>
+<li>Challenge results</li>
+<li>Synthesize/write up results</li>
+<li>Create reproducible code</li>
+</ol>
+<p>These steps might vary somewhat depending on the context of the project, but are remarkably consistent across projects in both industry and academia. To illustrate this process I’m going to use a simple, somewhat contrived, example - but it can equally be applied to any new data science project you start.</p>
+<div id="defining-the-question" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Defining the question</h3>
+<p>The difference between real success and failure in data analysis often comes down to the question. The key to settling on a good question is to first start without thinking about the data that you have. Think only about the question you care about. It has been suggested that <a href="https://www.wired.com/2008/06/pb-theory/">data makes the scientific method obsolete</a> - but the reality is that <a href="https://psmag.com/education/how-big-data-impacts-scientific-research">big data makes careful scientific thinking more important, not less</a>.</p>
+<p>Regardless of who is involved in the question definition process there are four criteria that help define a good data science question.</p>
+<ol style="list-style-type: decimal">
+<li>It should be specific</li>
+<li>It should be answerable with data</li>
+<li>It should be answerable with the data you have</li>
+<li>It should not be designed to discriminate or cause harm</li>
+<li>It should come with a definition of success</li>
+</ol>
+<p>So we might start with a general question - something like:</p>
+<blockquote>
+<p>Is it possible to consistently label hand-drawn images of hardware using a simple model?</p>
+</blockquote>
+<p>This question could be of interest if, for example, you are building a hand-drawn search feature for a hardware store app or website. Note that this question was defined without thinking about what data we might collect, what data we have on hand, or really any of the potential constraints. It is generally a good idea to start with the question you really care about - ignoring these constraints - and work down to a more specific, answerable question.</p>
+</div>
+<div id="defining-the-ideal-data-set" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Defining the ideal data set</h3>
+<p>The ideal data set might be a large collection of hand drawn images, labeled with the intention of each of the people who made the drawing. This kind of data would allow you to directly develop a classification algorithm and measure its success. However, this might also be an expensive data set to collect. You would need to pay people to make the drawings and take the time to go through your inventory with them to get them to provide gold standard labels.</p>
+<p>This might be well beyond the resources you have available to you - so you might have to settle for a less than ideal data set. However, it is always important to consider what ideal looks like. At a minimum, this will allow you to identify specific, concrete potential limitations of the data you end up using.</p>
+</div>
+<div id="determine-the-data-you-can-access" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Determine the data you can access</h3>
+<p>If you hadn’t already collected data to answer this question, you might go looking for convenience data. For example you might land on the <a href="https://quickdraw.withgoogle.com/">Google Quickdraw</a> project. The QuickDraw project asks people to draw pictures of different objects and then uses a neural network to predict what has been drawn.</p>
+<p><img src="images/week2/carrot.png" /></p>
+<p>The data consist of a large number of hand drawn images and the neural-network predicted labels for those objects from Google.</p>
+<p>So in applying the criteria above we need to refine our question to be more specific and answerable with the data we have in hand:</p>
+<blockquote>
+<p>Can we classify images based on the data collected by QuickDraw into labeled categories from the neural network?</p>
+</blockquote>
+<p>Sometimes this would be where the data science project may stop. The question may either not be answerable with data at all - or we may not have sufficiently good data to answer the question. Expert data scientists learn through years of practice to identify questions that are likely to lead to fruitful conclusions. For example, in this case past experience has shown that classification of images with high-accuracy is <a href="https://paperswithcode.com/sota/image-classification-on-imagenet">quite possible - at least with complicated models.</a>.</p>
+<p><img src="images/week2/imagenet.png" /></p>
+<p>While this data is large and potentially incredibly useful for the question we originally set out to answer, it also has some limitations. Since we defined the ideal data set to start, we can use that as a way to highlight potential limitations of our analysis.</p>
+<p>For example:</p>
+<ul>
+<li>The data were collected on the internet at large, and not necessarily from the potential customers at the hardware store.</li>
+<li>The labels are not defined by the the artist, but by the neural network from Google and so may be inaccurate.</li>
+<li>The pictures represent a large collection of objects, not simply hardware, and so may not reflect all of the types of images you may see in practice.</li>
+</ul>
+<p>Another important question is whether the proposed application is ethical or a good idea. There are entire courses on the <a href="https://www.fast.ai/2020/08/19/data-ethics/">ethics of data science</a> and we will cover this in more detail later in the course. But for this simple example - we might also want to consider relevant questions such as:</p>
+<ul>
+<li>How will this classifier work for people with disabilities?</li>
+<li>Are there cultural differences that will make the classifier work better for certain groups of people?</li>
+<li>What should happen if a person draws something inappropriate?</li>
+</ul>
+<p>Despite these limitations and considerations, this data is public, free, and large, so represents an opportunity to start to answer our question. Here we will make the question even more specific, simply for ease of exposition. We will narrow the set of data to the hand drawn images of axes and clouds and see if we can separate the two.</p>
+<p>The final step in defining the question is coming up with the definition of success. It is critically important to do this before you start and will depend heavily on the context. For example, in our simple case we might only need classification accuracy of 80% for the project to be successful - 4 out of 5 customers will be directed to the right project and the other won’t be harmed. But if you are building a self-driving car, you might need to be <a href="https://www.vox.com/recode/2020/2/26/21154502/tesla-autopilot-fatal-crashes">significantly more accurate</a>!
+However, using this definition of success we can write down our final question:</p>
+<blockquote>
+<p>Can we classify images of clouds and axes to 80% accuracy based on the data collected by QuickDraw into labeled categories from the neural network?</p>
+</blockquote>
+<p>This question only answers a fraction of our initial, broad question. That is often the case! Most data science problems start out with a major open question and narrow down to a question answerable with a given data set.</p>
+<p>One important consideration we have not discussed here is that as a data scientist you are often not the only person involved in the definition of the question. It may be driven by a scientific collaborator, a project manager, or an executive in industry. The process should still be the same - moving from an important content driven question and drilling down to a specific, answerable data science question. It is generally helpful in these conversations to be open about the entire process of question definition - from generality to specificity. This process may involve significant iteration and will require good communication between you and your collaborators or managers. Often the most difficult part of this process is managing expectations - people without significant data analysis expertise will often expect the data to be capable of answering more, or harder, questions than they actually can.</p>
+</div>
+<div id="obtain-the-data" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Obtain the data</h3>
+<p>Now that we have defined our question, we need to obtain some data. In this case, the QuickDraw data are <a href="https://github.com/googlecreativelab/quickdraw-dataset">publicly available</a>. You can download them from the web. This process also might involve pulling data from an API, accessing a database and sampling data, or collecting the data directly. Having a variety of tools at your disposal for collecting (sometimes called pulling) data is an important component of your toolbox as a data scientist.</p>
+<div class="resources">
+<p>There are a number of courses and resources focused on getting data including:</p>
+<ul>
+<li><a href="https://www.coursera.org/learn/data-cleaning">Getting and cleaning data</a></li>
+<li><a href="https://leanpub.com/universities/courses/jhu/cbds-getting-data">Getting data</a></li>
+<li><a href="https://db.rstudio.com/dplyr/">Databases using dplyr</a></li>
+<li><a href="https://github.com/simonmunzert/rscraping-jsm-2016">Data scraping in R</a></li>
+</ul>
+</div>
+<p>In our simple example, I have downloaded and subsampled the data to make them usable for this analysis. One important thing I haven’t done - but is a good idea in general - is to write code that will automatically and reproducibly pull the data from the source. Including this step as a component of your data analytic code will save you a lot of time in the future when a collaborator asks you to update your analysis with the latest data. We will discuss this more when we talk about structuring data science projects.</p>
+</div>
+<div id="clean-the-data" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Clean the data</h3>
+<p>It has been said that data science is 80% data cleaning and that continues to hold true (at least if the data scientists on Twitter are to be trusted):</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+Have been extremely curious about this for a while now, so I decided to create a poll. <br>“As someone titled ‘data scientist’ in 2019, I spend most of (60%+) my time:” <br>(“Other”) also welcome, add it in the replies.
+</p>
+— Vicki Boykis (<span class="citation">@vboykis</span>) <a href="https://twitter.com/vboykis/status/1089920316644704256?ref_src=twsrc%5Etfw">January 28, 2019</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Data cleaning is one of the hardest things to teach. The reason is best summed up in this quote by <a href="https://vita.had.co.nz/papers/tidy-data.pdf">Hadley Wickham</a> with apologies to Tolstoy:</p>
+<blockquote>
+<p>tidy datasets are all alike but every messy dataset is messy in its own way.</p>
+</blockquote>
+<p>Each type of data you encounter will have different steps involved in the process. But data cleaning always involves identifying and cataloging data quirks, iconsistencies, and errors and reformatting or reshaping data to the form needed for analysis.</p>
+<p>In our simple example we can find the data here: <a href="https://github.com/jtleek/ads2020/tree/master/docs/resources/week2/" class="uri">https://github.com/jtleek/ads2020/tree/master/docs/resources/week2/</a>. In cases where the data are large or unwieldy an important principle is to make the data small enough to work with. Here we do that by random sampling:</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+Robert Gentleman, Genentech: “make big data as small as possible as quick as is possible” to enable sharing <a href="https://twitter.com/hashtag/bigdatamed?src=hash&amp;ref_src=twsrc%5Etfw">#bigdatamed</a>
+</p>
+— Ellie McDonagh (<span class="citation">@EllieMcDonagh</span>) <a href="https://twitter.com/EllieMcDonagh/status/469184554549248000?ref_src=twsrc%5Etfw">May 21, 2014</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="week-2.html#cb1-1"></a><span class="kw">library</span>(LaF)</span>
+<span id="cb1-2"><a href="week-2.html#cb1-2"></a><span class="kw">library</span>(here)</span>
+<span id="cb1-3"><a href="week-2.html#cb1-3"></a>axes_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/axes.ndjson&quot;</span>),<span class="dv">100</span>)</span>
+<span id="cb1-4"><a href="week-2.html#cb1-4"></a>clouds_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/clouds.ndjson&quot;</span>),<span class="dv">100</span>)</span>
+<span id="cb1-5"><a href="week-2.html#cb1-5"></a>axes_json[[<span class="dv">1</span>]]</span></code></pre></div>
+<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;FI\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-26 18:15:48.75339 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;6684253230202880\&quot;,\&quot;drawing\&quot;:[[[0,37],[55,139]],[[8,54,64,74,114,118,122,195,211],[50,50,46,40,1,2,21,191,255]],[[43,44,53,80,120,127,185,203],[139,134,124,112,105,108,193,235]]]}&quot;</code></pre>
+<p>The next thing I did was google “quick draw data ndjson rstats”. I found a <a href="https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/">tutorial</a> and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-2.html#cb3-1"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb3-2"><a href="week-2.html#cb3-2"></a></span>
+<span id="cb3-3"><a href="week-2.html#cb3-3"></a>parse_drawing =<span class="st"> </span><span class="cf">function</span>(list)</span>
+<span id="cb3-4"><a href="week-2.html#cb3-4"></a>{</span>
+<span id="cb3-5"><a href="week-2.html#cb3-5"></a>  <span class="kw">lapply</span>(list<span class="op">$</span>drawing, <span class="cf">function</span>(z) {<span class="kw">data_frame</span>(<span class="dt">x=</span>z[[<span class="dv">1</span>]], <span class="dt">y=</span>z[[<span class="dv">2</span>]])}) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-6"><a href="week-2.html#cb3-6"></a><span class="st">    </span><span class="kw">bind_rows</span>(<span class="dt">.id =</span> <span class="st">&quot;line&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">drawing=</span>list<span class="op">$</span>key_id, <span class="dt">row_id=</span><span class="kw">row_number</span>())</span>
+<span id="cb3-7"><a href="week-2.html#cb3-7"></a>}</span>
+<span id="cb3-8"><a href="week-2.html#cb3-8"></a>first_axe =<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(axes_json[[<span class="dv">1</span>]]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">parse_drawing</span>()</span>
+<span id="cb3-9"><a href="week-2.html#cb3-9"></a>first_axe</span></code></pre></div>
+<pre><code>## # A tibble: 19 x 5
+##    line      x     y drawing          row_id
+##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;
+##  1 1         0    55 6684253230202880      1
+##  2 1        37   139 6684253230202880      2
+##  3 2         8    50 6684253230202880      3
+##  4 2        54    50 6684253230202880      4
+##  5 2        64    46 6684253230202880      5
+##  6 2        74    40 6684253230202880      6
+##  7 2       114     1 6684253230202880      7
+##  8 2       118     2 6684253230202880      8
+##  9 2       122    21 6684253230202880      9
+## 10 2       195   191 6684253230202880     10
+## 11 2       211   255 6684253230202880     11
+## 12 3        43   139 6684253230202880     12
+## 13 3        44   134 6684253230202880     13
+## 14 3        53   124 6684253230202880     14
+## 15 3        80   112 6684253230202880     15
+## 16 3       120   105 6684253230202880     16
+## 17 3       127   108 6684253230202880     17
+## 18 3       185   193 6684253230202880     18
+## 19 3       203   235 6684253230202880     19</code></pre>
+</div>
+<div id="exploratory-data-analysis" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> Exploratory data analysis</h3>
+<p>Now that we have cleaned the data up into a format we can use we can start to explore the data. For most data analysis projects, exploratory data analysis and data cleaning will go hand-in-hand and it will often be iterative between the two steps. The key point is that you should use EDA to discover issues with the data, sources of variation, and key factors you must account for in downstream analysis.</p>
+<p>The process is very similar to the parable of the <a href="https://en.wikipedia.org/wiki/Blind_men_and_an_elephant">blind men and the elephant</a>:</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Blind_monks_examining_an_elephant.jpg/2560px-Blind_monks_examining_an_elephant.jpg" /></p>
+<blockquote>
+<p>A group of blind men heard that a strange animal, called an elephant, had been brought to the town, but none of them were aware of its shape and form. Out of curiosity, they said: “We must inspect and know it by touch, of which we are capable”. So, they sought it out, and when they found it they groped about it. The first person, whose hand landed on the trunk, said, “This being is like a thick snake”. For another one whose hand reached its ear, it seemed like a kind of fan. As for another person, whose hand was upon its leg, said, the elephant is a pillar like a tree-trunk. The blind man who placed his hand upon its side said the elephant, “is a wall”. Another who felt its tail, described it as a rope. The last felt its tusk, stating the elephant is that which is hard, smooth and like a spear.</p>
+</blockquote>
+<p>Similarly, when doing your initial data cleaning you will be looking at different parts of the data and trying to get a mental picture of the complete data set before moving on to modeling.</p>
+<p>Here we can do some simple EDA and look at a plot of one of the axes</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="week-2.html#cb5-1"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb5-2"><a href="week-2.html#cb5-2"></a><span class="kw">ggplot</span>(first_axe,<span class="kw">aes</span>(x, y)) <span class="op">+</span></span>
+<span id="cb5-3"><a href="week-2.html#cb5-3"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb5-4"><a href="week-2.html#cb5-4"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">255</span>))<span class="op">+</span></span>
+<span id="cb5-5"><a href="week-2.html#cb5-5"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">255</span>, <span class="dv">0</span>))<span class="op">+</span></span>
+<span id="cb5-6"><a href="week-2.html#cb5-6"></a><span class="st">    </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>then we might fill in the lines to get a better idea of what the drawing looks like to the customer:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="week-2.html#cb6-1"></a><span class="kw">ggplot</span>(first_axe,<span class="kw">aes</span>(x, y)) <span class="op">+</span></span>
+<span id="cb6-2"><a href="week-2.html#cb6-2"></a><span class="st">    </span><span class="kw">geom_path</span>(<span class="kw">aes</span>(<span class="dt">group =</span> line), <span class="dt">lwd=</span><span class="dv">1</span>)<span class="op">+</span></span>
+<span id="cb6-3"><a href="week-2.html#cb6-3"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">255</span>))<span class="op">+</span></span>
+<span id="cb6-4"><a href="week-2.html#cb6-4"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">255</span>, <span class="dv">0</span>))<span class="op">+</span></span>
+<span id="cb6-5"><a href="week-2.html#cb6-5"></a><span class="st">    </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>then we might look at a few more axes to get a handle on the variation in the data set:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="week-2.html#cb7-1"></a>rjson<span class="op">::</span><span class="kw">fromJSON</span>(axes_json[[<span class="dv">2</span>]]) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-2"><a href="week-2.html#cb7-2"></a><span class="st">    </span><span class="kw">parse_drawing</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-3"><a href="week-2.html#cb7-3"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, y)) <span class="op">+</span></span>
+<span id="cb7-4"><a href="week-2.html#cb7-4"></a><span class="st">    </span><span class="kw">geom_path</span>(<span class="kw">aes</span>(<span class="dt">group =</span> line), <span class="dt">lwd=</span><span class="dv">1</span>)<span class="op">+</span></span>
+<span id="cb7-5"><a href="week-2.html#cb7-5"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">255</span>))<span class="op">+</span></span>
+<span id="cb7-6"><a href="week-2.html#cb7-6"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">255</span>, <span class="dv">0</span>))<span class="op">+</span></span>
+<span id="cb7-7"><a href="week-2.html#cb7-7"></a><span class="st">    </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>then compare these drawings to drawings of clouds</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="week-2.html#cb8-1"></a>rjson<span class="op">::</span><span class="kw">fromJSON</span>(clouds_json[[<span class="dv">1</span>]]) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-2"><a href="week-2.html#cb8-2"></a><span class="st">    </span><span class="kw">parse_drawing</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-3"><a href="week-2.html#cb8-3"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, y)) <span class="op">+</span></span>
+<span id="cb8-4"><a href="week-2.html#cb8-4"></a><span class="st">    </span><span class="kw">geom_path</span>(<span class="kw">aes</span>(<span class="dt">group =</span> line), <span class="dt">lwd=</span><span class="dv">1</span>)<span class="op">+</span></span>
+<span id="cb8-5"><a href="week-2.html#cb8-5"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">255</span>))<span class="op">+</span></span>
+<span id="cb8-6"><a href="week-2.html#cb8-6"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">255</span>, <span class="dv">0</span>))<span class="op">+</span></span>
+<span id="cb8-7"><a href="week-2.html#cb8-7"></a><span class="st">    </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>A bunch of data processing has been done for us, but the data aren’t quite ready to be fed into an algorithm yet. To do that, we’d need a data frame with each row equal to one drawing and each column equal to one feature for that drawing, with an extra column for the drawing output.</p>
+<p>Can we think of how we’d do that for a data set like this?</p>
+<p>Here are two things I thought of:</p>
+<ul>
+<li>I need the points sampled on a regular grid</li>
+<li>I need the points to be of a manageable size</li>
+</ul>
+<p>Note that these are semi-arbitrary choices. A lot of data processing is based on the intuition/best guess of the analyst. While this shouldn’t be a cause for alarm, it is important that you document all of these choices as they may have an impact on the answers you ultimately obtain; these choices may need to be explored and explained when interpreting your results.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="week-2.html#cb9-1"></a><span class="co"># Let’s start by creating a regular grid of 256 x and y values.</span></span>
+<span id="cb9-2"><a href="week-2.html#cb9-2"></a><span class="kw">library</span>(tibble)</span>
+<span id="cb9-3"><a href="week-2.html#cb9-3"></a>grid_dat =<span class="st"> </span><span class="kw">as.tibble</span>(<span class="kw">expand.grid</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">256</span>,<span class="dt">y=</span><span class="dv">1</span><span class="op">:</span><span class="dv">256</span>))</span>
+<span id="cb9-4"><a href="week-2.html#cb9-4"></a></span>
+<span id="cb9-5"><a href="week-2.html#cb9-5"></a><span class="co"># Now we could make each x,y value be a grid point with a join - this is overkill</span></span>
+<span id="cb9-6"><a href="week-2.html#cb9-6"></a>grid_axe =<span class="st"> </span><span class="kw">left_join</span>(grid_dat,first_axe)</span>
+<span id="cb9-7"><a href="week-2.html#cb9-7"></a></span>
+<span id="cb9-8"><a href="week-2.html#cb9-8"></a><span class="co"># Let’s add an indicator of whether a particular value is zero or not.</span></span>
+<span id="cb9-9"><a href="week-2.html#cb9-9"></a>grid_axe =<span class="st"> </span>grid_axe <span class="op">%&gt;%</span></span>
+<span id="cb9-10"><a href="week-2.html#cb9-10"></a><span class="st">   </span><span class="kw">mutate</span>(<span class="dt">pixel =</span> <span class="kw">ifelse</span>(<span class="kw">is.na</span>(line),<span class="dv">0</span>,<span class="dv">1</span>))</span>
+<span id="cb9-11"><a href="week-2.html#cb9-11"></a></span>
+<span id="cb9-12"><a href="week-2.html#cb9-12"></a><span class="co"># subsample to a smaller size</span></span>
+<span id="cb9-13"><a href="week-2.html#cb9-13"></a><span class="kw">library</span>(Hmisc)</span>
+<span id="cb9-14"><a href="week-2.html#cb9-14"></a>grid_axe<span class="op">$</span>xgroup =<span class="st"> </span><span class="kw">cut2</span>(grid_axe<span class="op">$</span>x,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
+<span id="cb9-15"><a href="week-2.html#cb9-15"></a>grid_axe<span class="op">$</span>ygroup =<span class="st"> </span><span class="kw">cut2</span>(grid_axe<span class="op">$</span>y,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
+<span id="cb9-16"><a href="week-2.html#cb9-16"></a>grid_axe</span></code></pre></div>
+<pre><code>## # A tibble: 65,536 x 8
+##        x     y line  drawing row_id pixel xgroup  ygroup 
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;  
+##  1     1     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  2     2     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  3     3     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  4     4     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  5     5     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  6     6     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  7     7     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  8     8     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  9     9     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+## 10    10     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+## # … with 65,526 more rows</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="week-2.html#cb11-1"></a><span class="co"># Now I can convert these to numbers so we’ll have them later</span></span>
+<span id="cb11-2"><a href="week-2.html#cb11-2"></a></span>
+<span id="cb11-3"><a href="week-2.html#cb11-3"></a>grid_axe =<span class="st"> </span>grid_axe <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb11-4"><a href="week-2.html#cb11-4"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">xgroup =</span> <span class="kw">as.numeric</span>(<span class="kw">as.character</span>(xgroup)) <span class="op">-</span><span class="st"> </span><span class="fl">7.5</span>) <span class="op">%&gt;%</span></span>
+<span id="cb11-5"><a href="week-2.html#cb11-5"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">ygroup =</span> <span class="kw">as.numeric</span>(<span class="kw">as.character</span>(ygroup)) <span class="op">-</span><span class="st"> </span><span class="fl">7.5</span>)</span>
+<span id="cb11-6"><a href="week-2.html#cb11-6"></a></span>
+<span id="cb11-7"><a href="week-2.html#cb11-7"></a><span class="co"># Then average within groups of pixels to get a smaller value</span></span>
+<span id="cb11-8"><a href="week-2.html#cb11-8"></a></span>
+<span id="cb11-9"><a href="week-2.html#cb11-9"></a>small_axe =<span class="st"> </span>grid_axe <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb11-10"><a href="week-2.html#cb11-10"></a><span class="st">    </span><span class="kw">group_by</span>(xgroup,ygroup) <span class="op">%&gt;%</span></span>
+<span id="cb11-11"><a href="week-2.html#cb11-11"></a><span class="st">    </span><span class="kw">summarise</span>(<span class="dt">pixel=</span><span class="kw">mean</span>(pixel))</span>
+<span id="cb11-12"><a href="week-2.html#cb11-12"></a></span>
+<span id="cb11-13"><a href="week-2.html#cb11-13"></a>small_axe</span></code></pre></div>
+<pre><code>## # A tibble: 256 x 3
+## # Groups:   xgroup [16]
+##    xgroup ygroup   pixel
+##     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+##  1      1      1 0      
+##  2      1     17 0      
+##  3      1     33 0      
+##  4      1     49 0.00391
+##  5      1     65 0      
+##  6      1     81 0      
+##  7      1     97 0      
+##  8      1    113 0      
+##  9      1    129 0      
+## 10      1    145 0      
+## # … with 246 more rows</code></pre>
+<p>Remember this was our original axe</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="week-2.html#cb13-1"></a><span class="kw">ggplot</span>(first_axe,<span class="kw">aes</span>(x, y)) <span class="op">+</span></span>
+<span id="cb13-2"><a href="week-2.html#cb13-2"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb13-3"><a href="week-2.html#cb13-3"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">255</span>))<span class="op">+</span></span>
+<span id="cb13-4"><a href="week-2.html#cb13-4"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">255</span>, <span class="dv">0</span>))<span class="op">+</span></span>
+<span id="cb13-5"><a href="week-2.html#cb13-5"></a><span class="st">    </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Now we can look at the small version - after cleaning, sampling to a grid, downsampling to shrink the data and averaging pixels - it looks similar - whew! :)</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="week-2.html#cb14-1"></a><span class="kw">ggplot</span>(small_axe <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(pixel <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>),<span class="kw">aes</span>(xgroup, ygroup)) <span class="op">+</span></span>
+<span id="cb14-2"><a href="week-2.html#cb14-2"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb14-3"><a href="week-2.html#cb14-3"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">255</span>))<span class="op">+</span></span>
+<span id="cb14-4"><a href="week-2.html#cb14-4"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">255</span>, <span class="dv">0</span>))<span class="op">+</span></span>
+<span id="cb14-5"><a href="week-2.html#cb14-5"></a><span class="st">    </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>This is obviously glossing over a lot of exploration and cleaning, remember this should be 80% of the analysis! But it is a fair representation of the kinds of steps you might go through to get the data ready to model. Now let’s do this for all axes and clouds.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="week-2.html#cb15-1"></a>img_dat =<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">pixel=</span><span class="ot">NA</span>,<span class="dt">type=</span><span class="ot">NA</span>,<span class="dt">drawing=</span><span class="ot">NA</span>,<span class="dt">pixel_number=</span><span class="ot">NA</span>)</span>
+<span id="cb15-2"><a href="week-2.html#cb15-2"></a></span>
+<span id="cb15-3"><a href="week-2.html#cb15-3"></a><span class="co">## Axes</span></span>
+<span id="cb15-4"><a href="week-2.html#cb15-4"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
+<span id="cb15-5"><a href="week-2.html#cb15-5"></a>    tmp_draw =<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(axes_json[[i]]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">parse_drawing</span>()</span>
+<span id="cb15-6"><a href="week-2.html#cb15-6"></a>    </span>
+<span id="cb15-7"><a href="week-2.html#cb15-7"></a>    grid_draw =<span class="st"> </span><span class="kw">left_join</span>(grid_dat,tmp_draw) <span class="op">%&gt;%</span></span>
+<span id="cb15-8"><a href="week-2.html#cb15-8"></a><span class="st">           </span><span class="kw">mutate</span>(<span class="dt">pixel =</span> <span class="kw">ifelse</span>(<span class="kw">is.na</span>(line),<span class="dv">0</span>,<span class="dv">1</span>)) </span>
+<span id="cb15-9"><a href="week-2.html#cb15-9"></a>    </span>
+<span id="cb15-10"><a href="week-2.html#cb15-10"></a>    grid_draw<span class="op">$</span>xgroup =<span class="st"> </span><span class="kw">cut2</span>(grid_draw<span class="op">$</span>x,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
+<span id="cb15-11"><a href="week-2.html#cb15-11"></a>    grid_draw<span class="op">$</span>ygroup =<span class="st"> </span><span class="kw">cut2</span>(grid_draw<span class="op">$</span>y,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
+<span id="cb15-12"><a href="week-2.html#cb15-12"></a>    </span>
+<span id="cb15-13"><a href="week-2.html#cb15-13"></a>    small_draw =<span class="st"> </span>grid_draw <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-14"><a href="week-2.html#cb15-14"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">xgroup =</span> <span class="kw">as.numeric</span>(<span class="kw">as.character</span>(xgroup)) <span class="op">-</span><span class="st"> </span><span class="fl">7.5</span>) <span class="op">%&gt;%</span></span>
+<span id="cb15-15"><a href="week-2.html#cb15-15"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">ygroup =</span> <span class="kw">as.numeric</span>(<span class="kw">as.character</span>(ygroup)) <span class="op">-</span><span class="st"> </span><span class="fl">7.5</span>) <span class="op">%&gt;%</span></span>
+<span id="cb15-16"><a href="week-2.html#cb15-16"></a><span class="st">    </span><span class="kw">group_by</span>(xgroup,ygroup) <span class="op">%&gt;%</span></span>
+<span id="cb15-17"><a href="week-2.html#cb15-17"></a><span class="st">    </span><span class="kw">summarise</span>(<span class="dt">pixel=</span><span class="kw">mean</span>(pixel)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></span>
+<span id="cb15-18"><a href="week-2.html#cb15-18"></a><span class="st">        </span><span class="kw">select</span>(pixel) <span class="op">%&gt;%</span></span>
+<span id="cb15-19"><a href="week-2.html#cb15-19"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">type=</span><span class="st">&quot;axe&quot;</span>,<span class="dt">drawing=</span>i,<span class="dt">pixel_number=</span><span class="kw">row_number</span>())</span>
+<span id="cb15-20"><a href="week-2.html#cb15-20"></a>    img_dat =<span class="st"> </span>img_dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">bind_rows</span>(small_draw)</span>
+<span id="cb15-21"><a href="week-2.html#cb15-21"></a>}</span>
+<span id="cb15-22"><a href="week-2.html#cb15-22"></a></span>
+<span id="cb15-23"><a href="week-2.html#cb15-23"></a><span class="co">## Clouds</span></span>
+<span id="cb15-24"><a href="week-2.html#cb15-24"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>){</span>
+<span id="cb15-25"><a href="week-2.html#cb15-25"></a>    tmp_draw =<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(clouds_json[[i]]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">parse_drawing</span>()</span>
+<span id="cb15-26"><a href="week-2.html#cb15-26"></a>    </span>
+<span id="cb15-27"><a href="week-2.html#cb15-27"></a>    grid_draw =<span class="st"> </span><span class="kw">left_join</span>(grid_dat,tmp_draw) <span class="op">%&gt;%</span></span>
+<span id="cb15-28"><a href="week-2.html#cb15-28"></a><span class="st">           </span><span class="kw">mutate</span>(<span class="dt">pixel =</span> <span class="kw">ifelse</span>(<span class="kw">is.na</span>(line),<span class="dv">0</span>,<span class="dv">1</span>)) </span>
+<span id="cb15-29"><a href="week-2.html#cb15-29"></a>    </span>
+<span id="cb15-30"><a href="week-2.html#cb15-30"></a>    grid_draw<span class="op">$</span>xgroup =<span class="st"> </span><span class="kw">cut2</span>(grid_draw<span class="op">$</span>x,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
+<span id="cb15-31"><a href="week-2.html#cb15-31"></a>    grid_draw<span class="op">$</span>ygroup =<span class="st"> </span><span class="kw">cut2</span>(grid_draw<span class="op">$</span>y,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
+<span id="cb15-32"><a href="week-2.html#cb15-32"></a>    </span>
+<span id="cb15-33"><a href="week-2.html#cb15-33"></a>    small_draw =<span class="st"> </span>grid_draw <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-34"><a href="week-2.html#cb15-34"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">xgroup =</span> <span class="kw">as.numeric</span>(<span class="kw">as.character</span>(xgroup)) <span class="op">-</span><span class="st"> </span><span class="fl">7.5</span>) <span class="op">%&gt;%</span></span>
+<span id="cb15-35"><a href="week-2.html#cb15-35"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">ygroup =</span> <span class="kw">as.numeric</span>(<span class="kw">as.character</span>(ygroup)) <span class="op">-</span><span class="st"> </span><span class="fl">7.5</span>) <span class="op">%&gt;%</span></span>
+<span id="cb15-36"><a href="week-2.html#cb15-36"></a><span class="st">    </span><span class="kw">group_by</span>(xgroup,ygroup) <span class="op">%&gt;%</span></span>
+<span id="cb15-37"><a href="week-2.html#cb15-37"></a><span class="st">    </span><span class="kw">summarise</span>(<span class="dt">pixel=</span><span class="kw">mean</span>(pixel)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></span>
+<span id="cb15-38"><a href="week-2.html#cb15-38"></a><span class="st">        </span><span class="kw">select</span>(pixel) <span class="op">%&gt;%</span></span>
+<span id="cb15-39"><a href="week-2.html#cb15-39"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">type=</span><span class="st">&quot;cloud&quot;</span>,<span class="dt">drawing=</span>i,<span class="dt">pixel_number=</span><span class="kw">row_number</span>())</span>
+<span id="cb15-40"><a href="week-2.html#cb15-40"></a>    img_dat =<span class="st"> </span>img_dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">bind_rows</span>(small_draw)</span>
+<span id="cb15-41"><a href="week-2.html#cb15-41"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="week-2.html#cb16-1"></a><span class="kw">library</span>(tidyr)</span>
+<span id="cb16-2"><a href="week-2.html#cb16-2"></a>img_final =<span class="st"> </span><span class="kw">spread</span>(img_dat[<span class="op">-</span><span class="dv">1</span>,],pixel_number,pixel)</span>
+<span id="cb16-3"><a href="week-2.html#cb16-3"></a><span class="kw">names</span>(img_final) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;type&quot;</span>,<span class="st">&quot;drawing&quot;</span>,<span class="kw">paste0</span>(<span class="st">&quot;pixel&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">256</span>))</span>
+<span id="cb16-4"><a href="week-2.html#cb16-4"></a>img_final </span></code></pre></div>
+<pre><code>## # A tibble: 200 x 258
+##    type  drawing  pixel1  pixel2  pixel3 pixel4  pixel5  pixel6  pixel7 pixel8
+##    &lt;chr&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+##  1 axe         1 0       0       0.0232       0 0       0       0            0
+##  2 axe         2 0       0.00368 0            0 0       0       0            0
+##  3 axe         3 0.00391 0       0            0 0       0       0.00781      0
+##  4 axe         4 0       0       0            0 0       0       0            0
+##  5 axe         5 0       0.00781 0.00391      0 0       0       0            0
+##  6 axe         6 0.00368 0       0            0 0       0       0            0
+##  7 axe         7 0.00391 0.00391 0            0 0       0       0            0
+##  8 axe         8 0       0       0            0 0.00391 0.00391 0            0
+##  9 axe         9 0       0       0            0 0.00391 0       0            0
+## 10 axe        10 0       0       0            0 0       0.00368 0            0
+## # … with 190 more rows, and 248 more variables: pixel9 &lt;dbl&gt;, pixel10 &lt;dbl&gt;,
+## #   pixel11 &lt;dbl&gt;, pixel12 &lt;dbl&gt;, pixel13 &lt;dbl&gt;, pixel14 &lt;dbl&gt;, pixel15 &lt;dbl&gt;,
+## #   pixel16 &lt;dbl&gt;, pixel17 &lt;dbl&gt;, pixel18 &lt;dbl&gt;, pixel19 &lt;dbl&gt;, pixel20 &lt;dbl&gt;,
+## #   pixel21 &lt;dbl&gt;, pixel22 &lt;dbl&gt;, pixel23 &lt;dbl&gt;, pixel24 &lt;dbl&gt;, pixel25 &lt;dbl&gt;,
+## #   pixel26 &lt;dbl&gt;, pixel27 &lt;dbl&gt;, pixel28 &lt;dbl&gt;, pixel29 &lt;dbl&gt;, pixel30 &lt;dbl&gt;,
+## #   pixel31 &lt;dbl&gt;, pixel32 &lt;dbl&gt;, pixel33 &lt;dbl&gt;, pixel34 &lt;dbl&gt;, pixel35 &lt;dbl&gt;,
+## #   pixel36 &lt;dbl&gt;, pixel37 &lt;dbl&gt;, pixel38 &lt;dbl&gt;, pixel39 &lt;dbl&gt;, pixel40 &lt;dbl&gt;,
+## #   pixel41 &lt;dbl&gt;, pixel42 &lt;dbl&gt;, pixel43 &lt;dbl&gt;, pixel44 &lt;dbl&gt;, pixel45 &lt;dbl&gt;,
+## #   pixel46 &lt;dbl&gt;, pixel47 &lt;dbl&gt;, pixel48 &lt;dbl&gt;, pixel49 &lt;dbl&gt;, pixel50 &lt;dbl&gt;,
+## #   pixel51 &lt;dbl&gt;, pixel52 &lt;dbl&gt;, pixel53 &lt;dbl&gt;, pixel54 &lt;dbl&gt;, pixel55 &lt;dbl&gt;,
+## #   pixel56 &lt;dbl&gt;, pixel57 &lt;dbl&gt;, pixel58 &lt;dbl&gt;, pixel59 &lt;dbl&gt;, pixel60 &lt;dbl&gt;,
+## #   pixel61 &lt;dbl&gt;, pixel62 &lt;dbl&gt;, pixel63 &lt;dbl&gt;, pixel64 &lt;dbl&gt;, pixel65 &lt;dbl&gt;,
+## #   pixel66 &lt;dbl&gt;, pixel67 &lt;dbl&gt;, pixel68 &lt;dbl&gt;, pixel69 &lt;dbl&gt;, pixel70 &lt;dbl&gt;,
+## #   pixel71 &lt;dbl&gt;, pixel72 &lt;dbl&gt;, pixel73 &lt;dbl&gt;, pixel74 &lt;dbl&gt;, pixel75 &lt;dbl&gt;,
+## #   pixel76 &lt;dbl&gt;, pixel77 &lt;dbl&gt;, pixel78 &lt;dbl&gt;, pixel79 &lt;dbl&gt;, pixel80 &lt;dbl&gt;,
+## #   pixel81 &lt;dbl&gt;, pixel82 &lt;dbl&gt;, pixel83 &lt;dbl&gt;, pixel84 &lt;dbl&gt;, pixel85 &lt;dbl&gt;,
+## #   pixel86 &lt;dbl&gt;, pixel87 &lt;dbl&gt;, pixel88 &lt;dbl&gt;, pixel89 &lt;dbl&gt;, pixel90 &lt;dbl&gt;,
+## #   pixel91 &lt;dbl&gt;, pixel92 &lt;dbl&gt;, pixel93 &lt;dbl&gt;, pixel94 &lt;dbl&gt;, pixel95 &lt;dbl&gt;,
+## #   pixel96 &lt;dbl&gt;, pixel97 &lt;dbl&gt;, pixel98 &lt;dbl&gt;, pixel99 &lt;dbl&gt;, pixel100 &lt;dbl&gt;,
+## #   pixel101 &lt;dbl&gt;, pixel102 &lt;dbl&gt;, pixel103 &lt;dbl&gt;, pixel104 &lt;dbl&gt;,
+## #   pixel105 &lt;dbl&gt;, pixel106 &lt;dbl&gt;, pixel107 &lt;dbl&gt;, pixel108 &lt;dbl&gt;, …</code></pre>
+<p>Since this is a prediction problem, we will need to split the data into a training and a testing set. We will learn more about the structure of machine learning vs inference problems later in the course. For now, you can just take my word for it that if we build a model in the training set, we will need a held out set of independent data to validate and critique our model.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="week-2.html#cb18-1"></a><span class="kw">library</span>(caret)</span>
+<span id="cb18-2"><a href="week-2.html#cb18-2"></a>train_set =<span class="st"> </span><span class="kw">createDataPartition</span>(img_final<span class="op">$</span>type,<span class="dt">list=</span><span class="ot">FALSE</span>)</span>
+<span id="cb18-3"><a href="week-2.html#cb18-3"></a></span>
+<span id="cb18-4"><a href="week-2.html#cb18-4"></a>train_dat =<span class="st"> </span>img_final[train_set,]</span>
+<span id="cb18-5"><a href="week-2.html#cb18-5"></a>test_dat =<span class="st"> </span>img_final[<span class="op">-</span>train_set,]</span>
+<span id="cb18-6"><a href="week-2.html#cb18-6"></a></span>
+<span id="cb18-7"><a href="week-2.html#cb18-7"></a>train_dat</span></code></pre></div>
+<pre><code>## # A tibble: 100 x 258
+##    type  drawing  pixel1  pixel2 pixel3  pixel4  pixel5  pixel6  pixel7 pixel8
+##    &lt;chr&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+##  1 axe         2 0       0.00368      0 0       0       0       0            0
+##  2 axe         3 0.00391 0            0 0       0       0       0.00781      0
+##  3 axe         4 0       0            0 0       0       0       0            0
+##  4 axe         8 0       0            0 0       0.00391 0.00391 0            0
+##  5 axe         9 0       0            0 0       0.00391 0       0            0
+##  6 axe        10 0       0            0 0       0       0.00368 0            0
+##  7 axe        11 0       0            0 0       0.00781 0       0            0
+##  8 axe        13 0.00368 0            0 0       0       0.00368 0            0
+##  9 axe        14 0       0.00391      0 0       0       0       0            0
+## 10 axe        15 0.00391 0.0156       0 0.00391 0.00391 0       0            0
+## # … with 90 more rows, and 248 more variables: pixel9 &lt;dbl&gt;, pixel10 &lt;dbl&gt;,
+## #   pixel11 &lt;dbl&gt;, pixel12 &lt;dbl&gt;, pixel13 &lt;dbl&gt;, pixel14 &lt;dbl&gt;, pixel15 &lt;dbl&gt;,
+## #   pixel16 &lt;dbl&gt;, pixel17 &lt;dbl&gt;, pixel18 &lt;dbl&gt;, pixel19 &lt;dbl&gt;, pixel20 &lt;dbl&gt;,
+## #   pixel21 &lt;dbl&gt;, pixel22 &lt;dbl&gt;, pixel23 &lt;dbl&gt;, pixel24 &lt;dbl&gt;, pixel25 &lt;dbl&gt;,
+## #   pixel26 &lt;dbl&gt;, pixel27 &lt;dbl&gt;, pixel28 &lt;dbl&gt;, pixel29 &lt;dbl&gt;, pixel30 &lt;dbl&gt;,
+## #   pixel31 &lt;dbl&gt;, pixel32 &lt;dbl&gt;, pixel33 &lt;dbl&gt;, pixel34 &lt;dbl&gt;, pixel35 &lt;dbl&gt;,
+## #   pixel36 &lt;dbl&gt;, pixel37 &lt;dbl&gt;, pixel38 &lt;dbl&gt;, pixel39 &lt;dbl&gt;, pixel40 &lt;dbl&gt;,
+## #   pixel41 &lt;dbl&gt;, pixel42 &lt;dbl&gt;, pixel43 &lt;dbl&gt;, pixel44 &lt;dbl&gt;, pixel45 &lt;dbl&gt;,
+## #   pixel46 &lt;dbl&gt;, pixel47 &lt;dbl&gt;, pixel48 &lt;dbl&gt;, pixel49 &lt;dbl&gt;, pixel50 &lt;dbl&gt;,
+## #   pixel51 &lt;dbl&gt;, pixel52 &lt;dbl&gt;, pixel53 &lt;dbl&gt;, pixel54 &lt;dbl&gt;, pixel55 &lt;dbl&gt;,
+## #   pixel56 &lt;dbl&gt;, pixel57 &lt;dbl&gt;, pixel58 &lt;dbl&gt;, pixel59 &lt;dbl&gt;, pixel60 &lt;dbl&gt;,
+## #   pixel61 &lt;dbl&gt;, pixel62 &lt;dbl&gt;, pixel63 &lt;dbl&gt;, pixel64 &lt;dbl&gt;, pixel65 &lt;dbl&gt;,
+## #   pixel66 &lt;dbl&gt;, pixel67 &lt;dbl&gt;, pixel68 &lt;dbl&gt;, pixel69 &lt;dbl&gt;, pixel70 &lt;dbl&gt;,
+## #   pixel71 &lt;dbl&gt;, pixel72 &lt;dbl&gt;, pixel73 &lt;dbl&gt;, pixel74 &lt;dbl&gt;, pixel75 &lt;dbl&gt;,
+## #   pixel76 &lt;dbl&gt;, pixel77 &lt;dbl&gt;, pixel78 &lt;dbl&gt;, pixel79 &lt;dbl&gt;, pixel80 &lt;dbl&gt;,
+## #   pixel81 &lt;dbl&gt;, pixel82 &lt;dbl&gt;, pixel83 &lt;dbl&gt;, pixel84 &lt;dbl&gt;, pixel85 &lt;dbl&gt;,
+## #   pixel86 &lt;dbl&gt;, pixel87 &lt;dbl&gt;, pixel88 &lt;dbl&gt;, pixel89 &lt;dbl&gt;, pixel90 &lt;dbl&gt;,
+## #   pixel91 &lt;dbl&gt;, pixel92 &lt;dbl&gt;, pixel93 &lt;dbl&gt;, pixel94 &lt;dbl&gt;, pixel95 &lt;dbl&gt;,
+## #   pixel96 &lt;dbl&gt;, pixel97 &lt;dbl&gt;, pixel98 &lt;dbl&gt;, pixel99 &lt;dbl&gt;, pixel100 &lt;dbl&gt;,
+## #   pixel101 &lt;dbl&gt;, pixel102 &lt;dbl&gt;, pixel103 &lt;dbl&gt;, pixel104 &lt;dbl&gt;,
+## #   pixel105 &lt;dbl&gt;, pixel106 &lt;dbl&gt;, pixel107 &lt;dbl&gt;, pixel108 &lt;dbl&gt;, …</code></pre>
+<p>We can look at a few of the pixels to see if we see any differences between the two types of images:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="week-2.html#cb20-1"></a><span class="kw">ggplot</span>(train_dat,<span class="kw">aes</span>(<span class="dt">x=</span>type,<span class="dt">y=</span>pixel1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="week-2.html#cb21-1"></a><span class="kw">ggplot</span>(train_dat,<span class="kw">aes</span>(<span class="dt">x=</span>type,<span class="dt">y=</span>pixel100)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+<p>In general, this would kick off another phase of exploratory analysis before setting off to build a model.</p>
+</div>
+<div id="statistical-predictionmodeling" class="section level3">
+<h3><span class="header-section-number">3.2.7</span> Statistical prediction/modeling</h3>
+<p>Now that we have a sufficiently organized and cleaned data set we can go about modeling. This is the part that tends to get a lot of attention. Random forests, deep neural nets, and penalized regression, oh my! But the best data analyses use the simplest model that they can to get the job done. There are always tradeoffs - typically between some measure of accuracy and either cost, time, interpretability, or convenience. We will discuss these tradeoffs later in the class, but in general, it is better to err on the side of simplicity when developing a statistical model.</p>
+<p>For this simple example we will use penalized logistic regression. In particular, we use the lasso penalty - which encourages a model that uses as few of the pixels as possible when predicting.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="week-2.html#cb22-1"></a>myGrid &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(</span>
+<span id="cb22-2"><a href="week-2.html#cb22-2"></a>                       <span class="dt">alpha =</span> <span class="dv">1</span>,</span>
+<span id="cb22-3"><a href="week-2.html#cb22-3"></a>                       <span class="dt">lambda =</span> <span class="kw">seq</span>(<span class="fl">0.0001</span>, <span class="dv">1</span>, <span class="dt">length =</span> <span class="dv">20</span>)</span>
+<span id="cb22-4"><a href="week-2.html#cb22-4"></a>                      )</span>
+<span id="cb22-5"><a href="week-2.html#cb22-5"></a></span>
+<span id="cb22-6"><a href="week-2.html#cb22-6"></a>mod =<span class="st"> </span><span class="kw">train</span>(<span class="kw">as.factor</span>(type) <span class="op">~</span><span class="st"> </span>. <span class="op">-</span><span class="st"> </span>drawing , <span class="dt">data=</span>train_dat,</span>
+<span id="cb22-7"><a href="week-2.html#cb22-7"></a>            <span class="dt">method=</span><span class="st">&quot;glmnet&quot;</span>,</span>
+<span id="cb22-8"><a href="week-2.html#cb22-8"></a>            <span class="dt">tuneGrid =</span> myGrid)</span>
+<span id="cb22-9"><a href="week-2.html#cb22-9"></a></span>
+<span id="cb22-10"><a href="week-2.html#cb22-10"></a><span class="kw">confusionMatrix</span>(<span class="kw">as.factor</span>(test_dat<span class="op">$</span>type),<span class="kw">predict</span>(mod,test_dat))</span></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction axe cloud
+##      axe    43     7
+##      cloud   7    43
+##                                           
+##                Accuracy : 0.86            
+##                  95% CI : (0.7763, 0.9213)
+##     No Information Rate : 0.5             
+##     P-Value [Acc &gt; NIR] : 4.142e-14       
+##                                           
+##                   Kappa : 0.72            
+##                                           
+##  Mcnemar&#39;s Test P-Value : 1               
+##                                           
+##             Sensitivity : 0.86            
+##             Specificity : 0.86            
+##          Pos Pred Value : 0.86            
+##          Neg Pred Value : 0.86            
+##              Prevalence : 0.50            
+##          Detection Rate : 0.43            
+##    Detection Prevalence : 0.50            
+##       Balanced Accuracy : 0.86            
+##                                           
+##        &#39;Positive&#39; Class : axe             
+## </code></pre>
+<p>It looks like we get a reasonable level of accuracy compared to our original question - we were shooting for 80% accuracy, and for low levels of the regularization parameter we are above 80%:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="week-2.html#cb24-1"></a><span class="kw">plot</span>(mod)</span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="interpret-results" class="section level3">
+<h3><span class="header-section-number">3.2.8</span> Interpret results</h3>
+<p>Next we might dig in deeper and try to understand why and how our model is working. For example we might look at the pixels with non-zero coefficients.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="week-2.html#cb25-1"></a><span class="kw">library</span>(pheatmap)</span>
+<span id="cb25-2"><a href="week-2.html#cb25-2"></a><span class="kw">coef</span>(mod<span class="op">$</span>finalModel, mod<span class="op">$</span>bestTune<span class="op">$</span>lambda)[<span class="op">-</span><span class="dv">1</span>] <span class="op">%&gt;%</span></span>
+<span id="cb25-3"><a href="week-2.html#cb25-3"></a><span class="st">        </span><span class="kw">abs</span>() <span class="op">%&gt;%</span></span>
+<span id="cb25-4"><a href="week-2.html#cb25-4"></a><span class="st">        </span><span class="kw">matrix</span>(<span class="dt">byrow=</span><span class="ot">TRUE</span>,<span class="dt">nrow=</span><span class="dv">16</span>) <span class="op">%&gt;%</span></span>
+<span id="cb25-5"><a href="week-2.html#cb25-5"></a><span class="st">        </span><span class="kw">pheatmap</span>(.,<span class="dt">cluster_cols=</span><span class="ot">FALSE</span>,<span class="dt">cluster_rows=</span><span class="ot">FALSE</span>)      </span></code></pre></div>
+<p><img src="02-week_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>We see that most of the non-zero coefficients are clustered near the bottom of the image. If you look at the pictures of axes and clouds above, you’ll see that the lower part of the image often contains the handle of the axe. So one interpretation might be that the handle of the axe may be the feature our model is using to make the predictions. In a real data analysis we would want to explore and evaluate that carefully.</p>
+</div>
+<div id="challenge-results" class="section level3">
+<h3><span class="header-section-number">3.2.9</span> Challenge results</h3>
+<p>On the one hand we have completed a “successful” data analysis - we have identified a model that answers our original, specific data science question up to our originally proposed metric for success. But there are also a number of outstanding questions like:</p>
+<ul>
+<li>Would this work if we had to classify many types of images?</li>
+<li>Would this level of accuracy hold up in the real world?</li>
+<li>Did our approach to downsampling produce bias? Reduce accuracy?</li>
+<li>Is our sample size sufficiently large to have confidence in our answer?</li>
+<li>Does this analysis even really address our more general question of creating a classifier for a hardware website?</li>
+</ul>
+<p>Some of these questions are easy to answer, some less so. But a critical component of any data analysis is identifying these issues and including them in the analysis you ultimately deliver.</p>
+</div>
+<div id="synthesizewrite-up-results" class="section level3">
+<h3><span class="header-section-number">3.2.10</span> Synthesize/write up results</h3>
+<p>We have gone through a simple analysis of images from Google QuickDraw. This represents what we would call a “raw” analysis of the data. A raw analysis is performed as a stream of consciousness, trying out each idea as you go without discarding or attempting to synthesize.</p>
+<p>If this were a real data science project, the next step would be synthesis and interpretation. We will discuss the keys to a successful data analysis later in the course. But a primary purpose of an analysis is to communicate the answer to the question.</p>
+<p>So our write-up might include an executive summary of our conclusions, remove extraneous and unnecessary processing, include additional explanations for a non-technical audience, clean up figures, and provide a clearer “arc” to the analysis. We might recommend next steps for both analysis and implementation and highlight key strengths or weaknesses of our approach.</p>
+</div>
+<div id="create-reproducible-code" class="section level3">
+<h3><span class="header-section-number">3.2.11</span> Create reproducible code</h3>
+<p>The most common query from a collaborator, manager, or executive when you perform an analysis is:</p>
+<blockquote>
+<p>Could you just re-run that code with the [latest/different/best] parameters?</p>
+</blockquote>
+<p>Even if you are doing a data science project solely for yourself you should keep in mind that:</p>
+<blockquote>
+<p>Your closest collaborator is you six months ago, but you don’t reply to emails</p>
+</blockquote>
+<p>Both of these quotes are modified from this excellent lecture by <a href="http://kbroman.org/Tools4RR/assets/lectures/06_org_eda.pdf">Karl Broman</a> as part of his <a href="https://kbroman.org/Tools4RR/">Tools for Reproducible Research Course</a>.</p>
+<p>The point of these quotes is that it is an almost certainty that you will need to run your analysis more than once. For that reason alone, it is worth it to build out code that can be used to perform the analysis automatically - saving your future self hours of frustrating investigation.</p>
+</div>
+</div>
+<div id="raw-informal-and-formal-data-science" class="section level2">
+<h2><span class="header-section-number">3.3</span> Raw, informal, and formal data science</h2>
+<p>In this lecture we have performed a “raw” data analysis. We did not attempt to organize, synthesize, or format our analysis for a particular audience. Every step, piece of code, and plot inthe analysis was included whether it was relevant or not.</p>
+<p>Raw data analysis is almost always the place to start. As with the parable of the blind men and the elephant, the priority should be placed on a full exploration to identify all of the strengths and weaknesses of both the data and the methods used on the data.</p>
+<p>An “informal” data analysis takes the first steps toward polishing a data analysis for a broader audience. Common steps between a raw data analysis and an informal data analysis are:</p>
+<ul>
+<li>An arc of the analysis will be defined</li>
+<li>Unimportant analyses may be removed</li>
+<li>Figures may be improved</li>
+<li>Code may be removed or simplified</li>
+<li>Conclusions will be more specifically outlined</li>
+</ul>
+<p>But the analysis might not be subject to the formal structure of a memo, report, or journal article. Some examples of informal data analyses are:</p>
+<ul>
+<li><a href="http://varianceexplained.org/r/trump-tweets/" class="uri">http://varianceexplained.org/r/trump-tweets/</a></li>
+<li><a href="https://hilaryparker.com/2013/01/30/hilary-the-most-poisoned-baby-name-in-us-history/" class="uri">https://hilaryparker.com/2013/01/30/hilary-the-most-poisoned-baby-name-in-us-history/</a></li>
+<li><a href="http://alyssafrazee.com/2014/06/04/gender-and-github-code.html" class="uri">http://alyssafrazee.com/2014/06/04/gender-and-github-code.html</a></li>
+</ul>
+<p>A formal data analysis is one that may appear in a formalized report, memo, or journal. Some steps for moving from an informal to a formal data analysis are:</p>
+<ul>
+<li>An arc of the analysis will be streamlined</li>
+<li>Unimportant analyses will be removed</li>
+<li>Supporting analyses will be moved to supporting documentation</li>
+<li>Figures may be production quality</li>
+<li>Code will be moved to supporting documentation</li>
+<li>Methods will be referenced and supported</li>
+<li>Conclusions will be referenced and supported</li>
+</ul>
+<p>Moreover, the analysis will conform to a specific set of formatting rules, structure, and style that are specific to the outlet.</p>
+<p>Each of these types of data science can play an important role in scoping projects and moving them forward - depending on the relative need for speed or completeness.</p>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><span class="header-section-number">3.4</span> Additional Resources</h2>
+<div class="resources">
+<ul>
+<li><a href="https://leanpub.com/artofdatascience">Art of Data Science</a></li>
+<li><a href="https://kbroman.org/Tools4RR/">Tools for Reproducible Research</a></li>
+<li><a href="https://bit.ly/3lYAeLS">Opinion: Reproducible research can still be wrong: Adopting a prevention approach</a></li>
+<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619">10 simple rules for structuring papers</a></li>
+</ul>
+</div>
+</div>
+<div id="homework" class="section level2">
+<h2><span class="header-section-number">3.5</span> Homework</h2>
+<div class="homework">
+<ul>
+<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework2" class="uri">https://github.com/advdatasci/homework2</a></li>
+<li><strong>Repo Name</strong>: homework2-ind-yourgithubusername</li>
+<li><strong>Pull Date</strong>: 2020/09/14 9:00AM Baltimore Time</li>
+</ul>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="week-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ads2020.pdf", "ads2020.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
