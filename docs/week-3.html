@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Week 3 | Week 3 - Organizing a data analysis</title>
+  <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Week 3 | Week 3 - Organizing a data analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Week 3 | Week 3 - Organizing a data analysis" />
+  
+  <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+<meta name="author" content="Jeff Leek and Roger D. Peng" />
+
+
+<meta name="date" content="2020-09-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="week-2.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<img src ="ads2020-small.png" class="center">
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#assumptions-and-pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Assumptions and pre-requisites</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#course-staff"><i class="fa fa-check"></i><b>1.3</b> Course Staff</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-logistics"><i class="fa fa-check"></i><b>1.4</b> Course logistics</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment-due-dates"><i class="fa fa-check"></i><b>1.5</b> Assignment Due Dates</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-pandemic"><i class="fa fa-check"></i><b>1.6</b> The Pandemic</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#philosophy"><i class="fa fa-check"></i><b>1.7.1</b> Philosophy</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#relative-weights"><i class="fa fa-check"></i><b>1.7.2</b> Relative weights</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a><ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#submitting-assignments"><i class="fa fa-check"></i><b>1.8.1</b> Submitting assignments</a></li>
+<li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#data-analysis-assignments"><i class="fa fa-check"></i><b>1.8.2</b> Data Analysis Assignments</a></li>
+<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.3</b> Data Analysis Reviews</a></li>
+<li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.4</b> Reviewing Code of Conduct</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i><b>1.9.1</b> Need Help?</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#feedback"><i class="fa fa-check"></i><b>1.9.2</b> Feedback</a></li>
+<li class="chapter" data-level="1.9.3" data-path="index.html"><a href="index.html#license-and-attribution"><i class="fa fa-check"></i><b>1.9.3</b> License and attribution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#academic-ethics"><i class="fa fa-check"></i><b>1.10</b> Academic Ethics</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#disability-support-services"><i class="fa fa-check"></i><b>1.11</b> Disability support services</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#email-alerts"><i class="fa fa-check"></i><b>1.12</b> Email alerts</a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#previous-versions-of-the-class"><i class="fa fa-check"></i><b>1.13</b> Previous versions of the class</a></li>
+<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#typos-and-corrections"><i class="fa fa-check"></i><b>1.14</b> Typos and corrections</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a><ul>
+<li class="chapter" data-level="2.1" data-path="week-1.html"><a href="week-1.html#week-1-learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Week 1 Learning objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="week-1.html"><a href="week-1.html#maybe-we-should-start-by-defining-data-science."><i class="fa fa-check"></i><b>2.2.1</b> Maybe we should start by defining data science….</a></li>
+<li class="chapter" data-level="2.2.2" data-path="week-1.html"><a href="week-1.html#data-science-is-hard-but-not-like-math-is-hard"><i class="fa fa-check"></i><b>2.2.2</b> Data Science is hard, but not like math is hard</a></li>
+<li class="chapter" data-level="2.2.3" data-path="week-1.html"><a href="week-1.html#so-what-is-advanced-data-science"><i class="fa fa-check"></i><b>2.2.3</b> So what is advanced data science?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="week-1.html"><a href="week-1.html#descriptive"><i class="fa fa-check"></i><b>2.3.1</b> Descriptive</a></li>
+<li class="chapter" data-level="2.3.2" data-path="week-1.html"><a href="week-1.html#exploratory"><i class="fa fa-check"></i><b>2.3.2</b> Exploratory</a></li>
+<li class="chapter" data-level="2.3.3" data-path="week-1.html"><a href="week-1.html#inferential"><i class="fa fa-check"></i><b>2.3.3</b> Inferential</a></li>
+<li class="chapter" data-level="2.3.4" data-path="week-1.html"><a href="week-1.html#predictive"><i class="fa fa-check"></i><b>2.3.4</b> Predictive</a></li>
+<li class="chapter" data-level="2.3.5" data-path="week-1.html"><a href="week-1.html#causal"><i class="fa fa-check"></i><b>2.3.5</b> Causal</a></li>
+<li class="chapter" data-level="2.3.6" data-path="week-1.html"><a href="week-1.html#mechanistic"><i class="fa fa-check"></i><b>2.3.6</b> Mechanistic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="week-1.html"><a href="week-1.html#answering-the-question"><i class="fa fa-check"></i><b>2.4.1</b> Answering the question</a></li>
+<li class="chapter" data-level="2.4.2" data-path="week-1.html"><a href="week-1.html#checking-the-data"><i class="fa fa-check"></i><b>2.4.2</b> Checking the data</a></li>
+<li class="chapter" data-level="2.4.3" data-path="week-1.html"><a href="week-1.html#tidying-the-data"><i class="fa fa-check"></i><b>2.4.3</b> Tidying the data</a></li>
+<li class="chapter" data-level="2.4.4" data-path="week-1.html"><a href="week-1.html#exploratory-analysis"><i class="fa fa-check"></i><b>2.4.4</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="2.4.5" data-path="week-1.html"><a href="week-1.html#inference"><i class="fa fa-check"></i><b>2.4.5</b> Inference</a></li>
+<li class="chapter" data-level="2.4.6" data-path="week-1.html"><a href="week-1.html#prediction"><i class="fa fa-check"></i><b>2.4.6</b> Prediction</a></li>
+<li class="chapter" data-level="2.4.7" data-path="week-1.html"><a href="week-1.html#causality"><i class="fa fa-check"></i><b>2.4.7</b> Causality</a></li>
+<li class="chapter" data-level="2.4.8" data-path="week-1.html"><a href="week-1.html#written-analyses"><i class="fa fa-check"></i><b>2.4.8</b> Written analyses</a></li>
+<li class="chapter" data-level="2.4.9" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>2.4.9</b> Figures</a></li>
+<li class="chapter" data-level="2.4.10" data-path="week-1.html"><a href="week-1.html#presentations"><i class="fa fa-check"></i><b>2.4.10</b> Presentations</a></li>
+<li class="chapter" data-level="2.4.11" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
+<li class="chapter" data-level="2.4.12" data-path="week-1.html"><a href="week-1.html#r-packages"><i class="fa fa-check"></i><b>2.4.12</b> R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="week-1.html"><a href="week-1.html#your-first-assignment---deconstructing-an-analysis"><i class="fa fa-check"></i><b>2.5</b> Your first assignment - deconstructing an analysis</a></li>
+<li class="chapter" data-level="2.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>2.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>2.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a><ul>
+<li class="chapter" data-level="3.1" data-path="week-2.html"><a href="week-2.html#week-2-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Week 2 Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="week-2.html"><a href="week-2.html#defining-the-question"><i class="fa fa-check"></i><b>3.2.1</b> Defining the question</a></li>
+<li class="chapter" data-level="3.2.2" data-path="week-2.html"><a href="week-2.html#defining-the-ideal-data-set"><i class="fa fa-check"></i><b>3.2.2</b> Defining the ideal data set</a></li>
+<li class="chapter" data-level="3.2.3" data-path="week-2.html"><a href="week-2.html#determine-the-data-you-can-access"><i class="fa fa-check"></i><b>3.2.3</b> Determine the data you can access</a></li>
+<li class="chapter" data-level="3.2.4" data-path="week-2.html"><a href="week-2.html#obtain-the-data"><i class="fa fa-check"></i><b>3.2.4</b> Obtain the data</a></li>
+<li class="chapter" data-level="3.2.5" data-path="week-2.html"><a href="week-2.html#clean-the-data"><i class="fa fa-check"></i><b>3.2.5</b> Clean the data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="week-2.html"><a href="week-2.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>3.2.6</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="3.2.7" data-path="week-2.html"><a href="week-2.html#statistical-predictionmodeling"><i class="fa fa-check"></i><b>3.2.7</b> Statistical prediction/modeling</a></li>
+<li class="chapter" data-level="3.2.8" data-path="week-2.html"><a href="week-2.html#interpret-results"><i class="fa fa-check"></i><b>3.2.8</b> Interpret results</a></li>
+<li class="chapter" data-level="3.2.9" data-path="week-2.html"><a href="week-2.html#challenge-results"><i class="fa fa-check"></i><b>3.2.9</b> Challenge results</a></li>
+<li class="chapter" data-level="3.2.10" data-path="week-2.html"><a href="week-2.html#synthesizewrite-up-results"><i class="fa fa-check"></i><b>3.2.10</b> Synthesize/write up results</a></li>
+<li class="chapter" data-level="3.2.11" data-path="week-2.html"><a href="week-2.html#create-reproducible-code"><i class="fa fa-check"></i><b>3.2.11</b> Create reproducible code</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="week-2.html"><a href="week-2.html#raw-informal-and-formal-data-science"><i class="fa fa-check"></i><b>3.3</b> Raw, informal, and formal data science</a></li>
+<li class="chapter" data-level="3.4" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.5" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="week-3.html"><a href="week-3.html"><i class="fa fa-check"></i><b>4</b> Week 3</a><ul>
+<li class="chapter" data-level="4.1" data-path="week-3.html"><a href="week-3.html#week-3-learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Week 3 Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="week-3.html"><a href="week-3.html#organizing-a-data-analysis"><i class="fa fa-check"></i><b>4.2</b> Organizing a data analysis</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="week-3.html"><a href="week-3.html#motivation---the-stick"><i class="fa fa-check"></i><b>4.2.1</b> Motivation - the stick</a></li>
+<li class="chapter" data-level="4.2.2" data-path="week-3.html"><a href="week-3.html#motivation---the-carrot"><i class="fa fa-check"></i><b>4.2.2</b> Motivation - the carrot</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="week-3.html"><a href="week-3.html#project-organization"><i class="fa fa-check"></i><b>4.3</b> Project Organization</a></li>
+<li class="chapter" data-level="4.4" data-path="week-3.html"><a href="week-3.html#readme.md"><i class="fa fa-check"></i><b>4.4</b> README.md</a></li>
+<li class="chapter" data-level="4.5" data-path="week-3.html"><a href="week-3.html#gitignore"><i class="fa fa-check"></i><b>4.5</b> .gitignore</a></li>
+<li class="chapter" data-level="4.6" data-path="week-3.html"><a href="week-3.html#data"><i class="fa fa-check"></i><b>4.6</b> data/</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="week-3.html"><a href="week-3.html#the-components-of-a-data-set"><i class="fa fa-check"></i><b>4.6.1</b> The components of a data set</a></li>
+<li class="chapter" data-level="4.6.2" data-path="week-3.html"><a href="week-3.html#dataraw_data"><i class="fa fa-check"></i><b>4.6.2</b> data/raw_data/</a></li>
+<li class="chapter" data-level="4.6.3" data-path="week-3.html"><a href="week-3.html#dataprocessed_data"><i class="fa fa-check"></i><b>4.6.3</b> data/processed_data</a></li>
+<li class="chapter" data-level="4.6.4" data-path="week-3.html"><a href="week-3.html#datacodebook.md"><i class="fa fa-check"></i><b>4.6.4</b> data/codebook.md</a></li>
+<li class="chapter" data-level="4.6.5" data-path="week-3.html"><a href="week-3.html#the-instruction-listscript"><i class="fa fa-check"></i><b>4.6.5</b> The instruction list/script</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="week-3.html"><a href="week-3.html#code"><i class="fa fa-check"></i><b>4.7</b> code/</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="week-3.html"><a href="week-3.html#coderaw_code"><i class="fa fa-check"></i><b>4.7.1</b> code/raw_code</a></li>
+<li class="chapter" data-level="4.7.2" data-path="week-3.html"><a href="week-3.html#codefinal_code"><i class="fa fa-check"></i><b>4.7.2</b> code/final_code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>4.8</b> figures</a><ul>
+<li class="chapter" data-level="4.8.1" data-path="week-3.html"><a href="week-3.html#figuresexploratory_figures"><i class="fa fa-check"></i><b>4.8.1</b> figures/exploratory_figures</a></li>
+<li class="chapter" data-level="4.8.2" data-path="week-3.html"><a href="week-3.html#figuresexplanatory_figures"><i class="fa fa-check"></i><b>4.8.2</b> figures/explanatory_figures</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="week-3.html"><a href="week-3.html#products"><i class="fa fa-check"></i><b>4.9</b> products/</a><ul>
+<li class="chapter" data-level="4.9.1" data-path="week-3.html"><a href="week-3.html#productswriting"><i class="fa fa-check"></i><b>4.9.1</b> products/writing</a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="week-3.html"><a href="week-3.html#file-naming"><i class="fa fa-check"></i><b>4.10</b> File naming</a></li>
+<li class="chapter" data-level="4.11" data-path="week-3.html"><a href="week-3.html#absolute-vs.-relative-paths"><i class="fa fa-check"></i><b>4.11</b> Absolute vs. relative paths</a></li>
+<li class="chapter" data-level="4.12" data-path="week-3.html"><a href="week-3.html#coding-variables"><i class="fa fa-check"></i><b>4.12</b> Coding Variables</a></li>
+<li class="chapter" data-level="4.13" data-path="week-3.html"><a href="week-3.html#project-management-software"><i class="fa fa-check"></i><b>4.13</b> Project management software</a></li>
+<li class="chapter" data-level="4.14" data-path="week-3.html"><a href="week-3.html#coding-style"><i class="fa fa-check"></i><b>4.14</b> Coding style</a></li>
+<li class="chapter" data-level="4.15" data-path="week-3.html"><a href="week-3.html#chain-of-custody-for-data"><i class="fa fa-check"></i><b>4.15</b> Chain of Custody for Data</a></li>
+<li class="chapter" data-level="4.16" data-path="week-3.html"><a href="week-3.html#version-control"><i class="fa fa-check"></i><b>4.16</b> Version Control</a></li>
+<li class="chapter" data-level="4.17" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>4.17</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.18" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>4.18</b> Homework</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Data Science 2020</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="week-3" class="section level1">
+<h1><span class="header-section-number">4</span> Week 3</h1>
+<div id="week-3-learning-objectives" class="section level2">
+<h2><span class="header-section-number">4.1</span> Week 3 Learning Objectives</h2>
+<div class="keyidea">
+<p>At the end of this lesson you will be able to:</p>
+<ul>
+<li>Organize a data analysis</li>
+<li>Use appropriate file naming</li>
+<li>Develop and apply a coding style</li>
+<li>Distinguish raw from processed data</li>
+<li>Apply the chain of custody model for data</li>
+</ul>
+</div>
+</div>
+<div id="organizing-a-data-analysis" class="section level2">
+<h2><span class="header-section-number">4.2</span> Organizing a data analysis</h2>
+<p>This week we will focus on organizing a data analysis from high level to low level. An important thing to keep in mind is that this is <em>one</em> system for doing this, it is not the <em>only</em> system for data analysis organization. The key idea here is just to be consistent in everything you do - from folder structure, to file names, to data columns, and more. This will slow you down a bit as you do your analysis! That’s ok! You will more than make up for the time somewhere down the line when you have to repeat or reproduce an analysis. As Karl Broman <a href="https://kbroman.org/AdvData/12_collab_eda.pdf">puts it</a> the key steps are:</p>
+<div class="keyidea">
+<ul>
+<li>Step 1: slow down and document.</li>
+<li>Step 2: have sympathy for your future self.</li>
+<li>Step 3: have a system</li>
+</ul>
+</div>
+<div id="motivation---the-stick" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Motivation - the stick</h3>
+<p>This is an advanced data science class. You’d think that the most important parts of advanced data science would focus on complicated methods like deep learning, or managing massive scale data sets. But the reality is that the primary measure of how well or poorly a data analysis goes comes down to organization and management of data, code, and writing.</p>
+<p>This is going to seem pretty simple for an advanced course, but is remarkably one of the things most commonly left out of courses. If you focus on setting your analysis well up from the start you’ll have a much better time!</p>
+<p><img src="images/week3/badtime.jpg" /></p>
+<p>The classic example of what can go wrong with a poorly organized, documented data analysis is the <a href="https://www.economist.com/science-and-technology/2011/09/10/an-array-of-errors">Duke Saga</a>. In this case, a group of scientists at Duke developed a statistical model that appeared to precisely predict patient response to chemotherapy based on gene expression measurements. This seemed like a huge precision medicine success and resulted in several high profile publications:</p>
+<p><img src="http://jtleek.com/advdatasci/imgs/potti.png" /></p>
+<p>Unfortunately, it turns out there were a lot of problems with the analysis. Some of them were very obvious problems - things like the analysts used probability incorrectly in their calculations. But many of the <em>most</em> important problems were things like row-names shifting due to Excel and mis-labeled values for variables (things like coding 0 = responded, 1= not responded, when it was actually the reverse). These mistakes were ultimately detailed in a statistical paper:</p>
+<p><img src="http://jtleek.com/advdatasci/imgs/baggerly.png" /></p>
+<p>This paper was one of the fastest reviewed in the history of statistics! The reason was that by the time this paper was published, there were already clinical trials ongoing where patients were being assigned the wrong therapy on the basis of this flawed data analysis!</p>
+<p>How could clinical trials have gotten started so quickly?! The reason is that it actually took almost 3 years (!) for the statisticians reproducing the paper to get all of the code and data together so that they could reverse engineer the problems with the analysis.</p>
+<p><img src="http://jtleek.com/advdatasci/imgs/timeline-potti.png" /></p>
+<p>It turns out there were a lot of problems with this case, from scientific, to cultural, to statistical - that led to the eventual bad clinical trial. This case was so bad that the scientists and administrators involved even faced lawsuits.</p>
+<p><img src="http://jtleek.com/advdatasci/imgs/potti-lawsuit.png" /></p>
+<p>Obviously most data analyses aren’t this high risk! But the real problems here were due to a lack of organization and sharing of the original research materials for the data analysis that identified the chemotherapy predictors. Had the analysts used an organized data analysis many of these problems could be avoided.</p>
+<p>If you want a <em>highly entertaining</em> review of the entire Duke Saga by one of the statisticians involved in identifying the errors (and one of the most entertaining statistical speakers out there) you can watch this <a href="http://www.birs.ca/events/2013/5-day-workshops/13w5083/videos/watch/201308141121-Baggerly.html">video of a talk he gave</a>.</p>
+</div>
+<div id="motivation---the-carrot" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Motivation - the carrot</h3>
+<p>When you perform a data analysis the audience is either someone else or you at some time in the future.</p>
+<p><img src="images/week3/your-audience.jpg" /></p>
+<p>As we mentioned last week the most common query from a collaborator, manager, or executive when you perform an analysis is:</p>
+<blockquote>
+<p>Could you just re-run that code with the [latest/different/best] parameters?</p>
+</blockquote>
+<p>So even when you think you are doing an analysis for someone else, your code is actually most often just for you at some point in the future.</p>
+<p><img src="images/week3/why-you-audience.jpg" /></p>
+<p>When you first get started analyzing data you may have one project or two that you are working on. You will know where all the files are and what they all mean. But as you go on in your career, you will accumulate more analyses and each one will have a large number of code, data, and writing files. This isn’t a big problem at first, but later when someone asks you to find, reproduce, or share a piece of analysis from a paper 10 years ago, you’ll be so grateful to your past self for being organized!</p>
+</div>
+</div>
+<div id="project-organization" class="section level2">
+<h2><span class="header-section-number">4.3</span> Project Organization</h2>
+<p>At a high level when you are organizing a data analysis project you need to manage data, code, writing, and analysis products (figures, tables, graphics). When I set up a new project I usually use a single folder with a structure like this.</p>
+<ul>
+<li>README.md</li>
+<li>.gitignore</li>
+<li>project.Rproj</li>
+<li>data/
+<ul>
+<li>raw_data/</li>
+<li>tidy_data/</li>
+<li>codebook.md</li>
+</ul></li>
+<li>code/
+<ul>
+<li>raw_code/</li>
+<li>final_code/</li>
+</ul></li>
+<li>figures/
+<ul>
+<li>exploratory_figures/</li>
+<li>explanatory_figures/</li>
+</ul></li>
+<li>products/
+<ul>
+<li>writing/</li>
+</ul></li>
+</ul>
+</div>
+<div id="readme.md" class="section level2">
+<h2><span class="header-section-number">4.4</span> README.md</h2>
+<p>This is maybe the most critical piece of any data analysis that you are working on. You absolutely <em>will</em> forget which files were the original data, which code you used to clean the data with, that one really weird quik that means you have to run <code>clean_data.R</code> before <code>preprocess_data.R</code> and many other small details. If you keep a steady record of these changes as you go it will be <em>much</em> easier to reproduce, share, or manage your analysis. This could save future you hundreds or thousands of hours of repetitive and frustrating work.</p>
+</div>
+<div id="gitignore" class="section level2">
+<h2><span class="header-section-number">4.5</span> .gitignore</h2>
+<p>This file is critical. It tells you which files for Github to ignore when you are pushing to the web. The files that you should make sure you ignore are:</p>
+<ul>
+<li>Any data files that contain PII or HIPAA protected data</li>
+<li>Any files that contain access keys or tokens to databases or services</li>
+<li>Any big data or image files (&gt; 25 MB)</li>
+</ul>
+<p>It is particularly important that you make sure you don’t push access keys or private data to Github where they can be accessed publicly. Generally when I have data or keys like these I need to protect I create an additional folder <code>project/private</code> that contains these files. I then add _private/*_ to my .gitignore folder so that all the files in this folder are ignored. I push the .gitignore file to Github before I put anything in the private folder. Then, because I’m always paranoid about these things, I generally put a more innocuous file in the private folder and push to test to make sure it is ignored.</p>
+</div>
+<div id="data" class="section level2">
+<h2><span class="header-section-number">4.6</span> data/</h2>
+<div id="the-components-of-a-data-set" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> The components of a data set</h3>
+<p>The work of converting the data from raw form to directly analyzable form is the first step of any data analysis. It is important to see the raw data, understand the steps in the processing pipeline, and be able to incorporate hidden sources of variability in one’s data analysis. On the other hand, for many data types, the processing steps are well documented and standardized.</p>
+<p>These are the components of a processed data set:</p>
+<ol style="list-style-type: decimal">
+<li>The raw data.</li>
+<li>A tidy data set.</li>
+<li>A code book describing each variable and its values in the tidy data set.</li>
+<li>An explicit and exact recipe you used to go from 1 -&gt; 2,3</li>
+</ol>
+</div>
+<div id="dataraw_data" class="section level3">
+<h3><span class="header-section-number">4.6.2</span> data/raw_data/</h3>
+<p>It is critical that you include the rawest form of the data that you have access to. Here are some examples of the raw form of data:</p>
+<ol style="list-style-type: decimal">
+<li>The strange binary file your measurement machine spits out</li>
+<li>The unformatted Excel file with 10 worksheets the company you contracted with sent you</li>
+<li>The complicated JSON data you got from scraping the Twitter API</li>
+<li>The hand-entered numbers you collected looking through a microscope</li>
+</ol>
+<p>You know the raw data is in the right format if you:</p>
+<ul>
+<li>Ran no software on the data</li>
+<li>Did not manipulate any of the numbers in the data</li>
+<li>You did not remove any data from the data set</li>
+<li>You did not summarize the data in any way</li>
+</ul>
+<p>If you did any manipulation of the data at all it is not the raw form of the data. Reporting manipulated data as raw data is a very common way to slow down the analysis process, since the analyst will often have to do a forensic study of your data to figure out why the raw data looks weird.</p>
+</div>
+<div id="dataprocessed_data" class="section level3">
+<h3><span class="header-section-number">4.6.3</span> data/processed_data</h3>
+<p>The general principles of tidy data are laid out by Hadley Wickham in this paper and this video. The paper and the video are both focused on the R package, which you may or may not know how to use. Regardless the four general principles you should pay attention to are:</p>
+<ul>
+<li>Each variable you measure should be in one column</li>
+<li>Each different observation of that variable should be in a different row</li>
+<li>There should be one table for each “kind” of variable</li>
+<li>If you have multiple tables, they should include a column in the table that allows them to be linked</li>
+</ul>
+<p>While these are the hard and fast rules, there are a number of other things that will make your data set much easier to handle. First is to include a row at the top of each data table/spreadsheet that contains full row names. So if you measured age at diagnosis for patients, you would head that column with the name AgeAtDiagnosis instead of something like ADx or another abbreviation that may be hard for another person to understand.</p>
+<p>Here is an example of how this would work from genomics. Suppose that for 20 people you have collected gene expression measurements with RNA-sequencing. You have also collected demographic and clinical information about the patients including their age, treatment, and diagnosis. You would have one table/spreadsheet that contains the clinical/demographic information. It would have four columns (patient id, age, treatment, diagnosis) and 21 rows (a row with variable names, then one row for every patient). You would also have one spreadsheet for the summarized genomic data. Usually this type of data is summarized at the level of the number of counts per exon. Suppose you have 100,000 exons, then you would have a table/spreadsheet that had 21 rows (a row for gene names, and one row for each patient) and 100,001 columns (one row for patient ids and one row for each data type).</p>
+<p>If you are sharing your data with the collaborator in Excel, the tidy data should be in one Excel file per table. They should not have multiple worksheets, no macros should be applied to the data, and no columns/cells should be highlighted. Alternatively share the data in a CSV or TAB-delimited text file.</p>
+</div>
+<div id="datacodebook.md" class="section level3">
+<h3><span class="header-section-number">4.6.4</span> data/codebook.md</h3>
+<p>For almost any data set, the measurements you calculate will need to be described in more detail than you will sneak into the spreadsheet. The code book contains this information. At minimum it should contain:</p>
+<ul>
+<li>Information about the variables (including units!) in the data set not contained in the tidy data</li>
+<li>Information about the summary choices you made</li>
+<li>Information about the experimental study design you used</li>
+</ul>
+<p>In our genomics example, the analyst would want to know what the unit of measurement for each clinical/demographic variable is (age in years, treatment by name/dose, level of diagnosis and how heterogeneous). They would also want to know how you picked the exons you used for summarizing the genomic data (UCSC/Ensembl, etc.). They would also want to know any other information about how you did the data collection/study design. For example, are these the first 20 patients that walked into the clinic? Are they 20 highly selected patients by some characteristic like age? Are they randomized to treatments?</p>
+<p>A common format for this document is a Word file. There should be a section called “Study design” that has a thorough description of how you collected the data. There is a section called “Code book” that describes each variable and its units.</p>
+</div>
+<div id="the-instruction-listscript" class="section level3">
+<h3><span class="header-section-number">4.6.5</span> The instruction list/script</h3>
+<p>You may have heard this before, but reproducibility is kind of a big deal in computational science. That means, when you submit your paper, the reviewers and the rest of the world should be able to exactly replicate the analyses from raw data all the way to final results. If you are trying to be efficient, you will likely perform some summarization/data analysis steps before the data can be considered tidy.</p>
+<p>The ideal thing for you to do when performing summarization is to create a computer script (in R, Python, or something else) that takes the raw data as input and produces the tidy data you are sharing as output. You can try running your script a couple of times and see if the code produces the same output.</p>
+<p>In many cases, the person who collected the data has incentive to make it tidy for a statistician to speed the process of collaboration. They may not know how to code in a scripting language. In that case, what you should provide the statistician is something called pseudocode. It should look something like:</p>
+<ul>
+<li>Step 1 - take the raw file, run version 3.1.2 of summarize software with parameters a=1, b=2, c=3</li>
+<li>Step 2 - run the software separately for each sample</li>
+<li>Step 3 - take column three of outputfile.out for each sample and that is the corresponding row in the output data set</li>
+</ul>
+<p>You should also include information about which system (Mac/Windows/Linux) you used the software on and whether you tried it more than once to confirm it gave the same results. Ideally, you will run this by a fellow student/labmate to confirm that they can obtain the same output file you did.</p>
+</div>
+</div>
+<div id="code" class="section level2">
+<h2><span class="header-section-number">4.7</span> code/</h2>
+<div id="coderaw_code" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> code/raw_code</h3>
+<p>When you start out doing an analysis recall that you will be doing exploration and data cleaning. Unless you have worked with this type of data before, you will be acting like the blind men and the elephant - just trying to figure out the different aspects of the data set.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Blind_monks_examining_an_elephant.jpg/2560px-Blind_monks_examining_an_elephant.jpg" /></p>
+<p>The important characteristics of this stage of an analysis are speed and comprehensiveness. You will want to make many plots, tables, and summaries of the data. You will generally not be trying to make these clean or organize the results. This is ok! You can put these (often slightly unorganized) R scripts in the <code>code/raw_code</code> folder. While these scripts are generally unorganized two things will save you a lot of time later:</p>
+<ol style="list-style-type: decimal">
+<li><p>Make sure you comment your code, even if it is really fast/simple comments. Especially highlight any important discoveries/plots you think might be useful later with labeled comments.</p></li>
+<li><p>If you find anything really important that you definitely will include in downstream analysis add a note to your README.md file about the nature of the discovery and which file you discovered it in, so you can find it later.</p></li>
+</ol>
+</div>
+<div id="codefinal_code" class="section level3">
+<h3><span class="header-section-number">4.7.2</span> code/final_code</h3>
+<p>Your raw code is mostly for <em>you</em> - to help you figure out a data set, start to scope your analysis, and organize your thoughts. Your final code is for <em>other people</em> or <em>future you</em>. Final code should be organized, easy to follow, and reproducible. Final code is like a curation of your original raw code. You shouldn’t keep every plot, figure, summary or table from your raw code in your final code. Only the ones that are important and are part of the story.</p>
+<p>Some important principles of final code are:</p>
+<ol style="list-style-type: decimal">
+<li>Files should be ordered so it is easy to follow the flow of an analysis (see file naming section for more)</li>
+<li>You should use relative, rather than absolute, paths for all coding within your final code (see section on relative vs absolute paths below)</li>
+<li>If you randomly sample data, or use methods like k means clustering or random forests that are inherently stochastic, you should set a seed so that calculations can be reproduced exactly.</li>
+<li>Final code files should either be in R markdown format or heavily commented so it is easy to follow all the steps in ana analysis.</li>
+</ol>
+</div>
+</div>
+<div id="figures" class="section level2">
+<h2><span class="header-section-number">4.8</span> figures</h2>
+<p>We will have an entire week focused on just figures, so for now we will briefly explain these two folders, but more will be coming soon!</p>
+<div id="figuresexploratory_figures" class="section level3">
+<h3><span class="header-section-number">4.8.1</span> figures/exploratory_figures</h3>
+<p>Exploratory figures are figures that are made rapidly to determine the structure, quirks, and summaries of the data that will be important for downstream analysis. The important thing about exploratory figures is that you should make a lot of them! Exploratory figures are like raw code, they are mostly for you. You should save any figure you make that you think could be useful for you later. You should still maintain good file naming practices and include comments in your raw code that point out which code produces which exploratory figure.</p>
+</div>
+<div id="figuresexplanatory_figures" class="section level3">
+<h3><span class="header-section-number">4.8.2</span> figures/explanatory_figures</h3>
+<p>Explanatory figures, like final code, is for sharing with others. You will generally make many fewer explantory figures than exploratory figures, they will generally be much more polished, and you will want to make sure that they clearly follow the “arc” of the data analysis you are performing. Since this is a folder you will be sharing with others, it is a good idea to include documentation in your README.md explaining what these figures are and which code in the <code>code/final_code</code> folder makes these figures.</p>
+</div>
+</div>
+<div id="products" class="section level2">
+<h2><span class="header-section-number">4.9</span> products/</h2>
+<p>This folder is for any complete data analytic products you will be sharing with your collaborators, manager, or audience. For our class, we will be primarily focusing on written data analyses so the main folder we include is <code>products/writing</code> but you may also include folders such as <code>products/presentations</code>, <code>products/shinyapps</code>, or <code>products/dashboards</code> if they are more appropriate for the type of sharing you are performing.</p>
+<div id="productswriting" class="section level3">
+<h3><span class="header-section-number">4.9.1</span> products/writing</h3>
+<p>This folder will contain written documents you are sharing with collaborators. They may be Word documents, links to Google Docs, or Latex documents. Sometimes it will be possible for one of your .Rmd files to compile directly to these documents, but it is more common that these will be passed back and forth with collaborators. It is good to separate these writing files from those that you are managing and organizing for the broader data analysis.</p>
+</div>
+</div>
+<div id="file-naming" class="section level2">
+<h2><span class="header-section-number">4.10</span> File naming</h2>
+<p><a href="https://jennybryan.org/">Jenny Bryan</a>, one of the world’s best data scientists says that:</p>
+<blockquote>
+<p>File organization and naming are powerful weapons against chaos.</p>
+</blockquote>
+<p>If this looks familiar, you may want to update your file naming approach!</p>
+<p><img src="https://imgs.xkcd.com/comics/documents_2x.png" /></p>
+<p>She has outlined some key principles for naming files. While these principles are especially useful for final code, they are also useful for naming data files, for naming raw code, and for naming figures and writing. The principles are that files should be:</p>
+<ul>
+<li>Machine readable</li>
+<li>Human readable</li>
+<li>Be nicely ordered</li>
+</ul>
+<p>Machine readable means that file names shouldn’t contain spaces, special characters, and should include important pieces of information about the file contents (sometimes called slugs) separated by underscores or dashes so that it is easy to run computer code to search for specific files. It is often easier if file names are entirely lowercase letters to avoid simple coding errors.</p>
+<p>Human readable means that files should be labeled with names that make it easy for a person to follow along. So err on the side of long file names rather than abbreviations, numeric only file names, or obscure file names.</p>
+<p>When you open a folder - especially the final code folder - it is useful to see the files in the order you want them to be run. One way to do this is to name files alpha-numerically so that they will appear in the right order on your computer. One way to do this is to order the files and then append a number to the beginning of each file name (like <code>01_data_cleaning.R</code>, <code>02_exploratory_analysis.R</code> etc. so that the files will be ordered correctly). Here are some examples of good and bad names for files - can you figure out why the bad file names are bad?</p>
+<p><img src="images/week3/file_names.png" /></p>
+<p>As an example, here are two data files from an analysis I worked on.</p>
+<blockquote>
+<p>processed_pvalue_data_from_pubmed_oct24.rData
+raw_pvalue_data_from_pubmed_oct24.rData</p>
+</blockquote>
+<p>The first part of the file name tells you what I did to the data:</p>
+<blockquote>
+<p><strong>processed</strong>_pvalue_data_from_pubmed_oct24.rData
+<strong>raw</strong>_pvalue_data_from_pubmed_oct24.rData</p>
+</blockquote>
+<p>the second part of the file name tells you what kind of data it is:</p>
+<blockquote>
+<p>processed_<strong>pvalue_data_from_pubmed</strong>_oct24.rData
+raw_<strong>pvalue_data_from_pubmed</strong>_oct24.rData</p>
+</blockquote>
+<p>and the last part tells you the date I pulled the data:</p>
+<blockquote>
+<p>processed_pvalue_data_from_pubmed_<strong>oct24</strong>.rData
+raw_pvalue_data_from_pubmed_<strong>oct24</strong>.rData</p>
+</blockquote>
+<p>These file names are human readable, machine readable (you can sort by processing type, etc.), and they are nicely ordered if you care about the data processing as the main ordering variable.</p>
+</div>
+<div id="absolute-vs.-relative-paths" class="section level2">
+<h2><span class="header-section-number">4.11</span> Absolute vs. relative paths</h2>
+<p>An important reason you are organizing your data analysis files is that you will often have to share the files with others. One thing to keep in mind is that when you share files with others <em>they are no longer on your computer</em>. This means that if you give your code to someone else, they will need to be able to find the files, data, and code within the folders you have created inside your project.</p>
+<p>Imagine for example that you have set up your folder structure like this:</p>
+<p><img src="images/week3/file_structure.png" /></p>
+<p>The reality is that while you will share only this one folder with someone else; it is on your computer somewhere and might be buried deep in your folder structure.</p>
+<p><img src="images/week3/your_files.png" /></p>
+<p>The important thing to realize is you have to specify files you call in your analysis so they can be found by others. So if you source a file like this:</p>
+<ul>
+<li><code>source('C:\Documents\ds_projects\project\code\final_code\myfile.R')</code></li>
+<li><code>source('/root/analyses/ds_projects/project/code/final_code/myfile.R')</code></li>
+</ul>
+<p>Then it won’t work on someone else’s computer since they don’t have that same file structure!</p>
+<p>To avoid this, you should use relative paths, which specify the file path to a folder relative to the project folder. You can do that with the <a href="https://cran.r-project.org/web/packages/here/index.html">here</a> package in R. The here package looks for a .Rproj file and points to that directory:</p>
+<p><img src="images/week3/here_base.png" /></p>
+<p>The nice thing about the <code>here</code> function finds the base folder regardless of which folder you are in inside the project directory:</p>
+<p><img src="images/week3/here_stable.png" /></p>
+<p>You can use the here function to define paths in your code to code or data files:</p>
+<p><img src="images/week3/here_filename.png" /></p>
+<p>So for example if your working directory is <code>/root/analyses/ds_projects/project/</code> and you run the code:</p>
+<p><code>here('code/final_code/myfile.R')</code></p>
+<p>it will produce the file path:</p>
+<p><code>/root/analyses/ds_projects/project/code/final_code/myfile.R</code></p>
+<p>and if you are on a different computer and your working directory is <code>C:\Documents\ds_projects\</code> and you run the code:</p>
+<p><code>here('code/final_code/myfile.R')</code></p>
+<p>it will produce the file path:</p>
+<p><code>C:\Documents\ds_projects\project\code\final_code\myfile.R</code></p>
+<p>In other words, here will produce the complete path to your <code>myfile.R</code> file, <em>relative</em> to the directory where you have stored .Rproj. This means that regardless of where a person puts the folder on their computer, the here function will be able to create the path to the data.</p>
+<p>The optimal way to take advantage of this package is to use <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">Rstudio projects</a> but you can use the <code>set_here()</code> function to create a .here file that will function as if it was the .Rproj file for targeting the here function.</p>
+</div>
+<div id="coding-variables" class="section level2">
+<h2><span class="header-section-number">4.12</span> Coding Variables</h2>
+<p>When you put variables into a spreadsheet there are several main categories you will run into depending on their data type:</p>
+<ul>
+<li>Continuous</li>
+<li>Ordinal</li>
+<li>Categorical</li>
+<li>Missing</li>
+<li>Censored</li>
+</ul>
+<p>Continuous variables are anything measured on a quantitative scale that could be any fractional number. An example would be something like weight measured in kg. Ordinal data are data that have a fixed, small (&lt; 100) number of levels but are ordered. This could be for example survey responses where the choices are: poor, fair, good. Categorical data are data where there are multiple categories, but they aren’t ordered. One example would be sex: male or female. Missing data are data that are missing and you don’t know the mechanism. You should code missing values as NA. Censored data/make up/ throw away missing observations.</p>
+<p>In general, try to avoid coding categorical or ordinal variables as numbers. When you enter the value for sex in the tidy data, it should be “male” or “female”. The ordinal values in the data set should be “poor”, “fair”, and “good” not 1, 2 ,3. This will avoid potential mixups about which direction effects go and will help identify coding errors.</p>
+<p>Always encode every piece of information about your observations using text. For example, if you are storing data in Excel and use a form of colored text or cell background formatting to indicate information about an observation (“red variable entries were observed in experiment 1.”) then this information will not be exported (and will be lost!) when the data is exported as raw text. Every piece of data should be encoded as actual text that can be exported.</p>
+<div class="resources">
+<p>One very good approach to naming columns in a data analysis are with multiple levels as described in this great <a href="https://emilyriederer.netlify.app/post/column-name-contracts/">blog post by Emily Riederer</a>. For example your variable names might include:</p>
+<ul>
+<li>A slug for the type of variable (ID for ids, IND for indicators, N for counts, etc.)</li>
+<li>A slug for subjects being measured (DRIVER for drivers, RIDER for riders etc.)</li>
+<li>A slug for what is being measured (CITY, ZIPCODE, etc)</li>
+</ul>
+<p>which turns into data column names like:</p>
+<ul>
+<li>ID_DRIVER</li>
+<li>N_TRIP_PASSENGER_ORIGIN_DESTINATION</li>
+</ul>
+<p>The blog post contains much more information on this approach.</p>
+</div>
+</div>
+<div id="project-management-software" class="section level2">
+<h2><span class="header-section-number">4.13</span> Project management software</h2>
+<p>The approach we discussed here to managing a project can be done by hand or by copy pasting each time you create a new project. It has some advantages - it is lightweight and focused on organization - so you don’t depend on any outside software.</p>
+<p>That being said there are some important pieces of software that have been developed for project management in R. These packages can help automate some of the processes that make data project management difficult.</p>
+<div class="resources">
+<ul>
+<li><a href="https://docs.ropensci.org/drake/">drake</a>- is software for automating pipelines in R, it is smart about knowing which file to run in which order and can be really useful if you have a complicated set of processing scripts that must be run in just the right order to produce your final analysis.</li>
+<li><a href="https://github.com/jdblischak/workflowr">workflowr</a> - is a package for setting up and automating some of the file organization/folder structure described in this lecture. It also contains workflow management functions and can be combined with drake to make workflows automated.</li>
+<li><a href="https://snakemake.github.io/">snakemake</a> is more general purpose workflow automation software. If you are doing lots of processing outside of R, this is probably more useful than drake.</li>
+</ul>
+</div>
+</div>
+<div id="coding-style" class="section level2">
+<h2><span class="header-section-number">4.14</span> Coding style</h2>
+<p>While it isn’t as critical as some of the other organizing principles we have discussed here, having clean code is really helpful for making it easier for others to follow your analysis. As with many of the other suggestions in this week’s lesson, the key principle here is consistency. There are a variety of different coding style definitions you can go with - if you use a popular framework your code will be more easily readable by individuals from that community.</p>
+<div class="resources">
+<ul>
+<li><a href="https://google.github.io/styleguide/Rguide.html">Google’s R Style Guide</a></li>
+<li><a href="https://style.tidyverse.org/">Tidyverse Style Guide</a></li>
+<li><a href="https://bioconductor.org/developers/how-to/coding-style/">Bioconductor Style Guide</a></li>
+</ul>
+</div>
+</div>
+<div id="chain-of-custody-for-data" class="section level2">
+<h2><span class="header-section-number">4.15</span> Chain of Custody for Data</h2>
+<p>“Raw data” is one of those terms that everyone in statistics and data science uses but no one defines. For example, we all agree that we should be able to recreate results in scientific papers from the raw data and the code for that paper.</p>
+<blockquote>
+<p>But what do we mean when we say raw data?</p>
+</blockquote>
+<p>When working with collaborators or students I often find myself saying - could you just give me the raw data so I can do the normalization or processing myself. To give a concrete example, I work in the analysis of data from <a href="http://www.nature.com/nbt/journal/v26/n10/full/nbt1486.html">high-throughput genomic sequencing experiments</a>.</p>
+<p>These experiments produce data by breaking up genomic molecules into short fragements of DNA - then reading off parts of those fragments to generate “reads” - usually 100 to 200 letters long per read. But the reads are just puzzle pieces that need to be fit back together and then quantified to produce measurements on DNA variation or gene expression abundances.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/simplystats/simplystats.github.io/master/_images/sequencing.png" alt="" />
+<p class="caption">High throughput sequencing</p>
+</div>
+<p><a href="http://cbcb.umd.edu/~hcorrada/CFG/lectures/lect22_seqIntro/seqIntro.pdf">Image from Hector Corrata Bravo’s lecture notes</a></p>
+<p>When I say “raw data” when talking to a collaborator I mean the reads that are reported from the sequencing machine. To me that is the rawest form of the data I will look at. But to generate those reads the sequencing machine first (1) created a set of images for each letter in the sequence of reads, (2) measured the color at the spots on that image to get the quantitative measurement of which letter, and (3) calculated which letter was there with a confidence measure. The raw data I ask for only includes the confidence measure and the sequence of letters itself, but ignores the images and the colors extracted from them (steps 1 and 2).</p>
+<p>So to me the “raw data” is the files of reads. But to the people who produce the machine for sequencing the raw data may be the images or the color data. To my collaborator the raw data may be the quantitative measurements I calculate from the reads. When thinking about this I realized an important characteristics of raw data.</p>
+<blockquote>
+<p>Raw data is relative to your reference frame.</p>
+</blockquote>
+<p>In other words the raw data is raw to <em>you</em> if you have done no processing, manipulation, coding, or analysis of the data. In other words, the file you received from the person before you is untouched. But it may not be the <em>rawest</em> version of the data. The person who gave you the raw data may have done some computations. They have a different “raw data set”.</p>
+<p>The implication for reproducibility and replicability is that we need a “chain of custody”. The chain of custody model states that each person must keep a copy of the raw data and a complete record of the operations they performed to arrive at their version of processed data. As long as each person follows these steps, then the data will be</p>
+<p>As long as each person keeps a copy and record of the “raw data” to them you can trace the provencance of the data back to the original source.</p>
+</div>
+<div id="version-control" class="section level2">
+<h2><span class="header-section-number">4.16</span> Version Control</h2>
+<p>Typically when you are working on data analysis files, you will have to update them over and over again. One way to handle this is to save a new file each time like in this comic from <a href="http://phdcomics.com/">PhD Comics</a></p>
+<p><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" /></p>
+<p>This is a ….bad idea. You should instead use a version control system that will keep track of the changes to your files. The unfortunate truth about version control though is that most version control systems can be frustrating:</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+“Version control is a truly vital concept that has unfortunately been implemented by madmen.” Amen. <a href="https://t.co/wSI7r9Epm7">https://t.co/wSI7r9Epm7</a>
+</p>
+— mike cook (<span class="citation">@mtrc</span>) <a href="https://twitter.com/mtrc/status/617075570761965568?ref_src=twsrc%5Etfw">July 3, 2015</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>It is as an assumed pre-requisite for this class that you know how to use a version control system like Github. That being said there are a number of good tutorials out there for using Git/Github both with R and more generally. I highly recommend, for example, that you check out <a href="https://happygitwithr.com/">Happy Git and Github for the UseR</a>.</p>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><span class="header-section-number">4.17</span> Additional Resources</h2>
+<div class="resources">
+<ul>
+<li><a href="https://leanpub.com/universities/courses/jhu/cbds-organizing">Organizing Data Science Projects</a></li>
+<li><a href="https://happygitwithr.com/">Happy Git and Github for the UseR</a></li>
+<li><a href="https://speakerdeck.com/jennybc/how-to-name-files">How to name files</a></li>
+<li><a href="https://kbroman.org/AdvData/12_collab_eda.pdf">Coordinating with collaborators</a></li>
+</ul>
+</div>
+</div>
+<div id="homework" class="section level2">
+<h2><span class="header-section-number">4.18</span> Homework</h2>
+<div class="homework">
+<ul>
+<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework3" class="uri">https://github.com/advdatasci/homework3</a></li>
+<li><strong>Repo Name</strong>: homework3-ind-yourgithubusername</li>
+<li><strong>Pull Date</strong>: 2020/09/21 9:00AM Baltimore Time</li>
+</ul>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="week-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ads2020.pdf", "ads2020.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
