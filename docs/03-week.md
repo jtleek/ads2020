@@ -101,11 +101,11 @@ At a high level when you are organizing a data analysis project you need to mana
   * writing/
 
 
-## README.md
+### README.md
 
 This is maybe the most critical piece of any data analysis that you are working on. You absolutely *will* forget which files were the original data, which code you used to clean the data with, that one really weird quik that means you have to run `clean_data.R` before `preprocess_data.R` and many other small details. If you keep a steady record of these changes as you go it will be *much* easier to reproduce, share, or manage your analysis. This could save future you hundreds or thousands of hours of repetitive and frustrating work. 
 
-## .gitignore
+### .gitignore
 
 This file is critical. It tells you which files for Github to ignore when you are pushing to the web. The files that you should make sure you ignore are:
 
@@ -115,9 +115,9 @@ This file is critical. It tells you which files for Github to ignore when you ar
 
 It is particularly important that you make sure you don't push access keys or private data to Github where they can be accessed publicly. Generally when I have data or keys like these I need to protect I create an additional folder `project/private` that contains these files. I then add _private/*_ to my .gitignore folder so that all the files in this folder are ignored. I push the .gitignore file to Github before I put anything in the private folder. Then, because I'm always paranoid about these things, I generally put a more innocuous file in the private folder and push to test to make sure it is ignored. 
 
-## data/
+### data/
 
-### The components of a data set
+#### The components of a data set
 
 The work of converting the data from raw form to directly analyzable form is the first step of any data analysis. It is important to see the raw data, understand the steps in the processing pipeline, and be able to incorporate hidden sources of variability in one's data analysis. On the other hand, for many data types, the processing steps are well documented and standardized. 
 
@@ -129,7 +129,7 @@ These are the components of a processed data set:
 4. An explicit and exact recipe you used to go from 1 -> 2,3
 
 
-### data/raw_data/
+#### data/raw_data/
 
 It is critical that you include the rawest form of the data that you have access to. Here are some examples of the raw form of data:
 
@@ -148,7 +148,7 @@ You know the raw data is in the right format if you:
 
 If you did any manipulation of the data at all it is not the raw form of the data. Reporting manipulated data as raw data is a very common way to slow down the analysis process, since the analyst will often have to do a forensic study of your data to figure out why the raw data looks weird.
 
-### data/processed_data
+#### data/processed_data
 
 The general principles of tidy data are laid out by Hadley Wickham in this paper and this video. The paper and the video are both focused on the R package, which you may or may not know how to use. Regardless the four general principles you should pay attention to are:
 
@@ -163,7 +163,7 @@ Here is an example of how this would work from genomics. Suppose that for 20 peo
 
 If you are sharing your data with the collaborator in Excel, the tidy data should be in one Excel file per table. They should not have multiple worksheets, no macros should be applied to the data, and no columns/cells should be highlighted. Alternatively share the data in a CSV or TAB-delimited text file.
 
-### data/codebook.md
+#### data/codebook.md
 
 For almost any data set, the measurements you calculate will need to be described in more detail than you will sneak into the spreadsheet. The code book contains this information. At minimum it should contain:
 
@@ -176,7 +176,7 @@ In our genomics example, the analyst would want to know what the unit of measure
 
 A common format for this document is a Word file. There should be a section called "Study design" that has a thorough description of how you collected the data. There is a section called "Code book" that describes each variable and its units.
 
-### The instruction list/script
+#### The instruction list/script
 
 You may have heard this before, but reproducibility is kind of a big deal in computational science. That means, when you submit your paper, the reviewers and the rest of the world should be able to exactly replicate the analyses from raw data all the way to final results. If you are trying to be efficient, you will likely perform some summarization/data analysis steps before the data can be considered tidy.
 
@@ -192,9 +192,9 @@ In many cases, the person who collected the data has incentive to make it tidy f
 You should also include information about which system (Mac/Windows/Linux) you used the software on and whether you tried it more than once to confirm it gave the same results. Ideally, you will run this by a fellow student/labmate to confirm that they can obtain the same output file you did.
 
 
-## code/
+### code/
 
-### code/raw_code
+#### code/raw_code
 
 When you start out doing an analysis recall that you will be doing exploration and data cleaning. Unless you have worked with this type of data before, you will be acting like the blind men and the elephant - just trying to figure out the different aspects of the data set. 
 
@@ -207,7 +207,7 @@ The important characteristics of this stage of an analysis are speed and compreh
 2. If you find anything really important that you definitely will include in downstream analysis add a note to your README.md file about the nature of the discovery and which file you discovered it in, so you can find it later. 
 
 
-### code/final_code
+#### code/final_code
 
 Your raw code is mostly for *you* - to help you figure out a data set, start to scope your analysis, and organize your thoughts. Your final code is for *other people* or *future you*. Final code should be organized, easy to follow, and reproducible. Final code is like a curation of your original raw code. You shouldn't keep every plot, figure, summary or table from your raw code in your final code. Only the ones that are important and are part of the story. 
 
@@ -219,24 +219,24 @@ Some important principles of final code are:
 4. Final code files should either be in R markdown format or heavily commented so it is easy to follow all the steps in ana analysis. 
 
 
-## figures
+### figures
 
 We will have an entire week focused on just figures, so for now we will briefly explain these two folders, but more will be coming soon! 
 
-### figures/exploratory_figures
+#### figures/exploratory_figures
 
 Exploratory figures are figures that are made rapidly to determine the structure, quirks, and summaries of the data that will be important for downstream analysis. The important thing about exploratory figures is that you should make a lot of them! Exploratory figures are like raw code, they are mostly for you. You should save any figure you make that you think could be useful for you later. You should still maintain good file naming practices and include comments in your raw code that point out which code produces which exploratory figure. 
 
 
-### figures/explanatory_figures
+#### figures/explanatory_figures
 
 Explanatory figures, like final code, is for sharing with others. You will generally make many fewer explantory figures than exploratory figures, they will generally be much more polished, and you will want to make sure that they clearly follow the "arc" of the data analysis you are performing. Since this is a folder you will be sharing with others, it is a good idea to include documentation in your README.md explaining what these figures are and which code in the `code/final_code` folder makes these figures.  
 
-## products/
+### products/
 
 This folder is for any complete data analytic products you will be sharing with your collaborators, manager, or audience. For our class, we will be primarily focusing on written data analyses so the main folder we include is `products/writing` but you may also include folders such as `products/presentations`, `products/shinyapps`, or `products/dashboards` if they are more appropriate for the type of sharing you are performing. 
 
-### products/writing
+#### products/writing
 
 This folder will contain written documents you are sharing with collaborators. They may be Word documents, links to Google Docs, or Latex documents. Sometimes it will be possible for one of your .Rmd files to compile directly to these documents, but it is more common that these will be passed back and forth with collaborators. It is good to separate these writing files from those that you are managing and organizing for the broader data analysis. 
 
