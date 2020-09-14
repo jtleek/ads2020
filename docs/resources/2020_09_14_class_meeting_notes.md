@@ -9,6 +9,9 @@
         * Feedback/grades being pushed by instructors today
 3. Logistics
         * Identify two individuals to summarize
+        * Reviewer 1/2 present their reviews/start discussion
+        * Random assignment to subgroups
+        * Class discussion 
 4. Discussion
         * Discuss paper: https://www.nejm.org/doi/full/10.1056/NEJMsa1803972
         * Compare/Contrast with blogpost: https://simplystatistics.org/2018/06/08/a-first-look-at-recently-released-official-puerto-rico-death-count-data
