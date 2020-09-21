@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-09-14" />
+<meta name="date" content="2020-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,6 +238,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.11" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>4.11</b> Additional Resources</a></li>
 <li class="chapter" data-level="4.12" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>4.12</b> Homework</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="week-4.html"><a href="week-4.html"><i class="fa fa-check"></i><b>5</b> Week 4</a><ul>
+<li class="chapter" data-level="5.1" data-path="week-4.html"><a href="week-4.html#week-4-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Week 4 Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="week-4.html"><a href="week-4.html#the-optimality-paradox"><i class="fa fa-check"></i><b>5.2</b> The optimality paradox</a></li>
+<li class="chapter" data-level="5.3" data-path="week-4.html"><a href="week-4.html#an-example-of-the-art-of-data-science"><i class="fa fa-check"></i><b>5.3</b> An example of the art of data science</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="week-4.html"><a href="week-4.html#an-important-subtlety---analyst-decisions-change-the-question"><i class="fa fa-check"></i><b>5.3.1</b> An important subtlety - analyst decisions change the question</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="5.4.2" data-path="week-4.html"><a href="week-4.html#replicability"><i class="fa fa-check"></i><b>5.4.2</b> Replicability</a></li>
+<li class="chapter" data-level="5.4.3" data-path="week-4.html"><a href="week-4.html#false-discovery"><i class="fa fa-check"></i><b>5.4.3</b> False discovery</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="week-4.html"><a href="week-4.html#a-theory-of-data-science-success"><i class="fa fa-check"></i><b>5.5</b> A theory of data science success</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="week-4.html"><a href="week-4.html#elements-of-data-science"><i class="fa fa-check"></i><b>5.5.1</b> Elements of Data Science</a></li>
+<li class="chapter" data-level="5.5.2" data-path="week-4.html"><a href="week-4.html#principles-of-data-science"><i class="fa fa-check"></i><b>5.5.2</b> Principles of Data Science</a></li>
+<li class="chapter" data-level="5.5.3" data-path="week-4.html"><a href="week-4.html#data-matching"><i class="fa fa-check"></i><b>5.5.3</b> Data matching</a></li>
+<li class="chapter" data-level="5.5.4" data-path="week-4.html"><a href="week-4.html#exhaustive"><i class="fa fa-check"></i><b>5.5.4</b> Exhaustive</a></li>
+<li class="chapter" data-level="5.5.5" data-path="week-4.html"><a href="week-4.html#skeptical"><i class="fa fa-check"></i><b>5.5.5</b> Skeptical</a></li>
+<li class="chapter" data-level="5.5.6" data-path="week-4.html"><a href="week-4.html#second-order"><i class="fa fa-check"></i><b>5.5.6</b> Second order</a></li>
+<li class="chapter" data-level="5.5.7" data-path="week-4.html"><a href="week-4.html#transparent"><i class="fa fa-check"></i><b>5.5.7</b> Transparent</a></li>
+<li class="chapter" data-level="5.5.8" data-path="week-4.html"><a href="week-4.html#reproducible"><i class="fa fa-check"></i><b>5.5.8</b> Reproducible</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="week-4.html"><a href="week-4.html#what-about-being-correct"><i class="fa fa-check"></i><b>5.6</b> What about being correct?</a></li>
+<li class="chapter" data-level="5.7" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>5.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.8" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>5.8</b> Homework</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -394,7 +419,7 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb1-3"><a href="week-2.html#cb1-3"></a>axes_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/axes.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-4"><a href="week-2.html#cb1-4"></a>clouds_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/clouds.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-5"><a href="week-2.html#cb1-5"></a>axes_json[[<span class="dv">1</span>]]</span></code></pre></div>
-<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;PH\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-23 04:24:44.89514 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;5473237406318592\&quot;,\&quot;drawing\&quot;:[[[15,14,1,0,9,25,18,15,15,52,99,134,147,170,189,188,168,115,56,15,11,12,26,28],[56,99,179,252,255,250,248,240,99,100,109,125,136,123,74,70,60,48,13,0,4,23,55,68]]]}&quot;</code></pre>
+<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;EE\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-15 16:53:34.24086 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;4814171638071296\&quot;,\&quot;drawing\&quot;:[[[75,79,82,84,87],[34,77,215,249,255]],[[76,131,166,168,157,145,90,74,71],[34,6,1,14,93,93,71,59,48]],[[72,69,48,27,0,18,30,36,51,91],[42,36,18,9,3,45,91,101,82,50]],[[71,71],[65,65]]]}&quot;</code></pre>
 <p>The next thing I did was google “quick draw data ndjson rstats”. I found a <a href="https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/">tutorial</a> and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-2.html#cb3-1"></a><span class="kw">library</span>(dplyr)</span>
 <span id="cb3-2"><a href="week-2.html#cb3-2"></a></span>
@@ -405,20 +430,20 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb3-7"><a href="week-2.html#cb3-7"></a>}</span>
 <span id="cb3-8"><a href="week-2.html#cb3-8"></a>first_axe =<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(axes_json[[<span class="dv">1</span>]]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">parse_drawing</span>()</span>
 <span id="cb3-9"><a href="week-2.html#cb3-9"></a>first_axe</span></code></pre></div>
-<pre><code>## # A tibble: 24 x 5
+<pre><code>## # A tibble: 26 x 5
 ##    line      x     y drawing          row_id
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;
-##  1 1        15    56 5473237406318592      1
-##  2 1        14    99 5473237406318592      2
-##  3 1         1   179 5473237406318592      3
-##  4 1         0   252 5473237406318592      4
-##  5 1         9   255 5473237406318592      5
-##  6 1        25   250 5473237406318592      6
-##  7 1        18   248 5473237406318592      7
-##  8 1        15   240 5473237406318592      8
-##  9 1        15    99 5473237406318592      9
-## 10 1        52   100 5473237406318592     10
-## # … with 14 more rows</code></pre>
+##  1 1        75    34 4814171638071296      1
+##  2 1        79    77 4814171638071296      2
+##  3 1        82   215 4814171638071296      3
+##  4 1        84   249 4814171638071296      4
+##  5 1        87   255 4814171638071296      5
+##  6 2        76    34 4814171638071296      6
+##  7 2       131     6 4814171638071296      7
+##  8 2       166     1 4814171638071296      8
+##  9 2       168    14 4814171638071296      9
+## 10 2       157    93 4814171638071296     10
+## # … with 16 more rows</code></pre>
 </div>
 <div id="exploratory-data-analysis" class="section level3">
 <h3><span class="header-section-number">3.2.6</span> Exploratory data analysis</h3>
@@ -486,20 +511,20 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb9-14"><a href="week-2.html#cb9-14"></a>grid_axe<span class="op">$</span>xgroup =<span class="st"> </span><span class="kw">cut2</span>(grid_axe<span class="op">$</span>x,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
 <span id="cb9-15"><a href="week-2.html#cb9-15"></a>grid_axe<span class="op">$</span>ygroup =<span class="st"> </span><span class="kw">cut2</span>(grid_axe<span class="op">$</span>y,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
 <span id="cb9-16"><a href="week-2.html#cb9-16"></a>grid_axe</span></code></pre></div>
-<pre><code>## # A tibble: 65,536 x 8
-##        x     y line  drawing row_id pixel xgroup  ygroup 
-##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;  
-##  1     1     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  2     2     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  3     3     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  4     4     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  5     5     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  6     6     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  7     7     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  8     8     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  9     9     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-## 10    10     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-## # … with 65,526 more rows</code></pre>
+<pre><code>## # A tibble: 65,537 x 8
+##        x     y line  drawing row_id pixel xgroup    ygroup   
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;     &lt;fct&gt;    
+##  1     1     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+##  2     2     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+##  3     3     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+##  4     4     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+##  5     5     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+##  6     6     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+##  7     7     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+##  8     8     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+##  9     9     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+## 10    10     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  9.000&quot; &quot;  9.000&quot;
+## # … with 65,527 more rows</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="week-2.html#cb11-1"></a><span class="co"># Now I can convert these to numbers so we’ll have them later</span></span>
 <span id="cb11-2"><a href="week-2.html#cb11-2"></a></span>
 <span id="cb11-3"><a href="week-2.html#cb11-3"></a>grid_axe =<span class="st"> </span>grid_axe <span class="op">%&gt;%</span><span class="st"> </span></span>
@@ -515,18 +540,18 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb11-13"><a href="week-2.html#cb11-13"></a>small_axe</span></code></pre></div>
 <pre><code>## # A tibble: 256 x 3
 ## # Groups:   xgroup [16]
-##    xgroup ygroup   pixel
-##     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
-##  1      1      1 0.00391
-##  2      1     17 0.00391
-##  3      1     33 0      
-##  4      1     49 0.00391
-##  5      1     65 0      
-##  6      1     81 0      
-##  7      1     97 0.00781
-##  8      1    113 0      
-##  9      1    129 0      
-## 10      1    145 0      
+##    xgroup ygroup pixel
+##     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+##  1    1.5    1.5     0
+##  2    1.5   18       0
+##  3    1.5   34       0
+##  4    1.5   50.0     0
+##  5    1.5   65.5     0
+##  6    1.5   81       0
+##  7    1.5   97       0
+##  8    1.5  113       0
+##  9    1.5  129       0
+## 10    1.5  145       0
 ## # … with 246 more rows</code></pre>
 <p>Remember this was our original axe</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="week-2.html#cb13-1"></a><span class="kw">ggplot</span>(first_axe,<span class="kw">aes</span>(x, y)) <span class="op">+</span></span>
