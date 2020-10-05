@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>10 Getting data | Week 6 - Getting and exploring data</title>
+  <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="10 Getting data | Week 6 - Getting and exploring data" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="10 Getting data | Week 6 - Getting and exploring data" />
+  
+  <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+<meta name="author" content="Jeff Leek and Roger D. Peng" />
+
+
+<meta name="date" content="2020-10-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="what-it-actually-looks-like.html"/>
+<link rel="next" href="exploring-data.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<img src ="ads2020-small.png" class="center">
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#assumptions-and-pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Assumptions and pre-requisites</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#course-staff"><i class="fa fa-check"></i><b>1.3</b> Course Staff</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-logistics"><i class="fa fa-check"></i><b>1.4</b> Course logistics</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment-due-dates"><i class="fa fa-check"></i><b>1.5</b> Assignment Due Dates</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-pandemic"><i class="fa fa-check"></i><b>1.6</b> The Pandemic</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#philosophy"><i class="fa fa-check"></i><b>1.7.1</b> Philosophy</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#relative-weights"><i class="fa fa-check"></i><b>1.7.2</b> Relative weights</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a><ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#submitting-assignments"><i class="fa fa-check"></i><b>1.8.1</b> Submitting assignments</a></li>
+<li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#data-analysis-assignments"><i class="fa fa-check"></i><b>1.8.2</b> Data Analysis Assignments</a></li>
+<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.3</b> Data Analysis Reviews</a></li>
+<li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.4</b> Reviewing Code of Conduct</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i><b>1.9.1</b> Need Help?</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#feedback"><i class="fa fa-check"></i><b>1.9.2</b> Feedback</a></li>
+<li class="chapter" data-level="1.9.3" data-path="index.html"><a href="index.html#license-and-attribution"><i class="fa fa-check"></i><b>1.9.3</b> License and attribution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#academic-ethics"><i class="fa fa-check"></i><b>1.10</b> Academic Ethics</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#disability-support-services"><i class="fa fa-check"></i><b>1.11</b> Disability support services</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#email-alerts"><i class="fa fa-check"></i><b>1.12</b> Email alerts</a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#previous-versions-of-the-class"><i class="fa fa-check"></i><b>1.13</b> Previous versions of the class</a></li>
+<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#typos-and-corrections"><i class="fa fa-check"></i><b>1.14</b> Typos and corrections</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a><ul>
+<li class="chapter" data-level="2.1" data-path="week-1.html"><a href="week-1.html#week-1-learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Week 1 Learning objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="week-1.html"><a href="week-1.html#maybe-we-should-start-by-defining-data-science."><i class="fa fa-check"></i><b>2.2.1</b> Maybe we should start by defining data science….</a></li>
+<li class="chapter" data-level="2.2.2" data-path="week-1.html"><a href="week-1.html#data-science-is-hard-but-not-like-math-is-hard"><i class="fa fa-check"></i><b>2.2.2</b> Data Science is hard, but not like math is hard</a></li>
+<li class="chapter" data-level="2.2.3" data-path="week-1.html"><a href="week-1.html#so-what-is-advanced-data-science"><i class="fa fa-check"></i><b>2.2.3</b> So what is advanced data science?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="week-1.html"><a href="week-1.html#descriptive"><i class="fa fa-check"></i><b>2.3.1</b> Descriptive</a></li>
+<li class="chapter" data-level="2.3.2" data-path="week-1.html"><a href="week-1.html#exploratory"><i class="fa fa-check"></i><b>2.3.2</b> Exploratory</a></li>
+<li class="chapter" data-level="2.3.3" data-path="week-1.html"><a href="week-1.html#inferential"><i class="fa fa-check"></i><b>2.3.3</b> Inferential</a></li>
+<li class="chapter" data-level="2.3.4" data-path="week-1.html"><a href="week-1.html#predictive"><i class="fa fa-check"></i><b>2.3.4</b> Predictive</a></li>
+<li class="chapter" data-level="2.3.5" data-path="week-1.html"><a href="week-1.html#causal"><i class="fa fa-check"></i><b>2.3.5</b> Causal</a></li>
+<li class="chapter" data-level="2.3.6" data-path="week-1.html"><a href="week-1.html#mechanistic"><i class="fa fa-check"></i><b>2.3.6</b> Mechanistic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="week-1.html"><a href="week-1.html#answering-the-question"><i class="fa fa-check"></i><b>2.4.1</b> Answering the question</a></li>
+<li class="chapter" data-level="2.4.2" data-path="week-1.html"><a href="week-1.html#checking-the-data"><i class="fa fa-check"></i><b>2.4.2</b> Checking the data</a></li>
+<li class="chapter" data-level="2.4.3" data-path="week-1.html"><a href="week-1.html#tidying-the-data"><i class="fa fa-check"></i><b>2.4.3</b> Tidying the data</a></li>
+<li class="chapter" data-level="2.4.4" data-path="week-1.html"><a href="week-1.html#exploratory-analysis"><i class="fa fa-check"></i><b>2.4.4</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="2.4.5" data-path="week-1.html"><a href="week-1.html#inference"><i class="fa fa-check"></i><b>2.4.5</b> Inference</a></li>
+<li class="chapter" data-level="2.4.6" data-path="week-1.html"><a href="week-1.html#prediction"><i class="fa fa-check"></i><b>2.4.6</b> Prediction</a></li>
+<li class="chapter" data-level="2.4.7" data-path="week-1.html"><a href="week-1.html#causality"><i class="fa fa-check"></i><b>2.4.7</b> Causality</a></li>
+<li class="chapter" data-level="2.4.8" data-path="week-1.html"><a href="week-1.html#written-analyses"><i class="fa fa-check"></i><b>2.4.8</b> Written analyses</a></li>
+<li class="chapter" data-level="2.4.9" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>2.4.9</b> Figures</a></li>
+<li class="chapter" data-level="2.4.10" data-path="week-1.html"><a href="week-1.html#presentations"><i class="fa fa-check"></i><b>2.4.10</b> Presentations</a></li>
+<li class="chapter" data-level="2.4.11" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
+<li class="chapter" data-level="2.4.12" data-path="week-1.html"><a href="week-1.html#r-packages"><i class="fa fa-check"></i><b>2.4.12</b> R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="week-1.html"><a href="week-1.html#your-first-assignment---deconstructing-an-analysis"><i class="fa fa-check"></i><b>2.5</b> Your first assignment - deconstructing an analysis</a></li>
+<li class="chapter" data-level="2.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>2.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>2.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a><ul>
+<li class="chapter" data-level="3.1" data-path="week-2.html"><a href="week-2.html#week-2-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Week 2 Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="week-2.html"><a href="week-2.html#defining-the-question"><i class="fa fa-check"></i><b>3.2.1</b> Defining the question</a></li>
+<li class="chapter" data-level="3.2.2" data-path="week-2.html"><a href="week-2.html#defining-the-ideal-data-set"><i class="fa fa-check"></i><b>3.2.2</b> Defining the ideal data set</a></li>
+<li class="chapter" data-level="3.2.3" data-path="week-2.html"><a href="week-2.html#determine-the-data-you-can-access"><i class="fa fa-check"></i><b>3.2.3</b> Determine the data you can access</a></li>
+<li class="chapter" data-level="3.2.4" data-path="week-2.html"><a href="week-2.html#obtain-the-data"><i class="fa fa-check"></i><b>3.2.4</b> Obtain the data</a></li>
+<li class="chapter" data-level="3.2.5" data-path="week-2.html"><a href="week-2.html#clean-the-data"><i class="fa fa-check"></i><b>3.2.5</b> Clean the data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="week-2.html"><a href="week-2.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>3.2.6</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="3.2.7" data-path="week-2.html"><a href="week-2.html#statistical-predictionmodeling"><i class="fa fa-check"></i><b>3.2.7</b> Statistical prediction/modeling</a></li>
+<li class="chapter" data-level="3.2.8" data-path="week-2.html"><a href="week-2.html#interpret-results"><i class="fa fa-check"></i><b>3.2.8</b> Interpret results</a></li>
+<li class="chapter" data-level="3.2.9" data-path="week-2.html"><a href="week-2.html#challenge-results"><i class="fa fa-check"></i><b>3.2.9</b> Challenge results</a></li>
+<li class="chapter" data-level="3.2.10" data-path="week-2.html"><a href="week-2.html#synthesizewrite-up-results"><i class="fa fa-check"></i><b>3.2.10</b> Synthesize/write up results</a></li>
+<li class="chapter" data-level="3.2.11" data-path="week-2.html"><a href="week-2.html#create-reproducible-code"><i class="fa fa-check"></i><b>3.2.11</b> Create reproducible code</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="week-2.html"><a href="week-2.html#raw-informal-and-formal-data-science"><i class="fa fa-check"></i><b>3.3</b> Raw, informal, and formal data science</a></li>
+<li class="chapter" data-level="3.4" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.5" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="week-3.html"><a href="week-3.html"><i class="fa fa-check"></i><b>4</b> Week 3</a><ul>
+<li class="chapter" data-level="4.1" data-path="week-3.html"><a href="week-3.html#week-3-learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Week 3 Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="week-3.html"><a href="week-3.html#organizing-a-data-analysis"><i class="fa fa-check"></i><b>4.2</b> Organizing a data analysis</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="week-3.html"><a href="week-3.html#motivation---the-stick"><i class="fa fa-check"></i><b>4.2.1</b> Motivation - the stick</a></li>
+<li class="chapter" data-level="4.2.2" data-path="week-3.html"><a href="week-3.html#motivation---the-carrot"><i class="fa fa-check"></i><b>4.2.2</b> Motivation - the carrot</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="week-3.html"><a href="week-3.html#project-organization"><i class="fa fa-check"></i><b>4.3</b> Project Organization</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="week-3.html"><a href="week-3.html#readme.md"><i class="fa fa-check"></i><b>4.3.1</b> README.md</a></li>
+<li class="chapter" data-level="4.3.2" data-path="week-3.html"><a href="week-3.html#gitignore"><i class="fa fa-check"></i><b>4.3.2</b> .gitignore</a></li>
+<li class="chapter" data-level="4.3.3" data-path="week-3.html"><a href="week-3.html#data"><i class="fa fa-check"></i><b>4.3.3</b> data/</a></li>
+<li class="chapter" data-level="4.3.4" data-path="week-3.html"><a href="week-3.html#code"><i class="fa fa-check"></i><b>4.3.4</b> code/</a></li>
+<li class="chapter" data-level="4.3.5" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>4.3.5</b> figures</a></li>
+<li class="chapter" data-level="4.3.6" data-path="week-3.html"><a href="week-3.html#products"><i class="fa fa-check"></i><b>4.3.6</b> products/</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="week-3.html"><a href="week-3.html#file-naming"><i class="fa fa-check"></i><b>4.4</b> File naming</a></li>
+<li class="chapter" data-level="4.5" data-path="week-3.html"><a href="week-3.html#absolute-vs.-relative-paths"><i class="fa fa-check"></i><b>4.5</b> Absolute vs. relative paths</a></li>
+<li class="chapter" data-level="4.6" data-path="week-3.html"><a href="week-3.html#coding-variables"><i class="fa fa-check"></i><b>4.6</b> Coding Variables</a></li>
+<li class="chapter" data-level="4.7" data-path="week-3.html"><a href="week-3.html#project-management-software"><i class="fa fa-check"></i><b>4.7</b> Project management software</a></li>
+<li class="chapter" data-level="4.8" data-path="week-3.html"><a href="week-3.html#coding-style"><i class="fa fa-check"></i><b>4.8</b> Coding style</a></li>
+<li class="chapter" data-level="4.9" data-path="week-3.html"><a href="week-3.html#chain-of-custody-for-data"><i class="fa fa-check"></i><b>4.9</b> Chain of Custody for Data</a></li>
+<li class="chapter" data-level="4.10" data-path="week-3.html"><a href="week-3.html#version-control"><i class="fa fa-check"></i><b>4.10</b> Version Control</a></li>
+<li class="chapter" data-level="4.11" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>4.11</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.12" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>4.12</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="week-4.html"><a href="week-4.html"><i class="fa fa-check"></i><b>5</b> Week 4</a><ul>
+<li class="chapter" data-level="5.1" data-path="week-4.html"><a href="week-4.html#week-4-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Week 4 Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="week-4.html"><a href="week-4.html#the-optimality-paradox"><i class="fa fa-check"></i><b>5.2</b> The optimality paradox</a></li>
+<li class="chapter" data-level="5.3" data-path="week-4.html"><a href="week-4.html#an-example-of-the-art-of-data-science"><i class="fa fa-check"></i><b>5.3</b> An example of the art of data science</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="week-4.html"><a href="week-4.html#an-important-subtlety---analyst-decisions-change-the-question"><i class="fa fa-check"></i><b>5.3.1</b> An important subtlety - analyst decisions change the question</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="5.4.2" data-path="week-4.html"><a href="week-4.html#replicability"><i class="fa fa-check"></i><b>5.4.2</b> Replicability</a></li>
+<li class="chapter" data-level="5.4.3" data-path="week-4.html"><a href="week-4.html#false-discovery"><i class="fa fa-check"></i><b>5.4.3</b> False discovery</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="week-4.html"><a href="week-4.html#a-theory-of-data-science-success"><i class="fa fa-check"></i><b>5.5</b> A theory of data science success</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="week-4.html"><a href="week-4.html#elements-of-data-science"><i class="fa fa-check"></i><b>5.5.1</b> Elements of Data Science</a></li>
+<li class="chapter" data-level="5.5.2" data-path="week-4.html"><a href="week-4.html#principles-of-data-science"><i class="fa fa-check"></i><b>5.5.2</b> Principles of Data Science</a></li>
+<li class="chapter" data-level="5.5.3" data-path="week-4.html"><a href="week-4.html#data-matching"><i class="fa fa-check"></i><b>5.5.3</b> Data matching</a></li>
+<li class="chapter" data-level="5.5.4" data-path="week-4.html"><a href="week-4.html#exhaustive"><i class="fa fa-check"></i><b>5.5.4</b> Exhaustive</a></li>
+<li class="chapter" data-level="5.5.5" data-path="week-4.html"><a href="week-4.html#skeptical"><i class="fa fa-check"></i><b>5.5.5</b> Skeptical</a></li>
+<li class="chapter" data-level="5.5.6" data-path="week-4.html"><a href="week-4.html#second-order"><i class="fa fa-check"></i><b>5.5.6</b> Second order</a></li>
+<li class="chapter" data-level="5.5.7" data-path="week-4.html"><a href="week-4.html#transparent"><i class="fa fa-check"></i><b>5.5.7</b> Transparent</a></li>
+<li class="chapter" data-level="5.5.8" data-path="week-4.html"><a href="week-4.html#reproducible"><i class="fa fa-check"></i><b>5.5.8</b> Reproducible</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="week-4.html"><a href="week-4.html#a-successful-data-analysis"><i class="fa fa-check"></i><b>5.6</b> A successful data analysis</a></li>
+<li class="chapter" data-level="5.7" data-path="week-4.html"><a href="week-4.html#constraints-and-expectation-matching"><i class="fa fa-check"></i><b>5.7</b> Constraints and expectation matching</a></li>
+<li class="chapter" data-level="5.8" data-path="week-4.html"><a href="week-4.html#what-about-being-correct"><i class="fa fa-check"></i><b>5.8</b> What about being correct?</a></li>
+<li class="chapter" data-level="5.9" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>5.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.10" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>5.10</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="week-5.html"><a href="week-5.html"><i class="fa fa-check"></i><b>6</b> Week 5</a><ul>
+<li class="chapter" data-level="6.1" data-path="week-5.html"><a href="week-5.html#week-5-learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Week 5 Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="week-5.html"><a href="week-5.html#skepticism-vs.-discovery"><i class="fa fa-check"></i><b>6.2</b> Skepticism vs. Discovery</a></li>
+<li class="chapter" data-level="6.3" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>6.3</b> Figures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="week-5.html"><a href="week-5.html#just-modeling-results---show-the-data"><i class="fa fa-check"></i><b>6.3.1</b> Just modeling results -&gt; show the data!</a></li>
+<li class="chapter" data-level="6.3.2" data-path="week-5.html"><a href="week-5.html#dynamite-plots---scatterplots"><i class="fa fa-check"></i><b>6.3.2</b> Dynamite plots -&gt; scatterplots</a></li>
+<li class="chapter" data-level="6.3.3" data-path="week-5.html"><a href="week-5.html#ridiculograms---clustering-diagrams"><i class="fa fa-check"></i><b>6.3.3</b> Ridiculograms -&gt; clustering diagrams</a></li>
+<li class="chapter" data-level="6.3.4" data-path="week-5.html"><a href="week-5.html#venn-diagrams---upset-plots"><i class="fa fa-check"></i><b>6.3.4</b> Venn diagrams -&gt; upset plots</a></li>
+<li class="chapter" data-level="6.3.5" data-path="week-5.html"><a href="week-5.html#extreme-variation-in-scales---log-scales"><i class="fa fa-check"></i><b>6.3.5</b> Extreme variation in scales -&gt; log scales</a></li>
+<li class="chapter" data-level="6.3.6" data-path="week-5.html"><a href="week-5.html#correlated-measurements---ma-plots"><i class="fa fa-check"></i><b>6.3.6</b> Correlated measurements -&gt; MA plots</a></li>
+<li class="chapter" data-level="6.3.7" data-path="week-5.html"><a href="week-5.html#axes-cutoff---plot-to-zero"><i class="fa fa-check"></i><b>6.3.7</b> Axes cutoff -&gt; plot to zero</a></li>
+<li class="chapter" data-level="6.3.8" data-path="week-5.html"><a href="week-5.html#d-graphics---just-dont"><i class="fa fa-check"></i><b>6.3.8</b> 3d graphics -&gt; just don’t</a></li>
+<li class="chapter" data-level="6.3.9" data-path="week-5.html"><a href="week-5.html#pie-charts---adjacent-bar-plots"><i class="fa fa-check"></i><b>6.3.9</b> Pie charts -&gt; adjacent bar plots</a></li>
+<li class="chapter" data-level="6.3.10" data-path="week-5.html"><a href="week-5.html#difficult-comparisons---put-things-close-on-linear-axes"><i class="fa fa-check"></i><b>6.3.10</b> Difficult comparisons -&gt; put things close on linear axes</a></li>
+<li class="chapter" data-level="6.3.11" data-path="week-5.html"><a href="week-5.html#comparisons-hard-to-make-between-plots---use-common-axes"><i class="fa fa-check"></i><b>6.3.11</b> Comparisons hard to make between plots -&gt; use common axes</a></li>
+<li class="chapter" data-level="6.3.12" data-path="week-5.html"><a href="week-5.html#legends-hard-to-follow---use-labels"><i class="fa fa-check"></i><b>6.3.12</b> Legends hard to follow -&gt; use labels</a></li>
+<li class="chapter" data-level="6.3.13" data-path="week-5.html"><a href="week-5.html#confounders-arent-clear---color-by-confounder"><i class="fa fa-check"></i><b>6.3.13</b> Confounders aren’t clear -&gt; color by confounder</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="week-5.html"><a href="week-5.html#common-data-analytic-fallacies"><i class="fa fa-check"></i><b>6.4</b> Common data analytic fallacies</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="week-5.html"><a href="week-5.html#spurious-correlation"><i class="fa fa-check"></i><b>6.4.1</b> Spurious correlation</a></li>
+<li class="chapter" data-level="6.4.2" data-path="week-5.html"><a href="week-5.html#outliers"><i class="fa fa-check"></i><b>6.4.2</b> Outliers</a></li>
+<li class="chapter" data-level="6.4.3" data-path="week-5.html"><a href="week-5.html#reversing-cause-and-effect"><i class="fa fa-check"></i><b>6.4.3</b> Reversing Cause and Effect</a></li>
+<li class="chapter" data-level="6.4.4" data-path="week-5.html"><a href="week-5.html#confounders"><i class="fa fa-check"></i><b>6.4.4</b> Confounders</a></li>
+<li class="chapter" data-level="6.4.5" data-path="week-5.html"><a href="week-5.html#simpsons-paradox"><i class="fa fa-check"></i><b>6.4.5</b> Simpson’s Paradox</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="week-5.html"><a href="week-5.html#over-skepticism"><i class="fa fa-check"></i><b>6.5</b> Over-skepticism</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="week-5.html"><a href="week-5.html#everything-must-be-causal"><i class="fa fa-check"></i><b>6.5.1</b> Everything must be causal</a></li>
+<li class="chapter" data-level="6.5.2" data-path="week-5.html"><a href="week-5.html#nothing-can-be-causal"><i class="fa fa-check"></i><b>6.5.2</b> Nothing can be causal</a></li>
+<li class="chapter" data-level="6.5.3" data-path="week-5.html"><a href="week-5.html#you-should-answer-my-question-not-yours"><i class="fa fa-check"></i><b>6.5.3</b> You should answer my question, not yours</a></li>
+<li class="chapter" data-level="6.5.4" data-path="week-5.html"><a href="week-5.html#you-used-insert-method-i-dont-use-therefore-the-analysis-is-wrong"><i class="fa fa-check"></i><b>6.5.4</b> You used (insert method I don’t use) therefore the analysis is wrong</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>6.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="week-6.html"><a href="week-6.html"><i class="fa fa-check"></i><b>7</b> Week 6</a><ul>
+<li class="chapter" data-level="7.1" data-path="week-6.html"><a href="week-6.html#week-6-learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Week 6 Learning objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="what-you-wish-data-looked-like.html"><a href="what-you-wish-data-looked-like.html"><i class="fa fa-check"></i><b>8</b> What you wish data looked like</a></li>
+<li class="chapter" data-level="9" data-path="what-it-actually-looks-like.html"><a href="what-it-actually-looks-like.html"><i class="fa fa-check"></i><b>9</b> What it actually looks like</a></li>
+<li class="chapter" data-level="10" data-path="getting-data.html"><a href="getting-data.html"><i class="fa fa-check"></i><b>10</b> Getting data</a><ul>
+<li class="chapter" data-level="10.1" data-path="getting-data.html"><a href="getting-data.html#where-do-data-live"><i class="fa fa-check"></i><b>10.1</b> Where do data live?</a></li>
+<li class="chapter" data-level="10.2" data-path="getting-data.html"><a href="getting-data.html#databases"><i class="fa fa-check"></i><b>10.2</b> databases</a></li>
+<li class="chapter" data-level="10.3" data-path="getting-data.html"><a href="getting-data.html#google-sheets"><i class="fa fa-check"></i><b>10.3</b> google sheets</a></li>
+<li class="chapter" data-level="10.4" data-path="getting-data.html"><a href="getting-data.html#apis"><i class="fa fa-check"></i><b>10.4</b> APIs</a></li>
+<li class="chapter" data-level="10.5" data-path="getting-data.html"><a href="getting-data.html#webscraping"><i class="fa fa-check"></i><b>10.5</b> Webscraping</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="exploring-data.html"><a href="exploring-data.html"><i class="fa fa-check"></i><b>11</b> Exploring data</a><ul>
+<li class="chapter" data-level="11.1" data-path="exploring-data.html"><a href="exploring-data.html#readlines"><i class="fa fa-check"></i><b>11.1</b> readlines</a></li>
+<li class="chapter" data-level="11.2" data-path="exploring-data.html"><a href="exploring-data.html#head-tail-sampling"><i class="fa fa-check"></i><b>11.2</b> head, tail, sampling</a></li>
+<li class="chapter" data-level="11.3" data-path="exploring-data.html"><a href="exploring-data.html#merging"><i class="fa fa-check"></i><b>11.3</b> merging</a></li>
+<li class="chapter" data-level="11.4" data-path="exploring-data.html"><a href="exploring-data.html#strings"><i class="fa fa-check"></i><b>11.4</b> strings</a></li>
+<li class="chapter" data-level="11.5" data-path="exploring-data.html"><a href="exploring-data.html#counting"><i class="fa fa-check"></i><b>11.5</b> counting</a></li>
+<li class="chapter" data-level="11.6" data-path="exploring-data.html"><a href="exploring-data.html#plotting"><i class="fa fa-check"></i><b>11.6</b> plotting</a></li>
+<li class="chapter" data-level="11.7" data-path="exploring-data.html"><a href="exploring-data.html#dimension-reduction"><i class="fa fa-check"></i><b>11.7</b> dimension reduction</a></li>
+<li class="chapter" data-level="11.8" data-path="exploring-data.html"><a href="exploring-data.html#clustering"><i class="fa fa-check"></i><b>11.8</b> clustering</a></li>
+<li class="chapter" data-level="11.9" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>11.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="11.10" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>11.10</b> Homework</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Data Science 2020</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="getting-data" class="section level1">
+<h1><span class="header-section-number">10</span> Getting data</h1>
+<p>Regardless of how the data is formatted, the first step in your data analysis will be to collect the data, organize it, read it into R and format it so that you can perform your analysis. We are going to cover some of the most common ways of getting data here, and this will necessarily be pretty R specific, but this is the step that is most likely to be field specific so you may need to follow tutorials within your field. A good place to start is always “file format extension rstats package” on Google.</p>
+<div id="where-do-data-live" class="section level2">
+<h2><span class="header-section-number">10.1</span> Where do data live?</h2>
+<p>Data lives anywhere and everywhere. Data
+might be stored simply in a <code>.csv</code> or <code>.txt</code>
+file. Data might be stored in an Excel or
+Google Spreadsheet. Data might be stored in
+large databases that require users to write
+special functions to interact with to extract
+the data they are interested in.</p>
+<p>For example, you may have heard of the terms
+<code>mySQL</code> or <code>MongoDB</code>.</p>
+<p>From <a href="https://en.wikipedia.org/wiki/MySQL">Wikipedia, MySQL</a>
+is defined as <em>an open-source relational database management system (RDBMS). Its name is a combination of “My”, the name of co-founder Michael Widenius’s daughter,[7] and “SQL”, the abbreviation for Structured Query Language.</em>.</p>
+<p>From <a href="https://en.wikipedia.org/wiki/MongoDB">Wikipeda, MongoDB</a>
+is defined as <em>“a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata.”</em></p>
+<p>So after reading that, we get the sense that there
+are multiple ways large databases can be structured,
+data can be formatted and interacted with.
+In addition, we see that database programs
+(e.g. MySQL and MongoDB) can also interact
+with each other.</p>
+<p><img src="https://github.com/jtleek/advdatasci/raw/master/imgs/databases.png" /><!-- --></p>
+<p>We will learn more about <code>SQL</code> and <code>JSON</code> in a bit.</p>
+</div>
+<div id="databases" class="section level2">
+<h2><span class="header-section-number">10.2</span> databases</h2>
+</div>
+<div id="google-sheets" class="section level2">
+<h2><span class="header-section-number">10.3</span> google sheets</h2>
+</div>
+<div id="apis" class="section level2">
+<h2><span class="header-section-number">10.4</span> APIs</h2>
+</div>
+<div id="webscraping" class="section level2">
+<h2><span class="header-section-number">10.5</span> Webscraping</h2>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="what-it-actually-looks-like.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exploring-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ads2020.pdf", "ads2020.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
