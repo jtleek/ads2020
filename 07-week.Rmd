@@ -16,6 +16,7 @@ At the end of this lesson you will be able to:
 - Know and apply general exploratory data analysis principles
 :::
 
+*This lecture is based on Roger Peng's nice [lecture](https://jhu-advdatasci.github.io/2019/lectures/EDA.pdf) on exploratory data analysis* 
 
 
 

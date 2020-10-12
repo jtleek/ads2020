@@ -578,7 +578,7 @@ working directory path and the files available using <code>list.file()</code></p
 ## [31] &quot;fyi.png&quot;               &quot;index.md&quot;              &quot;index.Rmd&quot;            
 ## [34] &quot;index.utf8.md&quot;         &quot;jhsph ads.png&quot;         &quot;key.png&quot;              
 ## [37] &quot;Lightbulb.png&quot;         &quot;Live-code.png&quot;         &quot;logo&quot;                 
-## [40] &quot;private&quot;               &quot;README.md&quot;             &quot;render20c33ba1a52.rds&quot;
+## [40] &quot;private&quot;               &quot;README.md&quot;             &quot;render1482edc4f5d.rds&quot;
 ## [43] &quot;style.css&quot;             &quot;test.png&quot;              &quot;Your-turn.png&quot;</code></pre>
 <p>OK so our current location is in the <code>/cloud/project</code> directory. Using the here package we can see that here points to this base directory.</p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="week-6.html#cb103-1"></a><span class="kw">library</span>(here)</span></code></pre></div>
@@ -599,14 +599,14 @@ working directory path and the files available using <code>list.file()</code></p
 ## [31] &quot;fyi.png&quot;               &quot;index.md&quot;              &quot;index.Rmd&quot;            
 ## [34] &quot;index.utf8.md&quot;         &quot;jhsph ads.png&quot;         &quot;key.png&quot;              
 ## [37] &quot;Lightbulb.png&quot;         &quot;Live-code.png&quot;         &quot;logo&quot;                 
-## [40] &quot;private&quot;               &quot;README.md&quot;             &quot;render20c33ba1a52.rds&quot;
+## [40] &quot;private&quot;               &quot;README.md&quot;             &quot;render1482edc4f5d.rds&quot;
 ## [43] &quot;style.css&quot;             &quot;test.png&quot;              &quot;Your-turn.png&quot;</code></pre>
 <p>We can now create a <code>data</code> folder if it doesn’t already exist and see how to create a link to the data directory using the here package:</p>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="week-6.html#cb109-1"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">file.exists</span>(<span class="st">&quot;data&quot;</span>)){<span class="kw">dir.create</span>(<span class="st">&quot;data&quot;</span>)}</span>
 <span id="cb109-2"><a href="week-6.html#cb109-2"></a><span class="kw">list.files</span>(<span class="kw">here</span>(<span class="st">&quot;data&quot;</span>))</span></code></pre></div>
 <pre><code>## [1] &quot;2020-10-05-cameras.csv&quot;  &quot;2020-10-05-cameras.xlsx&quot;
-## [3] &quot;2020-10-11-cameras.csv&quot;  &quot;cameras.csv&quot;            
-## [5] &quot;Chinook.sqlite&quot;</code></pre>
+## [3] &quot;2020-10-11-cameras.csv&quot;  &quot;2020-10-12-cameras.csv&quot; 
+## [5] &quot;cameras.csv&quot;             &quot;Chinook.sqlite&quot;</code></pre>
 <p>Now we see that using the <code>here::here()</code> function is a
 <em>relative</em> path (relative to the <code>.Rproj</code> file in our home directory. We also see there is a <code>cameras.csv</code> file in
 the <code>data</code> folder. Let’s read it into R with the <code>readr</code> package.</p>
@@ -870,7 +870,7 @@ the JSON file into a data frame with the names:</p>
 <pre><code>## 
 ##      0      1      2      3      5      6      7      8      9     11     23 
 ##      7      4      2      3      2      1      1      1      1      1      1 
-##     25     41     61    126    713 227454 
+##     25     41     61    126    713 227478 
 ##      1      1      1      1      1      1</code></pre>
 <p>What’s the most popular language?</p>
 <div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="week-6.html#cb139-1"></a><span class="kw">table</span>(jsonData<span class="op">$</span>language)</span></code></pre></div>
@@ -883,7 +883,7 @@ a table:</p>
 <div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="week-6.html#cb141-1"></a><span class="co"># how many repos have open issues? </span></span>
 <span id="cb141-2"><a href="week-6.html#cb141-2"></a><span class="kw">table</span>(jsonData<span class="op">$</span>open_issues_count)</span></code></pre></div>
 <pre><code>## 
-##   0   1   2   5   6 725 
+##   0   1   2   5   6 726 
 ##  22   4   1   1   1   1</code></pre>
 <p>Whew! Not as many as I thought.</p>
 <p>How many do you have?</p>
@@ -1605,7 +1605,7 @@ album and plot the frequency of each letter.</p>
 <span id="cb191-3"><a href="week-6.html#cb191-3"></a>req =<span class="st"> </span><span class="kw">GET</span>(query_url)</span>
 <span id="cb191-4"><a href="week-6.html#cb191-4"></a>req</span></code></pre></div>
 <pre><code>## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-10-12 03:28
+##   Date: 2020-10-12 11:56
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB

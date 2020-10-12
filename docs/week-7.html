@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Week 7 | Week 7 - Exploring data</title>
+  <title>8 Week 7 | Week 1</title>
   <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Week 7 | Week 7 - Exploring data" />
+  <meta property="og:title" content="8 Week 7 | Week 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Week 7 | Week 7 - Exploring data" />
+  <meta name="twitter:title" content="8 Week 7 | Week 1" />
   
   <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   
@@ -385,6 +385,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Know and apply general exploratory data analysis principles</li>
 </ul>
 </div>
+<p><em>This lecture is based on Roger Peng’s nice <a href="https://jhu-advdatasci.github.io/2019/lectures/EDA.pdf">lecture</a> on exploratory data analysis</em></p>
 </div>
 <div id="a-framework-for-exploratory-analysis" class="section level2">
 <h2><span class="header-section-number">8.2</span> A framework for exploratory analysis</h2>
@@ -623,10 +624,10 @@ measurement to check that they’re correlated
 <li>1_first_plots.R</li>
 </ul>
 <p>I generally use .R files (not Rmd files or Jupyter notebooks) since I will likely be moving fast and don’t have a lot of time for formatting. One thing I like to do is add comments when I find something interesting with words I hope will be searchable later. So something like:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="week-7.html#cb1-1"></a><span class="co">#########</span></span>
-<span id="cb1-2"><a href="week-7.html#cb1-2"></a><span class="co">### Interesting correlation between x and y</span></span>
-<span id="cb1-3"><a href="week-7.html#cb1-3"></a><span class="co">######### </span></span>
-<span id="cb1-4"><a href="week-7.html#cb1-4"></a><span class="kw">cor</span>(x,y)</span></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="week-7.html#cb209-1"></a><span class="co">#########</span></span>
+<span id="cb209-2"><a href="week-7.html#cb209-2"></a><span class="co">### Interesting correlation between x and y</span></span>
+<span id="cb209-3"><a href="week-7.html#cb209-3"></a><span class="co">######### </span></span>
+<span id="cb209-4"><a href="week-7.html#cb209-4"></a><span class="kw">cor</span>(x,y)</span></code></pre></div>
 </div>
 <div id="additional-resources" class="section level2">
 <h2><span class="header-section-number">8.5</span> Additional Resources</h2>
@@ -705,6 +706,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -508,7 +508,7 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb1-3"><a href="week-2.html#cb1-3"></a>axes_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/axes.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-4"><a href="week-2.html#cb1-4"></a>clouds_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/clouds.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-5"><a href="week-2.html#cb1-5"></a>axes_json[[<span class="dv">1</span>]]</span></code></pre></div>
-<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;HK\&quot;,\&quot;timestamp\&quot;:\&quot;2017-01-29 18:07:16.25726 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;6398825998581760\&quot;,\&quot;drawing\&quot;:[[[11,15,24],[25,50,77]],[[18,50,79,84,84,70],[14,5,1,8,24,74]],[[20,72],[84,70]],[[72,72,80,83,86],[59,142,242,254,255]],[[121,111,105],[6,40,70]],[[116,166,169,160,158,155],[9,9,14,49,72,79]],[[103,153],[74,74]],[[108,39,0],[59,173,249]]]}&quot;</code></pre>
+<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;VN\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-14 02:09:53.94068 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;5752584193179648\&quot;,\&quot;drawing\&quot;:[[[71,74],[56,253]],[[67,58,58,45,33,24,24,14,0,0,1,19,23,50,42,42,46,54,65,68],[253,251,104,104,126,151,176,163,124,82,71,41,24,0,17,50,48,32,25,59]]]}&quot;</code></pre>
 <p>The next thing I did was google “quick draw data ndjson rstats”. I found a <a href="https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/">tutorial</a> and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-2.html#cb3-1"></a><span class="kw">library</span>(dplyr)</span>
 <span id="cb3-2"><a href="week-2.html#cb3-2"></a></span>
@@ -519,20 +519,20 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb3-7"><a href="week-2.html#cb3-7"></a>}</span>
 <span id="cb3-8"><a href="week-2.html#cb3-8"></a>first_axe =<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(axes_json[[<span class="dv">1</span>]]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">parse_drawing</span>()</span>
 <span id="cb3-9"><a href="week-2.html#cb3-9"></a>first_axe</span></code></pre></div>
-<pre><code>## # A tibble: 30 x 5
+<pre><code>## # A tibble: 22 x 5
 ##    line      x     y drawing          row_id
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;
-##  1 1        11    25 6398825998581760      1
-##  2 1        15    50 6398825998581760      2
-##  3 1        24    77 6398825998581760      3
-##  4 2        18    14 6398825998581760      4
-##  5 2        50     5 6398825998581760      5
-##  6 2        79     1 6398825998581760      6
-##  7 2        84     8 6398825998581760      7
-##  8 2        84    24 6398825998581760      8
-##  9 2        70    74 6398825998581760      9
-## 10 3        20    84 6398825998581760     10
-## # … with 20 more rows</code></pre>
+##  1 1        71    56 5752584193179648      1
+##  2 1        74   253 5752584193179648      2
+##  3 2        67   253 5752584193179648      3
+##  4 2        58   251 5752584193179648      4
+##  5 2        58   104 5752584193179648      5
+##  6 2        45   104 5752584193179648      6
+##  7 2        33   126 5752584193179648      7
+##  8 2        24   151 5752584193179648      8
+##  9 2        24   176 5752584193179648      9
+## 10 2        14   163 5752584193179648     10
+## # … with 12 more rows</code></pre>
 </div>
 <div id="exploratory-data-analysis" class="section level3">
 <h3><span class="header-section-number">3.2.6</span> Exploratory data analysis</h3>
@@ -632,10 +632,10 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 ##    xgroup ygroup   pixel
 ##     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
 ##  1      1      1 0      
-##  2      1     17 0.00391
+##  2      1     17 0      
 ##  3      1     33 0      
-##  4      1     49 0.00391
-##  5      1     65 0      
+##  4      1     49 0      
+##  5      1     65 0.00391
 ##  6      1     81 0      
 ##  7      1     97 0      
 ##  8      1    113 0      

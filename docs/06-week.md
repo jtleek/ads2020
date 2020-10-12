@@ -260,7 +260,7 @@ list.files()
 ## [31] "fyi.png"               "index.md"              "index.Rmd"            
 ## [34] "index.utf8.md"         "jhsph ads.png"         "key.png"              
 ## [37] "Lightbulb.png"         "Live-code.png"         "logo"                 
-## [40] "private"               "README.md"             "render20c33ba1a52.rds"
+## [40] "private"               "README.md"             "render1482edc4f5d.rds"
 ## [43] "style.css"             "test.png"              "Your-turn.png"
 ```
 
@@ -301,7 +301,7 @@ list.files(here::here())
 ## [31] "fyi.png"               "index.md"              "index.Rmd"            
 ## [34] "index.utf8.md"         "jhsph ads.png"         "key.png"              
 ## [37] "Lightbulb.png"         "Live-code.png"         "logo"                 
-## [40] "private"               "README.md"             "render20c33ba1a52.rds"
+## [40] "private"               "README.md"             "render1482edc4f5d.rds"
 ## [43] "style.css"             "test.png"              "Your-turn.png"
 ```
 
@@ -315,8 +315,8 @@ list.files(here("data"))
 
 ```
 ## [1] "2020-10-05-cameras.csv"  "2020-10-05-cameras.xlsx"
-## [3] "2020-10-11-cameras.csv"  "cameras.csv"            
-## [5] "Chinook.sqlite"
+## [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
+## [5] "cameras.csv"             "Chinook.sqlite"
 ```
 
 Now we see that using the `here::here()` function is a 
@@ -690,7 +690,7 @@ table(jsonData$forks)
 ## 
 ##      0      1      2      3      5      6      7      8      9     11     23 
 ##      7      4      2      3      2      1      1      1      1      1      1 
-##     25     41     61    126    713 227454 
+##     25     41     61    126    713 227478 
 ##      1      1      1      1      1      1
 ```
 
@@ -719,7 +719,7 @@ table(jsonData$open_issues_count)
 
 ```
 ## 
-##   0   1   2   5   6 725 
+##   0   1   2   5   6 726 
 ##  22   4   1   1   1   1
 ```
 
@@ -1646,7 +1646,7 @@ req
 
 ```
 ## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-10-12 03:28
+##   Date: 2020-10-12 11:56
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB
