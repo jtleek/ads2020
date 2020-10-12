@@ -1,0 +1,20 @@
+## An example EDA
+
+As an example of an EDA we will use data from your instructor's Fitbit devices. The initial question might be something vague in nature like:
+
+>  How has the pandemic impacted your instructor's activity levels and weight? And do his activity levels correlate with variation in his weight? 
+
+The first step in this process involves getting some data. In this case, your instructor could get the data for you by using the [fitbitr](https://github.com/teramonagi/fitbitr) package and following this [blog post](https://www.r-bloggers.com/2019/06/downloading-fitbit-data-histories-with-r-2/).
+
+One could obtain the raw data by repeated calls to the Fitbit API: 
+
+```{r, eval=FALSE}
+FITBIT_KEY="redacted"
+FITBIT_SECRET = "redacted"
+token = fitbitr::oauth_token()
+
+fitbit_dates = seq(ymd("2020-01-01"),ymd("2020-06-01"),by="1 day")
+
+```
+
+

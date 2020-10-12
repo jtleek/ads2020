@@ -247,21 +247,21 @@ list.files()
 ```
 
 ```
-##  [1] "_book"                  "_bookdown_files"        "_bookdown.yml"         
-##  [4] "_output.yml"            "01-week_files"          "01-week.md"            
-##  [7] "01-week.Rmd"            "01-week.utf8.md"        "02-week_cache"         
-## [10] "02-week_files"          "02-week.md"             "02-week.Rmd"           
-## [13] "02-week.utf8.md"        "03-week.md"             "03-week.Rmd"           
-## [16] "03-week.utf8.md"        "04-week.md"             "04-week.Rmd"           
-## [19] "04-week.utf8.md"        "05-week_files"          "05-week.md"            
-## [22] "05-week.Rmd"            "05-week.utf8.md"        "06-week_files"         
-## [25] "06-week.Rmd"            "ads2020.rds"            "ads2020.Rproj"         
-## [28] "data"                   "docs"                   "fyi.png"               
-## [31] "index.md"               "index.Rmd"              "index.utf8.md"         
-## [34] "jhsph ads.png"          "key.png"                "Lightbulb.png"         
-## [37] "Live-code.png"          "logo"                   "private"               
-## [40] "README.md"              "render771b7646647c.rds" "style.css"             
-## [43] "test.png"               "Your-turn.png"
+##  [1] "_book"                 "_bookdown_files"       "_bookdown.yml"        
+##  [4] "_output.yml"           "01-week_files"         "01-week.md"           
+##  [7] "01-week.Rmd"           "01-week.utf8.md"       "02-week_cache"        
+## [10] "02-week_files"         "02-week.md"            "02-week.Rmd"          
+## [13] "02-week.utf8.md"       "03-week.md"            "03-week.Rmd"          
+## [16] "03-week.utf8.md"       "04-week.md"            "04-week.Rmd"          
+## [19] "04-week.utf8.md"       "05-week_files"         "05-week.md"           
+## [22] "05-week.Rmd"           "05-week.utf8.md"       "06-week_files"        
+## [25] "06-week.Rmd"           "07-week.Rmd"           "ads2020.rds"          
+## [28] "ads2020.Rproj"         "data"                  "docs"                 
+## [31] "fyi.png"               "index.md"              "index.Rmd"            
+## [34] "index.utf8.md"         "jhsph ads.png"         "key.png"              
+## [37] "Lightbulb.png"         "Live-code.png"         "logo"                 
+## [40] "private"               "README.md"             "render20c33ba1a52.rds"
+## [43] "style.css"             "test.png"              "Your-turn.png"
 ```
 
 OK so our current location is in the `/cloud/project` directory. Using the here package we can see that here points to this base directory. 
@@ -288,21 +288,21 @@ list.files(here::here())
 ```
 
 ```
-##  [1] "_book"                  "_bookdown_files"        "_bookdown.yml"         
-##  [4] "_output.yml"            "01-week_files"          "01-week.md"            
-##  [7] "01-week.Rmd"            "01-week.utf8.md"        "02-week_cache"         
-## [10] "02-week_files"          "02-week.md"             "02-week.Rmd"           
-## [13] "02-week.utf8.md"        "03-week.md"             "03-week.Rmd"           
-## [16] "03-week.utf8.md"        "04-week.md"             "04-week.Rmd"           
-## [19] "04-week.utf8.md"        "05-week_files"          "05-week.md"            
-## [22] "05-week.Rmd"            "05-week.utf8.md"        "06-week_files"         
-## [25] "06-week.Rmd"            "ads2020.rds"            "ads2020.Rproj"         
-## [28] "data"                   "docs"                   "fyi.png"               
-## [31] "index.md"               "index.Rmd"              "index.utf8.md"         
-## [34] "jhsph ads.png"          "key.png"                "Lightbulb.png"         
-## [37] "Live-code.png"          "logo"                   "private"               
-## [40] "README.md"              "render771b7646647c.rds" "style.css"             
-## [43] "test.png"               "Your-turn.png"
+##  [1] "_book"                 "_bookdown_files"       "_bookdown.yml"        
+##  [4] "_output.yml"           "01-week_files"         "01-week.md"           
+##  [7] "01-week.Rmd"           "01-week.utf8.md"       "02-week_cache"        
+## [10] "02-week_files"         "02-week.md"            "02-week.Rmd"          
+## [13] "02-week.utf8.md"       "03-week.md"            "03-week.Rmd"          
+## [16] "03-week.utf8.md"       "04-week.md"            "04-week.Rmd"          
+## [19] "04-week.utf8.md"       "05-week_files"         "05-week.md"           
+## [22] "05-week.Rmd"           "05-week.utf8.md"       "06-week_files"        
+## [25] "06-week.Rmd"           "07-week.Rmd"           "ads2020.rds"          
+## [28] "ads2020.Rproj"         "data"                  "docs"                 
+## [31] "fyi.png"               "index.md"              "index.Rmd"            
+## [34] "index.utf8.md"         "jhsph ads.png"         "key.png"              
+## [37] "Lightbulb.png"         "Live-code.png"         "logo"                 
+## [40] "private"               "README.md"             "render20c33ba1a52.rds"
+## [43] "style.css"             "test.png"              "Your-turn.png"
 ```
 
 We can now create a `data` folder if it doesn't already exist and see how to create a link to the data directory using the here package:
@@ -315,7 +315,8 @@ list.files(here("data"))
 
 ```
 ## [1] "2020-10-05-cameras.csv"  "2020-10-05-cameras.xlsx"
-## [3] "cameras.csv"             "Chinook.sqlite"
+## [3] "2020-10-11-cameras.csv"  "cameras.csv"            
+## [5] "Chinook.sqlite"
 ```
 
 Now we see that using the `here::here()` function is a 
@@ -446,7 +447,7 @@ date_downloaded
 ```
 
 ```
-## [1] "2020-10-05"
+## [1] "2020-10-12"
 ```
 
 ```r
@@ -455,7 +456,8 @@ list.files(here("data"))
 
 ```
 ## [1] "2020-10-05-cameras.csv"  "2020-10-05-cameras.xlsx"
-## [3] "cameras.csv"             "Chinook.sqlite"
+## [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
+## [5] "cameras.csv"             "Chinook.sqlite"
 ```
 
 Here you will notice I also named the file with the date and/or saved another variable with the downloaded date. The reason is that if you are downloading data directly from the internet, it is likely to update and your results may change. It is a good idea to keep track of the data each time you download. 
@@ -688,7 +690,7 @@ table(jsonData$forks)
 ## 
 ##      0      1      2      3      5      6      7      8      9     11     23 
 ##      7      4      2      3      2      1      1      1      1      1      1 
-##     25     41     61    126    714 226878 
+##     25     41     61    126    713 227454 
 ##      1      1      1      1      1      1
 ```
 
@@ -717,8 +719,8 @@ table(jsonData$open_issues_count)
 
 ```
 ## 
-##   0   1   2   5 721 
-##  22   4   1   2   1
+##   0   1   2   5   6 725 
+##  22   4   1   1   1   1
 ```
 
 Whew! Not as many as I thought.
@@ -1212,7 +1214,8 @@ list.files(here("data"))
 
 ```
 ## [1] "2020-10-05-cameras.csv"  "2020-10-05-cameras.xlsx"
-## [3] "cameras.csv"             "Chinook.sqlite"
+## [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
+## [5] "cameras.csv"             "Chinook.sqlite"
 ```
 
 The main workhorse packages that we will use are 
@@ -1643,7 +1646,7 @@ req
 
 ```
 ## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-10-05 05:10
+##   Date: 2020-10-12 03:28
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB

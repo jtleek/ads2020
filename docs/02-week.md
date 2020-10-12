@@ -164,7 +164,7 @@ axes_json[[1]]
 ```
 
 ```
-## [1] "{\"word\":\"axe\",\"countrycode\":\"PL\",\"timestamp\":\"2017-03-26 18:58:16.84406 UTC\",\"recognized\":true,\"key_id\":\"6728272819781632\",\"drawing\":[[[1,1,104],[3,72,73]],[[1,92],[1,1]],[[102,100],[1,252]],[[34,34],[5,73]]]}"
+## [1] "{\"word\":\"axe\",\"countrycode\":\"HK\",\"timestamp\":\"2017-01-29 18:07:16.25726 UTC\",\"recognized\":true,\"key_id\":\"6398825998581760\",\"drawing\":[[[11,15,24],[25,50,77]],[[18,50,79,84,84,70],[14,5,1,8,24,74]],[[20,72],[84,70]],[[72,72,80,83,86],[59,142,242,254,255]],[[121,111,105],[6,40,70]],[[116,166,169,160,158,155],[9,9,14,49,72,79]],[[103,153],[74,74]],[[108,39,0],[59,173,249]]]}"
 ```
 
 The next thing I did was google “quick draw data ndjson rstats”. I found a [tutorial](https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/) and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do. 
@@ -183,18 +183,20 @@ first_axe
 ```
 
 ```
-## # A tibble: 9 x 5
-##   line      x     y drawing          row_id
-##   <chr> <dbl> <dbl> <chr>             <int>
-## 1 1         1     3 6728272819781632      1
-## 2 1         1    72 6728272819781632      2
-## 3 1       104    73 6728272819781632      3
-## 4 2         1     1 6728272819781632      4
-## 5 2        92     1 6728272819781632      5
-## 6 3       102     1 6728272819781632      6
-## 7 3       100   252 6728272819781632      7
-## 8 4        34     5 6728272819781632      8
-## 9 4        34    73 6728272819781632      9
+## # A tibble: 30 x 5
+##    line      x     y drawing          row_id
+##    <chr> <dbl> <dbl> <chr>             <int>
+##  1 1        11    25 6398825998581760      1
+##  2 1        15    50 6398825998581760      2
+##  3 1        24    77 6398825998581760      3
+##  4 2        18    14 6398825998581760      4
+##  5 2        50     5 6398825998581760      5
+##  6 2        79     1 6398825998581760      6
+##  7 2        84     8 6398825998581760      7
+##  8 2        84    24 6398825998581760      8
+##  9 2        70    74 6398825998581760      9
+## 10 3        20    84 6398825998581760     10
+## # … with 20 more rows
 ```
 
 
@@ -300,18 +302,18 @@ grid_axe
 
 ```
 ## # A tibble: 65,536 x 8
-##        x     y line  drawing          row_id pixel xgroup  ygroup 
-##    <dbl> <dbl> <chr> <chr>             <int> <dbl> <fct>   <fct>  
-##  1     1     1 2     6728272819781632      4     1 "  8.5" "  8.5"
-##  2     2     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
-##  3     3     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
-##  4     4     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
-##  5     5     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
-##  6     6     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
-##  7     7     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
-##  8     8     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
-##  9     9     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
-## 10    10     1 <NA>  <NA>                 NA     0 "  8.5" "  8.5"
+##        x     y line  drawing row_id pixel xgroup  ygroup 
+##    <dbl> <dbl> <chr> <chr>    <int> <dbl> <fct>   <fct>  
+##  1     1     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+##  2     2     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+##  3     3     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+##  4     4     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+##  5     5     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+##  6     6     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+##  7     7     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+##  8     8     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+##  9     9     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
+## 10    10     1 <NA>  <NA>        NA     0 "  8.5" "  8.5"
 ## # … with 65,526 more rows
 ```
 
@@ -336,11 +338,11 @@ small_axe
 ## # Groups:   xgroup [16]
 ##    xgroup ygroup   pixel
 ##     <dbl>  <dbl>   <dbl>
-##  1      1      1 0.00781
-##  2      1     17 0      
+##  1      1      1 0      
+##  2      1     17 0.00391
 ##  3      1     33 0      
-##  4      1     49 0      
-##  5      1     65 0.00391
+##  4      1     49 0.00391
+##  5      1     65 0      
 ##  6      1     81 0      
 ##  7      1     97 0      
 ##  8      1    113 0      

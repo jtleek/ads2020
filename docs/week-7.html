@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Advanced Data Science 2020 | Week 1</title>
+  <title>8 Week 7 | Week 7 - Exploring data</title>
   <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Advanced Data Science 2020 | Week 1" />
+  <meta property="og:title" content="8 Week 7 | Week 7 - Exploring data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Advanced Data Science 2020 | Week 1" />
+  <meta name="twitter:title" content="8 Week 7 | Week 7 - Exploring data" />
   
   <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="week-6.html"/>
 
-<link rel="next" href="week-1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -372,335 +372,280 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Advanced Data Science 2020</h1>
-<p class="author"><em>Jeff Leek and Roger D. Peng</em></p>
-<p class="date"><em>2020-10-12</em></p>
-</div>
-<div id="welcome-and-syllabus" class="section level1">
-<h1><span class="header-section-number">1</span> Welcome and Syllabus</h1>
-<p>Welcome! We are very excited to have you in our two-term (one semester) course on Advanced Data Science with course numbers 140.711 and 140.712 offered by the <a href="https://www.jhsph.edu/departments/biostatistics/">Department of Biostatistics</a> at the <a href="https://www.jhsph.edu/">Johns Hopkins Bloomberg School of Public Health</a>.</p>
-<p>This course is designed for PhD students at Johns Hopkins Bloomberg School of Public Health. We are usually pretty flexible about permitting outside students but we want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.</p>
+<div id="week-7" class="section level1">
+<h1><span class="header-section-number">8</span> Week 7</h1>
+<div id="week-7-learning-objectives" class="section level2">
+<h2><span class="header-section-number">8.1</span> Week 7 Learning objectives</h2>
 <div class="keyidea">
-<p>The primary goal of the course is to teach you how to deconstruct, perform, and communicate professional data analyses across diverse media.</p>
-</div>
-<p>The class is not designed to teach a set of statistical methods or packages - there are a ton of awesome classes, books, and tutorials about those things out there! Rather the goal is to help you to organize your thinking around how to combine the things you have learned about statistics, data manipulation, and visualization into complete data analyses that answer important questions about the world around you.</p>
-<div id="assumptions-and-pre-requisites" class="section level2">
-<h2><span class="header-section-number">1.1</span> Assumptions and pre-requisites</h2>
-<p>The course is designed for PhD students in the Johns Hopkins Biostatistics Masters and PhD programs and assumes significant background in statistics. Specifically we assume:</p>
-<ol style="list-style-type: decimal">
-<li>You know the basics of statistics</li>
-</ol>
+<p>At the end of this lesson you will be able to:</p>
 <ul>
-<li>The central dogma (estimates, standard errors, basic distributions, etc.)</li>
-<li>Key statistical terms and methods</li>
-<li>Estimtion vs testing vs prediction</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>You know how to fit and interpret statistical models</li>
-</ol>
-<ul>
-<li>Linear Models</li>
-<li>Generalized Linear Models</li>
-<li>Smoothing splines</li>
-<li>Basic mixture models</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>You know the basics of R or Python</li>
-</ol>
-<ul>
-<li>You can read in, clean, tidy data</li>
-<li>You can fit models</li>
-<li>You can make visualizations</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>You know the basics of reproducible research</li>
-</ol>
-<ul>
-<li>You know what version control is</li>
-<li>You know how to use Github</li>
-<li>You know how to use R/Rmarkdown</li>
-</ul>
-<p>Since the target audience for this course is advanced students in statistics we will not be able to spend significant time covering these concepts and technologies. To give you some idea about how these prerequisites will impact your experience in the course, we will be turning in all assignments via R markdown documents submitted through Github pull requests. The majority of the assignments will involve critiquing, fitting and interpreting statistical analyses - primarily focused on regression. Data analyses you will perform will also often involve significant data extraction, cleaning, and transformation. Hopefully all of that sounds familiar to you so you can focus on the concepts we will be teaching around deconstructing and constructing data analyses.</p>
-<div class="resources">
-<p>Some resources that may be useful if you feel you may be missing pieces of this background:</p>
-<ul>
-<li><strong>Statistics</strong> - <a href="https://www.coursera.org/learn/biostatistics">Mathematical Biostatistics Bootcamp I (Coursera)</a>; <a href="https://www.coursera.org/learn/biostatistics-2">Mathematical Biostatistics Bootcamp II (Coursera)</a></li>
-<li><strong>Basic Data Science</strong> - <a href="https://leanpub.com/universities/set/jhu/cloud-based-data-science">Cloud Data Science (Leanpub)</a>; <a href="https://www.coursera.org/specializations/jhu-data-science">Data Science Specialization (Coursera)</a></li>
-<li><strong>Version Control</strong> - <a href="https://lab.github.com/">Github Learning Lab</a>; <a href="https://happygitwithr.com/">Happy Git and Github for the useR</a></li>
-<li><strong>Rmarkdown</strong> - <a href="https://rmarkdown.rstudio.com/lesson-1.html">Rmarkdown introduction</a></li>
+<li>Apply an exploratory data analysis framework to refine questions</li>
+<li>Apply an exploratory data anaylsis framework to identify data issues</li>
+<li>Organize your exploratory data analysis files</li>
+<li>Know and apply general exploratory data analysis principles</li>
 </ul>
 </div>
 </div>
-<div id="learning-objectives" class="section level2">
-<h2><span class="header-section-number">1.2</span> Learning Objectives</h2>
-<p>Our goal is by the end of our class:</p>
-<ol style="list-style-type: decimal">
-<li>You will be able to critique a data analysis and separate good from bad analysis. Specifically you will be able to:</li>
-</ol>
-<ul>
-<li>Identify the underlying question</li>
-<li>Evaluate the “arc” of the data analysis</li>
-<li>Identify the underlying type of question</li>
-<li>Identify the study design</li>
-<li>Determine if visualizations are appropriate</li>
-<li>Determine if methods are appropriate</li>
-<li>Identify pipeline issues</li>
-<li>Identify reproducibility issues</li>
-<li>Identify common fallacies and mistakes</li>
-<li>Distinguish what is a real problem from what is just hard</li>
-<li>Identify common fallacies and mistakes.</li>
-<li>Evaluate the relationship between study design, data, and claims to data justification</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>You will be able to produce a complete data analysis. Specifically you will learn to:</li>
-</ol>
-<ul>
-<li>Translate general questions to data analysis questions</li>
-<li>Explore your data skeptically</li>
-<li>Select appropriate data analytic tools given the study design</li>
-<li>Combine appropriate data analytic tools into pipelines</li>
-<li>Identify strengths and weaknesses of data pipelines you produce</li>
-<li>Describe the results of your analysis accurately</li>
-<li>Decide what is and is not relevant to the “arc” of the data analysis</li>
-<li>Write the “arc” of the data analysis</li>
-<li>Avoid “reinventing the wheel”</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>You will be able to produce the components of a data analytic paper:</li>
-</ol>
-<ul>
-<li>The “arc” of a data analysis</li>
-<li>Abstracts</li>
-<li>Introductions</li>
-<li>Figures</li>
-<li>Tables</li>
-<li>Methods sections</li>
-<li>Discussion/limitations sections</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>You will be able to produce the components of a methods paper:</li>
-</ol>
-<ul>
-<li>The “arc” of a methods paper</li>
-<li>Abstracts</li>
-<li>Introductions</li>
-<li>Figures</li>
-<li>Tables</li>
-<li>Simulation sections</li>
-<li>Applications sections</li>
-<li>Discussion/limitations sections</li>
-</ul>
-<ol start="5" style="list-style-type: decimal">
-<li>You will be able to produce the components of a data analytic presentation for technical and non-technical audiences:</li>
-</ol>
-<ul>
-<li>Problem introduction</li>
-<li>Methods</li>
-<li>Results</li>
-<li>Conclusions</li>
-</ul>
-<ol start="6" style="list-style-type: decimal">
-<li>You will be able to identify key issues in data analytic relationships. Specifically you will be able to:</li>
-</ol>
-<ul>
-<li>Elicit objective functions from collaborators</li>
-<li>Identify types of data analysis relationships (collaboration, consultation, employment)</li>
-<li>Identify successful stategies for data analysis based on relationship type</li>
-<li>Identify key ethical issues in data analysis</li>
-<li>Understand your responsibility as a data analyst</li>
-<li>Explain the value of data science to non-technical audiences</li>
-</ul>
-</div>
-<div id="course-staff" class="section level2">
-<h2><span class="header-section-number">1.3</span> Course Staff</h2>
-<p>The course instructors this year are <a href="http://jtleek.com/">Jeff Leek</a> and <a href="http://www.biostat.jhsph.edu/~rpeng/">Roger Peng</a>. We are both professors in the Biostatistics Department at Johns Hopkins and Directors of the <a href="https://jhudatascience.org/">Johns Hopkins Data Science Lab</a>. Jeff’s research focuses on human genomics, meta-research, and edtech for social good. Roger’s research focuses on air pollution, spatial statistics, and reproducibility. We have been friends for about 10 years and are excited to teach you some of the ins and outs of data science.</p>
-<p>We also have a couple of amazing TA’s this year: <a href="http://ericwb.me/">Eric Bridgeford</a> who works on independence testing, manifold embedding, and graph inference; and <a href="https://www.linkedin.com/in/athchen/">Athena Chen</a> work works on developing statistical tools to analyzing proteomic and genomic data to facilitate a deeper understanding of disease.</p>
-</div>
-<div id="course-logistics" class="section level2">
-<h2><span class="header-section-number">1.4</span> Course logistics</h2>
-<p>This is a pretty unusual year because we will be entirely online. So our logistics will be a little different than usual. The course webpage will be here at:</p>
-<ul>
-<li><a href="http://jtleek.com/ads2020/" class="uri">http://jtleek.com/ads2020/</a></li>
-</ul>
-<p>All communication for the course is going to take place on one of four platforms:</p>
-<ul>
-<li><strong>Slack</strong> - for discussion, sharing resources, collaborating, and announcements
-- Course slack channel: jhsph-ads-2020.slack.com</li>
-<li><strong>Github</strong> - for submitting assignments
-- Course Github: <a href="https://github.com/jtleek/ads2020" class="uri">https://github.com/jtleek/ads2020</a></li>
-<li><strong>Zoom</strong> - for live class discussions
-- Course Zoom: <em>Link available on Course Slack</em></li>
-<li><strong>Hypothesis</strong> for annotating/reviewing data analyses</li>
-</ul>
-<p>The primary communication for the class will go through Slack. That is where we will post course announcements, post all assignments, host most of our asynchronous course discussion, and as the primary means of communication between course participants and course instructors.</p>
-<div class="keyidea">
-<p>You should request access to the JHU Advanced Data Science Course Slack immediately. The course TA’s will approve your access. Once you have access you will also be able to find the course Zoom and Zoom password.</p>
-</div>
-<p>We will have two synchronous meetings a week for discussion (see section on Discussions below) - the class will be split into two approximately equal groups for these sessions:</p>
-<ul>
-<li><strong>Available Times</strong>:
-- Mondays 9-10AM Baltimore Time
-- Mondays 1:30-2:30PM Baltimore Time</li>
-<li><strong>Location</strong>: <em>Zoom - link available on Slack</em></li>
-</ul>
-<p>For people who miss the sessions we will try to have a recap and notes that we will post to Slack so people can read them offline.</p>
-<div class="keyidea">
-<p>If you haven’t already, please fill out the pre-course survey with your information and your preferred discussion time.</p>
-</div>
-</div>
-<div id="assignment-due-dates" class="section level2">
-<h2><span class="header-section-number">1.5</span> Assignment Due Dates</h2>
-<p>All course assignment due dates will appear on the weekly course chapter. Please refer to these chapters for due dates.</p>
-</div>
-<div id="the-pandemic" class="section level2">
-<h2><span class="header-section-number">1.6</span> The Pandemic</h2>
-<p>This is how 2020 feels:</p>
-<p><img src="https://media.giphy.com/media/XdIOEZTt6dL7zTYWIo/giphy.gif" /></p>
-<p>It is super tough to be dealing with a pandemic, an economic crisis, challenges with visas and travel and coordinating school online. Your instructors understand that this is not an ordinary year. We are <em>ultra</em> sympathetic to family challenges and life challenges. We both have small children at home (who may make cameos in class discussions).</p>
-<p>Our goal is to make as much of the class asynchronous as possible so you can work whenever you have time, our plan is to be as understanding as possible when it comes to grading attendance, and any issues that come up with the course. Please don’t hesitate to reach out to us if you are having issues and we will do our best to direct you to whatever resources we have/accomodate you however we can.</p>
-<p>We think the material in this course is important, fun, and this is an opportunity to learn a lot. But life is more important than a course and if there was ever a year that life might get in the way of learning, this is that year. Good enough is the excellence of 2020.</p>
-</div>
-<div id="grading" class="section level2">
-<h2><span class="header-section-number">1.7</span> Grading</h2>
-<div id="philosophy" class="section level3">
-<h3><span class="header-section-number">1.7.1</span> Philosophy</h3>
-<p>We believe the purpose of graduate education is to train you to be able to think for yourself and initiate and complete your own projects. We are super excited to talk to you about ideas, work out solutions with you, and help you to figure out how to produce professional data analyses. We don’t think that graduate school grades are important for this purpose. This means that we don’t care very much about graduate student grades.</p>
-<p>That being said, we have to give you a grade so they will be:</p>
-<p>A - Excellent - 90%+
-B - Passing - 80%+
-C - Needs improvement - 70%+</p>
-<p>We rarely give out grades below a C and if you consistently submit work, participate in discussions, and do your best you are very likely to get an A or a B in the course.</p>
-</div>
-<div id="relative-weights" class="section level3">
-<h3><span class="header-section-number">1.7.2</span> Relative weights</h3>
-<p>This course is primarily focused on deconstructing and constructing data analyses. The grading will be based on your participation in the course and helping each other improve your data analyses. The breakdown of grading will be:</p>
-<ul>
-<li>40% for completing required reviews - see section on reviews below</li>
-<li>40% for completing required data analysis assignments - see section on data analysis assignments below</li>
-<li>20% for course participation on Slack and Zoom - see section on class participation below</li>
-</ul>
-<p>If you submit each review, it is your own work, and it meets a basic level of completeness and effort you will get 100% for that review. If you submit a review but it doesn’t meet basic completeness and effort you will receive 50%. If you do not submit a review you will receive 0%.</p>
-<p>If you submit a data analysis assignment, it is your own work, and it meets a basic level of completeness and effort you will get 100% for that data analysis assignment. If you submit a data analysis assignment but it doesn’t meet basic completeness and effort you will receive 50%. If you do not submit a review you will receive 0%.</p>
-<p>Grading participation is difficult in the best of circumstance and in a pandemic it is basically impossible. If you are at 80% of your assigned discussion sessions and participate in the discussion most of the time and respond to Slack prompts at least 5 times during the course of the term you will receive full participation points. If this level of course participation is challenging for you please reach out to the course instructors and we will work with you to figure out how to ensure you can participate sufficiently to get full points.</p>
-</div>
-</div>
-<div id="assignments" class="section level2">
-<h2><span class="header-section-number">1.8</span> Assignments</h2>
-<div id="submitting-assignments" class="section level3">
-<h3><span class="header-section-number">1.8.1</span> Submitting assignments</h3>
-<p>You will be invited to the JHSPH Advanced Data Science course organization: <a href="https://github.com/advdatasci" class="uri">https://github.com/advdatasci</a>. There will be one repo for each assignment. You will see two copies - the template repository (public) and your assigned homework repo which will be suffixed with your github user name (private). The assignment repos will include an Rmd file each week for you to fill out.</p>
-<p>For each assignment we will provide a time when we will pull your changes from Github. We will assume whatever version we pull at that time is what you are turning in.</p>
-<p>When we start peer reviewing each other’s work, after the submission deadline you will also be assigned another repo (private) with a suffix of your github user name and “peer-review”. This repo will include your peer’s work and a reviewing form which we will ask you to fill out and submit.</p>
-<p>After peer review is completed the feedback will be returned to you and you will be able to pull those changes to your computer, fill out a reviewer feedback form, and push your changes back to Github.</p>
-<p>Instruction submissions will be included with each assignment to remind you of the process you need to take and what dates/times to complete assignments.</p>
-</div>
-<div id="data-analysis-assignments" class="section level3">
-<h3><span class="header-section-number">1.8.2</span> Data Analysis Assignments</h3>
-<p>After we have spent a few weeks reviewing data analytic work written by others, we will begin working on data analyses within</p>
-</div>
-<div id="data-analysis-reviews" class="section level3">
-<h3><span class="header-section-number">1.8.3</span> Data Analysis Reviews</h3>
-<p>In this course we will be reviewing both published data analyses and each other’s work. You will review both in writing and orally during course discussions. Reviews in our course will take the following format:</p>
-<p><strong>Written reviews</strong></p>
-<p>For each assigned data analysis you will provide a written review which will include a summary of the data analysis and answers to key questions. At the beginning of the term these reviews will focus on published/public data analyses, but once we begin to turn in data analysis assignments, they will be peer reviews of each other’s work.</p>
-<p><strong>Oral reviews</strong></p>
-<p>The course will be broke up into two groups. Each group will meet once a week to discuss the papers/data analyses for that week. Each week, each group will have 2 discussion leaders: Lead Reviewer 1 and Lead Reviewer 2. We will rotate so each person gets to be a lead reviewer. Your responsibilities as lead reviewer are to:</p>
-<ul>
-<li><em>Lead Reviewer 1</em>: Complete your written review and provide an overall summary of the data analysis and your answers to the questions. You are responsible for leading the discussion of the analysis.</li>
-<li><em>Lead Reviewer 2</em>: Complete your written review and provide a second opinon on the data analysis, either supporting or providing new viewpoints of Reviewer 1.</li>
-</ul>
-<p>Both reviewers are encouraged to lead discussion of the data analysis to get feedback from the other participants in the session.</p>
-</div>
-<div id="reviewing-code-of-conduct" class="section level3">
-<h3><span class="header-section-number">1.8.4</span> Reviewing Code of Conduct</h3>
-<p>We will be reviewing both public work and each other’s work in both written and oral form. Reviewing well is an art form and is an important skill to master - and not just for this course! Regardless of where you go after Hopkins, you will be tasked with reviewing the work of others.</p>
-<p>The key principles of doing a good job in reviewing and the foundation for our course code of conduct are:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Being concise</strong> - nothing extraneous</li>
-<li><strong>Being precise</strong> - stating the specific problems with the manuscript or data analysis</li>
-<li><strong>Being honest</strong> - stating any real issues you perceive</li>
-<li><strong>Being constructive</strong> - stating how the authors could address the problems you have found</li>
-<li><strong>Being polite</strong> - this helps focus on real issues rather than pet peeves.</li>
-</ol>
-<p>Reviewing each other’s work well is a critical challenge. Remember that there is a person behind the data analysis and you want them to improve. It is very easy to be sucked into the temptation to write a review that is entirely critical or even rude. The best reviews follow the guidelines above and are short, percise, documents that politely suggest constructive critiques. It takes practice to produce these kinds of reviews, which we will work on in class!</p>
-<p>One of the biggest privileges is the priveledge to say you don’t know or that you need something explained. I use this priveledge all the time and it makes it much easier for me when I’m trying to learn new concepts. I want you all to feel that privilege in this class. It is critical that we are able to have discussions in the class and everyone can voice their opinion without feeling looked down on. So let’s work together to allow everyone space to learn maximally.</p>
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">
-An amazing benefit of my privilege is being able to say “I didn't understand that. Could you explain it again?” as many times as necessary without having to worry that people will think I'm stupid.
-</p>
-— Arvind Narayanan (<span class="citation">@random_walker</span>) <a href="https://twitter.com/random_walker/status/1298666512069337088?ref_src=twsrc%5Etfw">August 26, 2020</a>
+<div id="a-framework-for-exploratory-analysis" class="section level2">
+<h2><span class="header-section-number">8.2</span> A framework for exploratory analysis</h2>
+<blockquote>
+<p>“Far better an approximate answer to the right
+question, which is often vague, than an exact
+answer to the wrong question, which can always be
+made precise.” - John Tukey</p>
 </blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Last week we talked about different ways of collecting data. Sometimes this will be an exercise you perform, and sometimes you will just be handed data from someone else. Regardless of how the data arrives the first step you will pursue in any data analysis is to explore the data to understand several things:</p>
+<ol style="list-style-type: decimal">
+<li>Do you have the right question?</li>
+<li>Do you have the right data?</li>
+<li>can you sketch a solution to the question you care about?</li>
+</ol>
+<div id="do-you-have-the-right-question" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Do you have the right question?</h3>
+<p>As we discussed back in <a href="http://jtleek.com/ads2020/week-1.html">Week 1</a> the first and most important step in a data analysis is defining the question you want to answer. That sounds great in theory, but in practice, the question you set out to answer will almost inevitably change during the course of a data analysis. In his <a href="https://simplystatistics.org/2019/04/17/tukey-design-thinking-and-better-questions/">blog post</a> on design thinking in statistics Roger lays out a phase diagram for data analysis.</p>
+<p><img src="https://simplystatistics.org/post/2019-04-17-tukey-design-thinking-and-better-questions_files/question_evidence.png" /></p>
+<p>On the x-axis is the quality of the question. On the y-axis is the strength of evidence to answer that question. It is a common assumption that the data analysis question we are asking is “good” right from the start. So a data analysis is simply the process of moving along the phase diagram until you have strong evidence to answer the question.</p>
+<p>But in reality the question is often more dubious, vague, or not sufficiently clearly specified. This will be true both for questions you elicit from collaborators and for questions you define for yourself! The reason is it is really hard to define good data analytic questions that are concrete enough to answer, specific enough to support analytically, and still sufficiently interesting to merit attention.</p>
+<p>Statistics and machine learning - as they are usually defined - typically focus on building tools and techniques to improve the quality of evidence used to answer a question. Data science, on the other hand, usually involves both improving the question and providing evidence to answer that question. Not infrequently, improving the question will absorb more data analytic time than amassing evidence.</p>
+<p>The typical workflow for a data analysis involves one or more periods of exploration followed by a narrowing and problem definition for further analysis.</p>
+<p><img src="images/week7/exploration.png" /></p>
+<p>In the first phase of an analysis you may start with a relatively specific question you want to answer. Exploring the data involves considering a range of possibilities - whether the data is good enough, whether it can answer the question you wanted to in the first place, whether there are potential issues that you didn’t know about in advance. After a full exploration of the data you will again refine the question and sketch an answer. Then, the modeling phase of analysis will involve a second stage of exploration and consideration of different potential modeling choices resulting in a concrete answer to the question specified on the basis of your exploration that you can work to communicate.</p>
+<p>The middle phase (Phase 2 in the diagram above) represents an important moment in any analysis. Often a good exploratory analysis will be sufficient to give you a strong indication of whether a more complete analysis will answer the question you care about. This is a sort of <a href="https://en.wikipedia.org/wiki/Pareto_principle">Pareto principle</a> of data analysis - which many have recognized.</p>
+<blockquote>
+<p>“In my experience when a moderately good
+solution to a problem has been found, it is seldom
+worth while to spend much time trying to convert
+this to the ‘best’ solution. The time is much better
+spent in real research.” –George Kimball, “A critique of operations research,” J. Wash. Acad. Sci, 1958</p>
+</blockquote>
+<p>Once you refine your question and come up with your first sketch of a solution, it is worth “trusting your gut” before devoting significant extra resources to detailed and complicated statistical modeling. Typically after an exploratory analysis you will have one of three feelings about the potential for answering your question.</p>
+<ol style="list-style-type: decimal">
+<li><em>You are unlikely to find a satisfactory answer with a formal analysis</em> this is the case when there is limited signal, an obvious confounder, major data issues, or some other feature that makes the signal very difficult to find. In this case, it is worth considering whether fitting a complicated statistical model won’t lead to over-interpretation of your data. Proceed with caution if your exploration leads you to this conclusion.</li>
+<li><em>You aren’t certain what the formal analysis will show</em> this is the case when there appears to be some signal, the data are relatively well behaved, and you aren’t entirely cretain what the answer will be after full statistical modeling. This represents a major fraction of data analyses and suggests that you should proceed as planned with your new question defined through your exploration.</li>
+<li><em>The signal is obvious and clear</em> this is the case when your original study is well designed, there is a lot of very clear data, or the signal is so abundantly clear it is hard to imagine an alternative explanation for the signal you see. Here the primary purpose of formal statistical modeling is both to summarize this signal and to spend some time thinking carefully about potential biases. If the signal is expected, and especially if it is surprising, it is worth being careful. As Daniel MacArthur <a href="https://www.nature.com/articles/487427a">put it</a>:
+&gt; Few principles are more depressingly familiar to the veteran scientist: the more surprising a result seems to be, the less likely it is to be true.</li>
+</ol>
+<p>The inputs to the data exploration are the question, context, resources and audience. When you complete your exploratory analysis the goals should be to have refined your existing questions, defined and settled on any new questions, and have a sketch for your ultimate statistical analysis.</p>
+<p><img src="images/week7/outputs.png" /></p>
+<p>While this may seem like a single pass through the data often it is an iterative process between getting data, exploring your data, checking the data, refining hypotheses, and going back to the original data collection paradigm to validate.</p>
+<p>Ultimately you want to settle on a question that is</p>
+<ol style="list-style-type: decimal">
+<li><em>Specific</em> - so your analysis will not be unwieldy</li>
+<li><em>Not overly narrow</em> - so that your data is sufficient to answer the question both in size and target.</li>
+<li><em>Relevant </em> - interesting either to you or your collaborators</li>
+</ol>
+<p>As an example you may be interested in the question of if you run do you lose more weight. But you might only have data collected on yourself and you might be missing certain key variables. You will want to consider what type of question you can answer and what the limitations might be.</p>
+<p><img src="images/week7/fitbit.png" /></p>
+</div>
+<div id="do-you-have-the-right-data" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Do you have the right data?</h3>
+<p>Perhaps the key question in an exploratory analysis is to determine if you have the right data to answer the question. One of the key callenges is that the data you get in classrooms is much cleaner and easier to manipulate than the data you typically have to deal with in the real world. As Jenny Bryan put it in her JSM 2015 talk:</p>
+<blockquote>
+<p>“Classroom data are like teddy bears and real data are like a grizzly bear with salmon blood dripping out its mouth.”</p>
+</blockquote>
+<p>When doing any exploratory analysis you want to confirm at minimum these five things.</p>
+<ol style="list-style-type: decimal">
+<li><em>Are the data good proxies for what you want to measure?</em></li>
+</ol>
+<p><img src="images/week7/proxy.png" />
+Sometimes the data you collected don’t measure what you wanted to in order to answer your question. You may be interested in income, but you only measured reported income. You may be interested in time to death, but you only measured intermediate outcomes. To assess whether you have the right measures:</p>
+<ul>
+<li>Understand the source of each of the measurements in your data set</li>
+<li>Compare them to the expectations you had when defining your question</li>
+<li>Identify any gaps between the source and expecations - there will always be a gap! However your job is to determine how far is too far and then document any potential issues for including as modifications of your later analysis.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><em>Are there sufficient data, and the right type of data, to answer the question?</em></li>
+</ol>
+<p><img src="images/week7/enough.png" /></p>
+<p>This is the most common post-mortem on experimental data - you don’t have enough or the right type of data to answer the question. This is a <em>very common</em> situation to have to navigate with collaborators and we will dedicate more discussion to how to handle that conversation in future classes. But be sympathetic, some day you might collect your own data (like <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3212530/">I did</a>) and find when you were analyzing the data in the middle of the night you didn’t quite have enough:</p>
+<p><img src="images/week7/sympathy.png" /></p>
+<p>You should think through carefully not only if you have enough data, but enough of the kind of data you need. For example you may have a huge data set when performing survival analysis - but if you don’t have enough observed events you won’t be able to reliably detect statistical signals.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><em>Are there obviously missing pieces of information that could be confounders or modifiers?</em></li>
+</ol>
+<p><img src="images/week7/missing-variables.png" /></p>
+<p>This is probably the trickiest one to evaluate. It generally involves considering the context of the problem very carefully. For example, if you’ve collected information on the relationship between drinking and incidence of cancer - it might be important to consider smoking as a confounder. You might only know that from the context of the problem. In terms of exploratory analysis of data the presence of a missing covariate is most often observed by an unexplained pattern or clustering in the data. For example this plot of Covid-19 cases</p>
+<p><img src="images/week7/covid.png" />
+Shows a regular, repeating spike. If all you had was the counts, you might think there must be an underlying variable you haven’t collected that might explain such an important signal (in this case it is likely the <a href="https://www.bbc.com/news/health-52167016">weekend effect</a> in counting).</p>
+<p>This might be the only type of indicator you have a missing variable so worth keeping an eye out for.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><em>Are there any patterns of missing data among the measured variables that might cause problems for an analysis?</em></li>
+</ol>
+<p><img src="images/week7/missing-data.png" /></p>
+<p>This type of missingness is somewhat easier to detect. Mostly because you can count whether there are NA or missing values. The tricky thing is to determine <em>why</em> those data are missing and whether it is related to the variables you care about. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4121561/">This</a> is a relatively nice explainer of the types of missingness. The ideal (and often untestable) case is where the data are “missing completely at random” - in other words they aren’t missing in a way that correlates with any of the variables you care about. Slightly less good, but still ok, is if the data are “missing at random” where the observed variables can explain the systematic missingness patterns. Finally, “missing not at random” could spell significant trouble for your analysis since there are systematic patterns to the missing data, but they can’t be explained by the variables you have.</p>
+<p>Again, as with the missing variables, you may need to explore the data carefully to try to observe patterns of variation in missigness that may be important for your analysis.</p>
+<ol start="5" style="list-style-type: decimal">
+<li><em>Do the data have obvious errors that could increase bias or uncertainty?</em></li>
+</ol>
+<p><img src="images/week7/errors.png" /></p>
+<p>There are a <a href="https://github.com/Quartz/bad-data-guide">very large number of ways data can be wrong</a>. Sometimes these errors will be blazingly obvious. Sometimes they are exceedingly subtle. The key is to understand thoroughly and completely not only the code book for the variables but also the data themselves. Counting, visualization, and comparison to quantities you know must be true can help identify problems in a data set. But it is almost impossible to be 100% sure you have caught everything.</p>
+</div>
+<div id="can-you-sketch-a-solution-to-the-question-you-care-about" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> Can you sketch a solution to the question you care about?</h3>
+<p>Once your data have been organized and you’ve explored them for the obvious issues above, the last component of any exploratory data analysis is to sketch a solution to your primary questions. This sketch may be as simple as a table or a plot - possibly with a statistical model in mind. It will often tell you 80% of the answer - even if that basic sketch is rarely shown to others or included in your final analysis. Think the lego bridge, not the real one.</p>
+<p><img src="images/week7/lego.png" /></p>
+<p>When you are making this sketch you might identify new issues with the data, or modifications to your question. So you may have to cycle between these steps.</p>
+<p><img src="images/week7/epicycle.png" /></p>
+<p>As John Tukey said:</p>
+<blockquote>
+<p>The value of a plot is that it allows us to see what we never expected to see.”</p>
+</blockquote>
+<p>So while you are performing an exploratory analysis you should be constantly resetting your expectations to compare them to the summaries and plots of the data you are making.</p>
+<p><img src="images/week7/expectation.png" /></p>
+<p>You can use statistical models to help explore data as well. Typically these are stripped down versions of the model you will ultimately fit. Keep in mind that models quantify the expectations you have for the data, but won’t necessarily reveal what is unexpected. When exploring with models it is critical to overlay the data on any model fits you may calculate.</p>
+</div>
+</div>
+<div id="some-general-eda-principles" class="section level2">
+<h2><span class="header-section-number">8.3</span> Some general EDA principles</h2>
+<div id="check-the-packaging" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Check the packaging</h3>
+<ul>
+<li>What can you learn about the dataset before looking directly at the data?
+- Check codebooks
+- Ask questions
+- Read up on the data collection procedure</li>
+<li>Check on structure and format
+- Is the data a rectangle? If not look at the files/check the DB
+• Check metadata; are all variables there that you expected?
+- Compare the codebook to the data files you have
+- Make sure you have all the files you need
+• Are all metadata present?
+- Make sure there is a codebook
+- Make sure all the dates, times, and data types match up</li>
+</ul>
+</div>
+<div id="rectangle-your-data" class="section level3">
+<h3><span class="header-section-number">8.3.2</span> Rectangle your data</h3>
+<p>Some data sets will come in as “rectangles” - easy to manage data sets (possibly tidy already) that you can directly use in R. But some spreadsheets will have extra header rows, JSON files will read in as lists, databases may have multiple tables you need to join. The first step toward exploring your data is often “rectangling” the data. At this stage, it doesn’t have to be <a href="https://vita.had.co.nz/papers/tidy-data.pdf">tidy data</a>. You may split out rows or columns, clean up values, spread your data set out, or make it into a long, narrow table. But most data analytic operations in terms of plotting, counting, and more rely on rectangled data. So this is often a good first step.</p>
+</div>
+<div id="look-at-the-top-and-bottom" class="section level3">
+<h3><span class="header-section-number">8.3.3</span> Look at the top and bottom</h3>
+<ul>
+<li>Check the first few rows
+- Do the values match expectations?
+- Are the right variables present?</li>
+<li>Check the last few rows; make sure all rows were
+read properly and there’s no crud at the end
+- Are there weird values at the end?
+- Missing values?
+- Corrupted file endings?</li>
+<li>Time/Date data often sorted; make sure all dates/
+times are in appropriate range</li>
+</ul>
+</div>
+<div id="always-be-counting" class="section level3">
+<h3><span class="header-section-number">8.3.4</span> Always be counting</h3>
+<ul>
+<li>Count various aspects of your dataset
+- Number of rows
+- Number of columns
+- Number of levels of factors
+- Number of missing values</li>
+<li>Compare counts with landmarks
+- Does the row number match the sample size?
+- Do the number of columns match your number of variables?
+- Are there less than or equal to 31 days per month?</li>
+<li>Number of subjects (unique IDs), number of visits
+per subject, number of locations, number of
+missing observations, etc.</li>
+<li>Always be counting at every phase (“checking
+mindset”)
+- Assume the data may have errors!</li>
+</ul>
+</div>
+<div id="make-a-plot" class="section level3">
+<h3><span class="header-section-number">8.3.5</span> Make a plot</h3>
+<p>Actually make a <em>ton</em> of plots. You can’t have too many exploratory plots. Go overboard, most of these will be left on the cutting room floor. Plot every variable, plot most of the comparisons between pairs of variables. Consider heatmaps and other multi-variable plots as well.</p>
+<ul>
+<li>Plots show expectations and deviations from those
+expectations (i.e. distribution mean and outliers)</li>
+<li>Tables generally only show summaries, not deviations; also everything on the same “scale”</li>
+<li>Draw a “fake plot” first - set your expectations</li>
+</ul>
+</div>
+<div id="validate-with-an-external-data-source" class="section level3">
+<h3><span class="header-section-number">8.3.6</span> Validate with an external data source</h3>
+<ul>
+<li>Compare your data to something outside the dataset</li>
+<li>Even a single number/summary statistic comparison can
+be useful
+- Is the range of values what you’d see in the literature?
+- Is the number of observations plausible for this type of data?</li>
+<li>Compare your measurements to another similar
+measurement to check that they’re correlated
+- Get external upper/lower bounds
+- Ex: number of people should exceed total population
+- Ex: Check for negative values when they should be positive</li>
+</ul>
+</div>
+<div id="try-the-easy-solution" class="section level3">
+<h3><span class="header-section-number">8.3.7</span> Try the easy solution</h3>
+<p>Before you fit a complicated statistical model, try the easiest possible solution. Are you looking for a correlation? Just plot x vs y and see what it looks like colored by various potential confounders. Are you looking for a trend over time? Plot the variable vs time and look for patterns and deviations. Are you looking to compare the mean of two groups? Make a boxplot.</p>
+<ul>
+<li>First step in building a primary model</li>
+<li>Build prima facie evidence</li>
+<li>Basic argument, without nuance (that comes later)</li>
+<li>Maybe just one plot (or table)</li>
+</ul>
+</div>
+<div id="follow-up" class="section level3">
+<h3><span class="header-section-number">8.3.8</span> Follow up</h3>
+<ul>
+<li>Do you have the right question?
+- Questions often change once you see the data
+- Typically the scope narrows</li>
+<li>Do you have the right data?
+- Sometimes you might realize you don’t have the data to answer your original question</li>
+<li>Do you need other data?
+- Can you find it? Or is it better to treat this as a limitation</li>
+<li>Could you sketch the solution?</li>
+<li>Is there signal in the data?
+- From painful experience, if you don’t see much in the first pass simple analysis, it is often hard to find it even with <em>much</em> more effort.</li>
+</ul>
+</div>
+</div>
+<div id="organizing-an-eda" class="section level2">
+<h2><span class="header-section-number">8.4</span> Organizing an EDA</h2>
+<p>When performing an EDA, I typically create one or more analysis files. Often my files are placed in the</p>
+<ul>
+<li>code/
+- raw_code/</li>
+</ul>
+<p>folder with most of my plots being saved to</p>
+<ul>
+<li>figures/
+-exploratory figures</li>
+</ul>
+<p>I generally try to name my files in an order that I hope will make sense later. So something like:</p>
+<ul>
+<li>0_data_pull.R</li>
+<li>1_first_plots.R</li>
+</ul>
+<p>I generally use .R files (not Rmd files or Jupyter notebooks) since I will likely be moving fast and don’t have a lot of time for formatting. One thing I like to do is add comments when I find something interesting with words I hope will be searchable later. So something like:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="week-7.html#cb1-1"></a><span class="co">#########</span></span>
+<span id="cb1-2"><a href="week-7.html#cb1-2"></a><span class="co">### Interesting correlation between x and y</span></span>
+<span id="cb1-3"><a href="week-7.html#cb1-3"></a><span class="co">######### </span></span>
+<span id="cb1-4"><a href="week-7.html#cb1-4"></a><span class="kw">cor</span>(x,y)</span></code></pre></div>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><span class="header-section-number">8.5</span> Additional Resources</h2>
 <div class="resources">
-<p>Jeff has previously <a href="https://github.com/jtleek/reviews">written a guide</a> for written reviews of papers.</p>
-</div>
-</div>
-</div>
-<div id="code-of-conduct" class="section level2">
-<h2><span class="header-section-number">1.9</span> Code of Conduct</h2>
-<p>We are committed to providing a welcoming, inclusive, and harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), political beliefs/leanings, or technology choices. We do not tolerate harassment of course participants in any form. Sexual language and imagery is not appropriate for any work event, including group meetings, conferences, talks, parties, Twitter and other online media. This code of conduct applies to all course participants, including instructors and TAs, and applies to all modes of interaction, both in-person and online, including GitHub project repos, Slack channels, and Twitter.</p>
-<p>Course participants violating these rules will be referred to leadership of the Department of Biostatistics and the Title IX coordinator at JHU and may face expulsion from the class.</p>
-<p>All class participants agree to:</p>
 <ul>
-<li><strong>Be considerate</strong> in speech and actions, and actively seek to acknowledge and respect the boundaries of other members.</li>
-<li><strong>Be respectful</strong>. Disagreements happen, but do not require poor behavior or poor manners. Frustration is inevitable, but it should never turn into a personal attack. A community where people feel uncomfortable or threatened is not a productive one. Course participants should be respectful both of the other course participants and those outside the course.</li>
-<li><strong>Refrain from demeaning, discriminatory, or harassing behavior and speech</strong>. Harassment includes, but is not limited to: deliberate intimidation; stalking; unwanted photography or recording; sustained or willful disruption of talks or other events; inappropriate physical contact; use of sexual or discriminatory imagery, comments, or jokes; and unwelcome sexual attention. If you feel that someone has harassed you or otherwise treated you inappropriately, please alert Jeff Leek or Roger Peng.</li>
-<li><strong>Take care of each other</strong>. Refrain from advocating for, or encouraging, any of the above behavior. And, if someone asks you to stop, then stop. Alert Jeff Leek or Roger Peng if you notice a dangerous situation, someone in distress, or violations of this code of conduct, even if they seem inconsequential.</li>
-</ul>
-<div id="need-help" class="section level3">
-<h3><span class="header-section-number">1.9.1</span> Need Help?</h3>
-<p>Please speak with Jeff Leek or Roger Peng. You can also reach out to Karen Bandeen-Roche, chair of the department of Biostatistics or Margaret Taub, Ombudsman for the Department of Biostatistics.</p>
-<p>You may also reach out to any Hopkins resource for sexual harassment, discrimination, or misconduct:</p>
-<ul>
-<li>JHU Sexual Assault Helpline, 410-516-7333 (confidential)<br />
-</li>
-<li><a href="http://sexualassault.jhu.edu/?utm_source=JHU+Broadcast+Messages+-+Synced+List&amp;utm_campaign=c9030551f7-EMAIL_CAMPAIGN_2017_12_11&amp;utm_medium=email&amp;utm_term=0_af6859b027-c9030551f7-69248741">University Sexual Assault Response and Prevention website</a></li>
-<li><a href="https://johnshopkinsspeak2us.tnwreports.com/?utm_source=JHU+Broadcast+Messages+-+Synced+List&amp;utm_campaign=c9030551f7-EMAIL_CAMPAIGN_2017_12_11&amp;utm_medium=email&amp;utm_term=0_af6859b027-c9030551f7-69248741">Johns Hopkins Compliance Hotline</a>, 844-SPEAK2US (844-733-2528)</li>
-<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=8a667a12dd&amp;e=b1124f7c17">Hopkins Policies Online</a></li>
-<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=928bcfb8a9&amp;e=b1124f7c17">JHU Office of Institutional Equity</a> 410-516-8075 (nonconfidential)</li>
-<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=98f4091f97&amp;e=b1124f7c17">Johns Hopkins Student Assistance Program</a> (JHSAP), 443-287-7000</li>
-<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=d51077694c&amp;e=b1124f7c17">University Health Services</a>, 410-955-1892</li>
-<li><a href="https://jhu.us5.list-manage.com/track/click?u=bd75ef1a5cad0cbfd522412c4&amp;id=af1f20bd97&amp;e=b1124f7c17">The Faculty and Staff Assistance Program</a> (FASAP), 443-997-7000</li>
+<li>Karl Broman <a href="https://kbroman.org/AdvData/16_wrangling.pdf">Lecture on Data Wrangling</a></li>
+<li>Roger Peng <a href="https://jhu-advdatasci.github.io/2019/lectures/EDA.pdf">Lecture on EDA</a></li>
 </ul>
 </div>
-<div id="feedback" class="section level3">
-<h3><span class="header-section-number">1.9.2</span> Feedback</h3>
-<p>We welcome feedback on this Code of Conduct.</p>
 </div>
-<div id="license-and-attribution" class="section level3">
-<h3><span class="header-section-number">1.9.3</span> License and attribution</h3>
-<p>This Code of Conduct is distributed under a CC-BY license. Portions of above text comprised of language from the Codes of Conduct adopted by rOpenSci and Django, which are licensed by CC BY-SA 4.0 and CC BY 3.0. This work was further inspired by Ada Initiative’s “how to design a code of conduct for your community” and Geek Feminism’s Code of conduct evaluations and expanded by Ashley Johnson and Shannon Ellis in the Leek group.</p>
-</div>
-</div>
-<div id="academic-ethics" class="section level2">
-<h2><span class="header-section-number">1.10</span> Academic Ethics</h2>
-<p>Students enrolled in the Bloomberg School of Public Health of The Johns Hopkins University assume an obligation to conduct themselves in a manner appropriate to the University’s mission as an institution of higher education. A student is obligated to refrain from acts which he or she knows, or under the circumstances has reason to know, impair the academic integrity of the University. Violations of academic integrity include, but are not limited to: cheating; plagiarism; knowingly furnishing false information to any agent of the University for inclusion in the academic record; violation of the rights and welfare of animal or human subjects in research; and misconduct as a member of either School or University committees or recognized groups or organizations.</p>
-<p>Students should be familiar with the policies and procedures specified under Policy and Procedure Manual Student-01 (Academic Ethics), available on the school’s <a href="https://my.jhsph.edu/Pages/Faculty.aspx">portal</a>.</p>
-<p>The faculty, staff and students of the Bloomberg School of Public Health and the Johns Hopkins University have the shared responsibility to conduct themselves in a manner that upholds the law and respects the rights of others. Students enrolled in the School are subject to the Student Conduct Code (detailed in Policy and Procedure Manual Student-06) and assume an obligation to conduct themselves in a manner which upholds the law and respects the rights of others. They are responsible for maintaining the academic integrity of the institution and for preserving an environment conducive to the safe pursuit of the School’s educational, research, and professional practice missions.</p>
-</div>
-<div id="disability-support-services" class="section level2">
-<h2><span class="header-section-number">1.11</span> Disability support services</h2>
-<p>If you are a student with a documented disability who requires an academic accommodation, please contact the Office of Disability Support Services at 410-502-6602 or via email at <a href="mailto:JHSPH.dss@jhu.edu" class="email">JHSPH.dss@jhu.edu</a>. Accommodations take effect upon approval and apply to the remainder of the time for which a student is registered and enrolled at the Bloomberg School of Public Health.</p>
-</div>
-<div id="email-alerts" class="section level2">
-<h2><span class="header-section-number">1.12</span> Email alerts</h2>
-<p>The full course content will be available via this website. All assignments will be posted here and on Slack. But we are trying an experiment with Substack and you can sign up here for email alerts when new course chapters are available: <a href="https://jhuadvdatasci.substack.com/" class="uri">https://jhuadvdatasci.substack.com/</a>. If you aren’t at JHU but want to follow along with the content you are welcome to sign up as well!</p>
-</div>
-<div id="previous-versions-of-the-class" class="section level2">
-<h2><span class="header-section-number">1.13</span> Previous versions of the class</h2>
+<div id="homework" class="section level2">
+<h2><span class="header-section-number">8.6</span> Homework</h2>
+<div class="homework">
 <ul>
-<li><a href="https://jhu-advdatasci.github.io/2019/" class="uri">https://jhu-advdatasci.github.io/2019/</a></li>
-<li><a href="https://jhu-advdatasci.github.io/2018/" class="uri">https://jhu-advdatasci.github.io/2018/</a></li>
-<li><a href="http://jtleek.com/advdatasci/" class="uri">http://jtleek.com/advdatasci/</a></li>
-<li><a href="http://jtleek.com/advdatasci16/" class="uri">http://jtleek.com/advdatasci16/</a></li>
-<li><a href="http://jtleek.com/advdatasci15/" class="uri">http://jtleek.com/advdatasci15/</a></li>
-<li><a href="https://github.com/jtleek/jhsph753and4" class="uri">https://github.com/jtleek/jhsph753and4</a></li>
+<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework7" class="uri">https://github.com/advdatasci/homework7</a></li>
+<li><strong>Repo Name</strong>: homework7-ind-yourgithubusername</li>
+<li><strong>Pull Date</strong>: 2020/10/12 9:00AM Baltimore Time</li>
 </ul>
 </div>
-<div id="typos-and-corrections" class="section level2">
-<h2><span class="header-section-number">1.14</span> Typos and corrections</h2>
-<p>Feel free to submit typos/errors/etc via the github repository associated with the class: <a href="https://github.com/jtleek/ads2020" class="uri">https://github.com/jtleek/ads2020</a>. You will have the thanks of your grateful instructors!</p>
 
 </div>
 </div>
@@ -709,8 +654,8 @@ An amazing benefit of my privilege is being able to say “I didn't understand t
           </div>
         </div>
       </div>
+<a href="week-6.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="week-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -760,20 +705,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

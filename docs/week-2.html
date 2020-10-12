@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-10-05" />
+<meta name="date" content="2020-10-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -331,6 +331,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.12" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>7.12</b> Additional Resources</a></li>
 <li class="chapter" data-level="7.13" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>7.13</b> Homework</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="week-7.html"><a href="week-7.html"><i class="fa fa-check"></i><b>8</b> Week 7</a><ul>
+<li class="chapter" data-level="8.1" data-path="week-7.html"><a href="week-7.html#week-7-learning-objectives"><i class="fa fa-check"></i><b>8.1</b> Week 7 Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="week-7.html"><a href="week-7.html#a-framework-for-exploratory-analysis"><i class="fa fa-check"></i><b>8.2</b> A framework for exploratory analysis</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-question"><i class="fa fa-check"></i><b>8.2.1</b> Do you have the right question?</a></li>
+<li class="chapter" data-level="8.2.2" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-data"><i class="fa fa-check"></i><b>8.2.2</b> Do you have the right data?</a></li>
+<li class="chapter" data-level="8.2.3" data-path="week-7.html"><a href="week-7.html#can-you-sketch-a-solution-to-the-question-you-care-about"><i class="fa fa-check"></i><b>8.2.3</b> Can you sketch a solution to the question you care about?</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="week-7.html"><a href="week-7.html#some-general-eda-principles"><i class="fa fa-check"></i><b>8.3</b> Some general EDA principles</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="week-7.html"><a href="week-7.html#check-the-packaging"><i class="fa fa-check"></i><b>8.3.1</b> Check the packaging</a></li>
+<li class="chapter" data-level="8.3.2" data-path="week-7.html"><a href="week-7.html#rectangle-your-data"><i class="fa fa-check"></i><b>8.3.2</b> Rectangle your data</a></li>
+<li class="chapter" data-level="8.3.3" data-path="week-7.html"><a href="week-7.html#look-at-the-top-and-bottom"><i class="fa fa-check"></i><b>8.3.3</b> Look at the top and bottom</a></li>
+<li class="chapter" data-level="8.3.4" data-path="week-7.html"><a href="week-7.html#always-be-counting"><i class="fa fa-check"></i><b>8.3.4</b> Always be counting</a></li>
+<li class="chapter" data-level="8.3.5" data-path="week-7.html"><a href="week-7.html#make-a-plot"><i class="fa fa-check"></i><b>8.3.5</b> Make a plot</a></li>
+<li class="chapter" data-level="8.3.6" data-path="week-7.html"><a href="week-7.html#validate-with-an-external-data-source"><i class="fa fa-check"></i><b>8.3.6</b> Validate with an external data source</a></li>
+<li class="chapter" data-level="8.3.7" data-path="week-7.html"><a href="week-7.html#try-the-easy-solution"><i class="fa fa-check"></i><b>8.3.7</b> Try the easy solution</a></li>
+<li class="chapter" data-level="8.3.8" data-path="week-7.html"><a href="week-7.html#follow-up"><i class="fa fa-check"></i><b>8.3.8</b> Follow up</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="week-7.html"><a href="week-7.html#organizing-an-eda"><i class="fa fa-check"></i><b>8.4</b> Organizing an EDA</a></li>
+<li class="chapter" data-level="8.5" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>8.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.6" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>8.6</b> Homework</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -487,7 +508,7 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb1-3"><a href="week-2.html#cb1-3"></a>axes_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/axes.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-4"><a href="week-2.html#cb1-4"></a>clouds_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/clouds.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-5"><a href="week-2.html#cb1-5"></a>axes_json[[<span class="dv">1</span>]]</span></code></pre></div>
-<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;PL\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-26 18:58:16.84406 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;6728272819781632\&quot;,\&quot;drawing\&quot;:[[[1,1,104],[3,72,73]],[[1,92],[1,1]],[[102,100],[1,252]],[[34,34],[5,73]]]}&quot;</code></pre>
+<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;HK\&quot;,\&quot;timestamp\&quot;:\&quot;2017-01-29 18:07:16.25726 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;6398825998581760\&quot;,\&quot;drawing\&quot;:[[[11,15,24],[25,50,77]],[[18,50,79,84,84,70],[14,5,1,8,24,74]],[[20,72],[84,70]],[[72,72,80,83,86],[59,142,242,254,255]],[[121,111,105],[6,40,70]],[[116,166,169,160,158,155],[9,9,14,49,72,79]],[[103,153],[74,74]],[[108,39,0],[59,173,249]]]}&quot;</code></pre>
 <p>The next thing I did was google “quick draw data ndjson rstats”. I found a <a href="https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/">tutorial</a> and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-2.html#cb3-1"></a><span class="kw">library</span>(dplyr)</span>
 <span id="cb3-2"><a href="week-2.html#cb3-2"></a></span>
@@ -498,18 +519,20 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb3-7"><a href="week-2.html#cb3-7"></a>}</span>
 <span id="cb3-8"><a href="week-2.html#cb3-8"></a>first_axe =<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(axes_json[[<span class="dv">1</span>]]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">parse_drawing</span>()</span>
 <span id="cb3-9"><a href="week-2.html#cb3-9"></a>first_axe</span></code></pre></div>
-<pre><code>## # A tibble: 9 x 5
-##   line      x     y drawing          row_id
-##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;
-## 1 1         1     3 6728272819781632      1
-## 2 1         1    72 6728272819781632      2
-## 3 1       104    73 6728272819781632      3
-## 4 2         1     1 6728272819781632      4
-## 5 2        92     1 6728272819781632      5
-## 6 3       102     1 6728272819781632      6
-## 7 3       100   252 6728272819781632      7
-## 8 4        34     5 6728272819781632      8
-## 9 4        34    73 6728272819781632      9</code></pre>
+<pre><code>## # A tibble: 30 x 5
+##    line      x     y drawing          row_id
+##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;
+##  1 1        11    25 6398825998581760      1
+##  2 1        15    50 6398825998581760      2
+##  3 1        24    77 6398825998581760      3
+##  4 2        18    14 6398825998581760      4
+##  5 2        50     5 6398825998581760      5
+##  6 2        79     1 6398825998581760      6
+##  7 2        84     8 6398825998581760      7
+##  8 2        84    24 6398825998581760      8
+##  9 2        70    74 6398825998581760      9
+## 10 3        20    84 6398825998581760     10
+## # … with 20 more rows</code></pre>
 </div>
 <div id="exploratory-data-analysis" class="section level3">
 <h3><span class="header-section-number">3.2.6</span> Exploratory data analysis</h3>
@@ -578,18 +601,18 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb9-15"><a href="week-2.html#cb9-15"></a>grid_axe<span class="op">$</span>ygroup =<span class="st"> </span><span class="kw">cut2</span>(grid_axe<span class="op">$</span>y,<span class="dt">g=</span><span class="dv">16</span>,<span class="dt">levels.mean=</span><span class="ot">TRUE</span>)</span>
 <span id="cb9-16"><a href="week-2.html#cb9-16"></a>grid_axe</span></code></pre></div>
 <pre><code>## # A tibble: 65,536 x 8
-##        x     y line  drawing          row_id pixel xgroup  ygroup 
-##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;             &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;  
-##  1     1     1 2     6728272819781632      4     1 &quot;  8.5&quot; &quot;  8.5&quot;
-##  2     2     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  3     3     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  4     4     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  5     5     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  6     6     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  7     7     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  8     8     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-##  9     9     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
-## 10    10     1 &lt;NA&gt;  &lt;NA&gt;                 NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##        x     y line  drawing row_id pixel xgroup  ygroup 
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;  
+##  1     1     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  2     2     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  3     3     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  4     4     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  5     5     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  6     6     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  7     7     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  8     8     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+##  9     9     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
+## 10    10     1 &lt;NA&gt;  &lt;NA&gt;        NA     0 &quot;  8.5&quot; &quot;  8.5&quot;
 ## # … with 65,526 more rows</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="week-2.html#cb11-1"></a><span class="co"># Now I can convert these to numbers so we’ll have them later</span></span>
 <span id="cb11-2"><a href="week-2.html#cb11-2"></a></span>
@@ -608,11 +631,11 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 ## # Groups:   xgroup [16]
 ##    xgroup ygroup   pixel
 ##     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
-##  1      1      1 0.00781
-##  2      1     17 0      
+##  1      1      1 0      
+##  2      1     17 0.00391
 ##  3      1     33 0      
-##  4      1     49 0      
-##  5      1     65 0.00391
+##  4      1     49 0.00391
+##  5      1     65 0      
 ##  6      1     81 0      
 ##  7      1     97 0      
 ##  8      1    113 0      

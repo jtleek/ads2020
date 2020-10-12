@@ -1,7 +1,7 @@
 --- 
 title: "Advanced Data Science 2020"
 author: "Jeff Leek and Roger D. Peng"
-date: "2020-10-05"
+date: "2020-10-12"
 site: bookdown::bookdown_site
 documentclass: book
 link-citations: yes
