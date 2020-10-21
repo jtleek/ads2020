@@ -255,13 +255,16 @@ list.files()
 ## [16] "03-week.utf8.md"       "04-week.md"            "04-week.Rmd"          
 ## [19] "04-week.utf8.md"       "05-week_files"         "05-week.md"           
 ## [22] "05-week.Rmd"           "05-week.utf8.md"       "06-week_files"        
-## [25] "06-week.Rmd"           "07-week.Rmd"           "ads2020.rds"          
-## [28] "ads2020.Rproj"         "data"                  "docs"                 
-## [31] "fyi.png"               "index.md"              "index.Rmd"            
-## [34] "index.utf8.md"         "jhsph ads.png"         "key.png"              
-## [37] "Lightbulb.png"         "Live-code.png"         "logo"                 
-## [40] "private"               "README.md"             "render1482edc4f5d.rds"
-## [43] "style.css"             "test.png"              "Your-turn.png"
+## [25] "06-week.knit.md"       "06-week.md"            "06-week.Rmd"          
+## [28] "06-week.utf8.md"       "07-week.md"            "07-week.Rmd"          
+## [31] "07-week.utf8.md"       "08-week_files"         "08-week.knit.md"      
+## [34] "08-week.Rmd"           "ads2020.rds"           "ads2020.Rproj"        
+## [37] "data"                  "docs"                  "fyi.png"              
+## [40] "index.md"              "index.Rmd"             "index.utf8.md"        
+## [43] "jhsph ads.png"         "key.png"               "Lightbulb.png"        
+## [46] "Live-code.png"         "logo"                  "private"              
+## [49] "README.md"             "render2e86b5f6d0b.rds" "style.css"            
+## [52] "test.png"              "Your-turn.png"
 ```
 
 OK so our current location is in the `/cloud/project` directory. Using the here package we can see that here points to this base directory. 
@@ -296,13 +299,16 @@ list.files(here::here())
 ## [16] "03-week.utf8.md"       "04-week.md"            "04-week.Rmd"          
 ## [19] "04-week.utf8.md"       "05-week_files"         "05-week.md"           
 ## [22] "05-week.Rmd"           "05-week.utf8.md"       "06-week_files"        
-## [25] "06-week.Rmd"           "07-week.Rmd"           "ads2020.rds"          
-## [28] "ads2020.Rproj"         "data"                  "docs"                 
-## [31] "fyi.png"               "index.md"              "index.Rmd"            
-## [34] "index.utf8.md"         "jhsph ads.png"         "key.png"              
-## [37] "Lightbulb.png"         "Live-code.png"         "logo"                 
-## [40] "private"               "README.md"             "render1482edc4f5d.rds"
-## [43] "style.css"             "test.png"              "Your-turn.png"
+## [25] "06-week.knit.md"       "06-week.md"            "06-week.Rmd"          
+## [28] "06-week.utf8.md"       "07-week.md"            "07-week.Rmd"          
+## [31] "07-week.utf8.md"       "08-week_files"         "08-week.knit.md"      
+## [34] "08-week.Rmd"           "ads2020.rds"           "ads2020.Rproj"        
+## [37] "data"                  "docs"                  "fyi.png"              
+## [40] "index.md"              "index.Rmd"             "index.utf8.md"        
+## [43] "jhsph ads.png"         "key.png"               "Lightbulb.png"        
+## [46] "Live-code.png"         "logo"                  "private"              
+## [49] "README.md"             "render2e86b5f6d0b.rds" "style.css"            
+## [52] "test.png"              "Your-turn.png"
 ```
 
 We can now create a `data` folder if it doesn't already exist and see how to create a link to the data directory using the here package:
@@ -316,7 +322,8 @@ list.files(here("data"))
 ```
 ## [1] "2020-10-05-cameras.csv"  "2020-10-05-cameras.xlsx"
 ## [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
-## [5] "cameras.csv"             "Chinook.sqlite"
+## [5] "2020-10-21-cameras.csv"  "cameras.csv"            
+## [7] "Chinook.sqlite"          "repos.json"
 ```
 
 Now we see that using the `here::here()` function is a 
@@ -447,7 +454,7 @@ date_downloaded
 ```
 
 ```
-## [1] "2020-10-12"
+## [1] "2020-10-21"
 ```
 
 ```r
@@ -457,7 +464,8 @@ list.files(here("data"))
 ```
 ## [1] "2020-10-05-cameras.csv"  "2020-10-05-cameras.xlsx"
 ## [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
-## [5] "cameras.csv"             "Chinook.sqlite"
+## [5] "2020-10-21-cameras.csv"  "cameras.csv"            
+## [7] "Chinook.sqlite"          "repos.json"
 ```
 
 Here you will notice I also named the file with the date and/or saved another variable with the downloaded date. The reason is that if you are downloading data directly from the internet, it is likely to update and your results may change. It is a good idea to keep track of the data each time you download. 
@@ -633,6 +641,9 @@ library(jsonlite)
 jsonData <- fromJSON(github_url)
 ```
 
+
+
+
 The function `fromJSON()` has now converted 
 the JSON file into a data frame with the names: 
 
@@ -690,7 +701,7 @@ table(jsonData$forks)
 ## 
 ##      0      1      2      3      5      6      7      8      9     11     23 
 ##      7      4      2      3      2      1      1      1      1      1      1 
-##     25     41     61    126    713 227478 
+##     25     41     61    126    713 228195 
 ##      1      1      1      1      1      1
 ```
 
@@ -719,7 +730,7 @@ table(jsonData$open_issues_count)
 
 ```
 ## 
-##   0   1   2   5   6 726 
+##   0   1   2   5   6 731 
 ##  22   4   1   1   1   1
 ```
 
@@ -1215,7 +1226,8 @@ list.files(here("data"))
 ```
 ## [1] "2020-10-05-cameras.csv"  "2020-10-05-cameras.xlsx"
 ## [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
-## [5] "cameras.csv"             "Chinook.sqlite"
+## [5] "2020-10-21-cameras.csv"  "cameras.csv"            
+## [7] "Chinook.sqlite"          "repos.json"
 ```
 
 The main workhorse packages that we will use are 
@@ -1473,7 +1485,7 @@ tbl(conn, "Album") %>%
   geom_bar(stat = "identity")
 ```
 
-<img src="06-week_files/figure-html/unnamed-chunk-39-1.png" width="672" />
+<img src="06-week_files/figure-html/unnamed-chunk-40-1.png" width="672" />
 
 Let's also extract the first letter from each 
 album and plot the frequency of each letter. 
@@ -1486,7 +1498,7 @@ tbl(conn, "Album") %>%
   geom_bar()
 ```
 
-<img src="06-week_files/figure-html/unnamed-chunk-40-1.png" width="672" />
+<img src="06-week_files/figure-html/unnamed-chunk-41-1.png" width="672" />
 
 ### Delayed execution
 
@@ -1646,7 +1658,7 @@ req
 
 ```
 ## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-10-12 11:56
+##   Date: 2020-10-21 16:06
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB

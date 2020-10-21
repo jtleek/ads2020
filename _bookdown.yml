@@ -3,7 +3,7 @@ output_dir: "docs"
 chapter_name: ""
 repo: https://github.com/jtleek/ads2020/
 rmd_files: ["index.Rmd","01-week.Rmd","02-week.Rmd","03-week.Rmd","04-week.Rmd","05-week.Rmd", 
-"06-week.Rmd", "07-week.Rmd"]
+"06-week.Rmd", "07-week.Rmd", "08-week.Rmd"]
 new_session: yes
 delete_merged_file: true
 language:

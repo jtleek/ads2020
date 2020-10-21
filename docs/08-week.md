@@ -84,17 +84,25 @@ They were specifically referring to statistical significance in the sense of ide
 
 When you perform your exploratory analysis you will be looking for the "signal" in the data set. What is a signal? Typically we think of signal as the relationship between one or more variables. For example if you are looking for a relationship between x and y then the "signal" here is pretty obvious. 
 
-```{r,echo=FALSE, warning=FALSE,messsage=FALSE}
-library(tibble)
-library(ggplot2)
-library(dplyr)
-set.seed(1234)
-dat = tibble(x = rnorm(1000), z = rnorm(1000), y=x^3 + z)
-dat %>% 
- ggplot(aes(x = x,y=y)) + 
-        geom_point(color="grey") + 
-        theme_minimal()
+
 ```
+## 
+## Attaching package: 'dplyr'
+```
+
+```
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+```
+
+```
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+```
+
+<img src="08-week_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
 
 In fact, in this case the data are generated from the model:
@@ -109,7 +117,8 @@ where $y_i$ is the $i$th data point, $f$ is a function relating $x$ to $y$ and $
 
 On the simple side of the scale, a default reaction for most data analysts is to start with a linear model. It is often a reasonable first summary of the data. 
 
-```{r,warning=FALSE,messsage=FALSE}
+
+```r
 library(modelr)
 lm1 = lm(y ~ x, data=dat)
 dat = dat %>%
@@ -122,6 +131,8 @@ dat %>%
         theme_minimal()
 ```
 
+<img src="08-week_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
 Here this doesn't seem to capture the entire relationship between $x$ and $y$. But remember "all models are wrong...". We can _still think about the linear relationship between x and y even if it isn't the perfect model for the signal_. In particular, this model has the form: 
 
 $$y_i = \beta_0 + \beta_1 x_i + e_i$$ 
@@ -129,32 +140,55 @@ $$y_i = \beta_0 + \beta_1 x_i + e_i$$
 
 Where $\beta_0$ is the average value of $y$ when $x = 0$ and $\beta_1$ is the average increase in $y$ for a one unit increase in $x$. In this example we get parameters estimates for each of the terms: 
 
-```{r,warning=FALSE,messsage=FALSE}
+
+```r
 library(broom)
+```
+
+```
+## 
+## Attaching package: 'broom'
+```
+
+```
+## The following object is masked from 'package:modelr':
+## 
+##     bootstrap
+```
+
+```r
 lm1 %>% tidy()
+```
+
+```
+## # A tibble: 2 x 5
+##   term        estimate std.error statistic   p.value
+##   <chr>          <dbl>     <dbl>     <dbl>     <dbl>
+## 1 (Intercept)   0.0173    0.0888     0.195 8.46e-  1
+## 2 x             3.28      0.0891    36.8   3.83e-188
 ```
 
 So far so good. Remember, this line doesn't _perfectly_ represent the signal between $x$ and $y$. But it does represent our best estimate of the linear trend. Let's imagine that we could sample an infinite number of points. With infinite data you might get something that looks (approximately) like this: 
 
-```{r,echo=FALSE,cache=TRUE,warning=FALSE,messsage=FALSE}
-library(MASS)
-set.seed(1234)
-dat_big = tibble(x = rnorm(5e4), z = rnorm(5e4), y=x^3 + z)
-dat_big %>% 
- ggplot(aes(x = x,y=y)) + 
-        geom_tile()+ 
-        stat_density_2d(aes(fill = stat(level)), geom = "polygon",show.legend=FALSE) +
-        scale_fill_gradient(low = "white", high = "black") +
-        theme_minimal() +
-        xlim(-2,2) +
-        ylim(-8,8)
+
 ```
+## 
+## Attaching package: 'MASS'
+```
+
+```
+## The following object is masked from 'package:dplyr':
+## 
+##     select
+```
+
+<img src="08-week_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
 This limiting case of infinite data is called the "super population". You can think of applying the same linear regression model to this infinite super population of data. If you do, the $\beta_1$ you get is the "parameter" you are estimating. The coefficient $\beta_1$ when fit to this infinite data is the exact value we are trying to estimate with our regression model. 
 
 This seems pretty convoluted. In this case we can tell what the signal is exactly. So why think about the super population and define the parameter estimate as the "linear trend we would have observed in an infinite sample of data"? The reason is that while this case is simple and we know the true signal, we rarely will. So we are almost always using a summary of the data calculated with some simplified model. It is useful to think about what that model is trying to capture and what the result would be if we applied that summary to a data set where we could perfectly capture the same trend. 
 
-The advantage of this approach is simple. If we are estimating the linear trend in this data, it does exist in the limit and when we get a parameter estimate we can interpret it easily: `r lm1$beta` is the average change in $y$ values for a one unit change in $x$ values. 
+The advantage of this approach is simple. If we are estimating the linear trend in this data, it does exist in the limit and when we get a parameter estimate we can interpret it easily:  is the average change in $y$ values for a one unit change in $x$ values. 
 
 An alternative approach to capturing the "signal" is less focused on _attribution_ of the signal to a particular trend and more focused on capturing the most accurate representation we can with our simplified model. In that case we might fit a smooth function to the data.  There are a number of ways to [fit a smoother](https://rafalab.github.io/dsbook/smoothing.html) but one example is to fit a [generalized additive model](https://rafalab.github.io/pages/649/section-10.pdf). These models break what might be a complicated function of multiple variables:
 
@@ -166,7 +200,8 @@ $$ y = f(x_1) + f(x_2) + ...+ f(x_n) + e$$
 
 Where the $f()$ functions can be as complicated or as simple as we like. We can fit this kind of model using the `gam` R package. 
 
-```{r, warning=FALSE, message=FALSE}
+
+```r
 library(mgcv)
 
 gam1 = gam(y ~ s(x),data=dat)
@@ -177,10 +212,20 @@ dat %>% mutate(smooth = gam1$fitted) %>%
   geom_line(aes(x,smooth), color="red")
 ```
 
+<img src="08-week_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+
 Here we "capture" the signal much better. But the resulting interpretation is a little bit harder. We have a smooth term (the $f()$ function), with an estimated number of degrees of freedom (a term describing how flexible the $f()$ function is). 
 
-```{r}
+
+```r
 gam1 %>% tidy()
+```
+
+```
+## # A tibble: 1 x 5
+##   term    edf ref.df statistic p.value
+##   <chr> <dbl>  <dbl>     <dbl>   <dbl>
+## 1 s(x)   8.86   8.99     1988.       0
 ```
 
 This term doesn't have a neat interpretation of "a one unit change in x leads to a change of $\beta_1$ in y". Instead, we have to carefully describe the function and interpret what it means for the data. 
@@ -217,7 +262,8 @@ When you model your data there are two ways you can look for artifacts:
 
 1. Look for relationships among the measured variables that might impact your results. The best way to do this is to plot the outcome you care about versus the predictor you care about. Then color the points by other variables and look for patterns. For example if you see something like this:
 
-```{r}
+
+```r
 library(tibble)
 library(ggplot2)
 library(dplyr)
@@ -231,16 +277,28 @@ dat2 %>%
   ggplot(aes(x=x,y=y)) + geom_point() + theme_minimal()
 ```
 
+<img src="08-week_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+
 It might seem like your regression model is fine. But if you color by the third variable: 
 
-```{r}
+
+```r
 library(viridis)
+```
+
+```
+## Loading required package: viridisLite
+```
+
+```r
 dat2 %>%
   ggplot(aes(x=x,y=y,color=z)) + 
   geom_point() + 
   scale_color_viridis() + 
   theme_minimal() 
 ```
+
+<img src="08-week_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 You can see all of the values at the top of the plot have high levels of z and all the values at the bottom have low levels of z. This suggests z is an important variable to consider when you are modeling. 
 
@@ -253,12 +311,19 @@ You can see all of the values at the top of the plot have high levels of z and a
 
 For example, if we plot the residual histogram from the simple regression of y on x, you might start to notice that it looks a little strange - with something going on that might indicate a missing variable: 
     
-```{r}
+
+```r
 lm2 = lm(y ~ x, data=dat2)
 dat2 %>% 
   add_residuals(lm2) %>%
   ggplot(aes(x=resid)) + geom_histogram() +  theme_minimal()
 ```
+
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+<img src="08-week_files/figure-html/unnamed-chunk-9-1.png" width="672" />
 
 The danger of unknown unknowns is extremely real. There have been multiple papers that have had to be retracted because very good data analysts simply missed a variable that was important. For example - there was a famous paper linking genetic variation to human longeviity - it was ultimately retracted because the sample processing time appeared to be a major confounder of the analysis. However, this was a variable not necessarily known to the authors at the time of writing the paper:  
 
