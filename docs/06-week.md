@@ -257,14 +257,13 @@ list.files()
 ## [22] "05-week.Rmd"           "05-week.utf8.md"       "06-week_files"        
 ## [25] "06-week.Rmd"           "07-week.Rmd"           "08-week_cache"        
 ## [28] "08-week_files"         "08-week.Rmd"           "09-week.Rmd"          
-## [31] "10-week_files"         "10-week.Rmd"           "ads2020.html"         
-## [34] "ads2020.md"            "ads2020.rds"           "ads2020.Rproj"        
-## [37] "data"                  "docs"                  "fyi.png"              
-## [40] "index.md"              "index.Rmd"             "index.utf8.md"        
-## [43] "jhsph ads.png"         "key.png"               "Lightbulb.png"        
-## [46] "Live-code.png"         "logo"                  "private"              
-## [49] "README.md"             "render148514cf0ed.rds" "style.css"            
-## [52] "test.png"              "Your-turn.png"
+## [31] "10-week_files"         "10-week.Rmd"           "ads2020.rds"          
+## [34] "ads2020.Rproj"         "data"                  "docs"                 
+## [37] "fyi.png"               "index.md"              "index.Rmd"            
+## [40] "index.utf8.md"         "jhsph ads.png"         "key.png"              
+## [43] "Lightbulb.png"         "Live-code.png"         "logo"                 
+## [46] "private"               "README.md"             "render1f455586ef0.rds"
+## [49] "style.css"             "test.png"              "Your-turn.png"
 ```
 
 OK so our current location is in the `/cloud/project` directory. Using the here package we can see that here points to this base directory. 
@@ -301,14 +300,13 @@ list.files(here::here())
 ## [22] "05-week.Rmd"           "05-week.utf8.md"       "06-week_files"        
 ## [25] "06-week.Rmd"           "07-week.Rmd"           "08-week_cache"        
 ## [28] "08-week_files"         "08-week.Rmd"           "09-week.Rmd"          
-## [31] "10-week_files"         "10-week.Rmd"           "ads2020.html"         
-## [34] "ads2020.md"            "ads2020.rds"           "ads2020.Rproj"        
-## [37] "data"                  "docs"                  "fyi.png"              
-## [40] "index.md"              "index.Rmd"             "index.utf8.md"        
-## [43] "jhsph ads.png"         "key.png"               "Lightbulb.png"        
-## [46] "Live-code.png"         "logo"                  "private"              
-## [49] "README.md"             "render148514cf0ed.rds" "style.css"            
-## [52] "test.png"              "Your-turn.png"
+## [31] "10-week_files"         "10-week.Rmd"           "ads2020.rds"          
+## [34] "ads2020.Rproj"         "data"                  "docs"                 
+## [37] "fyi.png"               "index.md"              "index.Rmd"            
+## [40] "index.utf8.md"         "jhsph ads.png"         "key.png"              
+## [43] "Lightbulb.png"         "Live-code.png"         "logo"                 
+## [46] "private"               "README.md"             "render1f455586ef0.rds"
+## [49] "style.css"             "test.png"              "Your-turn.png"
 ```
 
 We can now create a `data` folder if it doesn't already exist and see how to create a link to the data directory using the here package:
@@ -1661,7 +1659,7 @@ req
 
 ```
 ## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-11-02 04:50
+##   Date: 2020-11-02 11:58
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB

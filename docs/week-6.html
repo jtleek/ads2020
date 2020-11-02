@@ -638,14 +638,13 @@ working directory path and the files available using <code>list.file()</code></p
 ## [22] &quot;05-week.Rmd&quot;           &quot;05-week.utf8.md&quot;       &quot;06-week_files&quot;        
 ## [25] &quot;06-week.Rmd&quot;           &quot;07-week.Rmd&quot;           &quot;08-week_cache&quot;        
 ## [28] &quot;08-week_files&quot;         &quot;08-week.Rmd&quot;           &quot;09-week.Rmd&quot;          
-## [31] &quot;10-week_files&quot;         &quot;10-week.Rmd&quot;           &quot;ads2020.html&quot;         
-## [34] &quot;ads2020.md&quot;            &quot;ads2020.rds&quot;           &quot;ads2020.Rproj&quot;        
-## [37] &quot;data&quot;                  &quot;docs&quot;                  &quot;fyi.png&quot;              
-## [40] &quot;index.md&quot;              &quot;index.Rmd&quot;             &quot;index.utf8.md&quot;        
-## [43] &quot;jhsph ads.png&quot;         &quot;key.png&quot;               &quot;Lightbulb.png&quot;        
-## [46] &quot;Live-code.png&quot;         &quot;logo&quot;                  &quot;private&quot;              
-## [49] &quot;README.md&quot;             &quot;render148514cf0ed.rds&quot; &quot;style.css&quot;            
-## [52] &quot;test.png&quot;              &quot;Your-turn.png&quot;</code></pre>
+## [31] &quot;10-week_files&quot;         &quot;10-week.Rmd&quot;           &quot;ads2020.rds&quot;          
+## [34] &quot;ads2020.Rproj&quot;         &quot;data&quot;                  &quot;docs&quot;                 
+## [37] &quot;fyi.png&quot;               &quot;index.md&quot;              &quot;index.Rmd&quot;            
+## [40] &quot;index.utf8.md&quot;         &quot;jhsph ads.png&quot;         &quot;key.png&quot;              
+## [43] &quot;Lightbulb.png&quot;         &quot;Live-code.png&quot;         &quot;logo&quot;                 
+## [46] &quot;private&quot;               &quot;README.md&quot;             &quot;render1f455586ef0.rds&quot;
+## [49] &quot;style.css&quot;             &quot;test.png&quot;              &quot;Your-turn.png&quot;</code></pre>
 <p>OK so our current location is in the <code>/cloud/project</code> directory. Using the here package we can see that here points to this base directory.</p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="week-6.html#cb103-1"></a><span class="kw">library</span>(here)</span></code></pre></div>
 <pre><code>## here() starts at /cloud/project</code></pre>
@@ -662,14 +661,13 @@ working directory path and the files available using <code>list.file()</code></p
 ## [22] &quot;05-week.Rmd&quot;           &quot;05-week.utf8.md&quot;       &quot;06-week_files&quot;        
 ## [25] &quot;06-week.Rmd&quot;           &quot;07-week.Rmd&quot;           &quot;08-week_cache&quot;        
 ## [28] &quot;08-week_files&quot;         &quot;08-week.Rmd&quot;           &quot;09-week.Rmd&quot;          
-## [31] &quot;10-week_files&quot;         &quot;10-week.Rmd&quot;           &quot;ads2020.html&quot;         
-## [34] &quot;ads2020.md&quot;            &quot;ads2020.rds&quot;           &quot;ads2020.Rproj&quot;        
-## [37] &quot;data&quot;                  &quot;docs&quot;                  &quot;fyi.png&quot;              
-## [40] &quot;index.md&quot;              &quot;index.Rmd&quot;             &quot;index.utf8.md&quot;        
-## [43] &quot;jhsph ads.png&quot;         &quot;key.png&quot;               &quot;Lightbulb.png&quot;        
-## [46] &quot;Live-code.png&quot;         &quot;logo&quot;                  &quot;private&quot;              
-## [49] &quot;README.md&quot;             &quot;render148514cf0ed.rds&quot; &quot;style.css&quot;            
-## [52] &quot;test.png&quot;              &quot;Your-turn.png&quot;</code></pre>
+## [31] &quot;10-week_files&quot;         &quot;10-week.Rmd&quot;           &quot;ads2020.rds&quot;          
+## [34] &quot;ads2020.Rproj&quot;         &quot;data&quot;                  &quot;docs&quot;                 
+## [37] &quot;fyi.png&quot;               &quot;index.md&quot;              &quot;index.Rmd&quot;            
+## [40] &quot;index.utf8.md&quot;         &quot;jhsph ads.png&quot;         &quot;key.png&quot;              
+## [43] &quot;Lightbulb.png&quot;         &quot;Live-code.png&quot;         &quot;logo&quot;                 
+## [46] &quot;private&quot;               &quot;README.md&quot;             &quot;render1f455586ef0.rds&quot;
+## [49] &quot;style.css&quot;             &quot;test.png&quot;              &quot;Your-turn.png&quot;</code></pre>
 <p>We can now create a <code>data</code> folder if it doesn’t already exist and see how to create a link to the data directory using the here package:</p>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="week-6.html#cb109-1"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">file.exists</span>(<span class="st">&quot;data&quot;</span>)){<span class="kw">dir.create</span>(<span class="st">&quot;data&quot;</span>)}</span>
 <span id="cb109-2"><a href="week-6.html#cb109-2"></a><span class="kw">list.files</span>(<span class="kw">here</span>(<span class="st">&quot;data&quot;</span>))</span></code></pre></div>
@@ -1680,7 +1678,7 @@ album and plot the frequency of each letter.</p>
 <span id="cb191-3"><a href="week-6.html#cb191-3"></a>req =<span class="st"> </span><span class="kw">GET</span>(query_url)</span>
 <span id="cb191-4"><a href="week-6.html#cb191-4"></a>req</span></code></pre></div>
 <pre><code>## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-11-02 04:50
+##   Date: 2020-11-02 11:58
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB

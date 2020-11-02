@@ -333,7 +333,7 @@ p = penguins %>%
         xlab("Flipper Length (mm)") + 
         labs(color="Penguin Species",
              title = "<b> Penguin body mass increases with flipper length</b><br>
-               <span style = 'font-size:10pt'>Penguins of three species, <span style='color:#440154'>Adelie</span>, <span style='color:#FDE725'>Chinstrap </span>, and <span style='color:#21908C'>Gentoo</span>, have body mass that increase with flipper length. </span>")+
+               <span style = 'font-size:10pt'>Penguins of three species, <span style='color:#440154'>Adelie</span>, <span style='color:#21908C'>Chinstrap </span>, and <span style='color:#FDE725'>Gentoo</span>, have body mass that increase with flipper length. </span>")+
         scale_color_viridis_d()+
         theme_minimal() + 
         theme(
