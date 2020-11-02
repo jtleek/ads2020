@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-10-26" />
+<meta name="date" content="2020-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,6 +51,7 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/table1-1.0/table1_defaults.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -391,6 +392,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>10.6</b> Additional Resources</a></li>
 <li class="chapter" data-level="10.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>10.7</b> Homework</a></li>
 </ul></li>
+<li class="chapter" data-level="11" data-path="week-10.html"><a href="week-10.html"><i class="fa fa-check"></i><b>11</b> Week 10</a><ul>
+<li class="chapter" data-level="11.1" data-path="week-10.html"><a href="week-10.html#week-10-learning-objectives"><i class="fa fa-check"></i><b>11.1</b> Week 10 Learning objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="week-10.html"><a href="week-10.html#exploratoy-vs-expository"><i class="fa fa-check"></i><b>11.2</b> Exploratoy vs expository</a></li>
+<li class="chapter" data-level="11.3" data-path="week-10.html"><a href="week-10.html#creating-expository-graphs"><i class="fa fa-check"></i><b>11.3</b> Creating Expository Graphs</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="week-10.html"><a href="week-10.html#background-color"><i class="fa fa-check"></i><b>11.3.1</b> Background color</a></li>
+<li class="chapter" data-level="11.3.2" data-path="week-10.html"><a href="week-10.html#axis-titles-and-axis-labels"><i class="fa fa-check"></i><b>11.3.2</b> Axis titles and axis labels</a></li>
+<li class="chapter" data-level="11.3.3" data-path="week-10.html"><a href="week-10.html#legends-or-not"><i class="fa fa-check"></i><b>11.3.3</b> Legends (or not!)</a></li>
+<li class="chapter" data-level="11.3.4" data-path="week-10.html"><a href="week-10.html#titles-with-color"><i class="fa fa-check"></i><b>11.3.4</b> Titles (with color!)</a></li>
+<li class="chapter" data-level="11.3.5" data-path="week-10.html"><a href="week-10.html#adding-a-model-fit"><i class="fa fa-check"></i><b>11.3.5</b> Adding a model fit</a></li>
+<li class="chapter" data-level="11.3.6" data-path="week-10.html"><a href="week-10.html#figure-captions"><i class="fa fa-check"></i><b>11.3.6</b> Figure captions</a></li>
+<li class="chapter" data-level="11.3.7" data-path="week-10.html"><a href="week-10.html#colors-and-fonts"><i class="fa fa-check"></i><b>11.3.7</b> Colors and fonts</a></li>
+<li class="chapter" data-level="11.3.8" data-path="week-10.html"><a href="week-10.html#multi-panel-plots"><i class="fa fa-check"></i><b>11.3.8</b> Multi-panel plots</a></li>
+<li class="chapter" data-level="11.3.9" data-path="week-10.html"><a href="week-10.html#miscellaneous-advice"><i class="fa fa-check"></i><b>11.3.9</b> Miscellaneous Advice</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="week-10.html"><a href="week-10.html#creating-expository-tables"><i class="fa fa-check"></i><b>11.4</b> Creating Expository Tables</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="week-10.html"><a href="week-10.html#table-1"><i class="fa fa-check"></i><b>11.4.1</b> Table 1</a></li>
+<li class="chapter" data-level="11.4.2" data-path="week-10.html"><a href="week-10.html#color-in-tables"><i class="fa fa-check"></i><b>11.4.2</b> Color in tables</a></li>
+<li class="chapter" data-level="11.4.3" data-path="week-10.html"><a href="week-10.html#captions"><i class="fa fa-check"></i><b>11.4.3</b> Captions</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="week-10.html"><a href="week-10.html#scientific-graphics-vs-infographics"><i class="fa fa-check"></i><b>11.5</b> Scientific graphics vs infographics</a></li>
+<li class="chapter" data-level="11.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>11.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="11.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>11.7</b> Homework</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -547,7 +571,7 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb1-3"><a href="week-2.html#cb1-3"></a>axes_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/axes.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-4"><a href="week-2.html#cb1-4"></a>clouds_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/clouds.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-5"><a href="week-2.html#cb1-5"></a>axes_json[[<span class="dv">1</span>]]</span></code></pre></div>
-<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;US\&quot;,\&quot;timestamp\&quot;:\&quot;2017-01-28 00:05:29.6737 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;4956324926324736\&quot;,\&quot;drawing\&quot;:[[[160,160,155,132,118,77,54,0,13,20,29,29,42,70,104,128],[255,233,196,121,48,23,13,0,52,124,149,162,139,114,94,89]]]}&quot;</code></pre>
+<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;US\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-01 23:25:21.8869 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;5975755978702848\&quot;,\&quot;drawing\&quot;:[[[0,27,80,151,199,241,255,211,142,142,169],[136,118,72,19,2,5,0,43,78,65,11]],[[8,22,70,120,174],[132,127,91,45,12]]]}&quot;</code></pre>
 <p>The next thing I did was google “quick draw data ndjson rstats”. I found a <a href="https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/">tutorial</a> and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-2.html#cb3-1"></a><span class="kw">library</span>(dplyr)</span>
 <span id="cb3-2"><a href="week-2.html#cb3-2"></a></span>
@@ -561,22 +585,22 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <pre><code>## # A tibble: 16 x 5
 ##    line      x     y drawing          row_id
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;
-##  1 1       160   255 4956324926324736      1
-##  2 1       160   233 4956324926324736      2
-##  3 1       155   196 4956324926324736      3
-##  4 1       132   121 4956324926324736      4
-##  5 1       118    48 4956324926324736      5
-##  6 1        77    23 4956324926324736      6
-##  7 1        54    13 4956324926324736      7
-##  8 1         0     0 4956324926324736      8
-##  9 1        13    52 4956324926324736      9
-## 10 1        20   124 4956324926324736     10
-## 11 1        29   149 4956324926324736     11
-## 12 1        29   162 4956324926324736     12
-## 13 1        42   139 4956324926324736     13
-## 14 1        70   114 4956324926324736     14
-## 15 1       104    94 4956324926324736     15
-## 16 1       128    89 4956324926324736     16</code></pre>
+##  1 1         0   136 5975755978702848      1
+##  2 1        27   118 5975755978702848      2
+##  3 1        80    72 5975755978702848      3
+##  4 1       151    19 5975755978702848      4
+##  5 1       199     2 5975755978702848      5
+##  6 1       241     5 5975755978702848      6
+##  7 1       255     0 5975755978702848      7
+##  8 1       211    43 5975755978702848      8
+##  9 1       142    78 5975755978702848      9
+## 10 1       142    65 5975755978702848     10
+## 11 1       169    11 5975755978702848     11
+## 12 2         8   132 5975755978702848     12
+## 13 2        22   127 5975755978702848     13
+## 14 2        70    91 5975755978702848     14
+## 15 2       120    45 5975755978702848     15
+## 16 2       174    12 5975755978702848     16</code></pre>
 </div>
 <div id="exploratory-data-analysis" class="section level3">
 <h3><span class="header-section-number">3.2.6</span> Exploratory data analysis</h3>
@@ -678,12 +702,12 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 ##  1      1      1 0      
 ##  2      1     17 0      
 ##  3      1     33 0      
-##  4      1     49 0.00391
+##  4      1     49 0      
 ##  5      1     65 0      
 ##  6      1     81 0      
 ##  7      1     97 0      
 ##  8      1    113 0      
-##  9      1    129 0      
+##  9      1    129 0.00391
 ## 10      1    145 0      
 ## # … with 246 more rows</code></pre>
 <p>Remember this was our original axe</p>

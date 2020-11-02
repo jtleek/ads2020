@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>11 Week 10 | Week 1</title>
+  <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="11 Week 10 | Week 1" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="11 Week 10 | Week 1" />
+  
+  <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+<meta name="author" content="Jeff Leek and Roger D. Peng" />
+
+
+<meta name="date" content="2020-11-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="week-9.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/table1-1.0/table1_defaults.css" rel="stylesheet" />
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<img src ="ads2020-small.png" class="center">
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#assumptions-and-pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Assumptions and pre-requisites</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#course-staff"><i class="fa fa-check"></i><b>1.3</b> Course Staff</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-logistics"><i class="fa fa-check"></i><b>1.4</b> Course logistics</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment-due-dates"><i class="fa fa-check"></i><b>1.5</b> Assignment Due Dates</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-pandemic"><i class="fa fa-check"></i><b>1.6</b> The Pandemic</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#philosophy"><i class="fa fa-check"></i><b>1.7.1</b> Philosophy</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#relative-weights"><i class="fa fa-check"></i><b>1.7.2</b> Relative weights</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a><ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#submitting-assignments"><i class="fa fa-check"></i><b>1.8.1</b> Submitting assignments</a></li>
+<li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#data-analysis-assignments"><i class="fa fa-check"></i><b>1.8.2</b> Data Analysis Assignments</a></li>
+<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.3</b> Data Analysis Reviews</a></li>
+<li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.4</b> Reviewing Code of Conduct</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i><b>1.9.1</b> Need Help?</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#feedback"><i class="fa fa-check"></i><b>1.9.2</b> Feedback</a></li>
+<li class="chapter" data-level="1.9.3" data-path="index.html"><a href="index.html#license-and-attribution"><i class="fa fa-check"></i><b>1.9.3</b> License and attribution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#academic-ethics"><i class="fa fa-check"></i><b>1.10</b> Academic Ethics</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#disability-support-services"><i class="fa fa-check"></i><b>1.11</b> Disability support services</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#email-alerts"><i class="fa fa-check"></i><b>1.12</b> Email alerts</a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#previous-versions-of-the-class"><i class="fa fa-check"></i><b>1.13</b> Previous versions of the class</a></li>
+<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#typos-and-corrections"><i class="fa fa-check"></i><b>1.14</b> Typos and corrections</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a><ul>
+<li class="chapter" data-level="2.1" data-path="week-1.html"><a href="week-1.html#week-1-learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Week 1 Learning objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="week-1.html"><a href="week-1.html#maybe-we-should-start-by-defining-data-science."><i class="fa fa-check"></i><b>2.2.1</b> Maybe we should start by defining data science….</a></li>
+<li class="chapter" data-level="2.2.2" data-path="week-1.html"><a href="week-1.html#data-science-is-hard-but-not-like-math-is-hard"><i class="fa fa-check"></i><b>2.2.2</b> Data Science is hard, but not like math is hard</a></li>
+<li class="chapter" data-level="2.2.3" data-path="week-1.html"><a href="week-1.html#so-what-is-advanced-data-science"><i class="fa fa-check"></i><b>2.2.3</b> So what is advanced data science?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="week-1.html"><a href="week-1.html#descriptive"><i class="fa fa-check"></i><b>2.3.1</b> Descriptive</a></li>
+<li class="chapter" data-level="2.3.2" data-path="week-1.html"><a href="week-1.html#exploratory"><i class="fa fa-check"></i><b>2.3.2</b> Exploratory</a></li>
+<li class="chapter" data-level="2.3.3" data-path="week-1.html"><a href="week-1.html#inferential"><i class="fa fa-check"></i><b>2.3.3</b> Inferential</a></li>
+<li class="chapter" data-level="2.3.4" data-path="week-1.html"><a href="week-1.html#predictive"><i class="fa fa-check"></i><b>2.3.4</b> Predictive</a></li>
+<li class="chapter" data-level="2.3.5" data-path="week-1.html"><a href="week-1.html#causal"><i class="fa fa-check"></i><b>2.3.5</b> Causal</a></li>
+<li class="chapter" data-level="2.3.6" data-path="week-1.html"><a href="week-1.html#mechanistic"><i class="fa fa-check"></i><b>2.3.6</b> Mechanistic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="week-1.html"><a href="week-1.html#answering-the-question"><i class="fa fa-check"></i><b>2.4.1</b> Answering the question</a></li>
+<li class="chapter" data-level="2.4.2" data-path="week-1.html"><a href="week-1.html#checking-the-data"><i class="fa fa-check"></i><b>2.4.2</b> Checking the data</a></li>
+<li class="chapter" data-level="2.4.3" data-path="week-1.html"><a href="week-1.html#tidying-the-data"><i class="fa fa-check"></i><b>2.4.3</b> Tidying the data</a></li>
+<li class="chapter" data-level="2.4.4" data-path="week-1.html"><a href="week-1.html#exploratory-analysis"><i class="fa fa-check"></i><b>2.4.4</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="2.4.5" data-path="week-1.html"><a href="week-1.html#inference"><i class="fa fa-check"></i><b>2.4.5</b> Inference</a></li>
+<li class="chapter" data-level="2.4.6" data-path="week-1.html"><a href="week-1.html#prediction"><i class="fa fa-check"></i><b>2.4.6</b> Prediction</a></li>
+<li class="chapter" data-level="2.4.7" data-path="week-1.html"><a href="week-1.html#causality"><i class="fa fa-check"></i><b>2.4.7</b> Causality</a></li>
+<li class="chapter" data-level="2.4.8" data-path="week-1.html"><a href="week-1.html#written-analyses"><i class="fa fa-check"></i><b>2.4.8</b> Written analyses</a></li>
+<li class="chapter" data-level="2.4.9" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>2.4.9</b> Figures</a></li>
+<li class="chapter" data-level="2.4.10" data-path="week-1.html"><a href="week-1.html#presentations"><i class="fa fa-check"></i><b>2.4.10</b> Presentations</a></li>
+<li class="chapter" data-level="2.4.11" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
+<li class="chapter" data-level="2.4.12" data-path="week-1.html"><a href="week-1.html#r-packages"><i class="fa fa-check"></i><b>2.4.12</b> R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="week-1.html"><a href="week-1.html#your-first-assignment---deconstructing-an-analysis"><i class="fa fa-check"></i><b>2.5</b> Your first assignment - deconstructing an analysis</a></li>
+<li class="chapter" data-level="2.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>2.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>2.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a><ul>
+<li class="chapter" data-level="3.1" data-path="week-2.html"><a href="week-2.html#week-2-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Week 2 Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="week-2.html"><a href="week-2.html#defining-the-question"><i class="fa fa-check"></i><b>3.2.1</b> Defining the question</a></li>
+<li class="chapter" data-level="3.2.2" data-path="week-2.html"><a href="week-2.html#defining-the-ideal-data-set"><i class="fa fa-check"></i><b>3.2.2</b> Defining the ideal data set</a></li>
+<li class="chapter" data-level="3.2.3" data-path="week-2.html"><a href="week-2.html#determine-the-data-you-can-access"><i class="fa fa-check"></i><b>3.2.3</b> Determine the data you can access</a></li>
+<li class="chapter" data-level="3.2.4" data-path="week-2.html"><a href="week-2.html#obtain-the-data"><i class="fa fa-check"></i><b>3.2.4</b> Obtain the data</a></li>
+<li class="chapter" data-level="3.2.5" data-path="week-2.html"><a href="week-2.html#clean-the-data"><i class="fa fa-check"></i><b>3.2.5</b> Clean the data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="week-2.html"><a href="week-2.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>3.2.6</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="3.2.7" data-path="week-2.html"><a href="week-2.html#statistical-predictionmodeling"><i class="fa fa-check"></i><b>3.2.7</b> Statistical prediction/modeling</a></li>
+<li class="chapter" data-level="3.2.8" data-path="week-2.html"><a href="week-2.html#interpret-results"><i class="fa fa-check"></i><b>3.2.8</b> Interpret results</a></li>
+<li class="chapter" data-level="3.2.9" data-path="week-2.html"><a href="week-2.html#challenge-results"><i class="fa fa-check"></i><b>3.2.9</b> Challenge results</a></li>
+<li class="chapter" data-level="3.2.10" data-path="week-2.html"><a href="week-2.html#synthesizewrite-up-results"><i class="fa fa-check"></i><b>3.2.10</b> Synthesize/write up results</a></li>
+<li class="chapter" data-level="3.2.11" data-path="week-2.html"><a href="week-2.html#create-reproducible-code"><i class="fa fa-check"></i><b>3.2.11</b> Create reproducible code</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="week-2.html"><a href="week-2.html#raw-informal-and-formal-data-science"><i class="fa fa-check"></i><b>3.3</b> Raw, informal, and formal data science</a></li>
+<li class="chapter" data-level="3.4" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.5" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="week-3.html"><a href="week-3.html"><i class="fa fa-check"></i><b>4</b> Week 3</a><ul>
+<li class="chapter" data-level="4.1" data-path="week-3.html"><a href="week-3.html#week-3-learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Week 3 Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="week-3.html"><a href="week-3.html#organizing-a-data-analysis"><i class="fa fa-check"></i><b>4.2</b> Organizing a data analysis</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="week-3.html"><a href="week-3.html#motivation---the-stick"><i class="fa fa-check"></i><b>4.2.1</b> Motivation - the stick</a></li>
+<li class="chapter" data-level="4.2.2" data-path="week-3.html"><a href="week-3.html#motivation---the-carrot"><i class="fa fa-check"></i><b>4.2.2</b> Motivation - the carrot</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="week-3.html"><a href="week-3.html#project-organization"><i class="fa fa-check"></i><b>4.3</b> Project Organization</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="week-3.html"><a href="week-3.html#readme.md"><i class="fa fa-check"></i><b>4.3.1</b> README.md</a></li>
+<li class="chapter" data-level="4.3.2" data-path="week-3.html"><a href="week-3.html#gitignore"><i class="fa fa-check"></i><b>4.3.2</b> .gitignore</a></li>
+<li class="chapter" data-level="4.3.3" data-path="week-3.html"><a href="week-3.html#data"><i class="fa fa-check"></i><b>4.3.3</b> data/</a></li>
+<li class="chapter" data-level="4.3.4" data-path="week-3.html"><a href="week-3.html#code"><i class="fa fa-check"></i><b>4.3.4</b> code/</a></li>
+<li class="chapter" data-level="4.3.5" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>4.3.5</b> figures</a></li>
+<li class="chapter" data-level="4.3.6" data-path="week-3.html"><a href="week-3.html#products"><i class="fa fa-check"></i><b>4.3.6</b> products/</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="week-3.html"><a href="week-3.html#file-naming"><i class="fa fa-check"></i><b>4.4</b> File naming</a></li>
+<li class="chapter" data-level="4.5" data-path="week-3.html"><a href="week-3.html#absolute-vs.-relative-paths"><i class="fa fa-check"></i><b>4.5</b> Absolute vs. relative paths</a></li>
+<li class="chapter" data-level="4.6" data-path="week-3.html"><a href="week-3.html#coding-variables"><i class="fa fa-check"></i><b>4.6</b> Coding Variables</a></li>
+<li class="chapter" data-level="4.7" data-path="week-3.html"><a href="week-3.html#project-management-software"><i class="fa fa-check"></i><b>4.7</b> Project management software</a></li>
+<li class="chapter" data-level="4.8" data-path="week-3.html"><a href="week-3.html#coding-style"><i class="fa fa-check"></i><b>4.8</b> Coding style</a></li>
+<li class="chapter" data-level="4.9" data-path="week-3.html"><a href="week-3.html#chain-of-custody-for-data"><i class="fa fa-check"></i><b>4.9</b> Chain of Custody for Data</a></li>
+<li class="chapter" data-level="4.10" data-path="week-3.html"><a href="week-3.html#version-control"><i class="fa fa-check"></i><b>4.10</b> Version Control</a></li>
+<li class="chapter" data-level="4.11" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>4.11</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.12" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>4.12</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="week-4.html"><a href="week-4.html"><i class="fa fa-check"></i><b>5</b> Week 4</a><ul>
+<li class="chapter" data-level="5.1" data-path="week-4.html"><a href="week-4.html#week-4-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Week 4 Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="week-4.html"><a href="week-4.html#the-optimality-paradox"><i class="fa fa-check"></i><b>5.2</b> The optimality paradox</a></li>
+<li class="chapter" data-level="5.3" data-path="week-4.html"><a href="week-4.html#an-example-of-the-art-of-data-science"><i class="fa fa-check"></i><b>5.3</b> An example of the art of data science</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="week-4.html"><a href="week-4.html#an-important-subtlety---analyst-decisions-change-the-question"><i class="fa fa-check"></i><b>5.3.1</b> An important subtlety - analyst decisions change the question</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="5.4.2" data-path="week-4.html"><a href="week-4.html#replicability"><i class="fa fa-check"></i><b>5.4.2</b> Replicability</a></li>
+<li class="chapter" data-level="5.4.3" data-path="week-4.html"><a href="week-4.html#false-discovery"><i class="fa fa-check"></i><b>5.4.3</b> False discovery</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="week-4.html"><a href="week-4.html#a-theory-of-data-science-success"><i class="fa fa-check"></i><b>5.5</b> A theory of data science success</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="week-4.html"><a href="week-4.html#elements-of-data-science"><i class="fa fa-check"></i><b>5.5.1</b> Elements of Data Science</a></li>
+<li class="chapter" data-level="5.5.2" data-path="week-4.html"><a href="week-4.html#principles-of-data-science"><i class="fa fa-check"></i><b>5.5.2</b> Principles of Data Science</a></li>
+<li class="chapter" data-level="5.5.3" data-path="week-4.html"><a href="week-4.html#data-matching"><i class="fa fa-check"></i><b>5.5.3</b> Data matching</a></li>
+<li class="chapter" data-level="5.5.4" data-path="week-4.html"><a href="week-4.html#exhaustive"><i class="fa fa-check"></i><b>5.5.4</b> Exhaustive</a></li>
+<li class="chapter" data-level="5.5.5" data-path="week-4.html"><a href="week-4.html#skeptical"><i class="fa fa-check"></i><b>5.5.5</b> Skeptical</a></li>
+<li class="chapter" data-level="5.5.6" data-path="week-4.html"><a href="week-4.html#second-order"><i class="fa fa-check"></i><b>5.5.6</b> Second order</a></li>
+<li class="chapter" data-level="5.5.7" data-path="week-4.html"><a href="week-4.html#transparent"><i class="fa fa-check"></i><b>5.5.7</b> Transparent</a></li>
+<li class="chapter" data-level="5.5.8" data-path="week-4.html"><a href="week-4.html#reproducible"><i class="fa fa-check"></i><b>5.5.8</b> Reproducible</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="week-4.html"><a href="week-4.html#a-successful-data-analysis"><i class="fa fa-check"></i><b>5.6</b> A successful data analysis</a></li>
+<li class="chapter" data-level="5.7" data-path="week-4.html"><a href="week-4.html#constraints-and-expectation-matching"><i class="fa fa-check"></i><b>5.7</b> Constraints and expectation matching</a></li>
+<li class="chapter" data-level="5.8" data-path="week-4.html"><a href="week-4.html#what-about-being-correct"><i class="fa fa-check"></i><b>5.8</b> What about being correct?</a></li>
+<li class="chapter" data-level="5.9" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>5.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.10" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>5.10</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="week-5.html"><a href="week-5.html"><i class="fa fa-check"></i><b>6</b> Week 5</a><ul>
+<li class="chapter" data-level="6.1" data-path="week-5.html"><a href="week-5.html#week-5-learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Week 5 Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="week-5.html"><a href="week-5.html#skepticism-vs.-discovery"><i class="fa fa-check"></i><b>6.2</b> Skepticism vs. Discovery</a></li>
+<li class="chapter" data-level="6.3" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>6.3</b> Figures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="week-5.html"><a href="week-5.html#just-modeling-results---show-the-data"><i class="fa fa-check"></i><b>6.3.1</b> Just modeling results -&gt; show the data!</a></li>
+<li class="chapter" data-level="6.3.2" data-path="week-5.html"><a href="week-5.html#dynamite-plots---scatterplots"><i class="fa fa-check"></i><b>6.3.2</b> Dynamite plots -&gt; scatterplots</a></li>
+<li class="chapter" data-level="6.3.3" data-path="week-5.html"><a href="week-5.html#ridiculograms---clustering-diagrams"><i class="fa fa-check"></i><b>6.3.3</b> Ridiculograms -&gt; clustering diagrams</a></li>
+<li class="chapter" data-level="6.3.4" data-path="week-5.html"><a href="week-5.html#venn-diagrams---upset-plots"><i class="fa fa-check"></i><b>6.3.4</b> Venn diagrams -&gt; upset plots</a></li>
+<li class="chapter" data-level="6.3.5" data-path="week-5.html"><a href="week-5.html#extreme-variation-in-scales---log-scales"><i class="fa fa-check"></i><b>6.3.5</b> Extreme variation in scales -&gt; log scales</a></li>
+<li class="chapter" data-level="6.3.6" data-path="week-5.html"><a href="week-5.html#correlated-measurements---ma-plots"><i class="fa fa-check"></i><b>6.3.6</b> Correlated measurements -&gt; MA plots</a></li>
+<li class="chapter" data-level="6.3.7" data-path="week-5.html"><a href="week-5.html#axes-cutoff---plot-to-zero"><i class="fa fa-check"></i><b>6.3.7</b> Axes cutoff -&gt; plot to zero</a></li>
+<li class="chapter" data-level="6.3.8" data-path="week-5.html"><a href="week-5.html#d-graphics---just-dont"><i class="fa fa-check"></i><b>6.3.8</b> 3d graphics -&gt; just don’t</a></li>
+<li class="chapter" data-level="6.3.9" data-path="week-5.html"><a href="week-5.html#pie-charts---adjacent-bar-plots"><i class="fa fa-check"></i><b>6.3.9</b> Pie charts -&gt; adjacent bar plots</a></li>
+<li class="chapter" data-level="6.3.10" data-path="week-5.html"><a href="week-5.html#difficult-comparisons---put-things-close-on-linear-axes"><i class="fa fa-check"></i><b>6.3.10</b> Difficult comparisons -&gt; put things close on linear axes</a></li>
+<li class="chapter" data-level="6.3.11" data-path="week-5.html"><a href="week-5.html#comparisons-hard-to-make-between-plots---use-common-axes"><i class="fa fa-check"></i><b>6.3.11</b> Comparisons hard to make between plots -&gt; use common axes</a></li>
+<li class="chapter" data-level="6.3.12" data-path="week-5.html"><a href="week-5.html#legends-hard-to-follow---use-labels"><i class="fa fa-check"></i><b>6.3.12</b> Legends hard to follow -&gt; use labels</a></li>
+<li class="chapter" data-level="6.3.13" data-path="week-5.html"><a href="week-5.html#confounders-arent-clear---color-by-confounder"><i class="fa fa-check"></i><b>6.3.13</b> Confounders aren’t clear -&gt; color by confounder</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="week-5.html"><a href="week-5.html#common-data-analytic-fallacies"><i class="fa fa-check"></i><b>6.4</b> Common data analytic fallacies</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="week-5.html"><a href="week-5.html#spurious-correlation"><i class="fa fa-check"></i><b>6.4.1</b> Spurious correlation</a></li>
+<li class="chapter" data-level="6.4.2" data-path="week-5.html"><a href="week-5.html#outliers"><i class="fa fa-check"></i><b>6.4.2</b> Outliers</a></li>
+<li class="chapter" data-level="6.4.3" data-path="week-5.html"><a href="week-5.html#reversing-cause-and-effect"><i class="fa fa-check"></i><b>6.4.3</b> Reversing Cause and Effect</a></li>
+<li class="chapter" data-level="6.4.4" data-path="week-5.html"><a href="week-5.html#confounders"><i class="fa fa-check"></i><b>6.4.4</b> Confounders</a></li>
+<li class="chapter" data-level="6.4.5" data-path="week-5.html"><a href="week-5.html#simpsons-paradox"><i class="fa fa-check"></i><b>6.4.5</b> Simpson’s Paradox</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="week-5.html"><a href="week-5.html#over-skepticism"><i class="fa fa-check"></i><b>6.5</b> Over-skepticism</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="week-5.html"><a href="week-5.html#everything-must-be-causal"><i class="fa fa-check"></i><b>6.5.1</b> Everything must be causal</a></li>
+<li class="chapter" data-level="6.5.2" data-path="week-5.html"><a href="week-5.html#nothing-can-be-causal"><i class="fa fa-check"></i><b>6.5.2</b> Nothing can be causal</a></li>
+<li class="chapter" data-level="6.5.3" data-path="week-5.html"><a href="week-5.html#you-should-answer-my-question-not-yours"><i class="fa fa-check"></i><b>6.5.3</b> You should answer my question, not yours</a></li>
+<li class="chapter" data-level="6.5.4" data-path="week-5.html"><a href="week-5.html#you-used-insert-method-i-dont-use-therefore-the-analysis-is-wrong"><i class="fa fa-check"></i><b>6.5.4</b> You used (insert method I don’t use) therefore the analysis is wrong</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>6.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="week-6.html"><a href="week-6.html"><i class="fa fa-check"></i><b>7</b> Week 6</a><ul>
+<li class="chapter" data-level="7.1" data-path="week-6.html"><a href="week-6.html#week-6-learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Week 6 Learning objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="week-6.html"><a href="week-6.html#what-you-wish-data-looked-like"><i class="fa fa-check"></i><b>7.2</b> What you wish data looked like</a></li>
+<li class="chapter" data-level="7.3" data-path="week-6.html"><a href="week-6.html#what-it-actually-looks-like"><i class="fa fa-check"></i><b>7.3</b> What it actually looks like</a></li>
+<li class="chapter" data-level="7.4" data-path="week-6.html"><a href="week-6.html#background-on-getting-data"><i class="fa fa-check"></i><b>7.4</b> Background on getting data</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="week-6.html"><a href="week-6.html#where-do-data-live"><i class="fa fa-check"></i><b>7.4.1</b> Where do data live?</a></li>
+<li class="chapter" data-level="7.4.2" data-path="week-6.html"><a href="week-6.html#best-practices-on-sharing-data"><i class="fa fa-check"></i><b>7.4.2</b> Best practices on sharing data</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="week-6.html"><a href="week-6.html#relative-versus-absolute-paths"><i class="fa fa-check"></i><b>7.5</b> Relative versus absolute paths</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="week-6.html"><a href="week-6.html#the-here-package"><i class="fa fa-check"></i><b>7.5.1</b> The <code>here</code> package</a></li>
+<li class="chapter" data-level="7.5.2" data-path="week-6.html"><a href="week-6.html#finding-and-creating-files-locally"><i class="fa fa-check"></i><b>7.5.2</b> Finding and creating files locally</a></li>
+<li class="chapter" data-level="7.5.3" data-path="week-6.html"><a href="week-6.html#downloading-files"><i class="fa fa-check"></i><b>7.5.3</b> Downloading files</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="week-6.html"><a href="week-6.html#reading-files"><i class="fa fa-check"></i><b>7.6</b> Reading files</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="week-6.html"><a href="week-6.html#reading-in-csv-files"><i class="fa fa-check"></i><b>7.6.1</b> Reading in CSV files</a></li>
+<li class="chapter" data-level="7.6.2" data-path="week-6.html"><a href="week-6.html#reading-in-excel-files"><i class="fa fa-check"></i><b>7.6.2</b> Reading in Excel files</a></li>
+<li class="chapter" data-level="7.6.3" data-path="week-6.html"><a href="week-6.html#reading-in-json-files"><i class="fa fa-check"></i><b>7.6.3</b> Reading in JSON Files</a></li>
+<li class="chapter" data-level="7.6.4" data-path="week-6.html"><a href="week-6.html#using-github-api"><i class="fa fa-check"></i><b>7.6.4</b> Using GitHub API</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="week-6.html"><a href="week-6.html#google-sheets"><i class="fa fa-check"></i><b>7.7</b> Google Sheets</a></li>
+<li class="chapter" data-level="7.8" data-path="week-6.html"><a href="week-6.html#databases"><i class="fa fa-check"></i><b>7.8</b> Databases</a><ul>
+<li class="chapter" data-level="7.8.1" data-path="week-6.html"><a href="week-6.html#querying-with-dplyr-syntax"><i class="fa fa-check"></i><b>7.8.1</b> Querying with <code>dplyr</code> syntax</a></li>
+<li class="chapter" data-level="7.8.2" data-path="week-6.html"><a href="week-6.html#delayed-execution"><i class="fa fa-check"></i><b>7.8.2</b> Delayed execution</a></li>
+</ul></li>
+<li class="chapter" data-level="7.9" data-path="week-6.html"><a href="week-6.html#apis"><i class="fa fa-check"></i><b>7.9</b> APIs</a></li>
+<li class="chapter" data-level="7.10" data-path="week-6.html"><a href="week-6.html#webscraping"><i class="fa fa-check"></i><b>7.10</b> Webscraping</a><ul>
+<li class="chapter" data-level="7.10.1" data-path="week-6.html"><a href="week-6.html#css-selectors"><i class="fa fa-check"></i><b>7.10.1</b> CSS Selectors</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="week-6.html"><a href="week-6.html#google-ing"><i class="fa fa-check"></i><b>7.11</b> Google-ing</a></li>
+<li class="chapter" data-level="7.12" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>7.12</b> Additional Resources</a></li>
+<li class="chapter" data-level="7.13" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>7.13</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="week-7.html"><a href="week-7.html"><i class="fa fa-check"></i><b>8</b> Week 7</a><ul>
+<li class="chapter" data-level="8.1" data-path="week-7.html"><a href="week-7.html#week-7-learning-objectives"><i class="fa fa-check"></i><b>8.1</b> Week 7 Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="week-7.html"><a href="week-7.html#a-framework-for-exploratory-analysis"><i class="fa fa-check"></i><b>8.2</b> A framework for exploratory analysis</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-question"><i class="fa fa-check"></i><b>8.2.1</b> Do you have the right question?</a></li>
+<li class="chapter" data-level="8.2.2" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-data"><i class="fa fa-check"></i><b>8.2.2</b> Do you have the right data?</a></li>
+<li class="chapter" data-level="8.2.3" data-path="week-7.html"><a href="week-7.html#can-you-sketch-a-solution-to-the-question-you-care-about"><i class="fa fa-check"></i><b>8.2.3</b> Can you sketch a solution to the question you care about?</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="week-7.html"><a href="week-7.html#some-general-eda-principles"><i class="fa fa-check"></i><b>8.3</b> Some general EDA principles</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="week-7.html"><a href="week-7.html#check-the-packaging"><i class="fa fa-check"></i><b>8.3.1</b> Check the packaging</a></li>
+<li class="chapter" data-level="8.3.2" data-path="week-7.html"><a href="week-7.html#rectangle-your-data"><i class="fa fa-check"></i><b>8.3.2</b> Rectangle your data</a></li>
+<li class="chapter" data-level="8.3.3" data-path="week-7.html"><a href="week-7.html#look-at-the-top-and-bottom"><i class="fa fa-check"></i><b>8.3.3</b> Look at the top and bottom</a></li>
+<li class="chapter" data-level="8.3.4" data-path="week-7.html"><a href="week-7.html#always-be-counting"><i class="fa fa-check"></i><b>8.3.4</b> Always be counting</a></li>
+<li class="chapter" data-level="8.3.5" data-path="week-7.html"><a href="week-7.html#make-a-plot"><i class="fa fa-check"></i><b>8.3.5</b> Make a plot</a></li>
+<li class="chapter" data-level="8.3.6" data-path="week-7.html"><a href="week-7.html#validate-with-an-external-data-source"><i class="fa fa-check"></i><b>8.3.6</b> Validate with an external data source</a></li>
+<li class="chapter" data-level="8.3.7" data-path="week-7.html"><a href="week-7.html#try-the-easy-solution"><i class="fa fa-check"></i><b>8.3.7</b> Try the easy solution</a></li>
+<li class="chapter" data-level="8.3.8" data-path="week-7.html"><a href="week-7.html#follow-up"><i class="fa fa-check"></i><b>8.3.8</b> Follow up</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="week-7.html"><a href="week-7.html#organizing-an-eda"><i class="fa fa-check"></i><b>8.4</b> Organizing an EDA</a></li>
+<li class="chapter" data-level="8.5" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>8.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.6" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>8.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="week-8.html"><a href="week-8.html"><i class="fa fa-check"></i><b>9</b> Week 8</a><ul>
+<li class="chapter" data-level="9.1" data-path="week-8.html"><a href="week-8.html#week-8-learning-objectives"><i class="fa fa-check"></i><b>9.1</b> Week 8 Learning objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="week-8.html"><a href="week-8.html#a-framework-for-modeling"><i class="fa fa-check"></i><b>9.2</b> A framework for modeling</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="week-8.html"><a href="week-8.html#identify-your-goal"><i class="fa fa-check"></i><b>9.2.1</b> Identify your goal</a></li>
+<li class="chapter" data-level="9.2.2" data-path="week-8.html"><a href="week-8.html#form-an-analysis-plan"><i class="fa fa-check"></i><b>9.2.2</b> Form an analysis plan</a></li>
+<li class="chapter" data-level="9.2.3" data-path="week-8.html"><a href="week-8.html#model-signal"><i class="fa fa-check"></i><b>9.2.3</b> Model signal</a></li>
+<li class="chapter" data-level="9.2.4" data-path="week-8.html"><a href="week-8.html#account-for-artifacts"><i class="fa fa-check"></i><b>9.2.4</b> Account for artifacts</a></li>
+<li class="chapter" data-level="9.2.5" data-path="week-8.html"><a href="week-8.html#build-models-up-sequentially"><i class="fa fa-check"></i><b>9.2.5</b> Build models up sequentially</a></li>
+<li class="chapter" data-level="9.2.6" data-path="week-8.html"><a href="week-8.html#model-uncertainty"><i class="fa fa-check"></i><b>9.2.6</b> Model uncertainty</a></li>
+<li class="chapter" data-level="9.2.7" data-path="week-8.html"><a href="week-8.html#compare-to-your-analysis-plan"><i class="fa fa-check"></i><b>9.2.7</b> Compare to your analysis plan</a></li>
+<li class="chapter" data-level="9.2.8" data-path="week-8.html"><a href="week-8.html#understand-incentives"><i class="fa fa-check"></i><b>9.2.8</b> Understand incentives</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>9.3</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.4" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>9.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="week-9.html"><a href="week-9.html"><i class="fa fa-check"></i><b>10</b> Week 9</a><ul>
+<li class="chapter" data-level="10.1" data-path="week-9.html"><a href="week-9.html#week-9-learning-objectives"><i class="fa fa-check"></i><b>10.1</b> Week 9 Learning objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="week-9.html"><a href="week-9.html#story-telling-in-data-analysis"><i class="fa fa-check"></i><b>10.2</b> Story Telling in Data Analysis</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="week-9.html"><a href="week-9.html#the-central-dramatic-argument"><i class="fa fa-check"></i><b>10.2.1</b> The Central Dramatic Argument</a></li>
+<li class="chapter" data-level="10.2.2" data-path="week-9.html"><a href="week-9.html#thematic-structure-and-causality"><i class="fa fa-check"></i><b>10.2.2</b> Thematic structure and causality</a></li>
+<li class="chapter" data-level="10.2.3" data-path="week-9.html"><a href="week-9.html#format"><i class="fa fa-check"></i><b>10.2.3</b> Format</a></li>
+<li class="chapter" data-level="10.2.4" data-path="week-9.html"><a href="week-9.html#trust-and-belief"><i class="fa fa-check"></i><b>10.2.4</b> Trust and Belief</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="week-9.html"><a href="week-9.html#the-journey-to-interesting-and-true"><i class="fa fa-check"></i><b>10.3</b> The journey to interesting and true</a></li>
+<li class="chapter" data-level="10.4" data-path="week-9.html"><a href="week-9.html#data-analysis-papers"><i class="fa fa-check"></i><b>10.4</b> Data Analysis Papers</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="week-9.html"><a href="week-9.html#how-do-you-know-when-to-start-writing"><i class="fa fa-check"></i><b>10.4.1</b> How do you know when to start writing?</a></li>
+<li class="chapter" data-level="10.4.2" data-path="week-9.html"><a href="week-9.html#structure"><i class="fa fa-check"></i><b>10.4.2</b> Structure</a></li>
+<li class="chapter" data-level="10.4.3" data-path="week-9.html"><a href="week-9.html#titles"><i class="fa fa-check"></i><b>10.4.3</b> Titles</a></li>
+<li class="chapter" data-level="10.4.4" data-path="week-9.html"><a href="week-9.html#abstracts"><i class="fa fa-check"></i><b>10.4.4</b> Abstracts</a></li>
+<li class="chapter" data-level="10.4.5" data-path="week-9.html"><a href="week-9.html#introductions"><i class="fa fa-check"></i><b>10.4.5</b> Introductions</a></li>
+<li class="chapter" data-level="10.4.6" data-path="week-9.html"><a href="week-9.html#results"><i class="fa fa-check"></i><b>10.4.6</b> Results</a></li>
+<li class="chapter" data-level="10.4.7" data-path="week-9.html"><a href="week-9.html#methods-sections"><i class="fa fa-check"></i><b>10.4.7</b> Methods sections</a></li>
+<li class="chapter" data-level="10.4.8" data-path="week-9.html"><a href="week-9.html#conclusions-and-discussion"><i class="fa fa-check"></i><b>10.4.8</b> Conclusions and discussion</a></li>
+<li class="chapter" data-level="10.4.9" data-path="week-9.html"><a href="week-9.html#supplementary-material"><i class="fa fa-check"></i><b>10.4.9</b> Supplementary material</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="week-9.html"><a href="week-9.html#a-few-matters-of-form"><i class="fa fa-check"></i><b>10.5</b> A few matters of form</a></li>
+<li class="chapter" data-level="10.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>10.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="10.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>10.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="week-10.html"><a href="week-10.html"><i class="fa fa-check"></i><b>11</b> Week 10</a><ul>
+<li class="chapter" data-level="11.1" data-path="week-10.html"><a href="week-10.html#week-10-learning-objectives"><i class="fa fa-check"></i><b>11.1</b> Week 10 Learning objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="week-10.html"><a href="week-10.html#exploratoy-vs-expository"><i class="fa fa-check"></i><b>11.2</b> Exploratoy vs expository</a></li>
+<li class="chapter" data-level="11.3" data-path="week-10.html"><a href="week-10.html#creating-expository-graphs"><i class="fa fa-check"></i><b>11.3</b> Creating Expository Graphs</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="week-10.html"><a href="week-10.html#background-color"><i class="fa fa-check"></i><b>11.3.1</b> Background color</a></li>
+<li class="chapter" data-level="11.3.2" data-path="week-10.html"><a href="week-10.html#axis-titles-and-axis-labels"><i class="fa fa-check"></i><b>11.3.2</b> Axis titles and axis labels</a></li>
+<li class="chapter" data-level="11.3.3" data-path="week-10.html"><a href="week-10.html#legends-or-not"><i class="fa fa-check"></i><b>11.3.3</b> Legends (or not!)</a></li>
+<li class="chapter" data-level="11.3.4" data-path="week-10.html"><a href="week-10.html#titles-with-color"><i class="fa fa-check"></i><b>11.3.4</b> Titles (with color!)</a></li>
+<li class="chapter" data-level="11.3.5" data-path="week-10.html"><a href="week-10.html#adding-a-model-fit"><i class="fa fa-check"></i><b>11.3.5</b> Adding a model fit</a></li>
+<li class="chapter" data-level="11.3.6" data-path="week-10.html"><a href="week-10.html#figure-captions"><i class="fa fa-check"></i><b>11.3.6</b> Figure captions</a></li>
+<li class="chapter" data-level="11.3.7" data-path="week-10.html"><a href="week-10.html#colors-and-fonts"><i class="fa fa-check"></i><b>11.3.7</b> Colors and fonts</a></li>
+<li class="chapter" data-level="11.3.8" data-path="week-10.html"><a href="week-10.html#multi-panel-plots"><i class="fa fa-check"></i><b>11.3.8</b> Multi-panel plots</a></li>
+<li class="chapter" data-level="11.3.9" data-path="week-10.html"><a href="week-10.html#miscellaneous-advice"><i class="fa fa-check"></i><b>11.3.9</b> Miscellaneous Advice</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="week-10.html"><a href="week-10.html#creating-expository-tables"><i class="fa fa-check"></i><b>11.4</b> Creating Expository Tables</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="week-10.html"><a href="week-10.html#table-1"><i class="fa fa-check"></i><b>11.4.1</b> Table 1</a></li>
+<li class="chapter" data-level="11.4.2" data-path="week-10.html"><a href="week-10.html#color-in-tables"><i class="fa fa-check"></i><b>11.4.2</b> Color in tables</a></li>
+<li class="chapter" data-level="11.4.3" data-path="week-10.html"><a href="week-10.html#captions"><i class="fa fa-check"></i><b>11.4.3</b> Captions</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="week-10.html"><a href="week-10.html#scientific-graphics-vs-infographics"><i class="fa fa-check"></i><b>11.5</b> Scientific graphics vs infographics</a></li>
+<li class="chapter" data-level="11.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>11.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="11.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>11.7</b> Homework</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Data Science 2020</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="week-10" class="section level1">
+<h1><span class="header-section-number">11</span> Week 10</h1>
+<div id="week-10-learning-objectives" class="section level2">
+<h2><span class="header-section-number">11.1</span> Week 10 Learning objectives</h2>
+<div class="keyidea">
+<p>At the end of this lesson you will be able to:</p>
+<ul>
+<li>Distinguish exploratory from expository figures</li>
+<li>Apply the steps to create expository, publication quality, figures</li>
+<li>Apply the steps to create publication quality tables</li>
+</ul>
+</div>
+</div>
+<div id="exploratoy-vs-expository" class="section level2">
+<h2><span class="header-section-number">11.2</span> Exploratoy vs expository</h2>
+<p>When you start off analyzing a data set you almost always start with exploratory analysis. This includes quick tables, plots, and graphs for you to explore data characteristics and get a handle on what is going on with the data. Exploratory graphs and tables should be made exceptionally quickly and you should make a ton of them! The only audience of an exploratory graphic is you so you shouldn’t worry about things like fonts, axis labels, titles, legends, and labeling. Similarly, exploratory tables may be as simple as a quick <code>dplyr::count</code> command and shouldn’t be cleaned up and organized. Recall the parable of the <a href="https://en.wikipedia.org/wiki/Blind_men_and_an_elephant">blind men and the elephant</a> from week 2 of the course:</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Blind_monks_examining_an_elephant.jpg/2560px-Blind_monks_examining_an_elephant.jpg" /></p>
+<p>Expository graphs and tables, on the other hand, are meant to be shared with an audience. Rather than trying to discover structure in the data for you personally, you are trying to communicate what you have found to your audience. The key thing to keep in mind is that:</p>
+<blockquote>
+<p>People spend way less time reading your work than you think</p>
+</blockquote>
+<p>Think about the last couple of papers you read. You probably quickly skimmed to start, maybe did a deeper read if it was part of an assignment or if you needed to use the results in your research. But for most of the papers you read, you are likely glancing them over pretty quickly.</p>
+<p>What does this mean?</p>
+<p>It means all of your figures should be designed to convey their message quickly, ideally in a glance. Furthermore, your figures should ideally be self-contained so that if a person only looks at the figures in your work, they can still follow the story you were trying to tell. Similarly, if you are making a table to communicate a result to your audience, you should think about what you are trying to communicate and how to highlight the message you want your audience to take home.</p>
+<p>A good expository graph has clear, large axis labels; color and size carefully used for communication; minimal abbreviations in axis labels and legends; shows the data; have figure captions with a declarative summary statement and self-sufficient labeling; and highlights take home messages with titles or annotation.</p>
+<p>A good expository table is simplified as much as possible; does not use excess digits in numbers; is not overly dense and complicated; uses color for highlighting key messages; have table captions with a declarative summary statement and self-sufficient labeling; and labels take home messages with a title.</p>
+<p>One thing to keep in mind is that there are multiple different plotting and tabling systems out there (both in R and in other languages!). One thing to keep in mind is that regardless of which system you use, making a good expository graph will typically take a lot of tweaking. For example this nice bar graph from the <a href="http://motioninsocial.com/tufte/">Tufte in R site</a>:</p>
+<p><img src="images/week10/bargraph.png" /></p>
+<p>Takes a significant amount of code to create in base R:</p>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="week-10.html#cb230-1"></a><span class="kw">library</span>(psych)</span>
+<span id="cb230-2"><a href="week-10.html#cb230-2"></a>d &lt;-<span class="st"> </span><span class="kw">colMeans</span>(msq[,<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">34</span>,<span class="dv">36</span>,<span class="dv">42</span>,<span class="dv">43</span>,<span class="dv">46</span>,<span class="dv">55</span>,<span class="dv">68</span>)], <span class="dt">na.rm =</span> T)<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb230-3"><a href="week-10.html#cb230-3"></a><span class="kw">barplot</span>(d, <span class="dt">xaxt=</span><span class="st">&quot;n&quot;</span>, <span class="dt">yaxt=</span><span class="st">&quot;n&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;&quot;</span>, <span class="dt">border=</span>F, <span class="dt">width=</span><span class="kw">c</span>(.<span class="dv">35</span>), <span class="dt">space=</span><span class="fl">1.8</span>)</span>
+<span id="cb230-4"><a href="week-10.html#cb230-4"></a><span class="kw">axis</span>(<span class="dv">1</span>, <span class="dt">at=</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(d))<span class="op">-</span>.<span class="dv">26</span>, <span class="dt">labels=</span><span class="kw">names</span>(d), <span class="dt">tick=</span>F, <span class="dt">family=</span><span class="st">&quot;serif&quot;</span>)</span>
+<span id="cb230-5"><a href="week-10.html#cb230-5"></a><span class="kw">axis</span>(<span class="dv">2</span>, <span class="dt">at=</span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">1</span>), <span class="dt">las=</span><span class="dv">2</span>, <span class="dt">tick=</span>F, <span class="dt">family=</span><span class="st">&quot;serif&quot;</span>)</span>
+<span id="cb230-6"><a href="week-10.html#cb230-6"></a><span class="kw">abline</span>(<span class="dt">h=</span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">1</span>), <span class="dt">col=</span><span class="st">&quot;white&quot;</span>, <span class="dt">lwd=</span><span class="dv">3</span>)</span>
+<span id="cb230-7"><a href="week-10.html#cb230-7"></a><span class="kw">abline</span>(<span class="dt">h=</span><span class="dv">0</span>, <span class="dt">col=</span><span class="st">&quot;gray&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb230-8"><a href="week-10.html#cb230-8"></a><span class="kw">text</span>(<span class="kw">min</span>(d)<span class="op">/</span><span class="dv">2</span>, <span class="kw">max</span>(d)<span class="op">/</span><span class="fl">1.2</span>, <span class="dt">pos =</span> <span class="dv">4</span>, <span class="dt">family=</span><span class="st">&quot;serif&quot;</span>,</span>
+<span id="cb230-9"><a href="week-10.html#cb230-9"></a><span class="st">&quot;Average scores</span><span class="ch">\n</span><span class="st">on negative emotion traits</span><span class="ch">\n</span><span class="st">from 3896 participants</span><span class="ch">\n</span><span class="st">(Watson et al., 1988)&quot;</span>)</span></code></pre></div>
+<p>But it also takes a significant amount of code in lattice:</p>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="week-10.html#cb231-1"></a><span class="kw">library</span>(lattice)</span>
+<span id="cb231-2"><a href="week-10.html#cb231-2"></a><span class="kw">library</span>(psych)</span>
+<span id="cb231-3"><a href="week-10.html#cb231-3"></a>d &lt;-<span class="st"> </span><span class="kw">colMeans</span>(msq[,<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">34</span>,<span class="dv">36</span>,<span class="dv">42</span>,<span class="dv">43</span>,<span class="dv">46</span>,<span class="dv">55</span>,<span class="dv">68</span>)],<span class="dt">na.rm =</span> T)<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb231-4"><a href="week-10.html#cb231-4"></a><span class="kw">barchart</span>(<span class="kw">sort</span>(d), <span class="dt">xlab=</span><span class="st">&quot;&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;grey&quot;</span>, <span class="dt">origin=</span><span class="dv">1</span>,  </span>
+<span id="cb231-5"><a href="week-10.html#cb231-5"></a><span class="dt">border =</span> <span class="st">&quot;transparent&quot;</span>, <span class="dt">box.ratio=</span><span class="fl">0.5</span>, </span>
+<span id="cb231-6"><a href="week-10.html#cb231-6"></a><span class="dt">panel =</span> <span class="cf">function</span>(x,y,...) {</span>
+<span id="cb231-7"><a href="week-10.html#cb231-7"></a><span class="kw">panel.barchart</span>(x,y,...)</span>
+<span id="cb231-8"><a href="week-10.html#cb231-8"></a><span class="kw">panel.abline</span>(<span class="dt">v=</span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">1</span>), <span class="dt">col=</span><span class="st">&quot;white&quot;</span>, <span class="dt">lwd=</span><span class="dv">3</span>)},</span>
+<span id="cb231-9"><a href="week-10.html#cb231-9"></a><span class="dt">par.settings =</span> <span class="kw">list</span>(<span class="dt">axis.line =</span> <span class="kw">list</span>(<span class="dt">col =</span> <span class="st">&quot;transparent&quot;</span>)))</span>
+<span id="cb231-10"><a href="week-10.html#cb231-10"></a><span class="kw">ltext</span>(<span class="kw">current.panel.limits</span>()<span class="op">$</span>xlim[<span class="dv">2</span>]<span class="op">-</span><span class="dv">50</span>, <span class="dt">adj=</span><span class="dv">1</span>,  </span>
+<span id="cb231-11"><a href="week-10.html#cb231-11"></a><span class="kw">current.panel.limits</span>()<span class="op">$</span>ylim[<span class="dv">1</span>]<span class="op">-</span><span class="dv">100</span>,</span>
+<span id="cb231-12"><a href="week-10.html#cb231-12"></a><span class="st">&quot;Average scores</span><span class="ch">\n</span><span class="st">on negative emotion traits</span><span class="ch">\n</span><span class="st">from 3896 participants</span><span class="ch">\n</span><span class="st">(Watson et al., 1988)&quot;</span>)</span></code></pre></div>
+<p>or in the ggplot2 plotting system:</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="week-10.html#cb232-1"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb232-2"><a href="week-10.html#cb232-2"></a><span class="kw">library</span>(ggthemes)</span>
+<span id="cb232-3"><a href="week-10.html#cb232-3"></a><span class="kw">library</span>(psych)</span>
+<span id="cb232-4"><a href="week-10.html#cb232-4"></a><span class="kw">library</span>(reshape2)</span>
+<span id="cb232-5"><a href="week-10.html#cb232-5"></a>d &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">colMeans</span>(msq[,<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">34</span>,<span class="dv">36</span>,<span class="dv">42</span>,<span class="dv">43</span>,<span class="dv">46</span>,<span class="dv">55</span>,<span class="dv">68</span>)],<span class="dt">na.rm =</span> T)<span class="op">*</span><span class="dv">10</span>)</span>
+<span id="cb232-6"><a href="week-10.html#cb232-6"></a>d<span class="op">$</span>trait &lt;-<span class="st"> </span><span class="kw">rownames</span>(d)</span>
+<span id="cb232-7"><a href="week-10.html#cb232-7"></a><span class="kw">ggplot</span>(d, <span class="kw">aes</span>(<span class="dt">x=</span>trait, <span class="dt">y=</span>value)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_tufte</span>(<span class="dt">base_size=</span><span class="dv">14</span>, <span class="dt">ticks=</span>F) <span class="op">+</span></span>
+<span id="cb232-8"><a href="week-10.html#cb232-8"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width=</span><span class="fl">0.25</span>, <span class="dt">fill=</span><span class="st">&quot;gray&quot;</span>, <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span><span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.title=</span><span class="kw">element_blank</span>()) <span class="op">+</span></span>
+<span id="cb232-9"><a href="week-10.html#cb232-9"></a><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">breaks=</span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">1</span>)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb232-10"><a href="week-10.html#cb232-10"></a><span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept=</span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">1</span>), <span class="dt">col=</span><span class="st">&quot;white&quot;</span>, <span class="dt">lwd=</span><span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb232-11"><a href="week-10.html#cb232-11"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="fl">3.5</span>, <span class="dt">y =</span> <span class="dv">5</span>, <span class="dt">adj=</span><span class="dv">1</span>,  <span class="dt">family=</span><span class="st">&quot;serif&quot;</span>,</span>
+<span id="cb232-12"><a href="week-10.html#cb232-12"></a><span class="dt">label =</span> <span class="kw">c</span>(<span class="st">&quot;Average scores</span><span class="ch">\n</span><span class="st">on negative emotion traits</span></span>
+<span id="cb232-13"><a href="week-10.html#cb232-13"></a><span class="st">          from 3896 participants</span><span class="ch">\n</span><span class="st">(Watson et al., 1988)&quot;</span>))</span></code></pre></div>
+<p>The important thing to keep in mind is that expository graphs and tables will be significantly more work than exploratory graphs. They also typically take quite a bit of Googling to make sure you get them to look <em>just right</em> so they will stand out and be easily understood.</p>
+<p>In the remainder of this lesson we will focus on taking exploratory figures and tables and turning them into expository figures and tables - highlighting some of the key tools for making these conversions.</p>
+</div>
+<div id="creating-expository-graphs" class="section level2">
+<h2><span class="header-section-number">11.3</span> Creating Expository Graphs</h2>
+<p>For this example we will be using the awesome <a href="https://github.com/allisonhorst/palmerpenguins">Palmer Penguins</a> data set! The artwork for this data is made by the amazing <span class="citation">[@allison_horst]</span>(<a href="https://twitter.com/allison_horst" class="uri">https://twitter.com/allison_horst</a>)</p>
+<p><img src="https://github.com/allisonhorst/palmerpenguins/raw/master/man/figures/lter_penguins.png" /></p>
+<p>We can start out by looking at the data</p>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="week-10.html#cb233-1"></a><span class="kw">library</span>(palmerpenguins)</span>
+<span id="cb233-2"><a href="week-10.html#cb233-2"></a><span class="kw">library</span>(magrittr)</span>
+<span id="cb233-3"><a href="week-10.html#cb233-3"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb233-4"><a href="week-10.html#cb233-4"></a>penguins</span></code></pre></div>
+<pre><code>## # A tibble: 344 x 8
+##    species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g
+##    &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt;
+##  1 Adelie  Torge…           39.1          18.7              181        3750
+##  2 Adelie  Torge…           39.5          17.4              186        3800
+##  3 Adelie  Torge…           40.3          18                195        3250
+##  4 Adelie  Torge…           NA            NA                 NA          NA
+##  5 Adelie  Torge…           36.7          19.3              193        3450
+##  6 Adelie  Torge…           39.3          20.6              190        3650
+##  7 Adelie  Torge…           38.9          17.8              181        3625
+##  8 Adelie  Torge…           39.2          19.6              195        4675
+##  9 Adelie  Torge…           34.1          18.1              193        3475
+## 10 Adelie  Torge…           42            20.2              190        4250
+## # … with 334 more rows, and 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+<p>and making what would be a fairly typical exploratory graph.</p>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="week-10.html#cb235-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb235-2"><a href="week-10.html#cb235-2"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,<span class="dt">y=</span>body_mass_g)) <span class="op">+</span></span>
+<span id="cb235-3"><a href="week-10.html#cb235-3"></a><span class="st">        </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>This isn’t bad! It’s a pretty decent way to start and you can already see the “take home message” that increasing flipper length is associated with increasing body mass. But we can do better, let’s label the different species</p>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="week-10.html#cb237-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb237-2"><a href="week-10.html#cb237-2"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb237-3"><a href="week-10.html#cb237-3"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb237-4"><a href="week-10.html#cb237-4"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb237-5"><a href="week-10.html#cb237-5"></a><span class="st">        </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>So far so good, and here we see that the relationship is increasing regardless of the species type. This graph looks <em>almost</em> good enough to put in a paper, but we are missing a few key components.</p>
+<div id="background-color" class="section level3">
+<h3><span class="header-section-number">11.3.1</span> Background color</h3>
+<p>In general, less is more when it comes to background color. In his talk <a href="https://www.williamrchase.com/slides/assets/player/KeynoteDHTMLPlayer.html#38">The glamour of graphics</a> Will Chase points out that:</p>
+<blockquote>
+<p>White space is like garlic; take the amount you think you need, then triple it.</p>
+</blockquote>
+<p>He also</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="week-10.html#cb239-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb239-2"><a href="week-10.html#cb239-2"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb239-3"><a href="week-10.html#cb239-3"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb239-4"><a href="week-10.html#cb239-4"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb239-5"><a href="week-10.html#cb239-5"></a><span class="st">        </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb239-6"><a href="week-10.html#cb239-6"></a><span class="st">        </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="axis-titles-and-axis-labels" class="section level3">
+<h3><span class="header-section-number">11.3.2</span> Axis titles and axis labels</h3>
+<p>Axis titles and labels need to be big enough to read. They should include labels of units (when appropriate) and should be written in full words, not in abbreviations. If you can avoid it you should also try to make it so that your audience doesn’t have to turn their head to read your plot.</p>
+<p>We can rotate the y-axis label and increase the font on the tick marks.</p>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="week-10.html#cb241-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb241-2"><a href="week-10.html#cb241-2"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb241-3"><a href="week-10.html#cb241-3"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb241-4"><a href="week-10.html#cb241-4"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb241-5"><a href="week-10.html#cb241-5"></a><span class="st">        </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb241-6"><a href="week-10.html#cb241-6"></a><span class="st">        </span><span class="kw">ylab</span>(<span class="st">&quot;Body </span><span class="ch">\n</span><span class="st"> Mass </span><span class="ch">\n</span><span class="st"> (g)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb241-7"><a href="week-10.html#cb241-7"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">&quot;Flipper Length (mm)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb241-8"><a href="week-10.html#cb241-8"></a><span class="st">        </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb241-9"><a href="week-10.html#cb241-9"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">axis.title.y =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">0</span>, <span class="dt">vjust =</span> <span class="fl">0.5</span>,<span class="dt">size=</span><span class="dv">14</span>),</span>
+<span id="cb241-10"><a href="week-10.html#cb241-10"></a>              <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>)) </span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="legends-or-not" class="section level3">
+<h3><span class="header-section-number">11.3.3</span> Legends (or not!)</h3>
+<p>When used, legends should have labeling in plain language that makes the graph self contained. So for example we could update the figure legend:</p>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="week-10.html#cb243-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb243-2"><a href="week-10.html#cb243-2"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb243-3"><a href="week-10.html#cb243-3"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb243-4"><a href="week-10.html#cb243-4"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb243-5"><a href="week-10.html#cb243-5"></a><span class="st">        </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb243-6"><a href="week-10.html#cb243-6"></a><span class="st">        </span><span class="kw">ylab</span>(<span class="st">&quot;Body </span><span class="ch">\n</span><span class="st"> Mass </span><span class="ch">\n</span><span class="st"> (g)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb243-7"><a href="week-10.html#cb243-7"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">&quot;Flipper Length (mm)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb243-8"><a href="week-10.html#cb243-8"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">color=</span><span class="st">&quot;Penguin Species&quot;</span>)<span class="op">+</span></span>
+<span id="cb243-9"><a href="week-10.html#cb243-9"></a><span class="st">        </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb243-10"><a href="week-10.html#cb243-10"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">axis.title.y =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">0</span>, <span class="dt">vjust =</span> <span class="fl">0.5</span>,<span class="dt">size=</span><span class="dv">14</span>),</span>
+<span id="cb243-11"><a href="week-10.html#cb243-11"></a>              <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>)) </span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>One challenge here is the legend is taking up a lot of space, that makes the plot harder to read. You have a couple of solutions. One is you could move the legend inside the plot. Another is you could just label the points directly with annotation. Here I’m using the basic ggplot2 functionality, but the <a href="https://cran.r-project.org/web/packages/ggforce/index.html">ggforce</a> has some nice labeling functionality.</p>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="week-10.html#cb245-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb245-2"><a href="week-10.html#cb245-2"></a><span class="st">        </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(flipper_length_mm)) <span class="op">%&gt;%</span></span>
+<span id="cb245-3"><a href="week-10.html#cb245-3"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb245-4"><a href="week-10.html#cb245-4"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb245-5"><a href="week-10.html#cb245-5"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb245-6"><a href="week-10.html#cb245-6"></a><span class="st">        </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb245-7"><a href="week-10.html#cb245-7"></a><span class="st">        </span><span class="kw">ylab</span>(<span class="st">&quot;Body </span><span class="ch">\n</span><span class="st"> Mass </span><span class="ch">\n</span><span class="st"> (g)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb245-8"><a href="week-10.html#cb245-8"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">&quot;Flipper Length (mm)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb245-9"><a href="week-10.html#cb245-9"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">color=</span><span class="st">&quot;Penguin Species&quot;</span>)<span class="op">+</span></span>
+<span id="cb245-10"><a href="week-10.html#cb245-10"></a><span class="st">        </span><span class="kw">annotate</span>(</span>
+<span id="cb245-11"><a href="week-10.html#cb245-11"></a>                <span class="dt">geom =</span> <span class="st">&quot;curve&quot;</span>, </span>
+<span id="cb245-12"><a href="week-10.html#cb245-12"></a>                <span class="dt">x =</span> <span class="dv">180</span>, <span class="dt">y =</span> <span class="dv">5000</span>, <span class="dt">xend =</span> <span class="dv">182</span>, <span class="dt">yend =</span> <span class="dv">3100</span>, </span>
+<span id="cb245-13"><a href="week-10.html#cb245-13"></a>                <span class="dt">curvature =</span> <span class="fl">.3</span>,</span>
+<span id="cb245-14"><a href="week-10.html#cb245-14"></a>                <span class="dt">arrow =</span> <span class="kw">arrow</span>(<span class="dt">length =</span> <span class="kw">unit</span>(<span class="dv">2</span>, <span class="st">&quot;mm&quot;</span>))</span>
+<span id="cb245-15"><a href="week-10.html#cb245-15"></a>           ) <span class="op">+</span></span>
+<span id="cb245-16"><a href="week-10.html#cb245-16"></a><span class="st">        </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="dv">180</span>, <span class="dt">y=</span><span class="dv">5000</span>, </span>
+<span id="cb245-17"><a href="week-10.html#cb245-17"></a>                      <span class="dt">label=</span><span class="st">&quot;Adelie Penguins&quot;</span>, </span>
+<span id="cb245-18"><a href="week-10.html#cb245-18"></a>                      <span class="dt">color=</span><span class="st">&quot;Adelie&quot;</span>), <span class="dt">show_guide=</span>F) <span class="op">+</span></span>
+<span id="cb245-19"><a href="week-10.html#cb245-19"></a><span class="st">        </span><span class="kw">annotate</span>(</span>
+<span id="cb245-20"><a href="week-10.html#cb245-20"></a>                <span class="dt">geom =</span> <span class="st">&quot;curve&quot;</span>, </span>
+<span id="cb245-21"><a href="week-10.html#cb245-21"></a>                <span class="dt">x =</span> <span class="dv">215</span>, <span class="dt">y =</span> <span class="dv">3000</span>, <span class="dt">xend =</span> <span class="dv">198</span>, <span class="dt">yend =</span> <span class="dv">3600</span>, </span>
+<span id="cb245-22"><a href="week-10.html#cb245-22"></a>                <span class="dt">curvature =</span> <span class="fl">.3</span>,</span>
+<span id="cb245-23"><a href="week-10.html#cb245-23"></a>                <span class="dt">arrow =</span> <span class="kw">arrow</span>(<span class="dt">length =</span> <span class="kw">unit</span>(<span class="dv">2</span>, <span class="st">&quot;mm&quot;</span>))</span>
+<span id="cb245-24"><a href="week-10.html#cb245-24"></a>           ) <span class="op">+</span></span>
+<span id="cb245-25"><a href="week-10.html#cb245-25"></a><span class="st">        </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="dv">215</span>, <span class="dt">y=</span><span class="dv">3000</span>, </span>
+<span id="cb245-26"><a href="week-10.html#cb245-26"></a>                      <span class="dt">label=</span><span class="st">&quot;Chinstrap Penguins&quot;</span>, </span>
+<span id="cb245-27"><a href="week-10.html#cb245-27"></a>                      <span class="dt">color=</span><span class="st">&quot;Chinstrap&quot;</span>), <span class="dt">show_guide=</span>F)<span class="op">+</span></span>
+<span id="cb245-28"><a href="week-10.html#cb245-28"></a><span class="st">        </span><span class="kw">annotate</span>(</span>
+<span id="cb245-29"><a href="week-10.html#cb245-29"></a>                <span class="dt">geom =</span> <span class="st">&quot;curve&quot;</span>, </span>
+<span id="cb245-30"><a href="week-10.html#cb245-30"></a>                <span class="dt">x =</span> <span class="dv">185</span>, <span class="dt">y =</span> <span class="dv">6000</span>, <span class="dt">xend =</span> <span class="dv">220</span>, <span class="dt">yend =</span> <span class="dv">5000</span>, </span>
+<span id="cb245-31"><a href="week-10.html#cb245-31"></a>                <span class="dt">curvature =</span> <span class="fl">.3</span>,</span>
+<span id="cb245-32"><a href="week-10.html#cb245-32"></a>                <span class="dt">arrow =</span> <span class="kw">arrow</span>(<span class="dt">length =</span> <span class="kw">unit</span>(<span class="dv">2</span>, <span class="st">&quot;mm&quot;</span>))</span>
+<span id="cb245-33"><a href="week-10.html#cb245-33"></a>           ) <span class="op">+</span></span>
+<span id="cb245-34"><a href="week-10.html#cb245-34"></a><span class="st">        </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="dv">185</span>, <span class="dt">y=</span><span class="dv">6000</span>, </span>
+<span id="cb245-35"><a href="week-10.html#cb245-35"></a>                      <span class="dt">label=</span><span class="st">&quot;Gentoo Penguins&quot;</span>, </span>
+<span id="cb245-36"><a href="week-10.html#cb245-36"></a>                      <span class="dt">color=</span><span class="st">&quot;Gentoo&quot;</span>), <span class="dt">show_guide=</span>F)<span class="op">+</span></span>
+<span id="cb245-37"><a href="week-10.html#cb245-37"></a><span class="st">        </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb245-38"><a href="week-10.html#cb245-38"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">axis.title.y =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">0</span>, <span class="dt">vjust =</span> <span class="fl">0.5</span>,<span class="dt">size=</span><span class="dv">14</span>),</span>
+<span id="cb245-39"><a href="week-10.html#cb245-39"></a>              <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb245-40"><a href="week-10.html#cb245-40"></a>              <span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<pre><code>## Warning: `show_guide` has been deprecated. Please use `show.legend` instead.
+
+## Warning: `show_guide` has been deprecated. Please use `show.legend` instead.
+
+## Warning: `show_guide` has been deprecated. Please use `show.legend` instead.</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="titles-with-color" class="section level3">
+<h3><span class="header-section-number">11.3.4</span> Titles (with color!)</h3>
+<p>This at least removes all the legend space, but I still find it pretty hard to read. I find that titles labeled with colors are much easier to follow, so something like this, which we can create with the <a href="https://github.com/wilkelab/ggtext">ggtext</a> package and a little HTML:</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="week-10.html#cb247-1"></a><span class="kw">library</span>(ggtext)</span>
+<span id="cb247-2"><a href="week-10.html#cb247-2"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb247-3"><a href="week-10.html#cb247-3"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb247-4"><a href="week-10.html#cb247-4"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb247-5"><a href="week-10.html#cb247-5"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb247-6"><a href="week-10.html#cb247-6"></a><span class="st">        </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb247-7"><a href="week-10.html#cb247-7"></a><span class="st">        </span><span class="kw">ylab</span>(<span class="st">&quot;Body </span><span class="ch">\n</span><span class="st"> Mass </span><span class="ch">\n</span><span class="st"> (g)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb247-8"><a href="week-10.html#cb247-8"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">&quot;Flipper Length (mm)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb247-9"><a href="week-10.html#cb247-9"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">color=</span><span class="st">&quot;Penguin Species&quot;</span>,</span>
+<span id="cb247-10"><a href="week-10.html#cb247-10"></a>             <span class="dt">title =</span> <span class="st">&quot;&lt;b&gt; Penguin body mass increases with flipper length&lt;/b&gt;&lt;br&gt;</span></span>
+<span id="cb247-11"><a href="week-10.html#cb247-11"></a><span class="st">               &lt;span style = &#39;font-size:10pt&#39;&gt;Penguins of three species, &lt;span style=&#39;color:#F8766D&#39;&gt;Adelie&lt;/span&gt;, &lt;span style=&#39;color:#00BA38&#39;&gt;Chinstrap &lt;/span&gt;, and &lt;span style=&#39;color:#619CFF&#39;&gt;Gentoo&lt;/span&gt;, have body mass that increase with flipper length. &lt;/span&gt;&quot;</span>)<span class="op">+</span></span>
+<span id="cb247-12"><a href="week-10.html#cb247-12"></a><span class="st">        </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb247-13"><a href="week-10.html#cb247-13"></a><span class="st">        </span><span class="kw">theme</span>(</span>
+<span id="cb247-14"><a href="week-10.html#cb247-14"></a>                <span class="dt">plot.title.position =</span> <span class="st">&quot;plot&quot;</span>,</span>
+<span id="cb247-15"><a href="week-10.html#cb247-15"></a>                  <span class="dt">plot.title =</span> <span class="kw">element_textbox_simple</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb247-16"><a href="week-10.html#cb247-16"></a>                <span class="dt">axis.title.y =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">0</span>, <span class="dt">vjust =</span> <span class="fl">0.5</span>,<span class="dt">size=</span><span class="dv">14</span>),</span>
+<span id="cb247-17"><a href="week-10.html#cb247-17"></a>              <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb247-18"><a href="week-10.html#cb247-18"></a>              <span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="adding-a-model-fit" class="section level3">
+<h3><span class="header-section-number">11.3.5</span> Adding a model fit</h3>
+<p>You may add a smooth term or model fit to highlight key trends in the data. The ggplot2 package makes this relatively easy by using the term <code>geom_smooth</code> but you should be careful to make sure you understand what kind of model is being fit “under the hood”. For example here the regression model is actually fit to each penguin species seperately - implying a full interaction model between species and both the slope and intercept coefficients.</p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="week-10.html#cb249-1"></a><span class="kw">library</span>(ggtext)</span>
+<span id="cb249-2"><a href="week-10.html#cb249-2"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb249-3"><a href="week-10.html#cb249-3"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb249-4"><a href="week-10.html#cb249-4"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb249-5"><a href="week-10.html#cb249-5"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb249-6"><a href="week-10.html#cb249-6"></a><span class="st">        </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb249-7"><a href="week-10.html#cb249-7"></a><span class="st">        </span><span class="kw">ylab</span>(<span class="st">&quot;Body </span><span class="ch">\n</span><span class="st"> Mass </span><span class="ch">\n</span><span class="st"> (g)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb249-8"><a href="week-10.html#cb249-8"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">&quot;Flipper Length (mm)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb249-9"><a href="week-10.html#cb249-9"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">color=</span><span class="st">&quot;Penguin Species&quot;</span>,</span>
+<span id="cb249-10"><a href="week-10.html#cb249-10"></a>             <span class="dt">title =</span> <span class="st">&quot;&lt;b&gt; Penguin body mass increases with flipper length&lt;/b&gt;&lt;br&gt;</span></span>
+<span id="cb249-11"><a href="week-10.html#cb249-11"></a><span class="st">               &lt;span style = &#39;font-size:10pt&#39;&gt;Penguins of three species, &lt;span style=&#39;color:#F8766D&#39;&gt;Adelie&lt;/span&gt;, &lt;span style=&#39;color:#00BA38&#39;&gt;Chinstrap &lt;/span&gt;, and &lt;span style=&#39;color:#619CFF&#39;&gt;Gentoo&lt;/span&gt;, have body mass that increase with flipper length. &lt;/span&gt;&quot;</span>)<span class="op">+</span></span>
+<span id="cb249-12"><a href="week-10.html#cb249-12"></a><span class="st">        </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb249-13"><a href="week-10.html#cb249-13"></a><span class="st">        </span><span class="kw">theme</span>(</span>
+<span id="cb249-14"><a href="week-10.html#cb249-14"></a>                <span class="dt">plot.title.position =</span> <span class="st">&quot;plot&quot;</span>,</span>
+<span id="cb249-15"><a href="week-10.html#cb249-15"></a>                  <span class="dt">plot.title =</span> <span class="kw">element_textbox_simple</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb249-16"><a href="week-10.html#cb249-16"></a>                <span class="dt">axis.title.y =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">0</span>, <span class="dt">vjust =</span> <span class="fl">0.5</span>,<span class="dt">size=</span><span class="dv">14</span>),</span>
+<span id="cb249-17"><a href="week-10.html#cb249-17"></a>              <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb249-18"><a href="week-10.html#cb249-18"></a>              <span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb249-19"><a href="week-10.html#cb249-19"></a><span class="st">          </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+<div id="figure-captions" class="section level3">
+<h3><span class="header-section-number">11.3.6</span> Figure captions</h3>
+<p>If you were going to include this figure in a paper you should also include a figure caption. The figure caption should be detailed. Think too detailed. You should try to imagine handing the figure and figure caption over to a friend and they should be able to tell the whole “story” of that figure from only those two pieces of information. It is a good idea for each of your figures to have a topic sentence, typically in bold, that highlights the key take home message for your audience. So for example, the figure caption for the above plot could be:</p>
+<blockquote>
+<p><strong>Figure 1. Penguin body mass increases with flipper length across three penguin species</strong> A plot of body mass in grams (g) versus flipper length in milimeters (mm) for three Penguin species: Adelie (red), Chinstrap (green), and Gentoo (blue). A separate linear regression fit to each species type is also shown, highlighting that penguin body mass increases with flipper length at different rates across different species. It is not surprising to see this correlation, since body size and body mass are typically highly correlated phenotypes.</p>
+</blockquote>
+</div>
+<div id="colors-and-fonts" class="section level3">
+<h3><span class="header-section-number">11.3.7</span> Colors and fonts</h3>
+<p>Will Chase’s excellent talk on the <a href="https://www.williamrchase.com/slides/assets/player/KeynoteDHTMLPlayer.html">Glamour of Graphics</a> goes into some details about choices of fonts and colors. One thing to keep in mind when producing graphics for both papers and talks is that some people are <a href="https://en.wikipedia.org/wiki/Color_blindness">colorblind</a> so can not distinguish between certain combinations of colors. There are different types of colorblindness. You can check how your plot will appear to color blind people by uploading it to websites <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">like this</a>. In R there is also a package for simulating colorblindness:</p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="week-10.html#cb253-1"></a><span class="co"># remotes::install_github(&quot;clauswilke/colorblindr&quot;)</span></span>
+<span id="cb253-2"><a href="week-10.html#cb253-2"></a><span class="kw">library</span>(colorblindr)</span></code></pre></div>
+<pre><code>## Loading required package: colorspace</code></pre>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="week-10.html#cb255-1"></a>p =<span class="st"> </span>penguins <span class="op">%&gt;%</span></span>
+<span id="cb255-2"><a href="week-10.html#cb255-2"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb255-3"><a href="week-10.html#cb255-3"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb255-4"><a href="week-10.html#cb255-4"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb255-5"><a href="week-10.html#cb255-5"></a><span class="st">        </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb255-6"><a href="week-10.html#cb255-6"></a><span class="st">        </span><span class="kw">ylab</span>(<span class="st">&quot;Body </span><span class="ch">\n</span><span class="st"> Mass </span><span class="ch">\n</span><span class="st"> (g)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb255-7"><a href="week-10.html#cb255-7"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">&quot;Flipper Length (mm)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb255-8"><a href="week-10.html#cb255-8"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">color=</span><span class="st">&quot;Penguin Species&quot;</span>,</span>
+<span id="cb255-9"><a href="week-10.html#cb255-9"></a>             <span class="dt">title =</span> <span class="st">&quot;&lt;b&gt; Penguin body mass increases with flipper length&lt;/b&gt;&lt;br&gt;</span></span>
+<span id="cb255-10"><a href="week-10.html#cb255-10"></a><span class="st">               &lt;span style = &#39;font-size:10pt&#39;&gt;Penguins of three species, &lt;span style=&#39;color:#F8766D&#39;&gt;Adelie&lt;/span&gt;, &lt;span style=&#39;color:#00BA38&#39;&gt;Chinstrap &lt;/span&gt;, and &lt;span style=&#39;color:#619CFF&#39;&gt;Gentoo&lt;/span&gt;, have body mass that increase with flipper length. &lt;/span&gt;&quot;</span>)<span class="op">+</span></span>
+<span id="cb255-11"><a href="week-10.html#cb255-11"></a><span class="st">        </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb255-12"><a href="week-10.html#cb255-12"></a><span class="st">        </span><span class="kw">theme</span>(</span>
+<span id="cb255-13"><a href="week-10.html#cb255-13"></a>                <span class="dt">plot.title.position =</span> <span class="st">&quot;plot&quot;</span>,</span>
+<span id="cb255-14"><a href="week-10.html#cb255-14"></a>                  <span class="dt">plot.title =</span> <span class="kw">element_textbox_simple</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb255-15"><a href="week-10.html#cb255-15"></a>                <span class="dt">axis.title.y =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">0</span>, <span class="dt">vjust =</span> <span class="fl">0.5</span>,<span class="dt">size=</span><span class="dv">14</span>),</span>
+<span id="cb255-16"><a href="week-10.html#cb255-16"></a>              <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb255-17"><a href="week-10.html#cb255-17"></a>              <span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb255-18"><a href="week-10.html#cb255-18"></a><span class="st">          </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb255-19"><a href="week-10.html#cb255-19"></a></span>
+<span id="cb255-20"><a href="week-10.html#cb255-20"></a><span class="kw">cvd_grid</span>(p)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>You can try changing your color palette to correct these issues. But don’t forget to change your title colors as well! A common set of more color-blind friendly palettes are the <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">viridis palettes</a>.</p>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="week-10.html#cb265-1"></a>p =<span class="st"> </span>penguins <span class="op">%&gt;%</span></span>
+<span id="cb265-2"><a href="week-10.html#cb265-2"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>flipper_length_mm,</span>
+<span id="cb265-3"><a href="week-10.html#cb265-3"></a>                   <span class="dt">y=</span>body_mass_g,</span>
+<span id="cb265-4"><a href="week-10.html#cb265-4"></a>                   <span class="dt">color=</span>species)) <span class="op">+</span></span>
+<span id="cb265-5"><a href="week-10.html#cb265-5"></a><span class="st">        </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb265-6"><a href="week-10.html#cb265-6"></a><span class="st">        </span><span class="kw">ylab</span>(<span class="st">&quot;Body </span><span class="ch">\n</span><span class="st"> Mass </span><span class="ch">\n</span><span class="st"> (g)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb265-7"><a href="week-10.html#cb265-7"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">&quot;Flipper Length (mm)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb265-8"><a href="week-10.html#cb265-8"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">color=</span><span class="st">&quot;Penguin Species&quot;</span>,</span>
+<span id="cb265-9"><a href="week-10.html#cb265-9"></a>             <span class="dt">title =</span> <span class="st">&quot;&lt;b&gt; Penguin body mass increases with flipper length&lt;/b&gt;&lt;br&gt;</span></span>
+<span id="cb265-10"><a href="week-10.html#cb265-10"></a><span class="st">               &lt;span style = &#39;font-size:10pt&#39;&gt;Penguins of three species, &lt;span style=&#39;color:#440154&#39;&gt;Adelie&lt;/span&gt;, &lt;span style=&#39;color:#FDE725&#39;&gt;Chinstrap &lt;/span&gt;, and &lt;span style=&#39;color:#21908C&#39;&gt;Gentoo&lt;/span&gt;, have body mass that increase with flipper length. &lt;/span&gt;&quot;</span>)<span class="op">+</span></span>
+<span id="cb265-11"><a href="week-10.html#cb265-11"></a><span class="st">        </span><span class="kw">scale_color_viridis_d</span>()<span class="op">+</span></span>
+<span id="cb265-12"><a href="week-10.html#cb265-12"></a><span class="st">        </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb265-13"><a href="week-10.html#cb265-13"></a><span class="st">        </span><span class="kw">theme</span>(</span>
+<span id="cb265-14"><a href="week-10.html#cb265-14"></a>                <span class="dt">plot.title.position =</span> <span class="st">&quot;plot&quot;</span>,</span>
+<span id="cb265-15"><a href="week-10.html#cb265-15"></a>                  <span class="dt">plot.title =</span> <span class="kw">element_textbox_simple</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb265-16"><a href="week-10.html#cb265-16"></a>                <span class="dt">axis.title.y =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">0</span>, <span class="dt">vjust =</span> <span class="fl">0.5</span>,<span class="dt">size=</span><span class="dv">14</span>),</span>
+<span id="cb265-17"><a href="week-10.html#cb265-17"></a>              <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>),</span>
+<span id="cb265-18"><a href="week-10.html#cb265-18"></a>              <span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb265-19"><a href="week-10.html#cb265-19"></a><span class="st">          </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb265-20"><a href="week-10.html#cb265-20"></a></span>
+<span id="cb265-21"><a href="week-10.html#cb265-21"></a>p</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>These look a bit better for people with color blindness:</p>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="week-10.html#cb269-1"></a><span class="kw">cvd_grid</span>(p)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="10-week_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="multi-panel-plots" class="section level3">
+<h3><span class="header-section-number">11.3.8</span> Multi-panel plots</h3>
+<p>If you are creating multi-panel plots, each panel should be labeled with either a lowercase or upper case letter. You should head the warning that “whitespace is like garlic” and make sure you don’t overcrowd your figures. In general, when creating multi-panel figures, each panel should be part of the same “story” or focused on the same question.</p>
+<p>If you are building multi-panel plots, it can be a lot easier to put the panels into presentation building software like Powerpoint, Keynote or Google Slides and arrange your panels together. However, the <a href="https://patchwork.data-imaginist.com/">patchwork</a> R package is pretty slick and gives you pretty fine-grained control over how to organize plots together.</p>
+<p>Multi-panel figure captions should include descriptions of each figure separately, labeled with the same values as in the multi-panel plots.</p>
+</div>
+<div id="miscellaneous-advice" class="section level3">
+<h3><span class="header-section-number">11.3.9</span> Miscellaneous Advice</h3>
+<ul>
+<li>When you have a lot of points in a plot, consider using a heatmap - for example <a href="https://ggplot2.tidyverse.org/reference/geom_hex.html">geom_hex</a>.</li>
+<li>When you save your figures - especially if they have a large number of points - you will find much smaller file sizes if you save them as .png files.</li>
+<li>Err on the side of simplicity and showing the data whenever possible.</li>
+<li>Mapping geographically and plotting timeseries have entirely different sets of aesthetics and manipulations you will need to do.</li>
+<li>Google is your friend. The plots above included these searches for your instructor:
+- “check colors colorblindness R”
+- “geom_smooth with groups”
+- “ggtext color to match plot colors”
+- “label group of points ggrepel” (wrong turn)
+- “remove grid lines theme minimal”
+- and many more!</li>
+<li>The <a href="https://www.r-graph-gallery.com/">R graph gallery is your friend</a></li>
+</ul>
+</div>
+</div>
+<div id="creating-expository-tables" class="section level2">
+<h2><span class="header-section-number">11.4</span> Creating Expository Tables</h2>
+<p>There have been many arguments for why <a href="http://www.stat.columbia.edu/~gelman/research/published/dodhia.pdf">tables should be turned into figures</a>. Your instructor has that natural inclination as well. However, sometimes you will need to produce a table either because the format of the journal requires it (Table 1 in a clinical paper consists of descriptive statististcs <a href="https://jamanetwork.com/DocumentLibrary/InstructionsForAuthors/InstructionsForTableCreation.pdf">has a very defined format</a>, and usually can’t be replaced with a figure).</p>
+<p>In R there are a variety of packages for making tables. During exploration, I generally make them using the <code>skimr</code> or <code>dplyr</code> packages. I like <code>skimr</code> for the quick overview:</p>
+<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="week-10.html#cb279-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb279-2"><a href="week-10.html#cb279-2"></a><span class="st">        </span>skimr<span class="op">::</span><span class="kw">skim</span>()</span></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-16">Table 11.1: </span>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">Piped data</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">344</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">8</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">5</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="left">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">species</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">3</td>
+<td align="left">Ade: 152, Gen: 124, Chi: 68</td>
+</tr>
+<tr class="even">
+<td align="left">island</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">3</td>
+<td align="left">Bis: 168, Dre: 124, Tor: 52</td>
+</tr>
+<tr class="odd">
+<td align="left">sex</td>
+<td align="right">11</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="left">mal: 168, fem: 165</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">bill_length_mm</td>
+<td align="right">2</td>
+<td align="right">0.99</td>
+<td align="right">43.92</td>
+<td align="right">5.46</td>
+<td align="right">32.1</td>
+<td align="right">39.23</td>
+<td align="right">44.45</td>
+<td align="right">48.5</td>
+<td align="right">59.6</td>
+<td align="left">▃▇▇▆▁</td>
+</tr>
+<tr class="even">
+<td align="left">bill_depth_mm</td>
+<td align="right">2</td>
+<td align="right">0.99</td>
+<td align="right">17.15</td>
+<td align="right">1.97</td>
+<td align="right">13.1</td>
+<td align="right">15.60</td>
+<td align="right">17.30</td>
+<td align="right">18.7</td>
+<td align="right">21.5</td>
+<td align="left">▅▅▇▇▂</td>
+</tr>
+<tr class="odd">
+<td align="left">flipper_length_mm</td>
+<td align="right">2</td>
+<td align="right">0.99</td>
+<td align="right">200.92</td>
+<td align="right">14.06</td>
+<td align="right">172.0</td>
+<td align="right">190.00</td>
+<td align="right">197.00</td>
+<td align="right">213.0</td>
+<td align="right">231.0</td>
+<td align="left">▂▇▃▅▂</td>
+</tr>
+<tr class="even">
+<td align="left">body_mass_g</td>
+<td align="right">2</td>
+<td align="right">0.99</td>
+<td align="right">4201.75</td>
+<td align="right">801.95</td>
+<td align="right">2700.0</td>
+<td align="right">3550.00</td>
+<td align="right">4050.00</td>
+<td align="right">4750.0</td>
+<td align="right">6300.0</td>
+<td align="left">▃▇▆▃▂</td>
+</tr>
+<tr class="odd">
+<td align="left">year</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">2008.03</td>
+<td align="right">0.82</td>
+<td align="right">2007.0</td>
+<td align="right">2007.00</td>
+<td align="right">2008.00</td>
+<td align="right">2009.0</td>
+<td align="right">2009.0</td>
+<td align="left">▇▁▇▁▇</td>
+</tr>
+</tbody>
+</table>
+<p>But I often use <code>dplyr</code> more frequently for looking at individual variables or pairs of variables:</p>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="week-10.html#cb280-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb280-2"><a href="week-10.html#cb280-2"></a><span class="st">        </span>dplyr<span class="op">::</span><span class="kw">count</span>(<span class="kw">is.na</span>(sex),species)</span></code></pre></div>
+<pre><code>## # A tibble: 5 x 3
+##   `is.na(sex)` species       n
+##   &lt;lgl&gt;        &lt;fct&gt;     &lt;int&gt;
+## 1 FALSE        Adelie      146
+## 2 FALSE        Chinstrap    68
+## 3 FALSE        Gentoo      119
+## 4 TRUE         Adelie        6
+## 5 TRUE         Gentoo        5</code></pre>
+<div id="table-1" class="section level3">
+<h3><span class="header-section-number">11.4.1</span> Table 1</h3>
+<p>As previously mentioned, Table 1 is a table of descriptive statistics and is frequently required in a number of different types of journals - most notably medical journals. There are thus usually highly specialized tools for creating this type of table. For example, in R the <a href="https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html">table1</a> package can be used to make descriptive tables:</p>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="week-10.html#cb282-1"></a><span class="kw">library</span>(table1)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;table1&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     units, units&lt;-</code></pre>
+<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="week-10.html#cb285-1"></a>penguins <span class="op">%&gt;%</span></span>
+<span id="cb285-2"><a href="week-10.html#cb285-2"></a><span class="st">        </span><span class="kw">table1</span>(<span class="op">~</span><span class="st"> </span><span class="kw">factor</span>(sex) <span class="op">+</span><span class="st"> </span><span class="kw">as.factor</span>(island)<span class="op">+</span><span class="st"> </span>bill_length_mm <span class="op">+</span><span class="st"> </span>bill_depth_mm <span class="op">|</span><span class="st"> </span>species,<span class="dt">data=</span>.)</span></code></pre></div>
+<div class="Rtable1"><table class="Rtable1">
+<thead>
+<tr>
+<th class='rowlabel firstrow lastrow'></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Adelie<br><span class='stratn'>(N=152)</span></span></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Chinstrap<br><span class='stratn'>(N=68)</span></span></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Gentoo<br><span class='stratn'>(N=124)</span></span></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Overall<br><span class='stratn'>(N=344)</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='rowlabel firstrow'><span class='varlabel'>factor(sex)</span></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>female</td>
+<td>73 (48.0%)</td>
+<td>34 (50.0%)</td>
+<td>58 (46.8%)</td>
+<td>165 (48.0%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>male</td>
+<td>73 (48.0%)</td>
+<td>34 (50.0%)</td>
+<td>61 (49.2%)</td>
+<td>168 (48.8%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>6 (3.9%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>5 (4.0%)</td>
+<td class='lastrow'>11 (3.2%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'><span class='varlabel'>as.factor(island)</span></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Biscoe</td>
+<td>44 (28.9%)</td>
+<td>0 (0%)</td>
+<td>124 (100%)</td>
+<td>168 (48.8%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Dream</td>
+<td>56 (36.8%)</td>
+<td>68 (100%)</td>
+<td>0 (0%)</td>
+<td>124 (36.0%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Torgersen</td>
+<td class='lastrow'>52 (34.2%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>52 (15.1%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'><span class='varlabel'>bill_length_mm</span></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Mean (SD)</td>
+<td>38.8 (2.66)</td>
+<td>48.8 (3.34)</td>
+<td>47.5 (3.08)</td>
+<td>43.9 (5.46)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Median [Min, Max]</td>
+<td>38.8 [32.1, 46.0]</td>
+<td>49.6 [40.9, 58.0]</td>
+<td>47.3 [40.9, 59.6]</td>
+<td>44.5 [32.1, 59.6]</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.7%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>1 (0.8%)</td>
+<td class='lastrow'>2 (0.6%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'><span class='varlabel'>bill_depth_mm</span></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Mean (SD)</td>
+<td>18.3 (1.22)</td>
+<td>18.4 (1.14)</td>
+<td>15.0 (0.981)</td>
+<td>17.2 (1.97)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Median [Min, Max]</td>
+<td>18.4 [15.5, 21.5]</td>
+<td>18.5 [16.4, 20.8]</td>
+<td>15.0 [13.1, 17.3]</td>
+<td>17.3 [13.1, 21.5]</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.7%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>1 (0.8%)</td>
+<td class='lastrow'>2 (0.6%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>However, note that there are R variable names in this table. We can remove these by creating new variables with easier to read names and units.</p>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="week-10.html#cb286-1"></a>penguins2 =<span class="st"> </span>penguins <span class="op">%&gt;%</span></span>
+<span id="cb286-2"><a href="week-10.html#cb286-2"></a><span class="st">        </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(</span>
+<span id="cb286-3"><a href="week-10.html#cb286-3"></a>                <span class="dt">sex =</span> <span class="kw">factor</span>(sex,</span>
+<span id="cb286-4"><a href="week-10.html#cb286-4"></a>                             <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&quot;female&quot;</span>,<span class="st">&quot;male&quot;</span>,<span class="st">&quot;Missing&quot;</span>),</span>
+<span id="cb286-5"><a href="week-10.html#cb286-5"></a>                             <span class="dt">labels=</span> <span class="kw">c</span>(<span class="st">&quot;Female&quot;</span>,<span class="st">&quot;Male&quot;</span>,<span class="st">&quot;Missing&quot;</span>))</span>
+<span id="cb286-6"><a href="week-10.html#cb286-6"></a>        )</span>
+<span id="cb286-7"><a href="week-10.html#cb286-7"></a></span>
+<span id="cb286-8"><a href="week-10.html#cb286-8"></a><span class="kw">label</span>(penguins2<span class="op">$</span>sex) =<span class="st"> &quot;Sex&quot;</span></span>
+<span id="cb286-9"><a href="week-10.html#cb286-9"></a><span class="kw">label</span>(penguins2<span class="op">$</span>island) =<span class="st"> &quot;Island&quot;</span></span>
+<span id="cb286-10"><a href="week-10.html#cb286-10"></a><span class="kw">label</span>(penguins2<span class="op">$</span>bill_length_mm) =<span class="st"> &quot;Bill Length&quot;</span></span>
+<span id="cb286-11"><a href="week-10.html#cb286-11"></a><span class="kw">label</span>(penguins2<span class="op">$</span>bill_depth_mm) =<span class="st"> &quot;Bill Depth&quot;</span></span>
+<span id="cb286-12"><a href="week-10.html#cb286-12"></a></span>
+<span id="cb286-13"><a href="week-10.html#cb286-13"></a><span class="kw">units</span>(penguins2<span class="op">$</span>bill_length_mm) =<span class="st"> &quot;mm&quot;</span></span>
+<span id="cb286-14"><a href="week-10.html#cb286-14"></a><span class="kw">units</span>(penguins2<span class="op">$</span>bill_depth_mm) =<span class="st"> &quot;mm&quot;</span></span>
+<span id="cb286-15"><a href="week-10.html#cb286-15"></a></span>
+<span id="cb286-16"><a href="week-10.html#cb286-16"></a>penguins2 <span class="op">%&gt;%</span></span>
+<span id="cb286-17"><a href="week-10.html#cb286-17"></a><span class="st">        </span><span class="kw">table1</span>(<span class="op">~</span><span class="st"> </span>sex <span class="op">+</span><span class="st"> </span>island <span class="op">+</span><span class="st"> </span>bill_length_mm <span class="op">+</span><span class="st"> </span>bill_depth_mm <span class="op">|</span><span class="st"> </span>species,<span class="dt">data=</span>.)</span></code></pre></div>
+<div class="Rtable1"><table class="Rtable1">
+<thead>
+<tr>
+<th class='rowlabel firstrow lastrow'></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Adelie<br><span class='stratn'>(N=152)</span></span></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Chinstrap<br><span class='stratn'>(N=68)</span></span></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Gentoo<br><span class='stratn'>(N=124)</span></span></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Overall<br><span class='stratn'>(N=344)</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='rowlabel firstrow'><span class='varlabel'>Sex</span></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Female</td>
+<td>73 (48.0%)</td>
+<td>34 (50.0%)</td>
+<td>58 (46.8%)</td>
+<td>165 (48.0%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Male</td>
+<td>73 (48.0%)</td>
+<td>34 (50.0%)</td>
+<td>61 (49.2%)</td>
+<td>168 (48.8%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Missing</td>
+<td>0 (0%)</td>
+<td>0 (0%)</td>
+<td>0 (0%)</td>
+<td>0 (0%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>6 (3.9%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>5 (4.0%)</td>
+<td class='lastrow'>11 (3.2%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'><span class='varlabel'>Island</span></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Biscoe</td>
+<td>44 (28.9%)</td>
+<td>0 (0%)</td>
+<td>124 (100%)</td>
+<td>168 (48.8%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Dream</td>
+<td>56 (36.8%)</td>
+<td>68 (100%)</td>
+<td>0 (0%)</td>
+<td>124 (36.0%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Torgersen</td>
+<td class='lastrow'>52 (34.2%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>52 (15.1%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'><span class='varlabel'>Bill Length<span class='varunits'> (mm)</span></span></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Mean (SD)</td>
+<td>38.8 (2.66)</td>
+<td>48.8 (3.34)</td>
+<td>47.5 (3.08)</td>
+<td>43.9 (5.46)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Median [Min, Max]</td>
+<td>38.8 [32.1, 46.0]</td>
+<td>49.6 [40.9, 58.0]</td>
+<td>47.3 [40.9, 59.6]</td>
+<td>44.5 [32.1, 59.6]</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.7%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>1 (0.8%)</td>
+<td class='lastrow'>2 (0.6%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'><span class='varlabel'>Bill Depth<span class='varunits'> (mm)</span></span></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Mean (SD)</td>
+<td>18.3 (1.22)</td>
+<td>18.4 (1.14)</td>
+<td>15.0 (0.981)</td>
+<td>17.2 (1.97)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Median [Min, Max]</td>
+<td>18.4 [15.5, 21.5]</td>
+<td>18.5 [16.4, 20.8]</td>
+<td>15.0 [13.1, 17.3]</td>
+<td>17.3 [13.1, 21.5]</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.7%)</td>
+<td class='lastrow'>0 (0%)</td>
+<td class='lastrow'>1 (0.8%)</td>
+<td class='lastrow'>2 (0.6%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>That is a pretty passable Table 1! Note that there is only one significant digit past the decimal. Some other nice things about this table that should be emulated are: (1) reporting of N for each column, (2) reporting of both N and the percentages for factor variables, (3) for conditional tables like this also including the overall total.</p>
+</div>
+<div id="color-in-tables" class="section level3">
+<h3><span class="header-section-number">11.4.2</span> Color in tables</h3>
+<p>While Table 1 is the most common use of tables that you will run into, they are often also used for reporting large collections of results across factor variables. For example, when reporting the results of state level polls, it is easier to summarize them in tabular format as the website <a href="https://projects.fivethirtyeight.com/polls/">FiveThirtyEight does</a>:</p>
+<p><img src="images/week10/538.png" /></p>
+<p>Most data analytic languages now make it possible for you to create expository tables with colors like these professional tables. In R <a href="https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/">there are a number of packages for making pretty tables</a>. The <a href="https://gt.rstudio.com/">gt</a> package is an early effort by the folks at Rstudio to make a ggplot2 equivalent grammar of tables. That is one to keep your eye on if you like the grammar style approach to composition. But some of the other table-making options are more mature and have more bells and whistles. For example with the <a href="https://renkun-ken.github.io/formattable/">formattable</a> package you can add within-cell barcharts, colors and icons - Laura Ellis has a <a href="https://www.littlemissdata.com/blog/prettytables">nice walkthrough</a> on how to make tables like this:</p>
+<p><img src="images/week10/ellis.png" /></p>
+<p>It can be useful to highlight important changes with arrows or +/- scales. Particularly when looking at data year over year.</p>
+</div>
+<div id="captions" class="section level3">
+<h3><span class="header-section-number">11.4.3</span> Captions</h3>
+<p>As with figures, your expository tables should have captions with a declarative summary statement in bold, followed by a complete description of the table, sufficient for a reader to understand the table as a self contained unit. One common difference is that Table captions are typically shown above tables, as opposed to below.</p>
+</div>
+</div>
+<div id="scientific-graphics-vs-infographics" class="section level2">
+<h2><span class="header-section-number">11.5</span> Scientific graphics vs infographics</h2>
+<p>In <a href="http://www.stat.columbia.edu/~gelman/research/published/vis14.pdf">his paper</a> on infographics and statistical visualization Andrew Gelman talks about two types of graphics:</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Statistical data visualization, which is focused not on visual appeal but on facilitating an understanding of patterns in an applied problem, both in directing readers to specific information and allowing the readers to see for themselves.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Infographics, which ideally should be attractive, grab one’s attention, tell a story and encourage the viewer to think about a particular dataset, both as individual measurements and as a representation of larger patterns.</li>
+</ol>
+</blockquote>
+<p>Both can be valuable, though for the purposes of this course we are more focused on the former. That being said, one thing that statisticians could certainly learn from infographic designers is that the focus on story can make even the most complicated and dense statistical graphics more interpretable to your audience.</p>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><span class="header-section-number">11.6</span> Additional Resources</h2>
+<div class="resources">
+<ul>
+<li><a href="https://www.williamrchase.com/slides/assets/player/KeynoteDHTMLPlayer.html">Glamour of Graphics (slides)</a></li>
+<li><a href="https://rstudio.com/resources/rstudioconf-2020/the-glamour-of-graphics/">Glamour of Graphics (talk)</a></li>
+<li><a href="http://www.stat.columbia.edu/~gelman/research/published/vis14.pdf">Infovis and Statistical Graphics: Different Goals, Different Looks</a></li>
+<li><a href="https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/">How to make beautiful tables in R</a></li>
+<li><a href="https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html">table1 R package</a></li>
+<li><a href="https://github.com/wilkelab/ggtext">ggtext R package</a></li>
+<li><a href="https://cran.r-project.org/web/packages/ggforce/index.html">ggforce R package</a></li>
+</ul>
+</div>
+</div>
+<div id="homework" class="section level2">
+<h2><span class="header-section-number">11.7</span> Homework</h2>
+<div class="homework">
+<ul>
+<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework10" class="uri">https://github.com/advdatasci/homework10</a></li>
+<li><strong>Repo Name</strong>: homework10-ind-yourgithubusername</li>
+<li><strong>Pull Date</strong>: 2020/11/09 9:00AM Baltimore Time</li>
+</ul>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="week-9.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ads2020.pdf", "ads2020.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
