@@ -10,6 +10,15 @@
     - 12/07 - working with collaborators (slightly higher effort)
     - 12/14 - data science ethics (moderate effort)
     - 12/21 - course wrap up (low effort)
+2. Reproducibility
+  - We have discussed the importance of reproducibility in class
+  - But we haven't explicitly talked about reproducibility in assignments
+  - We would like you to practice reproducibility with your assignments
+  - Please
+    - Make sure your document runs completely from beginning to end with no inputs
+    - Uses the here package and relative paths to ensure it can be run on the TAs computers
+    - Creates plots directly in your notebook/document
+    - Make sure that you test run the document on a couple of different systems
 3. Peer review this week
   - Break into small groups right away
   - Goal is to provide feedback to as many folks as possible
