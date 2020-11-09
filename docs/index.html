@@ -149,8 +149,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a><ul>
 <li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#submitting-assignments"><i class="fa fa-check"></i><b>1.8.1</b> Submitting assignments</a></li>
 <li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#data-analysis-assignments"><i class="fa fa-check"></i><b>1.8.2</b> Data Analysis Assignments</a></li>
-<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.3</b> Data Analysis Reviews</a></li>
-<li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.4</b> Reviewing Code of Conduct</a></li>
+<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>1.8.3</b> Reproducibility</a></li>
+<li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.4</b> Data Analysis Reviews</a></li>
+<li class="chapter" data-level="1.8.5" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.5</b> Reviewing Code of Conduct</a></li>
 </ul></li>
 <li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a><ul>
 <li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i><b>1.9.1</b> Need Help?</a></li>
@@ -189,7 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.8" data-path="week-1.html"><a href="week-1.html#written-analyses"><i class="fa fa-check"></i><b>2.4.8</b> Written analyses</a></li>
 <li class="chapter" data-level="2.4.9" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>2.4.9</b> Figures</a></li>
 <li class="chapter" data-level="2.4.10" data-path="week-1.html"><a href="week-1.html#presentations"><i class="fa fa-check"></i><b>2.4.10</b> Presentations</a></li>
-<li class="chapter" data-level="2.4.11" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
+<li class="chapter" data-level="2.4.11" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
 <li class="chapter" data-level="2.4.12" data-path="week-1.html"><a href="week-1.html#r-packages"><i class="fa fa-check"></i><b>2.4.12</b> R packages</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="week-1.html"><a href="week-1.html#your-first-assignment---deconstructing-an-analysis"><i class="fa fa-check"></i><b>2.5</b> Your first assignment - deconstructing an analysis</a></li>
@@ -246,7 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.1" data-path="week-4.html"><a href="week-4.html#an-important-subtlety---analyst-decisions-change-the-question"><i class="fa fa-check"></i><b>5.3.1</b> An important subtlety - analyst decisions change the question</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="week-1.html"><a href="week-1.html#reproducibility"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="5.4.1" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
 <li class="chapter" data-level="5.4.2" data-path="week-4.html"><a href="week-4.html#replicability"><i class="fa fa-check"></i><b>5.4.2</b> Replicability</a></li>
 <li class="chapter" data-level="5.4.3" data-path="week-4.html"><a href="week-4.html#false-discovery"><i class="fa fa-check"></i><b>5.4.3</b> False discovery</a></li>
 </ul></li>
@@ -679,8 +680,20 @@ C - Needs improvement - 70%+</p>
 <h3><span class="header-section-number">1.8.2</span> Data Analysis Assignments</h3>
 <p>After we have spent a few weeks reviewing data analytic work written by others, we will begin working on data analyses within</p>
 </div>
+<div id="reproducibility" class="section level3">
+<h3><span class="header-section-number">1.8.3</span> Reproducibility</h3>
+<p>We will talk about reproducibility a bit during class, and it will be a part of the homework assignments as well. Reproducibility of scientific code is very challenging, so the faculty and TAs completely understand difficulties that arise. But we think that it is important that you practice reproducible research. In particular, your homework assignments should perform the analyses you are asked to do and create the figures and tables you are asked to make as a part of the compilation of your document. Some pointers for some issues that have come up:</p>
+<ul>
+<li>You should make sure your code is executed when the document is compiled (so use <code>eval=FALSE</code> sparingly). Most code chunks should be run, especially those that create plots.</li>
+<li>You should have the document create figures as a part of the document compiling, rather than producing the figures in advance with distinct code and then embedding them in the HTML.</li>
+<li>A good best practice is to have your library calls all in the first “setup” chunk of your Rmarkdown file. That helps readers take a quick look and see what they need to run your code and to identify any issues or potential hidden dependencies.</li>
+<li>Your document should knit, in full, with a press of the knit button, with no user input required. This is a really important (and challenging!) part of reproducibility. As a simple check you might try exiting R and then starting a new session and recompiling your document with a clean session to make sure it runs. Another good idea is to move your whole project to a separate sub-folder and trying to run it. The gold standard would be having a friend try to run your document on their computer.</li>
+<li>As we discussed in the organizing projects lecture, an absolute path is a path which tells you exactly how to get to a file/folder starting from “root” (usually, it will start with a <code>"/"</code> or start with the address of a particular drive; ie, <code>"C://"</code>). This is not reproducible because an absolute path, more often than not, is going to be unique to your particular computer and layout. Rather, you should use relative paths. A relative path will start with the current directory, and you index off that. In the case of our homework documents, this means that any scripts/files/dependencies/etc you need should be pushed directly to your repository, and then you load them with a relative path inside your actual homework assignment (relative your working directory). Usually, a relative path will start with “./script.R” or you just specify a file directly; e.g., “script.R” (which the computer interprets as “start from the directory I am in”) or might start with telling you to go back a directory or something first (“../”). An important consideration: your R terminal within Rstudio (the little arrow at the bottom; &gt;, that executes raw R commands) will place the “working directory” somewhere (possibly) different from your markdown document. However, if you use the built-in Rmarkdown IDE in RStudio (e.g., pressing the green “run” arrow, or knitting the document) the working directory will be the same directory as the markdown document you are compiling. You might also consider the here package if you are using R to set your paths.</li>
+<li>Not everything needs to be run in real time. A few students (accurately) note that if you have, say, a code block that takes 20 minutes to run, it is perfectly acceptable/understandable to set that block to <code>eval=FALSE</code> , save whatever that block produces to say a rds object or a csv that you push to your repo, and at the top of the next block, load it in.</li>
+</ul>
+</div>
 <div id="data-analysis-reviews" class="section level3">
-<h3><span class="header-section-number">1.8.3</span> Data Analysis Reviews</h3>
+<h3><span class="header-section-number">1.8.4</span> Data Analysis Reviews</h3>
 <p>In this course we will be reviewing both published data analyses and each other’s work. You will review both in writing and orally during course discussions. Reviews in our course will take the following format:</p>
 <p><strong>Written reviews</strong></p>
 <p>For each assigned data analysis you will provide a written review which will include a summary of the data analysis and answers to key questions. At the beginning of the term these reviews will focus on published/public data analyses, but once we begin to turn in data analysis assignments, they will be peer reviews of each other’s work.</p>
@@ -693,7 +706,7 @@ C - Needs improvement - 70%+</p>
 <p>Both reviewers are encouraged to lead discussion of the data analysis to get feedback from the other participants in the session.</p>
 </div>
 <div id="reviewing-code-of-conduct" class="section level3">
-<h3><span class="header-section-number">1.8.4</span> Reviewing Code of Conduct</h3>
+<h3><span class="header-section-number">1.8.5</span> Reviewing Code of Conduct</h3>
 <p>We will be reviewing both public work and each other’s work in both written and oral form. Reviewing well is an art form and is an important skill to master - and not just for this course! Regardless of where you go after Hopkins, you will be tasked with reviewing the work of others.</p>
 <p>The key principles of doing a good job in reviewing and the foundation for our course code of conduct are:</p>
 <ol style="list-style-type: decimal">

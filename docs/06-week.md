@@ -263,7 +263,7 @@ list.files()
 ## [40] "index.Rmd"             "index.utf8.md"         "jhsph ads.png"        
 ## [43] "key.png"               "Lightbulb.png"         "Live-code.png"        
 ## [46] "logo"                  "private"               "README.md"            
-## [49] "render1482735a967.rds" "style.css"             "test.png"             
+## [49] "render148405cdf79.rds" "style.css"             "test.png"             
 ## [52] "Your-turn.png"
 ```
 
@@ -307,7 +307,7 @@ list.files(here::here())
 ## [40] "index.Rmd"             "index.utf8.md"         "jhsph ads.png"        
 ## [43] "key.png"               "Lightbulb.png"         "Live-code.png"        
 ## [46] "logo"                  "private"               "README.md"            
-## [49] "render1482735a967.rds" "style.css"             "test.png"             
+## [49] "render148405cdf79.rds" "style.css"             "test.png"             
 ## [52] "Your-turn.png"
 ```
 
@@ -1664,7 +1664,7 @@ req
 
 ```
 ## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-11-09 04:59
+##   Date: 2020-11-09 15:05
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB
