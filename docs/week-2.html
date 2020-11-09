@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-11-02" />
+<meta name="date" content="2020-11-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -415,6 +415,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>11.6</b> Additional Resources</a></li>
 <li class="chapter" data-level="11.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>11.7</b> Homework</a></li>
 </ul></li>
+<li class="chapter" data-level="12" data-path="week-11.html"><a href="week-11.html"><i class="fa fa-check"></i><b>12</b> Week 11</a><ul>
+<li class="chapter" data-level="12.1" data-path="week-11.html"><a href="week-11.html#week-11-learning-objectives"><i class="fa fa-check"></i><b>12.1</b> Week 11 Learning objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="week-11.html"><a href="week-11.html#methodology-vs-data-analysis"><i class="fa fa-check"></i><b>12.2</b> Methodology vs Data Analysis</a></li>
+<li class="chapter" data-level="12.3" data-path="week-11.html"><a href="week-11.html#the-sections-of-a-methodological-paper"><i class="fa fa-check"></i><b>12.3</b> The sections of a methodological paper</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="week-9.html"><a href="week-9.html#abstracts"><i class="fa fa-check"></i><b>12.3.1</b> Abstracts</a></li>
+<li class="chapter" data-level="12.3.2" data-path="week-9.html"><a href="week-9.html#introductions"><i class="fa fa-check"></i><b>12.3.2</b> Introductions</a></li>
+<li class="chapter" data-level="12.3.3" data-path="week-11.html"><a href="week-11.html#description-of-your-method"><i class="fa fa-check"></i><b>12.3.3</b> Description of your method</a></li>
+<li class="chapter" data-level="12.3.4" data-path="week-11.html"><a href="week-11.html#simulation-results"><i class="fa fa-check"></i><b>12.3.4</b> Simulation results</a></li>
+<li class="chapter" data-level="12.3.5" data-path="week-11.html"><a href="week-11.html#empirical-results"><i class="fa fa-check"></i><b>12.3.5</b> Empirical results</a></li>
+<li class="chapter" data-level="12.3.6" data-path="week-9.html"><a href="week-9.html#conclusions-and-discussion"><i class="fa fa-check"></i><b>12.3.6</b> Conclusions and discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="week-11.html"><a href="week-11.html#comparisons"><i class="fa fa-check"></i><b>12.4</b> Comparisons</a></li>
+<li class="chapter" data-level="12.5" data-path="week-11.html"><a href="week-11.html#transparency"><i class="fa fa-check"></i><b>12.5</b> Transparency</a></li>
+<li class="chapter" data-level="12.6" data-path="week-11.html"><a href="week-11.html#software"><i class="fa fa-check"></i><b>12.6</b> Software</a></li>
+<li class="chapter" data-level="12.7" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>12.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.8" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>12.8</b> Homework</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -571,7 +588,7 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb1-3"><a href="week-2.html#cb1-3"></a>axes_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/axes.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-4"><a href="week-2.html#cb1-4"></a>clouds_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/clouds.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-5"><a href="week-2.html#cb1-5"></a>axes_json[[<span class="dv">1</span>]]</span></code></pre></div>
-<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;ID\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-29 21:54:23.43518 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;4978316446531584\&quot;,\&quot;drawing\&quot;:[[[10,36,55,78],[0,22,30,34]],[[8,1,0,63],[12,48,116,101]],[[69,61,60,78],[2,20,79,254]]]}&quot;</code></pre>
+<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;US\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-27 19:23:56.34464 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;6278062536654848\&quot;,\&quot;drawing\&quot;:[[[188,191,178],[61,130,255]],[[180,166,131,110,86,72,63,49,44,35,0,16,25,42,53,69,84,109,189,223,228,223],[56,58,73,75,66,56,45,8,4,0,3,88,93,110,132,142,145,143,115,109,106,103]]]}&quot;</code></pre>
 <p>The next thing I did was google “quick draw data ndjson rstats”. I found a <a href="https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/">tutorial</a> and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-2.html#cb3-1"></a><span class="kw">library</span>(dplyr)</span>
 <span id="cb3-2"><a href="week-2.html#cb3-2"></a></span>
@@ -582,21 +599,20 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb3-7"><a href="week-2.html#cb3-7"></a>}</span>
 <span id="cb3-8"><a href="week-2.html#cb3-8"></a>first_axe =<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(axes_json[[<span class="dv">1</span>]]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">parse_drawing</span>()</span>
 <span id="cb3-9"><a href="week-2.html#cb3-9"></a>first_axe</span></code></pre></div>
-<pre><code>## # A tibble: 12 x 5
+<pre><code>## # A tibble: 25 x 5
 ##    line      x     y drawing          row_id
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;
-##  1 1        10     0 4978316446531584      1
-##  2 1        36    22 4978316446531584      2
-##  3 1        55    30 4978316446531584      3
-##  4 1        78    34 4978316446531584      4
-##  5 2         8    12 4978316446531584      5
-##  6 2         1    48 4978316446531584      6
-##  7 2         0   116 4978316446531584      7
-##  8 2        63   101 4978316446531584      8
-##  9 3        69     2 4978316446531584      9
-## 10 3        61    20 4978316446531584     10
-## 11 3        60    79 4978316446531584     11
-## 12 3        78   254 4978316446531584     12</code></pre>
+##  1 1       188    61 6278062536654848      1
+##  2 1       191   130 6278062536654848      2
+##  3 1       178   255 6278062536654848      3
+##  4 2       180    56 6278062536654848      4
+##  5 2       166    58 6278062536654848      5
+##  6 2       131    73 6278062536654848      6
+##  7 2       110    75 6278062536654848      7
+##  8 2        86    66 6278062536654848      8
+##  9 2        72    56 6278062536654848      9
+## 10 2        63    45 6278062536654848     10
+## # … with 15 more rows</code></pre>
 </div>
 <div id="exploratory-data-analysis" class="section level3">
 <h3><span class="header-section-number">3.2.6</span> Exploratory data analysis</h3>
@@ -695,12 +711,12 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 ## # Groups:   xgroup [16]
 ##    xgroup ygroup   pixel
 ##     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
-##  1      1      1 0.00391
+##  1      1      1 0      
 ##  2      1     17 0      
-##  3      1     33 0.00391
+##  3      1     33 0      
 ##  4      1     49 0      
 ##  5      1     65 0      
-##  6      1     81 0      
+##  6      1     81 0.00391
 ##  7      1     97 0      
 ##  8      1    113 0      
 ##  9      1    129 0      

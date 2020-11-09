@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>10 Week 9 | Week 1</title>
+  <title>12 Week 11 | Week 1</title>
   <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="10 Week 9 | Week 1" />
+  <meta property="og:title" content="12 Week 11 | Week 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="10 Week 9 | Week 1" />
+  <meta name="twitter:title" content="12 Week 11 | Week 1" />
   
   <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="week-8.html"/>
-<link rel="next" href="week-10.html"/>
+<link rel="prev" href="week-10.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -452,143 +452,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-9" class="section level1">
-<h1><span class="header-section-number">10</span> Week 9</h1>
-<div id="week-9-learning-objectives" class="section level2">
-<h2><span class="header-section-number">10.1</span> Week 9 Learning objectives</h2>
+<div id="week-11" class="section level1">
+<h1><span class="header-section-number">12</span> Week 11</h1>
+<div id="week-11-learning-objectives" class="section level2">
+<h2><span class="header-section-number">12.1</span> Week 11 Learning objectives</h2>
 <div class="keyidea">
 <p>At the end of this lesson you will be able to:</p>
 <ul>
-<li>Understand the central dramatic argument, structure, and form of a data analysis</li>
-<li>Use “therefore” and “but” as linkers in your analysis instead of “and then”</li>
-<li>Be able to define the journeys to correct and interesting in a data analysis</li>
-<li>Know which parts of your analysis appear in each section of a data analytic paper</li>
+<li>Identify the differences between a methodological and data analysis paper</li>
+<li>Structure and write the sections of methodological papers</li>
+<li>Understand the role and importance of simulation in methodological work</li>
+<li>Be able to perform appropriate comparisons to previous methodology</li>
 </ul>
 </div>
 </div>
-<div id="story-telling-in-data-analysis" class="section level2">
-<h2><span class="header-section-number">10.2</span> Story Telling in Data Analysis</h2>
-<p>As we have discussed earlier in the class, a data analysis always involves a communication between the analyst and their audience. A big part of that is telling the story of a data analysis. At the beginning of an analysis you will start out with a question and then through exploration you may chase dozens of leads and create hundreds of plots. But a key to success in data analysis is taking these disparate analyses and weaving them into a coherent story.</p>
-<div id="the-central-dramatic-argument" class="section level3">
-<h3><span class="header-section-number">10.2.1</span> The Central Dramatic Argument</h3>
-<p>The story or “arc” of a data analysis tells the central dramatic argument of the data and evidence. You can think of this a bit like “dimension reduction” for your analytic results. You are trying to summarize the key points and put them in order so that your audience doesn’t have to follow all of the potential dead ends you may have chased when performing your analysis.</p>
-<p>Sometimes the dramatic argument is obvious - its right in the title like in this <a href="https://pubmed.ncbi.nlm.nih.gov/29243937/">paper</a> by Roger and his colleagues.</p>
-<p><img src="images/week9/dramatic1.png" /></p>
-<p>But it isn’t always as clear what the central dramatic argument is in some papers. For example, this <a href="http://amstat.tandfonline.com/doi/abs/10.1080/01621459.1988.10478560">paper</a></p>
-<p><img src="images/week9/dramatic2.png" /></p>
-<p>the central dramatic argument appears in the abstract:</p>
+<div id="methodology-vs-data-analysis" class="section level2">
+<h2><span class="header-section-number">12.2</span> Methodology vs Data Analysis</h2>
+<p>This course is primarily focused on performing and communicating data analysis. But it is also incredibly common for a data scientist to be called on to create new techniques or methodologies to answer important scientific questions. Just as there is an accepted structure for communicating a data analysis, there is also standard structure for communicating a new technique or methodology.</p>
+<p>Before we go into this standard structure it is a good idea to describe what we mean by a new “methodology”. In (bio)statistics methodology often involves the development of a new mathematical model. As Leo Breiman puts it in his classic paper <a href="https://projecteuclid.org/euclid.ss/1009213726">Statistical Modeling: The Two Cultures</a></p>
 <blockquote>
-<p>“For point processes, effective use of such residual analysis makes it possible to find features of the data set that are not captured in the model.”</p>
+<p>There are two cultures in the use of statistical modeling to reach conclusions from data. One assumes that the data are generated by a given stochastic data model. The other uses algorithmic models and treats the data mechanism as unknown. The statistical community has been committed to the almost exclusive use of data models. This commitment has led to irrelevant theory, questionable conclusions, and has kept statisticians from working on a large range of interesting current problems. Algorithmic modeling, both in theory and practice, has developed rapidly in fields outside statistics. It can be used both on large complex data sets and as a more accurate and informative alternative to data modeling on smaller data sets. If our goal as a field is to use data to solve problems, then we need to move away from exclusive dependence on data models and adopt a more diverse set of tools.</p>
 </blockquote>
-<p>Depending on your writing style different approaches can be successful to creating a central dramatic arc. But it is critical to know that arc and follow it with your data analysis.</p>
-<p>It is also important to keep in mind that often we can agree on the data but disagree on what they tell us. Your job as the analyst, is to organize the evidence, present it clearly and help the audience to understand the arc through the data you are trying to present.</p>
-</div>
-<div id="thematic-structure-and-causality" class="section level3">
-<h3><span class="header-section-number">10.2.2</span> Thematic structure and causality</h3>
-<p>Most people who come to data analysis do so through a technical or empirical discipline like epidemiology or biostatistics. We have often have extensive and deep technical training but have spent less time learning about writing, exposition and telling stories. However, being good at writing can dramatically improve the impact of even your most technical writing.</p>
-<p>Since writing isn’t often a component of technical curricula we need to look outside to find key ideas. In <a href="https://jhu-advdatasci.github.io/2019/lectures/storytelling.pdf">Roger’s lecture</a> he points to this great quote from the <a href="https://johnaugust.com/scriptnotes">Scriptnotes</a> podcast:</p>
-<blockquote>
-<p>“The purpose of the story is to take a character
-from ignorance of the truth of the theme to
-embodiment of theme through action.” -Craig Mazin, Scriptnotes Podcast, Ep. 403</p>
-</blockquote>
-<p>In that same episode they discuss the key thematic structure of a movie, which has some lessons for us as data analysts:</p>
-<p><img src="images/week9/thematic.png" /></p>
-<p>The important thing about this structure is that there is a natural reason each step follows from the next and they flow from one to the other. A really nice simplification of this idea was proposed by the creators of the crass, but wildly successfull <a href="https://en.wikipedia.org/wiki/South_Park">South Park</a> television series - Matt Stone and Trey Parker. They lay out their simple model for creating narrative in this <a href="https://www.youtube.com/watch?v=vGUNqq3jVLg&amp;feature=youtu.be&amp;t=47">Youtube video</a> (a bit of strong language - no surprise)</p>
-<p>They discuss how the narrative ideas in a story should be linked using the words “therefore” and “but”. They also point out that stories where the narrative ideas are separated by “and then” are often much less coherent and harder to follow. The same rules apply in data analysis! When you are putting together the pieces of your analysis you should be thinking about causality between the beats of your story.</p>
-<p>For example this narrative structure takes the reader along with you on your path through the analysis:</p>
-<blockquote>
-<p>“In our exploratory analysis we observed that height and weight were correlated, <em>therefore</em> we fit a linear model, <em>but</em> after plotting the residuals and coloring by age of the participant we realized it was a confounder, <em>therefore</em> we included it as an adjustment factor.”</p>
-</blockquote>
-<p>However, a typical <em>“and then”</em> analysis looks more like a catalog of things you tried without a coherent picture.</p>
-<blockquote>
-<p>“We made a plot of height versus weight and then we made a plot of height versus age and then we fit a model that related height to weight adjusting for age.”</p>
-</blockquote>
-<p>When writing your analysis, think carefully about how to construct the narrative so it flows naturally from step to step rather than feeling like a catalog.</p>
-</div>
-<div id="format" class="section level3">
-<h3><span class="header-section-number">10.2.3</span> Format</h3>
-<p>The format of the presentation should match nature of the story being told. In some cases the format will be more formally structured, for example when reporting an analysis for a journal the structure may be dictated by the requirements of that journal. Other times, it may be more informal and free flowing.</p>
-<p>For example you may be reporting your analysis in a variety of formats:</p>
+<p>In data science we sometimes develop new mathematical models, but often data science methodological development involves a variety of other kinds of methodological development. Common examples could be:</p>
 <ul>
-<li>Blog post</li>
-<li>Report</li>
-<li>Paper</li>
-<li>Email</li>
-<li>Interactive presentation</li>
+<li>Putting together a collection of mathematical models in a specific order</li>
+<li>Developing a piece of software that does a specific kind of data processing</li>
+<li>Creating a new workflow for analyzing a generic data type</li>
+<li>Creating or applying a new class of machine learning models</li>
+<li>Identifying a new way to repurpose existing data to answer new questions</li>
 </ul>
-<p>Each will have its own set of requirements. For blog posts it often makes sense to restrict the dramatic arc to a single, coherent thought process. An email may be only a few lines of writing with a single figure meant to convey just one point. More in depth interactive reporting like <a href="https://www.nytimes.com/interactive/2018/01/27/technology/social-media-bots.html">The Follower Factory</a> may include interactive elements that guide the reader through the story.</p>
-<p>Below we will focus on the format for a data analytic scientific paper, but this format will depend heavily on the outlet you plan to ultimately pursue for communicating your results to your audience.</p>
+<p>With traditional statistical development, we can rely on purely mathematical arguments about optimality. One challenge of the broader definition of methodological development is that it can be harder to know what makes a method “good”. In this context the comparison and evaluation will largely be empirical and will need to follow the same best practices as any thoughtful data analysis.</p>
+<p>However the purpose of a methodological paper or report is very different than a standard data analysis. The primary difference is that the scientific question you are trying to answer is about how well the proposed method will behave in a variety of contexts. Direct answers to a scientific question may be a piece of that puzzle, but they are not sufficient by themselves to know that a method works or is good.</p>
 </div>
-<div id="trust-and-belief" class="section level3">
-<h3><span class="header-section-number">10.2.4</span> Trust and Belief</h3>
-<p>An audience can trust you did a good analysis, but still not believe your central dramatic argument.</p>
-<ul>
-<li>Trust
-- I accept the analysis, the data were analyzed properly and
-thoroughly
-- Trust is particular to the analysis and the person doing the
-analysis</li>
-<li>Belief
-- I believe the conclusion / central argument, is true
-- Depends on context, previous work, factors outside the analysis</li>
-</ul>
-<p>Regardless, the story you tell is part of a larger negotiation with the
-audience to accept the analysis. Depending on your relationship to the audience you may need to alter the way that you tell your story. If you are well known in an area and have a track record of solid analyses - you may be able to streamline your reporting or move significant pieces of the analysis to supplementary documents. But if you are new to an audience, or working outside your standard field, you will need to be more careful about documenting your choices.</p>
-<p>In his piece on <a href="https://simplystatistics.org/2018/06/04/trustworthy-data-analysis/">trustworthy data analysis</a> Roger discusses how there are three parts to a data analysis:</p>
-<ul>
-<li>The parts you did and presented</li>
-<li>The parts you did but did not present</li>
-<li>The parts you did not do</li>
-</ul>
-<p>As he puts it:</p>
-<blockquote>
-<p>“As an analyst it might be useful to think of what are the things that will fall into components A, B, and C. In particular, how one thinks about the three components will likely depend on the audience to which the presentation is being made. In fact, the “presentation” may range from sending a simple email, to delivering a class lecture, or a keynote talk. The manner in which you present the results of an analysis is part of the analysis and will play a large role in determining the success of the analysis. If you are unfamiliar with the audience, or believe they are unfamiliar with you, you may need to place more elements in components A (the presentation), and perhaps talk a little faster. But if you already have a long-term relationship with the audience, a quick summary (with lots of things placed into component B) may be enough."</p>
-</blockquote>
-</div>
-</div>
-<div id="the-journey-to-interesting-and-true" class="section level2">
-<h2><span class="header-section-number">10.3</span> The journey to interesting and true</h2>
-<p>In her outstanding <a href="https://docs.google.com/presentation/d/1pZe8Sp350iYzsKsweZzR374179gvRwpI3cAX_NObgj8/edit#slide=id.g8ef8954ce3_0_673">JSM 2020 talk</a> Lucy D’Agostion McGowan makes a two by two table of the types of data analysis you can observe. On one axis is whether the analysis is interesting or not and on the other is whether it is true or not.
-<img src="images/week9/interestingvstrue.png" /></p>
-<p>Untrue and uninteresting analyses are not usually worth that much interest. The other three quandrants are worth discussing briefly.</p>
-<ul>
-<li><strong>Interesting and true</strong> analyses are what we are typically trying to create as data analysts. They both tell a story people care about and they present the data fairly.</li>
-<li><strong>Not interesting and true</strong> analyses are probably the most common, they occur when you present the data fairly, tell the best story you can, but there isn’t a compelling story behind the data. These are ok! They should be reported more often than they are.</li>
-<li><strong>Interesting and untrue</strong> unfortunately these types of data analyses can be <em>very</em> popular and have extremely negative consequences. They are the type of analysis you want to avoid at all costs.</li>
-</ul>
-<p>Lucy points out that there are two separate journeys we take when performing and communicating a data analysis. The first is the journey to true.</p>
-<p><img src="images/week9/journeytrue.png" /></p>
-<p>This involves not only that the analysis is technically correct, but also that it is correctly disseminated, marketed, and interpreted by an audience. One important point to keep in mind is that you don’t always control some of these steps! A great example is a Youtube video Lucy and I made for TedEd, trying to communicate how to avoid being misled by scientific headlines. When the video came out on Youtube they used the title, <a href="https://ed.ted.com/lessons/this-one-weird-trick-will-help-you-spot-clickbait-jeff-leek-and-lucy-mcgowan">“This one weird trick will help you spot Clickbait”</a> and had “Clickbait” written in gigantic font on the video:</p>
-<p><img src="images/week9/clickbait.png" />
-Needless to say, this approach to dissemination and marketing reduced the veracity of our argument and made it harder for people to believe what we were saying!</p>
-<p>The journey to interesting is also a multi-step process which includes, picking the right format, length, complexity, focus, visuals, and marketing. These components depend on the forum, the audience you are communicating with, and the goal of your data analysis.</p>
-<p><img src="images/week9/journeyinteresting.png" /></p>
-<p>When you put these ideas together you get the full journey to an interesting and true analysis:</p>
-<p><img src="images/week9/wholejourney.png" /></p>
-<p>One reason that these analyses can be rare is that it really takes a lot of components working together to influence the results of an analysis. It is a lot to keep track of. But improving each of these components a bit has multiplicative effects on the success of your data analysis.</p>
-</div>
-<div id="data-analysis-papers" class="section level2">
-<h2><span class="header-section-number">10.4</span> Data Analysis Papers</h2>
-<p>While there are a number of formats for producing data analyses and sharing them, in advanced data science our focus will be on producing data analytic papers. While this is a somewhat academic-flavored view of data analytic products, it is also extremely common to be asked to produce data analytic reports in industry and government, which will share many of the characteristics of good data analytic papers.</p>
-<div id="how-do-you-know-when-to-start-writing" class="section level3">
-<h3><span class="header-section-number">10.4.1</span> How do you know when to start writing?</h3>
-<p>Sometimes this is an easy question to answer. If you started with a very concrete question at the beginning then once you have done enough analysis to convince yourself that you have the answer to the question. If the answer to the question is interesting/surprising then it is time to stop and write.</p>
-<p>If the answer isn’t interesting/surprising but you started with a concrete question it is also time to stop and write. But things often get more tricky with this type of paper as most journals when reviewing papers filter for “interest” so sometimes a paper without a really “big” result will be harder to publish. <strong>This is ok!!</strong> Even though it may take longer to publish the paper, it is important to publish even results that aren’t surprising/novel. It is much better that you come to an answer you are comfortable with and you go through a little pain trying to get it published than you keep pushing until you get an “interesting” result, which may or may not be justifiable (see the journey above).</p>
-<p>If you started with a question that wasn’t so concrete then it gets a little trickier. The basic idea here is that you have convinced yourself you have a result that is worth reporting. Usually this takes the form of between 1 and 5 figures that show a coherent story that you could explain to someone in your field. We will talk more about publication quality figures next week.</p>
-<p>For the first paper you will probably get a lot of help from an advisor or mentor on when to stop. But in general one thing you should be working on in graduate school is your own internal timer that tells you, “ok we have done enough, time to write this up”. I found this one of the hardest things to learn in graduate school, but it is a critical skill in both academics and industry. There are rarely deadlines for paper writing (unless you are submitting to CS conferences) so it will eventually be up to you when to start writing. If you don’t have a good clock, this can really slow down your ability to get things published or complete projects at work and get promoted.</p>
-<p>One good principle to keep in mind is “the perfect is the enemy of the very good” Another one is that a published paper in a respectable journal beats a paper you just never submit because you want to get it into the “best” journal. David Robinson really accurately describes the importance of completing projects and putting them out:</p>
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">
-“Things that are still on your computer are approximately useless.” -<a href="https://twitter.com/drob?ref_src=twsrc%5Etfw"><span class="citation">@drob</span></a> <a href="https://twitter.com/hashtag/eUSR?src=hash&amp;ref_src=twsrc%5Etfw">#eUSR</a> <a href="https://twitter.com/hashtag/eUSR2017?src=hash&amp;ref_src=twsrc%5Etfw">#eUSR2017</a> <a href="https://t.co/nS3IBiRHBn">pic.twitter.com/nS3IBiRHBn</a>
-</p>
-— Amelia McNamara (<span class="citation">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/926509282874585089?ref_src=twsrc%5Etfw">November 3, 2017</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-<div id="structure" class="section level3">
-<h3><span class="header-section-number">10.4.2</span> Structure</h3>
-<p>A scientific paper can be distilled into four parts:</p>
+<div id="the-sections-of-a-methodological-paper" class="section level2">
+<h2><span class="header-section-number">12.3</span> The sections of a methodological paper</h2>
+<p>As we discussed in <a href="http://jtleek.com/ads2020/week-9.html">week 9</a>; a scientific paper can be distilled into four parts:</p>
 <ul>
 <li>A set of methodologies</li>
 <li>A description of data</li>
@@ -596,141 +494,168 @@ Needless to say, this approach to dissemination and marketing reduced the veraci
 <li>A set of claims</li>
 </ul>
 <p>When you (or anyone else) writes a paper the goal is to communicate clearly items 1-3 so that they can justify the set of claims you are making. Before you can even write down 4 you have to do 1-3. So that is where you start when writing a paper.</p>
-<p>This <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619">paper</a> in PLoS Computational Biology lays out some simple rules for writing papers - these rules apply across many fields, but are really useful to think about when writing data analytic papers.</p>
-<p>In particular I really like this visual structure of a data analytic paper:</p>
-<p><img src="images/week9/structure.png" /></p>
-<p>That helps to break down how each section works together. In the remainder of this lesson we will focus on some of the most important parts of a data analytic paper. These components should be included</p>
-</div>
-<div id="titles" class="section level3">
-<h3><span class="header-section-number">10.4.3</span> Titles</h3>
-<p>Should be very short, declarative, and should state the main result. Example, “A new method for sequencing data that shows how to cure cancer”. Here you want to make sure people will read the paper without overselling your results - this is a delicate balance. Unless you have a really good reason not to, the dramatic argument of your analysis should be the title.</p>
-<p>It is important to keep in mind that titles are <em>way more important</em> than you think; even if you think they are important. I read at most a couple of papers a week at this stage. But I read hundreds of paper titles. Only those that really hook me or are really important for my current research will get me to read further.</p>
-</div>
-<div id="abstracts" class="section level3">
-<h3><span class="header-section-number">10.4.4</span> Abstracts</h3>
-<p>If I read hundreds of titles a week I might read a dozen paper abstracts. Depending on where you are submitting your paper abstracts may have pretty strict requirements and they vary quite a bit. For example consider the abstract structures at <a href="https://jamanetwork.com/journals/jama/pages/instructions-for-authors#SecAbstractsforReportsofOriginalData">JAMA</a> versus something like <a href="http://www.cbs.umn.edu/sites/default/files/public/downloads/Annotated_Nature_abstract.pdf">Nature</a> - they are very different!</p>
-<p>I do think that the Nature structure provides a good general purpose approach to writing abstracts when a journal doesn’t have concrete requirements.
-<img src="images/week9/nature.png" /></p>
+<p>Good methodological papers have the <a href="https://medium.com/@biostatistics/what-makes-a-good-applied-methods-paper-8130f2e24f2a">following characteristics</a>:</p>
+<blockquote>
 <ol style="list-style-type: decimal">
-<li>Lead with a widely accessible description of the area (this can be skipped for more specialized journal)</li>
-<li>A sentence or two of background information about why the problem is important 3. A sentence or two describing the key question</li>
-<li>A sentence stating your key dramatic argument</li>
-<li>A few sentences putting this result in context and providing broader perspective</li>
+<li>States the scientific problem the method is trying to solve at the beginning of the abstract and introduction.</li>
+<li>Describes a recent and relevant data set where this scientific problem occurs.
+Describes a method, justifying decisions based on how they are connected to the scientific problem</li>
+<li>Performs a thorough comparison to the best methods available through simulation or data examples. We don’t expect authors to implement other people’s methods in software just to compare them, but we would like to see some comparison to the best methods that have software available.</li>
+<li>Explains the metrics for comparison and why the comparison shows the proposed method represents a practical advance.</li>
+<li>Applies the method to the example data set and explains the solution to the problem.</li>
+<li>Includes well-documented scripts and data that perform the analyses presented in the paper.</li>
 </ol>
-<p>Geting this much information into an abstract is a skill! It takes practice and is worth writing a much longer form of what you want to say and cutting it down.</p>
-<p><a href="https://plos.org/resource/how-to-write-a-great-abstract/" class="uri">https://plos.org/resource/how-to-write-a-great-abstract/</a>
-<a href="http://www.cbs.umn.edu/sites/default/files/public/downloads/Annotated_Nature_abstract.pdf" class="uri">http://www.cbs.umn.edu/sites/default/files/public/downloads/Annotated_Nature_abstract.pdf</a></p>
+</blockquote>
+<div id="abstracts" class="section level3">
+<h3><span class="header-section-number">12.3.1</span> Abstracts</h3>
+<p>Recall the generic structure for an abstract from Nature:</p>
+<p><img src="images/week9/nature.png" /></p>
+<p>You can use this similar structure with a few modifications:</p>
+<p><img src="images/week11/methods-abstract.png" /></p>
+<p>Here I have annotated the abstract of a <a href="https://academic.oup.com/biostatistics/article/8/1/118/252073?searchresult=1">highly-regarded paper</a> from the journal Biostatistics. The key components of the abtract are:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Background:</strong> Here you should discuss the broad scientific field and methodological challenges.</li>
+<li><strong>Specific problem:</strong> Here you should provide a discussion of what other methods exist and why there is still a need for a new method.</li>
+<li><strong>Brief description:</strong> Here you should describe the method you have developed briefly.</li>
+<li><strong>Comparison Results:</strong> Here you should describe how your method performs relative to the state of the art.</li>
+<li><strong>Method sharing:</strong> Here you should describe how others can get access to your work - typically in the form of a piece of software</li>
+</ol>
 </div>
 <div id="introductions" class="section level3">
-<h3><span class="header-section-number">10.4.5</span> Introductions</h3>
-<p>An introduction should be a more lengthy (1-3 pages) explanation of the problem you are solving, why people should care, and how you are solving it. Always start with the big picture! Provide the audience with enough background that they understand <em>why</em> you are tackling this problem and what others have done.</p>
-<p>Another important structural element is that introductions should go from general to specific. So you should start by putting the idea in its general context, e.g. “cancer is important to study” and then narrow down to the problem you are addressing specifically, e.g. “measuring RNA abundance of genes helps us build biomarkers for cancer”.</p>
-<p>Here you also review what other people have done in the area. The most critical thing is never underestimate how little people know or care about what you are working on. It is your job to explain to them why they should.</p>
+<h3><span class="header-section-number">12.3.2</span> Introductions</h3>
+<p>An introduction should be a more lengthy (1-3 pages) explanation of the scientific problem motivating your methodology, why there is still a need for methodological development and people should care, how your method works, and a comparison to the state of the art. Always start with the big picture! Provide the audience with enough background that they understand <em>why</em> you are tackling this problem and what others have done.</p>
+<p>Another important structural element is that introductions should go from general to specific. So you should start by putting the idea in its general context, e.g. “we need methods to help us address confounding in genomics experiments” and then narrow down to the problem you are addressing specifically, e.g. “we need methods to correct for batch effects”.</p>
+<p>One device you can use in the introduction or the beginning of the methods section is to create a simple simulated, or fake, example where the problem is illustrated more clearly than it would be in real data. Brad Efron is an example of a statistician who <a href="http://statweb.stanford.edu/~ckirby/brad/papers/2008EBestimates.pdf">often</a> <a href="http://statweb.stanford.edu/~ckirby/brad/papers/2008RowColumn.pdf">uses</a> <a href="http://statweb.stanford.edu/~ckirby/brad/papers/2012ModelSelection.pdf">this</a> <a href="http://statweb.stanford.edu/~ckirby/brad/papers/2010FDRsandCNV.pdf">technique</a> very effectively. It helps to orient the reader before you launch into more complicated statistical or computational ideas.</p>
+<p>You should also briefly review what other people have done in the area. The most critical thing is never underestimate how little people know or care about what you are working on. It is your job to explain to them why they should.</p>
 </div>
-<div id="results" class="section level3">
-<h3><span class="header-section-number">10.4.6</span> Results</h3>
-<p>Results and methods may appear in either order, depending on the journal you are submitting to and the audience you are addressing. The key to a really solid results section is the combination of a coherent set of 1-5 figures that make up the “beats” of your analysis and then using the narrative connections of “therefore” and “but” to link these results together clearly.</p>
-<p>One of the “beats” may be a statistical model. It is good to try to condense your reported analysis to a small number of statistical models (one is ideal!) so that the reader doesn’t have to keep up with which model you are fitting and how it has changed from analysis to analysis. If you must switch models, make sure to specify them clearly with numbers or abbreviations so readers can follow which model you are discussing at any given time.</p>
-<p>A common order for results sections is:</p>
+<div id="description-of-your-method" class="section level3">
+<h3><span class="header-section-number">12.3.3</span> Description of your method</h3>
+<p>One of the biggest differences with a standard data analytic paper is that the methods <em>are the results</em> in a methodological paper. So most methodological journals and reports will flip the order of methods and results, putting the methods first.</p>
+<p>When describing your method you should remember that the audience needs to know three things:</p>
 <ol style="list-style-type: decimal">
-<li>Describing the experimental design</li>
-<li>Briefly describing the data set</li>
-<li>Decribing your main analyses and conclusions</li>
-<li>Summarizing your arc and narrative</li>
+<li><p><strong>What goes in to your method</strong>: Do you start with the raw data from the sensing equipment? A set of tidy data that have already been organized? JSON data from an API?</p></li>
+<li><p><strong>What does your method do to the data</strong>: Here you want to describe in precise detail how your method works using equations, psuedocode, or a very precise plain language description.</p></li>
+<li><p><strong>What does your method produce</strong>: Do you get predictions? Estimates? Confidence intervals? For data processing pipelines - what does the data look like when it leaves your workflow or pipeline?</p></li>
 </ol>
-<p>Do not report every analysis you performed! Many analyses, particularly exploratory analyses, will not be useful to explaining your result and interpretation. Before including an analysis in the final report, ask whether it contributes to the story or explains a crucial fact about the data set that can’t be left out.</p>
-<p>When describing the experimental design, explain where the data came from, how they were collected, and relevant information about the technologies and systems used to collect the data briefly. You will expand on this in the methods section.
-When describing the data set explain what processing you did to the data, and the tidy data you produced. It is common to lead with a table summarizing the variables in the tidy data set, including sample sizes, number of variables, averages and variances or standard deviations for each variable. This component of an analysis is critical to identify data versioning issues.</p>
-<p>You will typically be referring to the methods section of your paper for more details, so you may leave out mathematical detail when writing your results section. Each of your figures should convey ideally a single, coherent point and they should be linked together logically into an arc of a story.</p>
-<p>For each parameter of interest report an estimate and interpretation on the scale of interest. When reporting an estimate do not say that we estimated <em>a=3</em>, instead report that we estimated a change of <em>3</em> pounds in weight for one inch in height. For each parameter report a measure of uncertainty on the scientific scaleFor every estimate you report you should report a measure of uncertainty on the scale of interest. Report that a 95% confidence interval for the estimated change in weight for a unit change in height is <em>1</em> and <em>5</em> inches. Typical measures of uncertainty are standard deviations, confidence intervals, or credible intervals.</p>
-<p>You should also report potential problems with the analysis. If you fit a model and you observe that there may be missing data, or that outliers may be driving a particular estimate, report that as part of the results.</p>
+<p>Mathematical language is often used for statistical or machine learning methods. There is a temptation to be overly complicated with your notation - this temptation may be reinforced by reviewers looking for novelty and your own struggles with how to make a complicated method easy to understand. <em>Resist this temptation at all costs!</em> To make sure your method is understandable:</p>
+<ul>
+<li>Reduce the number of parameters in your model when possible</li>
+<li>Use parameter values that are common to your field or easy to follow (don’t use <span class="math inline">\(\alpha\)</span> for type II errors, don’t use <span class="math inline">\(\beta\)</span> for error terms)</li>
+<li>Explain every parameter that appears in an equation in plain language directly following the equation</li>
+<li>Minimize the use of subscripts and superscripts wherever possible</li>
+</ul>
+<p>You may also be describing a workflow or a set of computational steps that a user must perform. You migtht be doing nothing more than combining a set of previously developed software in a particular order, or applying software from a new field to your area of application. When describing software steps you will often use <a href="https://en.wikipedia.org/wiki/Pseudocode">pseudocode</a> which outline the steps that are being performed. The difficult tradeoff with pseudocode is between simplicity and ensuring that all steps are concretely documented. Regardless, if you are describing software or workflows, then you should ensure your code is made available.</p>
 </div>
-<div id="methods-sections" class="section level3">
-<h3><span class="header-section-number">10.4.7</span> Methods sections</h3>
-<p>In the methods section you will go into more detail about all of the components of your analysis. Here you are focused on building trust with the audience. You should provide the full details of your:</p>
+<div id="simulation-results" class="section level3">
+<h3><span class="header-section-number">12.3.4</span> Simulation results</h3>
+<p>A key component of methodological papers is simulation results. Simulated data is “made up data” that you control completely. Simulation is commonly used by statisticians/data analysts to: (1) <a href="http://en.wikipedia.org/wiki/Bootstrapping_(statistics)">estimate variability/improve predictors</a>, (2) <a href="http://en.wikipedia.org/wiki/Monte_Carlo_method">to evaluate the space of potential outcomes</a>, and (3) to evaluate the properties of new algorithms or procedures. It can be really useful for understanding when a method works and doesn’t work. Simulated data can come in different flavors like:</p>
+<ul>
+<li>Fully parametric and made up
+* You simply simulate from known distributions</li>
+<li>Parametric but modeling real data characteristics
+- You may model certain characteristics in real data
+- Then use those model fits to generate data from known distributions</li>
+<li>Non-parametric - resampling real data
+- You take a real data set
+- You sample from that data set and dadd “signal”</li>
+<li>Non-parametric - just real data
+- You use real data where some set of controls lets you control the signal
+- It is often the most realistic, but can be hard to know the “right answer”</li>
+</ul>
+<p>As an example, I often work with data from <a href="https://en.wikipedia.org/wiki/RNA-Seq">RNA-sequencing experiments</a>. One of the things we often do is count the number of “reads” that correspond to a particular gene:</p>
+<p><img src="images/week11/counting.png" /></p>
+<p>You could simulate this data</p>
+<ul>
+<li>Fully parametric and made up
+- By <a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-10-r106">simulating from a negative binomial distribution</a></li>
+<li>Parametric but modeling real data characteristics
+- By <a href="http://bioinformatics.oxfordjournals.org/content/early/2015/04/28/bioinformatics.btv272.abstract">modeling characteristics of the sequencing machine, then simulating from a negative binomial distribution</a></li>
+<li>Non-parametric - resampling real data
+- By <a href="http://bioinformatics.oxfordjournals.org/content/early/2015/02/26/bioinformatics.btv124">resampling from different groups of samples and genes to create signal</a></li>
+<li>Non-parametric - just real data
+- By <a href="http://biostatistics.oxfordjournals.org/content/early/2014/01/06/biostatistics.kxt053.full">sampling data from only Y or X chromosomes and making comparisons across males and females</a></li>
+</ul>
+<p>Regardless, the goals of these simulations are to show how your methods will behave. Some statisticians, particularly applied statisticians, aren’t fond of simulation for evaluating methods. One reason is that you can always simulate a situation that meets all of your assumptions and make your approach look good. Real data rarely conform to model assumptions and so are harder to “trick”. On the other hand, I really like simulation, it can reveal a lot about how and when a method will work well and it allows you to explore scenarios - particularly for new or difficult to obtain data.</p>
+<p>The best papers consider at least the “extremes”:</p>
 <ol style="list-style-type: decimal">
-<li>Experimental design - including any potential flaws in your design (sampling bias, etc.)</li>
-<li>Data preprocessing - ideally both describing these steps in mathematical language in the text and through code attached as supplementary material.</li>
-<li>Statistical models - you should write the full mathematical description of each model you use. Depending on the length of these equations you may choose to use symbols and letters, or words to describe parameters. Words are often easier to follow, but only work for shorter equations.</li>
-<li>Summary statistics calculation - what statistics did you calculate, what were the sample sizes, which models did you use for which statistics and so forth.</li>
+<li><strong>Simulation where the assumptions are true</strong> There are a surprising number of proposed methods/analysis procedures/analyses that fail or perform poorly even when the model assumptions hold. This could be because the methods overfit, have a bug, are computationally unstable, are on the wrong place on the bias/variance tradeoff curve, etc. etc. etc. I always do at least one simulation for every method where the answer should be easy to get, because I know if I don’t get the right answer, it is back to the drawing board.</li>
+<li><strong>Simulation where things should definitely fail</strong> I like to try out a few realistic scenarios where I’m pretty sure my model assumptions won’t hold and the method should fail. This kind of simulation is good for two reasons: (1) sometimes I’m pleasantly surprised and the model will hold up and (2) (the more common scenario) I can find out where the model assumption boundaries are so that I can give concrete guidance to users about when/where the method will work and when/where it will fail.</li>
 </ol>
-<p>Every model must be mathematically specified. This model may be specified in the main text of the writing if the audience is statistical or in an appendix if the audience is non-technical.</p>
-<p>Modeling procedures should be completely specified using equations or algorithms with explicit definitions of each input and output. Each term and index in the equation should be explained in plain language. When possible, use letters and symbols that are abbreviations of the variables in your model. For example, if modeling the relationship between weight and height you might write the model <em>W = a + b H + e</em> and then explain that <em>W</em> stands for weight, <em>a</em> is the weight for a person with 0 height, <em>b</em> is the increase in weight units for a person with one additional height unit, <em>H</em> is the height of the person, and <em>e</em> is measurement error or noise.</p>
-<p>Every statistical or machine learning method should be referenced. When using models it is important to give credit to the person who developed them. It is also important so that the reader can go back to the original source of the model and understand it.</p>
-<p>There is a convention that some statistical methods are not cited like maximum likelihood or least squares - but at minimum a reference to a textbook should be made when using even common techniques.</p>
+<p>The first type of simulation is easy to come up with - generally you can just simulate from the model. The second type is much harder. You have to creatively think about reasonable ways that your model can fail. I’ve found that using real data for simulations can be the best way to start coming up with ideas to try - but I usually find that it is worth building on those ideas to imagine even more extreme circumstances. Playing the <a href="http://en.wikipedia.org/wiki/Evil_demon">evil demon</a> for my own methods often leads me to new ideas/improvements I hadn’t thought of before. It also helps me to evaluate the work of other people - since I’ve tried to explore the contexts where methods likely fail.</p>
+<p>In any case, simulation sections are most believable when they show both where a method is likely to work and where it is likely to fail.</p>
+</div>
+<div id="empirical-results" class="section level3">
+<h3><span class="header-section-number">12.3.5</span> Empirical results</h3>
+<p>Most methodological papers will also include results on actual empirical data in addition to simulation. Typically, we won’t know the “right” answer on these data so the analysis is typically done for illustration purposes. Though in some cases, there will be a data set that is designed specifically for evaluation purposes, with signal “spiked in” so that one can determine if the method is able to capture it.</p>
+<p>Empirical results sections are often shorter in methodological papers but are critically important. They show that the method works out in the wild, without the simplification of simulation. A good empirical results section:</p>
+<ul>
+<li>Describes the data and why they pose the specific challenge your method is trying to address</li>
+<li>Describes how the method was applied in detail including any tuning parameters that you may need to set to get the method to work</li>
+<li>Describes the results, especially in comparison to the state of the art.</li>
+</ul>
 </div>
 <div id="conclusions-and-discussion" class="section level3">
-<h3><span class="header-section-number">10.4.8</span> Conclusions and discussion</h3>
-<p>Remember <em>“tell them what you are going to tell them, tell them, then tell them what you told them”</em>. In your introduction you explained what you were going to tell your audience, in the results and methods you told them, and in the conclusions and discussion you should start with a summary of what you told them.
-It is then a good idea to highlight potential limitations of your analysis. Be honest! It builds trust when an analysis highlights potential issues for you, so that you don’t have to discover them yourself.</p>
-<p>After you have explained the limitations you can conclude with the strengths of your study and the potential next steps for your audience. This is often “more research” in academics, but may be a call to action for your audience on the basis of what you have found. The more succicint this statement is, the better, since it is the last thing your audience will hear from you.</p>
-</div>
-<div id="supplementary-material" class="section level3">
-<h3><span class="header-section-number">10.4.9</span> Supplementary material</h3>
-<p>Often your writing will be space-constrained, sometimes severely. In those cases, you may include additional details of your methods or results in supplementary information. Supplementary information should be structured to match the narrative flow of your text and should be organized into clear sections with labels that match the corresponding sections in the text. Every supplementary section should be referred to concretely by something in the main text. If it is not, then it should probably be removed from the supplementary material.</p>
-<p>A real danger of the supplementary material is to stuff the “and then” part of your analysis into the supplement - creating a complete catalogue of everything you did. The supplementary material should be streamlined to include only the componets that substantiate your main text.</p>
+<h3><span class="header-section-number">12.3.6</span> Conclusions and discussion</h3>
+<p>Remember <em>“tell them what you are going to tell them, tell them, then tell them what you told them”</em>. In your introduction you explained what you were going to tell your audience, in the methods and results you told them, and in the conclusions and discussion you should start with a summary of what you told them.
+It is then a good idea to highlight potential limitations of your methods and to provide a fair assessment of how they perform relative to others. Be honest! It builds trust when a methods paper highlights potential issues for you, so that you don’t have to discover them yourself.</p>
+<p>After you have explained the limitations you can conclude with the strengths of your method and the potential next steps for your audience - often with a reminder to where they can find your tool or software.</p>
 </div>
 </div>
-<div id="a-few-matters-of-form" class="section level2">
-<h2><span class="header-section-number">10.5</span> A few matters of form</h2>
-<ul>
-<li><p>Avoid jargon at all costs and use shorter words when possible</p></li>
-<li><p>Never include computer code directly in your write up</p></li>
-<li><p>Report estimates followed by parentheses.</p></li>
-</ul>
+<div id="comparisons" class="section level2">
+<h2><span class="header-section-number">12.4</span> Comparisons</h2>
+<p>In some very rare cases, you will propose a method to address a problem that no one has ever thought of before. But the majority of the time, you will need to compare your method to existing software, tools, workflows, or statistical models. A common criteria used to evaluate methodds is how well they stack up against the “state of the art”. The most sophisticated methodological journals, like <a href="https://genomebiology.biomedcentral.com/submission-guidelines/preparing-your-manuscript/method">Genome Biology</a>, make it an explicit requirement for publication:</p>
 <blockquote>
-<p><em>The increase is 5.3 units (95% CI: 3.1, 4.3 units)</em></p>
+<p>Method articles should describe novel methods that are shown to be a clear advance over existing state-of-the-art methods in a side-by-side demonstration, where possible.</p>
 </blockquote>
-<ul>
-<li>When reporting P-values do not report numbers below machine precision. P-values less than 2 x 10e-16 are generally below machine precision and inaccurate.</li>
-</ul>
 <blockquote>
-<p><em>Reporting a P-value of 1.35 x 10e-25 is effectively reporting a P-value of 0 and caution should be urged. A common approach is to report censored P-values such as P &lt; 1 x 10e-8.</em></p>
+<p>For computational methods, demonstration of superiority should be carried out using the same dataset. Where possible, the method should be benchmarked using a synthetic dataset (or other dataset where the ground truth is known), and its utility on real data demonstrated. A Method article need not necessarily provide novel biological insights, but these can help to demonstrate the method’s utility.</p>
 </blockquote>
-<ul>
-<li>When reporting permutation P-values avoid reporting a value of zero.</li>
-</ul>
+<p>One of the most obvious “failure modes” for methological papers is the lack of a sufficiently robust comparison to existing methodology. These comparisons involve both a literature review - to discover your potential competitors - and a simulation or empirical study - where you apply your method and the other methods to the same data. A good comparison does both of these steps well.</p>
+<p>One of the challenges you may run into is that competitor methods may not have software available. In this case, a fair comparison is simply to state that software for that method does not exist. You aren’t expected to create software for competivive methods.</p>
+</div>
+<div id="transparency" class="section level2">
+<h2><span class="header-section-number">12.5</span> Transparency</h2>
+<p>Data science methods can often have major implications financially, medically, culturally, and ethically. It is therefore critical that we can evaluate these methods in as complete a manner as possible. When developing a method, it is critical that you provide the code and data from your work for others to test and build on.</p>
+<p>Recently a group from Google <a href="https://www.nature.com/articles/s41586-019-1799-6">proposed</a> an artificial intelligence approach for diagnosing breast cancer from mammography screens they claimed was superior to clinical judgement:</p>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-019-1799-6/MediaObjects/41586_2019_1799_Fig1_HTML.png?as=webp" /></p>
+<p>However, a number of the details behind this approach where not made available:</p>
+<p><img src="images/week11/missing.png" /></p>
+<p>But as we have <a href="https://vimeo.com/16698764">seen previously</a> this kind of thing can go seriously wrong. The details must be available to make a method really understandable, useable, and scientific. As <a href="https://www.nature.com/articles/s41586-020-2766-y">we put it</a> in a response:</p>
 <blockquote>
-<p><em>P-values should be calculated as <a href="http://www.statsci.org/webguide/smyth/pubs/permp.pdf">(K + 1)/(B + 1)</a> where B is the number of permutations and K is the number of times the null statistic is more extreme than the upper bound.</em></p>
+<p>Scientific progress depends on the ability of independent researchers to scrutinize the results of a research study, to reproduce the study’s main results using its materials, and to build on them in future studies (<a href="https://www.nature.com/nature-research/editorial-policies/reporting-standards" class="uri">https://www.nature.com/nature-research/editorial-policies/reporting-standards</a>). Publication of insufficiently documented research does not meet the core requirements underlying scientific discovery2,3. Merely textual descriptions of deep-learning models can hide their high level of complexity. Nuances in the computer code may have marked effects on the training and evaluation of results4, potentially leading to unintended consequences5. Therefore, transparency in the form of the actual computer code used to train a model and arrive at its final set of parameters is essential for research reproducibility.</p>
 </blockquote>
+<p>To be transparent, you should at minimum include the code you used in your analysis, all simulated data, and a way to request access to empirical data.</p>
+</div>
+<div id="software" class="section level2">
+<h2><span class="header-section-number">12.6</span> Software</h2>
+<p>Incentives in academia lean heavily toward producing papers and less toward producing and maintaining software. However, to really make your methodological contribution useful for others you will need to wrap it into user friendly software that is well documented.</p>
+<p>But there are some real reasons to write software as a data scientist that are critically important:</p>
 <ul>
-<li>Do not report estimates with over-precision.</li>
+<li>You probably got into data science to have an impact. One of the most direct and quantifiable ways to have an impact on the world is to write software that other scientists, educators, and data scientists use. If you write a data science method paper with no software the chance of impacting the world is dramatically reduced.</li>
+<li>Software is the new publication. I couldn’t name one paper written by a graduate student (other than mine) in the last 2-3 years. But I could tell you about tons of software packages written by students/postdocs (both mine and at other places) that I use. It is the number one way to get your name out there in the data science community.</li>
+<li>If you write a software package you need for yourself, you will save yourself tons of time in sourcing scripts, and remembering where all your code/functions are. Most importantly might be that creating an R package is building something. It is something you can point to and say, “I made that”. Leaving aside all the tangible benefits to your career, the profession, etc. it is maybe the most gratifying feeling you get when working on research.</li>
 </ul>
-<blockquote>
-<p><em>If measurements are only accurate to the tenths digit, do not report an estimate of 6.8932</em></p>
-</blockquote>
-<ul>
-<li>When programing variable names should be lower case, with words separated by underscores, and as explicit as possible in data frames you are analyzing.</li>
-</ul>
-<blockquote>
-<p><em>The date of visiting a website might be named date_of_visit.</em></p>
-</blockquote>
-<ul>
-<li>In written analysis variable names should always be reported in plain language, not as variable names.</li>
-</ul>
-<blockquote>
-<p><em>The date of visiting a website would be described as “the date of visit variable”.</em></p>
-</blockquote>
+<p>If you write in R, there are a number of good guides for creating R packages. In Jeff’s research group they use <a href="https://github.com/jtleek/rpackages">this guide</a>. One thing to keep in mind is that even if your code is a bit messy or hard to use, it can often be rescued with good documentation:</p>
+<p><img src="https://camo.githubusercontent.com/65e7fb031b778b5bc7a7b80011352763d193fe1c84d8d9e258db29dc27236c0b/68747470733a2f2f7261772e6769746875622e636f6d2f6a746c65656b2f727061636b616765732f6d61737465722f646f63756d656e746174696f6e2e706e67" /></p>
 </div>
 <div id="additional-resources" class="section level2">
-<h2><span class="header-section-number">10.6</span> Additional Resources</h2>
+<h2><span class="header-section-number">12.7</span> Additional Resources</h2>
 <div class="resources">
 <ul>
-<li><a href="https://docs.google.com/presentation/d/1pZe8Sp350iYzsKsweZzR374179gvRwpI3cAX_NObgj8/edit?usp=sharing">Lucy D’Agostino McGowan’s 2020 JSM Talk</a></li>
-<li><a href="https://jhu-advdatasci.github.io/2019/lectures/storytelling.pdf">Roger Peng’s Lecture on Storytelling in Data Analysis</a></li>
-<li><a href="https://github.com/jtleek/firstpaper">Jeff Leek’s Guide to Writing your First Paper</a></li>
-<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619">10 Simple Rules for Structuring Papers</a></li>
-<li><a href="https://media.nature.com/original/magazine-assets/d41586-018-02404-4/d41586-018-02404-4.pdf">The Write Stuff</a></li>
+<li><a href="https://medium.com/@biostatistics/what-makes-a-good-applied-methods-paper-8130f2e24f2a">What makes a good applied methods paper</a></li>
+<li><a href="http://zarlab.cs.ucla.edu/writing-tips-why-we-publish-methods-papers/">Writing Tips: Why we Publish Methods Papers</a></li>
+<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285">Ten Simple Rules for Reproducible Computational Research</a></li>
+<li><a href="https://www4.stat.ncsu.edu/~davidian/st810a/simulation_handout.pdf">Marie Davidian’s simulation lecture notes</a></li>
 </ul>
 </div>
 </div>
 <div id="homework" class="section level2">
-<h2><span class="header-section-number">10.7</span> Homework</h2>
+<h2><span class="header-section-number">12.8</span> Homework</h2>
 <div class="homework">
 <ul>
-<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework9" class="uri">https://github.com/advdatasci/homework9</a></li>
-<li><strong>Repo Name</strong>: homework9-ind-yourgithubusername</li>
-<li><strong>Pull Date</strong>: 2020/11/02 9:00AM Baltimore Time</li>
+<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework11" class="uri">https://github.com/advdatasci/homework11</a></li>
+<li><strong>Repo Name</strong>: homework11-ind-yourgithubusername</li>
+<li><strong>Pull Date</strong>: 2020/11/16 9:00AM Baltimore Time</li>
 </ul>
 </div>
 
@@ -741,8 +666,8 @@ It is then a good idea to highlight potential limitations of your analysis. Be h
           </div>
         </div>
       </div>
-<a href="week-8.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="week-10.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="week-10.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

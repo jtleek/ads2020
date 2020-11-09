@@ -199,7 +199,6 @@ If I read hundreds of titles a week I might read a dozen paper abstracts. Depend
 I do think that the Nature structure provides a good general purpose approach to writing abstracts when a journal doesn't have concrete requirements. 
 ![](images/week9/nature.png)
 
-In particular: 
 
 1. Lead with a widely accessible description of the area (this can be skipped for more specialized journal)
 2. A sentence or two of background information about why the problem is important 3. A sentence or two describing the key question 
@@ -219,7 +218,7 @@ http://www.cbs.umn.edu/sites/default/files/public/downloads/Annotated_Nature_abs
 
 An introduction should be a more lengthy (1-3 pages) explanation of the problem you are solving, why people should care, and how you are solving it. Always start with the big picture! Provide the audience with enough background that they understand _why_ you are tackling this problem and what others have done. 
 
-Another important structural element is that abstracts should go from general to specific. So you should start by putting the idea in its general context, e.g. "cancer is important to study" and then narrow down to the problem you are addressing specifically, e.g. "measuring RNA abundance of genes helps us build biomarkers for cancer". 
+Another important structural element is that introductions should go from general to specific. So you should start by putting the idea in its general context, e.g. "cancer is important to study" and then narrow down to the problem you are addressing specifically, e.g. "measuring RNA abundance of genes helps us build biomarkers for cancer". 
 
 Here you also review what other people have done in the area. The most critical thing is never underestimate how little people know or care about what you are working on. It is your job to explain to them why they should.
 
