@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Week 7 | Week 1</title>
+  <title>13 Week 12 | Week 1</title>
   <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Week 7 | Week 1" />
+  <meta property="og:title" content="13 Week 12 | Week 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Week 7 | Week 1" />
+  <meta name="twitter:title" content="13 Week 12 | Week 1" />
   
   <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="week-6.html"/>
-<link rel="next" href="week-8.html"/>
+<link rel="prev" href="week-11.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -504,279 +504,407 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-7" class="section level1">
-<h1><span class="header-section-number">8</span> Week 7</h1>
-<div id="week-7-learning-objectives" class="section level2">
-<h2><span class="header-section-number">8.1</span> Week 7 Learning objectives</h2>
+<div id="week-12" class="section level1">
+<h1><span class="header-section-number">13</span> Week 12</h1>
+<div id="week-12-learning-objectives" class="section level2">
+<h2><span class="header-section-number">13.1</span> Week 12 Learning objectives</h2>
 <div class="keyidea">
 <p>At the end of this lesson you will be able to:</p>
 <ul>
-<li>Apply an exploratory data analysis framework to refine questions</li>
-<li>Apply an exploratory data anaylsis framework to identify data issues</li>
-<li>Organize your exploratory data analysis files</li>
-<li>Know and apply general exploratory data analysis principles</li>
+<li>Identify the types and lengths of data analysis presentations</li>
+<li>Identify and create the key components of data analytic presentations</li>
+<li>Combine components to create a data analytic story</li>
+<li>Be able to identify and use different styles of data analytic presentations</li>
 </ul>
 </div>
-<p><em>This lecture is based on Roger Peng’s nice <a href="https://jhu-advdatasci.github.io/2019/lectures/EDA.pdf">lecture</a> on exploratory data analysis</em></p>
+<p><em>This lecture borrows significantly from <a href="http://www.shanellis.com/">Shannon Ellis’</a> excellent work in creating the lectures for <a href="https://leanpub.com/universities/courses/jhu/cbds-communication">Written and Oral Communication in Data Science</a>.</em></p>
 </div>
-<div id="a-framework-for-exploratory-analysis" class="section level2">
-<h2><span class="header-section-number">8.2</span> A framework for exploratory analysis</h2>
-<blockquote>
-<p>“Far better an approximate answer to the right
-question, which is often vague, than an exact
-answer to the wrong question, which can always be
-made precise.” - John Tukey</p>
-</blockquote>
-<p>Last week we talked about different ways of collecting data. Sometimes this will be an exercise you perform, and sometimes you will just be handed data from someone else. Regardless of how the data arrives the first step you will pursue in any data analysis is to explore the data to understand several things:</p>
+<div id="why-give-data-analytic-presentations" class="section level2">
+<h2><span class="header-section-number">13.2</span> Why give data analytic presentations?</h2>
+<p>When you are first starting out you should accept pretty much every opportunity to speak about your research you get. In approximate order of importance, the value of talks early in your career are:</p>
 <ol style="list-style-type: decimal">
-<li>Do you have the right question?</li>
-<li>Do you have the right data?</li>
-<li>can you sketch a solution to the question you care about?</li>
+<li>To meet people</li>
+<li>To make people excited about your ideas/software/results</li>
+<li>To make people understand your ideas/software/results</li>
+<li>To practice speaking</li>
 </ol>
-<div id="do-you-have-the-right-question" class="section level3">
-<h3><span class="header-section-number">8.2.1</span> Do you have the right question?</h3>
-<p>As we discussed back in <a href="http://jtleek.com/ads2020/week-1.html">Week 1</a> the first and most important step in a data analysis is defining the question you want to answer. That sounds great in theory, but in practice, the question you set out to answer will almost inevitably change during the course of a data analysis. In his <a href="https://simplystatistics.org/2019/04/17/tukey-design-thinking-and-better-questions/">blog post</a> on design thinking in statistics Roger lays out a phase diagram for data analysis.</p>
-<p><img src="https://simplystatistics.org/post/2019-04-17-tukey-design-thinking-and-better-questions_files/question_evidence.png" /></p>
-<p>On the x-axis is the quality of the question. On the y-axis is the strength of evidence to answer that question. It is a common assumption that the data analysis question we are asking is “good” right from the start. So a data analysis is simply the process of moving along the phase diagram until you have strong evidence to answer the question.</p>
-<p>But in reality the question is often more dubious, vague, or not sufficiently clearly specified. This will be true both for questions you elicit from collaborators and for questions you define for yourself! The reason is it is really hard to define good data analytic questions that are concrete enough to answer, specific enough to support analytically, and still sufficiently interesting to merit attention.</p>
-<p>Statistics and machine learning - as they are usually defined - typically focus on building tools and techniques to improve the quality of evidence used to answer a question. Data science, on the other hand, usually involves both improving the question and providing evidence to answer that question. Not infrequently, improving the question will absorb more data analytic time than amassing evidence.</p>
-<p>The typical workflow for a data analysis involves one or more periods of exploration followed by a narrowing and problem definition for further analysis.</p>
-<p><img src="images/week7/exploration.png" /></p>
-<p>In the first phase of an analysis you may start with a relatively specific question you want to answer. Exploring the data involves considering a range of possibilities - whether the data is good enough, whether it can answer the question you wanted to in the first place, whether there are potential issues that you didn’t know about in advance. After a full exploration of the data you will again refine the question and sketch an answer. Then, the modeling phase of analysis will involve a second stage of exploration and consideration of different potential modeling choices resulting in a concrete answer to the question specified on the basis of your exploration that you can work to communicate.</p>
-<p>The middle phase (Phase 2 in the diagram above) represents an important moment in any analysis. Often a good exploratory analysis will be sufficient to give you a strong indication of whether a more complete analysis will answer the question you care about. This is a sort of <a href="https://en.wikipedia.org/wiki/Pareto_principle">Pareto principle</a> of data analysis - which many have recognized.</p>
-<blockquote>
-<p>“In my experience when a moderately good
-solution to a problem has been found, it is seldom
-worth while to spend much time trying to convert
-this to the ‘best’ solution. The time is much better
-spent in real research.” –George Kimball, “A critique of operations research,” J. Wash. Acad. Sci, 1958</p>
-</blockquote>
-<p>Once you refine your question and come up with your first sketch of a solution, it is worth “trusting your gut” before devoting significant extra resources to detailed and complicated statistical modeling. Typically after an exploratory analysis you will have one of three feelings about the potential for answering your question.</p>
+<p>Later the reasons evolve, altough not be as much as you’d think. The main change is that 4 evolves more into “to show people you are a good speaker”.</p>
+<p>The importance of point 1 can’t be overstated. At the beginning of your career, the primary reason you are giving talks is for people to get to know you. Being well regarded is absolutely not the goal of academia. However, being well known and well regarded can make a huge range of parts of your job easier. So first and foremost make sure you don’t forget to talk to people before, after, and during your talk.</p>
+<p>Point 2 is more important than point 3. As a scientist, it is hard to accept that the primary purpose of a talk is advertising, not science. See for example Hilary Mason’s great presentation <a href="http://www.hilarymason.com/speaking/speaking-entertain-dont-teach/">Entertain, don’t teach</a>. Here are reasons why entertainment is more important:</p>
+<ul>
+<li>People will legit fall asleep on you if you don’t keep them awake - this is embarrassing</li>
+<li>People will never understand your ideas/software/results if they fell asleep and didn’t hear about them</li>
+<li>There is <strong>no way</strong> to convey any reasonably complicated scientific idea completely in an hour - even less so in shorter periods of time</li>
+<li>If you entertain people <strong>they might go read your paper/use your code</strong> which is the best way to achieve goal 3.</li>
+</ul>
+<p>That being said, be very careful to avoid giving a <a href="https://www.ted.com/talks/browse">TED talk</a> (unless you are giving a Ted talk!). If you are giving a scientific presentation the goal is to communicate scientific ideas. So while you are entertaining, don’t forget why you are entertaining.</p>
+<div id="why-is-this-part-of-advanced-data-science" class="section level3">
+<h3><span class="header-section-number">13.2.1</span> Why is this part of advanced data science?</h3>
+<p>The technical components of data science (statistics, computing, databases, etc.) are usually the first things you learn in the field. You might take a course in R programming or in biostatistics to learn how to fit regression models. There is sometimes the mistaken impression when you are taught these tools for the first time that because data science is empirical it means that it isn’t a human enterprise. But as we discussed in Week 9, the more advanced you become in data analysis, the more it becomes a communication artform. Just as with written data analyses, it is critical that you are able to convey your data analysis message in oral presentations. Without effective communication the technical, statistical, and computational analyses you perform will not have any impact.</p>
+</div>
+</div>
+<div id="types-of-data-analytic-presentations" class="section level2">
+<h2><span class="header-section-number">13.3</span> Types of data analytic presentations</h2>
+<p>There are a few different types of data analytic presentations that you will give over the course of your career. The big categories include:</p>
+<ul>
+<li><strong>Informal group or lab meeting presentations</strong>
+<ul>
+<li><strong>Goal</strong>: Update people on what you are doing and get help.</li>
+<li><strong>What to talk about</strong>: Research in progress. This may either be a brief update or an attempt to get help.</li>
+</ul></li>
+<li><em>Short conference talks</em>
+<ul>
+<li><strong>Goal</strong>: Introduce yourself and your research so people will want to learn more.</li>
+<li><strong>What to talk about</strong>: Research you have completed, distilled into the highest level form and accessible to a broad audience.</li>
+</ul></li>
+<li><em>Long form seminar style talks</em>
+<ul>
+<li><strong>Goal</strong>: Introduce yourself and your research so people will want to learn more.</li>
+<li><strong>What to talk about</strong>: Research you have completed with a little bit more detail, but still at a high enough level that most people can follow along.</li>
+</ul></li>
+<li><em>Job talks</em>
+<ul>
+<li><strong>Goal</strong>: Get a job.<br />
+</li>
+<li><strong>What to talk about</strong>: Research you have completed that highlights your potential, some technical details that are impressive, and a summary of your plans going forward.</li>
+</ul></li>
+<li><em>Flash talks</em>
+<ul>
+<li><strong>Goal</strong>: Give people a teaser of what you are up to and intrigue them enough to read your work or talk to you.<br />
+</li>
+<li><strong>What to talk about</strong>: Just the high level problem and your most high impact result.</li>
+</ul></li>
+</ul>
+<p>There are three “typical” lengths with a little bit of wiggle room on the exact timing: flash (2-5 minutes), short form conference talks or research group updates (15-20 min), and long form seminar talks (50min-1hr). While this description is pretty specific to academic style talks; getting good at each of these forms of presentation is critical, whether you are in academia, industry or government.</p>
+<p>Elevator pitches in industry, like flash talks in academia, are how you get your foot in the door with potential funders, collaborators, employees, employers, or bosses. Short form talks are a part of updates whether you are in a research group or as a part of a presentation to your management teams. Long form talks are probably a little less common in industry (based on my convenience sample of industry folks) but it is worth learning how to present well anyway in case you want to end up on the keynote lecture circuit and raise your profile in industry.</p>
+</div>
+<div id="structure-of-your-talk" class="section level2">
+<h2><span class="header-section-number">13.4</span> Structure of your talk</h2>
+<p>The biggest trap in giving a talk is assuming that other people will follow you because you follow the talk. In general it is always better to assume your audience knows less than you think they do. People like to feel smart. I have rarely heard complaints about people who went too basic in their explanations, but frequently hear complaints about people being lost. That being said, here are some structural tips. Your mileage may vary.</p>
+<ul>
+<li><strong>Always lead with a brief, understandable to everyone statement of your problem</strong>.</li>
+<li>Explain the data and measurement technology before you explain the features you will use</li>
+<li>Explain the features you will use to model data before you explain the model</li>
+<li>When presenting results, make sure you are telling a story.</li>
+</ul>
+<p>The last point is particularly important. Usually by the results section people are getting a little antsy. So a completely disparate set of results with little story behind them is going to drive people bonkers. Make sure you explain up front where the results are going (e.g. “Results will show our method is the fastest/most accurate/best ever”), then make sure that your results are divided into sections by what point they are making and organized just like they would be if you were telling a story.</p>
+<div id="flash-talk-structure" class="section level3">
+<h3><span class="header-section-number">13.4.1</span> Flash talk structure</h3>
+<p>As a person who has been stuck in a large number of interminable flash talks, the main piece of structural advice is to not go long! Typically a flash talk will consist of between 2-5 slides.</p>
+<ul>
+<li>1-2 slides to introduce the key problem</li>
+<li>1-2 slides to introduce the solution</li>
+<li>One slide to point people to a website where they can learn more.</li>
+</ul>
+<p>A key problem people often run into with flash talks (as they are often required to introduce yourself generally to an audience) is that they try to cover too much ground. A flash talk should only have one take home message.</p>
+</div>
+<div id="short-form-talk-structure" class="section level3">
+<h3><span class="header-section-number">13.4.2</span> Short form talk structure</h3>
+<p>In 15 minutes you have very little time to get into detail. Typically you might expand the scope of your talk into:</p>
+<ul>
+<li>A few slides to introduce the background</li>
+<li>A few slides to introduce the data</li>
+<li>A few slides describing the methods</li>
+<li>A few slides describing the results</li>
+<li>A slide summarizing conclusions and pointing to further reading</li>
+</ul>
+<p>A shorter conference talk may have a couple of key messages, but with this little time, you will likely not have any room to get into detail. The purpose of the talk is to get the audience hooked so that they will read whatever follow up material you point them to, approach you and talk to you after the conference, or invite you to speak in a longer form format.</p>
+</div>
+<div id="long-form-talk-structure" class="section level3">
+<h3><span class="header-section-number">13.4.3</span> Long form talk structure</h3>
+<p>A long form talk allows you more space to introduce your topic more thoroughly. But remember, even in 50 minutes, it will be hard to explain everything you did. Nor should you! Remember a data analytic presentation is about telling a story, so you want to keep the same sort of arc:</p>
+<ul>
+<li>Background</li>
+<li>Introduce the Data</li>
+<li>Introduce the Methods</li>
+<li>Describe the results</li>
+<li>Summarize and point people to next steps</li>
+</ul>
+<p>Some of the more painful talks to attend are those that fail to touch one or more of these key points - say by only covering background and methods, or by only describing the results. The point is to take the listener along through the story so they can see the main conclusions, then give them something to do after.</p>
+</div>
+</div>
+<div id="slide-style" class="section level2">
+<h2><span class="header-section-number">13.5</span> Slide style</h2>
+<p>Now that you’ve outlined <em>what</em> you’ll talk about in your presentation, it’s time to decide <em>how</em> you’re going to put those ideas onto slides. There are many things to consider when designing visually-appealing slides.</p>
+<div id="text" class="section level3">
+<h3><span class="header-section-number">13.5.1</span> Text</h3>
+<p>A few guidelines when deciding the words you’ll include on slides:</p>
+<ul>
+<li>limit the number of ideas on a single slide</li>
+<li>limit words on slides</li>
+<li>encourage listening (limit reading)</li>
+<li>include references on the slides directly (and at the end!)</li>
+</ul>
+<p>Do not try to cram all your ideas onto a single slide. And, everything you say does <em>not</em> have to be up on the slides. You’re speaking for a reason. The slides should help guide you along in telling your story, but your audience should have to listen to what you’re saying to get the full picture of your story.</p>
+</div>
+<div id="fonts" class="section level3">
+<h3><span class="header-section-number">13.5.2</span> Fonts</h3>
+<p>To convey textual information to your audience, choosing a good font is important. It’s generally safe to <strong>stick to Sans Serif font</strong>. Sans Serif fonts can be searched through at <a href="https://fonts.google.com/">Google Fonts</a>. And, when in doubt, <strong>Helvetica is a safe font choice</strong>. Further, use consistent fonts throughout your talk. More than one font <em>can</em> be used to draw viewers attention to something, but typically there should be a consistent font used throughout the presentation. Finally, as with most rules, there are exceptions, so take time deciding on what font looks best for each part of your presentation.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_86" /></p>
+</div>
+<div id="size" class="section level3">
+<h3><span class="header-section-number">13.5.3</span> Size</h3>
+<p>Regardless of what font you choose for your text, your <strong>text should be very large</strong>. It’s often argued that you should design your slides for the back of the room.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_287" /></p>
+<p>The same goes for images. There’s no need to leave empty space on your slides around images. <strong>Expand your images</strong> to take up as much space on the slide as possible.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_297" /></p>
+</div>
+<div id="colors" class="section level3">
+<h3><span class="header-section-number">13.5.4</span> Colors</h3>
+<p>Finally, with regards to slide design, colors matter. Choosing a dark background (such as dark gray) means that your text should be light (maybe white). If your background is light, your text should be dark. Contrast will make it easier on your audience to read.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_307" /></p>
+<p>Additionally, use color to focus on text you want your audience to focus in on. If all your text is white, highlight a few words in a brighter color to draw your listener’s attention to what’s important.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_328" /></p>
+<p>The same goes for figures and plots. All images should have colors that are viewable and distinguishable by every person in your audience. Consider color blindness. Consider colors that tend not to project well (such as yellows or light pastels). Then, design your slides using colors that will work for your audience.</p>
+</div>
+<div id="alignment" class="section level3">
+<h3><span class="header-section-number">13.5.5</span> Alignment</h3>
+<p>Visually, things should be aligned. Center things in the middle of your slide. Make sure text boxes that should line up do line up. It may seem trivial, but it’s important to line things up so viewers aren’t distracted by something like alignment and can instead focus on your talk.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_339" /></p>
+</div>
+</div>
+<div id="presenting" class="section level2">
+<h2><span class="header-section-number">13.6</span> Presenting</h2>
+<p>When it comes time to give the presentation, there are a few things to keep in mind. First and foremost, <strong>speak clearly</strong>. Whether you are a loud-talker, a soft-speaker, someone who speaks slowly, or a fast-talker, the most important thing is to make sure that the words you say are clear to your audience.</p>
+<p>Second, you should <strong>be excited</strong>. If you’re not excited or passionate about what you’re talking about, why would your audience be? If you’re not excited, it may be best to <em>reconsider your outline</em> and re-work your story until you are.</p>
+<p>To avoid being boring during your talk, you can vary the speed and volume of your voice. You can move around so you’re not always in one place. And, you can use pauses effectively. It’s ok to not speak every second that you’re up there. You can pause and give your audience some time to look at a graph before you talk about it. Silence for short periods of time is allowed!</p>
+<p>Finally, be yourself. If you naturally like to tell jokes, tell jokes during your presentation. If stories are more your style, work a story or two in. Ultimately, if you’re not comfortable in front of your audience, check to make sure you’re being true to who you are as an individual.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_81" /></p>
+<p>Finally, when presenting it’s important to remember that <strong>you’ve seen the data and figures you’re presenting many times, but your audience has not</strong>. They’ll need time to get up to speed! Thus, it’s important to always introduce your axes (tell your audience what is on the x-axis and what is on the y-axis), explain the colors on your plot, <em>and</em> walk the audience through the figure you’re presenting.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g4039734916_0_0" /></p>
+<div id="be-prepared" class="section level3">
+<h3><span class="header-section-number">13.6.1</span> Be prepared</h3>
+<p>The day of your presentation, things may go wrong. Power goes out, projectors don’t always present your material exactly the same way it looks on your computer screen. Technology doesn’t always behave as we expect it too. In these cases, you just have to roll with the punches.</p>
+<p>To avoid any big issues, it’s best to bring a copy of your talk on a USB drive, carry any adapters you may need should you have to (or choose to) present from your own computer. Don’t expect the location to have the adapter you need. And, be sure your phone is on silent. After that, just roll with anything that goes wrong. The audience will be forgiving, as they all know that technology can sometimes act unexpectedly.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_364" /></p>
+</div>
+</div>
+<div id="equations" class="section level2">
+<h2><span class="header-section-number">13.7</span> Equations</h2>
+<p>If you are giving a data science talk you will probably have some equations. That is ok. But the way you present them is critically important to giving an understandable talk. Here are a few important points:</p>
+<ul>
+<li>Before presenting an equation explain the data</li>
+<li>Whenever possible use words instead of symbols in equations (<em>Expression = Noise + Signal</em> is better than <em>E = N + S</em> is better than <em>Y = X + E</em>)</li>
+<li>No more than two subscripts</li>
+<li>When explaining an equation
+<ul>
+<li>First explain the point of the equation (we are trying to model expression as a function of noise and signal)</li>
+<li>Then explain what each symbol is (E is expression, N is noise, etc.)</li>
+<li>Then explain how the model relates them (E is a linear function of signal and noise)</li>
+</ul></li>
+<li>Try to avoid subscripts, and no more than two are allowed.</li>
+</ul>
+</div>
+<div id="figures" class="section level2">
+<h2><span class="header-section-number">13.8</span> Figures</h2>
+<p>If you have a figure in your talk you should present it in the following way.</p>
+<ul>
+<li>Explain what the figure is supposed to communicate (e.g. “this figure shows our method has higher accuracy”)</li>
+<li>Explain the figure axes (e.g. “the y-axis is sensitivity the x-axis is 1-specificity”)</li>
+<li>Explain what trends the audience should look for (e.g. “curves that go straight up at zero and across the top of the plot are best”)</li>
+</ul>
+</div>
+<div id="job-talk-specific-issues" class="section level2">
+<h2><span class="header-section-number">13.9</span> Job talk specific issues</h2>
+<p>When giving a job talk you have an additional job on top of the four main goals we talked about above. The goal is to present your complete professional persona to a bunch of people who (mostly) won’t know who you are. You should tailor this a little bit to the place you are applying to a job, but don’t try to pretend to be something you are not. You can show a little more theory at a theory place and a few more results at an applied place, but don’t claim you are proving theorems all the time if you aren’t.</p>
+<p>You should include both at the beginning and the end of the talk brief summaries of all the stuff you have worked on and plan to work on so they get an idea of who you are in a complete sense. <strong>But only talk about one specific project when giving the talk</strong>. There is nothing more detrimental to your chances of getting a job than going way over time or not getting to give your whole talk.</p>
+<p>Two things that I think you want to convey when giving a job talk are:</p>
 <ol style="list-style-type: decimal">
-<li><em>You are unlikely to find a satisfactory answer with a formal analysis</em> this is the case when there is limited signal, an obvious confounder, major data issues, or some other feature that makes the signal very difficult to find. In this case, it is worth considering whether fitting a complicated statistical model won’t lead to over-interpretation of your data. Proceed with caution if your exploration leads you to this conclusion.</li>
-<li><em>You aren’t certain what the formal analysis will show</em> this is the case when there appears to be some signal, the data are relatively well behaved, and you aren’t entirely cretain what the answer will be after full statistical modeling. This represents a major fraction of data analyses and suggests that you should proceed as planned with your new question defined through your exploration.</li>
-<li><em>The signal is obvious and clear</em> this is the case when your original study is well designed, there is a lot of very clear data, or the signal is so abundantly clear it is hard to imagine an alternative explanation for the signal you see. Here the primary purpose of formal statistical modeling is both to summarize this signal and to spend some time thinking carefully about potential biases. If the signal is expected, and especially if it is surprising, it is worth being careful. As Daniel MacArthur <a href="https://www.nature.com/articles/487427a">put it</a>:
-&gt; Few principles are more depressingly familiar to the veteran scientist: the more surprising a result seems to be, the less likely it is to be true.</li>
+<li>You would be a fun person to work with and can play well with others</li>
+<li>You have some unique expertise that will strengthen the place you are applying</li>
 </ol>
-<p>The inputs to the data exploration are the question, context, resources and audience. When you complete your exploratory analysis the goals should be to have refined your existing questions, defined and settled on any new questions, and have a sketch for your ultimate statistical analysis.</p>
-<p><img src="images/week7/outputs.png" /></p>
-<p>While this may seem like a single pass through the data often it is an iterative process between getting data, exploring your data, checking the data, refining hypotheses, and going back to the original data collection paradigm to validate.</p>
-<p>Ultimately you want to settle on a question that is</p>
-<ol style="list-style-type: decimal">
-<li><em>Specific</em> - so your analysis will not be unwieldy</li>
-<li><em>Not overly narrow</em> - so that your data is sufficient to answer the question both in size and target.</li>
-<li><em>Relevant </em> - interesting either to you or your collaborators</li>
-</ol>
-<p>As an example you may be interested in the question of if you run do you lose more weight. But you might only have data collected on yourself and you might be missing certain key variables. You will want to consider what type of question you can answer and what the limitations might be.</p>
-<p><img src="images/week7/fitbit.png" /></p>
+<p>Traditionally in data science, (bio)statistics and computer science departments, people demonstrated #2 by showing that they could prove really hard theorems or do really difficult computations. At some places, that is still a really good thing to do. Other things that might make you unique are the ability to write amazing R packages that get used, the ability to analyze massive data sets other people can’t, the ability to teach courses that students will want to take but the department doesn’t have, or ideas about a brand new research area (with some data to back them up).</p>
+<p>Before giving a job talk ask around and get a feel for the sorts of things that people have heard about the place you are applying so you can be smart about your choices of how/what to present.</p>
 </div>
-<div id="do-you-have-the-right-data" class="section level3">
-<h3><span class="header-section-number">8.2.2</span> Do you have the right data?</h3>
-<p>Perhaps the key question in an exploratory analysis is to determine if you have the right data to answer the question. One of the key callenges is that the data you get in classrooms is much cleaner and easier to manipulate than the data you typically have to deal with in the real world. As Jenny Bryan put it in her JSM 2015 talk:</p>
-<blockquote>
-<p>“Classroom data are like teddy bears and real data are like a grizzly bear with salmon blood dripping out its mouth.”</p>
-</blockquote>
-<p>When doing any exploratory analysis you want to confirm at minimum these five things.</p>
-<ol style="list-style-type: decimal">
-<li><em>Are the data good proxies for what you want to measure?</em></li>
-</ol>
-<p><img src="images/week7/proxy.png" />
-Sometimes the data you collected don’t measure what you wanted to in order to answer your question. You may be interested in income, but you only measured reported income. You may be interested in time to death, but you only measured intermediate outcomes. To assess whether you have the right measures:</p>
+<div id="answering-hard-questions" class="section level2">
+<h2><span class="header-section-number">13.10</span> Answering hard questions</h2>
+<p>Inevitably you will get hard questions during your talk. The most important point is not to panic and not to get defensive. It is way better to just say <em>I don’t know</em>, then to get upset. When you get asked a really hard question you should:</p>
 <ul>
-<li>Understand the source of each of the measurements in your data set</li>
-<li>Compare them to the expectations you had when defining your question</li>
-<li>Identify any gaps between the source and expecations - there will always be a gap! However your job is to determine how far is too far and then document any potential issues for including as modifications of your later analysis.</li>
+<li>Take a second and a deep breath. If necessary, ask the person to repeat the question.</li>
+<li>Answer the question the best you can come up with on the spot</li>
+<li>Say <em>I don’t know</em> if you don’t know. If you say I don’t know, then you can give your best guess and explain it is a guess.</li>
 </ul>
-<ol start="2" style="list-style-type: decimal">
-<li><em>Are there sufficient data, and the right type of data, to answer the question?</em></li>
-</ol>
-<p><img src="images/week7/enough.png" /></p>
-<p>This is the most common post-mortem on experimental data - you don’t have enough or the right type of data to answer the question. This is a <em>very common</em> situation to have to navigate with collaborators and we will dedicate more discussion to how to handle that conversation in future classes. But be sympathetic, some day you might collect your own data (like <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3212530/">I did</a>) and find when you were analyzing the data in the middle of the night you didn’t quite have enough:</p>
-<p><img src="images/week7/sympathy.png" /></p>
-<p>You should think through carefully not only if you have enough data, but enough of the kind of data you need. For example you may have a huge data set when performing survival analysis - but if you don’t have enough observed events you won’t be able to reliably detect statistical signals.</p>
-<ol start="3" style="list-style-type: decimal">
-<li><em>Are there obviously missing pieces of information that could be confounders or modifiers?</em></li>
-</ol>
-<p><img src="images/week7/missing-variables.png" /></p>
-<p>This is probably the trickiest one to evaluate. It generally involves considering the context of the problem very carefully. For example, if you’ve collected information on the relationship between drinking and incidence of cancer - it might be important to consider smoking as a confounder. You might only know that from the context of the problem. In terms of exploratory analysis of data the presence of a missing covariate is most often observed by an unexplained pattern or clustering in the data. For example this plot of Covid-19 cases</p>
-<p><img src="images/week7/covid.png" />
-Shows a regular, repeating spike. If all you had was the counts, you might think there must be an underlying variable you haven’t collected that might explain such an important signal (in this case it is likely the <a href="https://www.bbc.com/news/health-52167016">weekend effect</a> in counting).</p>
-<p>This might be the only type of indicator you have a missing variable so worth keeping an eye out for.</p>
-<ol start="4" style="list-style-type: decimal">
-<li><em>Are there any patterns of missing data among the measured variables that might cause problems for an analysis?</em></li>
-</ol>
-<p><img src="images/week7/missing-data.png" /></p>
-<p>This type of missingness is somewhat easier to detect. Mostly because you can count whether there are NA or missing values. The tricky thing is to determine <em>why</em> those data are missing and whether it is related to the variables you care about. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4121561/">This</a> is a relatively nice explainer of the types of missingness. The ideal (and often untestable) case is where the data are “missing completely at random” - in other words they aren’t missing in a way that correlates with any of the variables you care about. Slightly less good, but still ok, is if the data are “missing at random” where the observed variables can explain the systematic missingness patterns. Finally, “missing not at random” could spell significant trouble for your analysis since there are systematic patterns to the missing data, but they can’t be explained by the variables you have.</p>
-<p>Again, as with the missing variables, you may need to explore the data carefully to try to observe patterns of variation in missigness that may be important for your analysis.</p>
-<ol start="5" style="list-style-type: decimal">
-<li><em>Do the data have obvious errors that could increase bias or uncertainty?</em></li>
-</ol>
-<p><img src="images/week7/errors.png" /></p>
-<p>There are a <a href="https://github.com/Quartz/bad-data-guide">very large number of ways data can be wrong</a>. Sometimes these errors will be blazingly obvious. Sometimes they are exceedingly subtle. The key is to understand thoroughly and completely not only the code book for the variables but also the data themselves. Counting, visualization, and comparison to quantities you know must be true can help identify problems in a data set. But it is almost impossible to be 100% sure you have caught everything.</p>
-</div>
-<div id="can-you-sketch-a-solution-to-the-question-you-care-about" class="section level3">
-<h3><span class="header-section-number">8.2.3</span> Can you sketch a solution to the question you care about?</h3>
-<p>Once your data have been organized and you’ve explored them for the obvious issues above, the last component of any exploratory data analysis is to sketch a solution to your primary questions. This sketch may be as simple as a table or a plot - possibly with a statistical model in mind. It will often tell you 80% of the answer - even if that basic sketch is rarely shown to others or included in your final analysis. Think the lego bridge, not the real one.</p>
-<p><img src="images/week7/lego.png" /></p>
-<p>When you are making this sketch you might identify new issues with the data, or modifications to your question. So you may have to cycle between these steps.</p>
-<p><img src="images/week7/epicycle.png" /></p>
-<p>As John Tukey said:</p>
-<blockquote>
-<p>The value of a plot is that it allows us to see what we never expected to see.”</p>
-</blockquote>
-<p>So while you are performing an exploratory analysis you should be constantly resetting your expectations to compare them to the summaries and plots of the data you are making.</p>
-<p><img src="images/week7/expectation.png" /></p>
-<p>You can use statistical models to help explore data as well. Typically these are stripped down versions of the model you will ultimately fit. Keep in mind that models quantify the expectations you have for the data, but won’t necessarily reveal what is unexpected. When exploring with models it is critical to overlay the data on any model fits you may calculate.</p>
+<p>The key is to distinguish what kind of response you are giving. Are you giving a response where you know the answer because you actually looked into that? Are you giving a complete guess where you have no idea? Or, what is more likely, are you somewhere in between?</p>
+<p>Most importantly, don’t feel embarrassed! Hard questions happen to everyone and if you are polite, explain how sure you are about your answer, and try your best it won’t be a problem.</p>
+<div id="that-one-person-who-keeps-going-bonkers-on-you" class="section level3">
+<h3><span class="header-section-number">13.10.1</span> That one person who keeps going bonkers on you</h3>
+<p>Almost everywhere you give a talk there will be a person who is upset/intense/aggressive. <strong>Do not fall into the temptation to be aggressive in return</strong>. Answer their first questions politely just like everyone else. If they keep asking really aggressive/lots of questions, you are within your rightst to say: “You are bringing up a lot of good issues, I’d be happy to discuss with you after the presentation more in depth, but in the interest of time I’m going to move on to the next part of my talk”. It is ok to keep things moving and to finish on time.</p>
 </div>
 </div>
-<div id="some-general-eda-principles" class="section level2">
-<h2><span class="header-section-number">8.3</span> Some general EDA principles</h2>
-<div id="check-the-packaging" class="section level3">
-<h3><span class="header-section-number">8.3.1</span> Check the packaging</h3>
+<div id="finishing-on-time" class="section level2">
+<h2><span class="header-section-number">13.11</span> Finishing on time</h2>
+<p>Do it. People will love you for it. If you are the last speaker in a session and others have gone long, adapt and go shorter. The value you gain by making your audience happy &gt;&gt;&gt;&gt; the extra 5 minutes of details you could have explained</p>
+</div>
+<div id="where-you-should-put-your-talk" class="section level2">
+<h2><span class="header-section-number">13.12</span> Where you should put your talk</h2>
+<p>If you have weblinks in your talk you need to post it online. There is no way people will write down any of the links in your talk. Two good places to put your talks are <a href="https://speakerdeck.com/" class="uri">https://speakerdeck.com/</a> or <a href="http://www.slideshare.net/" class="uri">http://www.slideshare.net/</a>. But then link to all the talks from one, single, memorable site you can show people at the very end of your talk. All my talks are at <a href="http://jtleek.com/talks/" class="uri">http://jtleek.com/talks/</a>. You are welcome to send a pull request with your talk there if it is Leek group related, or you can put them on your own short and sweet web link.</p>
+<p>I personally like Slideshare a little better these days because the slides are much easier to view on mobile phones and iPads, which is the most likely place someone will read your talk.</p>
+</div>
+<div id="example-presentation-methods" class="section level2">
+<h2><span class="header-section-number">13.13</span> Example Presentation: Methods</h2>
+<p>To walk you through an example of a data science presentation, we’re going to use a talk presented at a statistics conference by <a href="(https://www.lucymcgowan.com/)">Lucy D’Agostino McGowan</a>, a well-known biostatistician and R programmer. The slides used in the talk and a video of the talk itself (!) can be found <a href="https://www.lucymcgowan.com/talk/asa_joint_statistical_meeting_2018/">here</a>. The title of Lucy’s talk was “Harnessing the Power of the Web via R Clients for Web APIs.” In this talk she discussed accessing information from APIs using the <code>httr</code> package. So, if you need a refresher on this topic, <a href="https://www.lucymcgowan.com/talk/asa_joint_statistical_meeting_2018/">the slides and video here</a> would be a great reference!</p>
+<div id="talk-outline" class="section level3">
+<h3><span class="header-section-number">13.13.1</span> Talk Outline</h3>
+<p>In the introduction, Lucy expresses her excitement and gives her audience an outline of the talk. The three topics she’s going to cover are:</p>
 <ul>
-<li>What can you learn about the dataset before looking directly at the data?
-- Check codebooks
-- Ask questions
-- Read up on the data collection procedure</li>
-<li>Check on structure and format
-- Is the data a rectangle? If not look at the files/check the DB
-• Check metadata; are all variables there that you expected?
-- Compare the codebook to the data files you have
-- Make sure you have all the files you need
-• Are all metadata present?
-- Make sure there is a codebook
-- Make sure all the dates, times, and data types match up</li>
+<li>What is an API?</li>
+<li>How are APIs accessed from R</li>
+<li>Case studies.</li>
 </ul>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e029efc87_0_29" /></p>
+<p>We didn’t discuss this above; however, a general rule of thumb is that <strong>three main topics is about the most you should include in a talk</strong>, as humans’ attention spans are not very long. Lucy nailed this one with exactly three main topics to discuss, all of which tie together into a story about how to get information from Web APIs!</p>
 </div>
-<div id="rectangle-your-data" class="section level3">
-<h3><span class="header-section-number">8.3.2</span> Rectangle your data</h3>
-<p>Some data sets will come in as “rectangles” - easy to manage data sets (possibly tidy already) that you can directly use in R. But some spreadsheets will have extra header rows, JSON files will read in as lists, databases may have multiple tables you need to join. The first step toward exploring your data is often “rectangling” the data. At this stage, it doesn’t have to be <a href="https://vita.had.co.nz/papers/tidy-data.pdf">tidy data</a>. You may split out rows or columns, clean up values, spread your data set out, or make it into a long, narrow table. But most data analytic operations in terms of plotting, counting, and more rely on rectangled data. So this is often a good first step.</p>
+<div id="slide-design" class="section level3">
+<h3><span class="header-section-number">13.13.2</span> Slide Design</h3>
+<p>As Lucy dives into the content of her talk, she follows many of the best practices discussed above. We’ll pull a few slides from the talk to discuss here; however, do reference the whole talk to see it in its entirety!</p>
+<p>Lucy uses large fonts and colors that can be distinguished by anyone in the audience and that present well. As a result, everyone in the room, no matter where there seat was, was able to learn and be entertained.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g2bfdb07292_0_151" /></p>
+<p>Additionally, Lucy uses effective highlighting of text using different colors. Here, the parts of the text that Lucy wants the audience to focus on are in a brighter blue and a brighter green! Also note that there is not a lot of blank space on the slides.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e029efc87_0_6" /></p>
+<p>Additionally, Lucy’s slides guided what she was going to say but didn’t include all the words on the slides. Here, we see large font and large images but no words. This allowed the audience to listen to what she was saying rather than read all the words on the slides!</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e029efc87_0_19" /></p>
 </div>
-<div id="look-at-the-top-and-bottom" class="section level3">
-<h3><span class="header-section-number">8.3.3</span> Look at the top and bottom</h3>
-<ul>
-<li>Check the first few rows
-- Do the values match expectations?
-- Are the right variables present?</li>
-<li>Check the last few rows; make sure all rows were
-read properly and there’s no crud at the end
-- Are there weird values at the end?
-- Missing values?
-- Corrupted file endings?</li>
-<li>Time/Date data often sorted; make sure all dates/
-times are in appropriate range</li>
-</ul>
-</div>
-<div id="always-be-counting" class="section level3">
-<h3><span class="header-section-number">8.3.4</span> Always be counting</h3>
-<ul>
-<li>Count various aspects of your dataset
-- Number of rows
-- Number of columns
-- Number of levels of factors
-- Number of missing values</li>
-<li>Compare counts with landmarks
-- Does the row number match the sample size?
-- Do the number of columns match your number of variables?
-- Are there less than or equal to 31 days per month?</li>
-<li>Number of subjects (unique IDs), number of visits
-per subject, number of locations, number of
-missing observations, etc.</li>
-<li>Always be counting at every phase (“checking
-mindset”)
-- Assume the data may have errors!</li>
-</ul>
-</div>
-<div id="make-a-plot" class="section level3">
-<h3><span class="header-section-number">8.3.5</span> Make a plot</h3>
-<p>Actually make a <em>ton</em> of plots. You can’t have too many exploratory plots. Go overboard, most of these will be left on the cutting room floor. Plot every variable, plot most of the comparisons between pairs of variables. Consider heatmaps and other multi-variable plots as well.</p>
-<ul>
-<li>Plots show expectations and deviations from those
-expectations (i.e. distribution mean and outliers)</li>
-<li>Tables generally only show summaries, not deviations; also everything on the same “scale”</li>
-<li>Draw a “fake plot” first - set your expectations</li>
-</ul>
-</div>
-<div id="validate-with-an-external-data-source" class="section level3">
-<h3><span class="header-section-number">8.3.6</span> Validate with an external data source</h3>
-<ul>
-<li>Compare your data to something outside the dataset</li>
-<li>Even a single number/summary statistic comparison can
-be useful
-- Is the range of values what you’d see in the literature?
-- Is the number of observations plausible for this type of data?</li>
-<li>Compare your measurements to another similar
-measurement to check that they’re correlated
-- Get external upper/lower bounds
-- Ex: number of people should exceed total population
-- Ex: Check for negative values when they should be positive</li>
-</ul>
-</div>
-<div id="try-the-easy-solution" class="section level3">
-<h3><span class="header-section-number">8.3.7</span> Try the easy solution</h3>
-<p>Before you fit a complicated statistical model, try the easiest possible solution. Are you looking for a correlation? Just plot x vs y and see what it looks like colored by various potential confounders. Are you looking for a trend over time? Plot the variable vs time and look for patterns and deviations. Are you looking to compare the mean of two groups? Make a boxplot.</p>
-<ul>
-<li>First step in building a primary model</li>
-<li>Build prima facie evidence</li>
-<li>Basic argument, without nuance (that comes later)</li>
-<li>Maybe just one plot (or table)</li>
-</ul>
-</div>
-<div id="follow-up" class="section level3">
-<h3><span class="header-section-number">8.3.8</span> Follow up</h3>
-<ul>
-<li>Do you have the right question?
-- Questions often change once you see the data
-- Typically the scope narrows</li>
-<li>Do you have the right data?
-- Sometimes you might realize you don’t have the data to answer your original question</li>
-<li>Do you need other data?
-- Can you find it? Or is it better to treat this as a limitation</li>
-<li>Could you sketch the solution?</li>
-<li>Is there signal in the data?
-- From painful experience, if you don’t see much in the first pass simple analysis, it is often hard to find it even with <em>much</em> more effort.</li>
-</ul>
+<div id="presentation" class="section level3">
+<h3><span class="header-section-number">13.13.3</span> Presentation</h3>
+<p>In addition to having well-designed slides, Lucy was excited as she spoke, was clear in her speech, spoke at an easy-to-listen-to pace, and her personality came through as she spoke. This is all evident if you listen to the video of her presentation. Lucy being true to her personality helps make it a wonderful presentation. If your personality is different than Lucy’s, that’s totally ok! Just be sure that when you present, you’re presenting in a way that you’re most comfortable!</p>
 </div>
 </div>
-<div id="organizing-an-eda" class="section level2">
-<h2><span class="header-section-number">8.4</span> Organizing an EDA</h2>
-<p>When performing an EDA, I typically create one or more analysis files. Often my files are placed in the</p>
+<div id="example-presentation-analysis" class="section level2">
+<h2><span class="header-section-number">13.14</span> Example Presentation: Analysis</h2>
+<p>Lucy’s presentation is an example of a wonderful, educational, and helpful talk; however, her goal wasn’t to talk in depth about an analysis she’s done. Often, as a data scientist, you’ll be tasked with presenting an analysis you’ve done. To do so, you’ll want to use the same guidelines we previously discussed, but with a focus on <strong>presenting the story of your data analysis</strong>. This includes the plots, analytical approach, and findings of your project. That said, your slides should still be well-designed, you should still tell a story, and your text and colors should all be readable when projected; however, in this case, there are a few additional caveats to consider.</p>
+<p>To discuss these, we’ll use an example presentation from Julia Silge, who is a data scientist at Stack Overflow and a wonderful presenter. In 2017 at the rstudio::conf, <a href="https://juliasilge.com/about/">Julia Silge</a> presented “Text Mining the tidy Way”. The <a href="https://www.rstudio.com/resources/videos/text-mining-the-tidy-way/">video</a> and <a href="https://speakerd.s3.amazonaws.com/presentations/d6041c6b704d4bf7bfa9d0973ae2d006/rstudio_conf.pdf">visuals</a> from her presentation are available online. This talk discusses the <code>tidytext</code> package (which she and <a href="http://varianceexplained.org/about/">David Robinson</a> developed) and example analyses using this awesome R package. We’ve discussed this package previously, but if you want a refresher on tidytext, how to work with textual data, and sentiment analysis, <a href="https://www.rstudio.com/resources/videos/text-mining-the-tidy-way/">this</a> is a great resource!</p>
+<p>As above, we’ll highlight a few slides from the talk and discuss considerations to make when presenting a data analysis.</p>
+<div id="talk-outline-1" class="section level3">
+<h3><span class="header-section-number">13.14.1</span> Talk Outline</h3>
+<p>As in Lucy’s talk, Julia Silge, in addition to an introduction and a conclusion, had three main parts to her talk:</p>
 <ul>
-<li>code/
-- raw_code/</li>
+<li><code>tidytext</code> package</li>
+<li>Jane Austen example</li>
+<li>NASA example</li>
 </ul>
-<p>folder with most of my plots being saved to</p>
+<p>In data analysis talks, it’s often best to start with background information. Julia covers this information when discussing what the <code>tidytext</code> package is. Then, she delves into discussing a few examples of the types of analyses you can do with this package.</p>
+</div>
+<div id="slide-design-1" class="section level3">
+<h3><span class="header-section-number">13.14.2</span> Slide Design</h3>
+<p>As discussed above with Lucy’s presentation, in Julia’s slides, she limits the amount of information she puts on any one slide, thus allowing the audience to listen to the words she’s saying. And, she has text that’s large enough and legible when projected.</p>
+<p>However, what’s different about this presentation is how Julia presents her analyses. When presenting an analysis, it’s generally best to first explain the approach and then present the results. For example, Julia uses TF-IDF to analzze text in Jane Austen’s novels.</p>
+<p>She first explains what TF-IDF is. She includes the bare minimum amount of information on her slide, so that her audience is only seeing what’s necessary. Then, she verbally describes what TF-IDF is.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_24" /></p>
+<p>On subsequent slides she includes the code she used to run the analysis, discussing what is going on with the code on each slide and describing the output.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_12" /></p>
+<p>Finally, for each part of her analysis, she includes a visualization of the results. These figures have text large enough to be seen by all in the audience, are well-labeled, and include an informative title.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_5" /></p>
+<p>Note that Julia does not go into every single detail of every analysis, nor just she talk about all the things she tried in a single presentation. She includes enough information so that her audience learns and can go try this type of analysis on their own, if they’re interested!</p>
+</div>
+<div id="presentation-1" class="section level3">
+<h3><span class="header-section-number">13.14.3</span> Presentation</h3>
+<p>Watching the <a href="https://www.rstudio.com/resources/videos/text-mining-the-tidy-way/">18 minute video</a> will give you the best sense of how Julia presented the information in her <code>tidytext</code> presentation; however, we’ll highlight a few things here.</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_17" /></p>
+<p>Julia spoke at a reasonable pace and clearly, keeping her audience interested. Additionally, she presented true to her personality. Julia and Lucy are two different people and that is clear in their presentation styles. Differences are wonderful and help keep presentations interesting! It would be boring if everyone were the same.</p>
+<p>Additionally, Julia knew her audience. She knew that there would be many programmers in her audience, and that most of them would be familiar with the R programming language. Thus, she didn’t need to explain what the R syntax was. She could put R code on her slides, and her audience would successfully follow along. But, she knew that not everyone has worked with the <code>tidytext</code> package. Thus, she focused her time here, discussing the purpose of and basics on how to use the <code>tidytext</code> package and provided clear examples of analyses using this package. When outlining and preparing presentations, always consider your audience. If your audience is more technical, include more details about <em>how</em> you did the analysis. If they’re less technical, be sure to explain what you did at an appropriate level. And, of course, always make sure your figures are clear, regardless of your audience.</p>
+<p>We’ll note that at around 17:45 in the presentation, Julia went to show an image but it didn’t immediately show up how she had intended. This is a great example of rolling with the punches. She didn’t panic. She simply acknowledged that it didn’t work the first time and tried again. The audience, of course, didn’t mind, but when you’re presenting, these small occurrences can feel like a big deal. When it happens to you in the future, know that things don’t always work as anticipated and that this happens to everyone. If this happens to you, take a play out of Julia’s book and simply acknowledge what happened, try again, and continue on!</p>
+<p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_39" /></p>
+</div>
+</div>
+<div id="presenting-to-a-general-audience" class="section level2">
+<h2><span class="header-section-number">13.15</span> Presenting to a General Audience</h2>
+<p>When considering presenting to a general audience, this would be an audience that doesn’t know a lot about data science or quantitative analysis. This would be an audience that generally does not code or analyze data on a regular basis. This could be individuals at your company who are more focused on day-to-day operations or an audience of high schoolers getting their first introduction to data science.</p>
+<div id="the-goal" class="section level3">
+<h3><span class="header-section-number">13.15.1</span> The Goal</h3>
+<p>Regardless of exactly to whom you’re presenting, the goal of this type of presentation is to <strong>teach at a high level what you did</strong>. Your presentation should still inspire, educate, and entertain, but it should leave out some of the nitty gritty details and keep in more background and general explanation of your approach.</p>
+</div>
+<div id="general-presentation-example" class="section level3">
+<h3><span class="header-section-number">13.15.2</span> General Presentation Example</h3>
+<p>To discuss giving presentations to a general audience using a specific example, we’re going to walk through a presentation that was given to a general audience. The audience for this presentation was college students with a year of calculus but no particular background in statistics. This means that any statistical concepts would have to be explained, but it could be assumed that the audience was fairly analytical. The slides for this talk can be viewed <a href="https://docs.google.com/presentation/d/1AslQFsTHIz4R50KSDuzQtu75AlofrtCD1ZH80lp5k3A/edit?usp=sharing">here</a>. The title of this talk was “Upcycling genomics data: From publicly-available ‘junk’ to priceless ‘treasure’.”</p>
+<p>The outline of this presentation was as follows:</p>
 <ul>
-<li>figures/
--exploratory figures</li>
+<li>Introduction</li>
+<li>Part 1: recount</li>
+<li>Part 2: phenopredict</li>
+<li>Part 3: application</li>
+<li>Conclusion</li>
 </ul>
-<p>I generally try to name my files in an order that I hope will make sense later. So something like:</p>
+<p>Click on <a href="https://docs.google.com/presentation/d/1AslQFsTHIz4R50KSDuzQtu75AlofrtCD1ZH80lp5k3A/edit?usp=sharing">this link</a> and scroll through the slides to get an idea of what the presentation looked like. The content of the talk is not what we’ll be focusing on, so it doesn’t actually matter if you look at these slides and understand what they’re talking about. Rather, we’re going to walk through how this presentation was organized and designed to focus on a general audience.</p>
+<p>We’ll also walk through the slides for a talk on the exact same topic, that that was designed and presented to a technical audience.</p>
+<p>To walk through how this talk was organized, we’re going to use the following figure:</p>
+<p><img src="https://docs.google.com/presentation/d/1DW4eO4oQ_0qhAXs0IB-FBp790qeM8gH3ZLq-z58jBYg/export/png?id=1DW4eO4oQ_0qhAXs0IB-FBp790qeM8gH3ZLq-z58jBYg&amp;pageid=g3eb60191d5_0_11" /></p>
+<p>Each slide in the presentation was assigned to one of 7 categories. Each category is a different color on the figure:</p>
 <ul>
-<li>0_data_pull.R</li>
-<li>1_first_plots.R</li>
+<li>Question - the motivating question used to tie the story together</li>
+<li>Outline - to remind the audience what we’ve already discussed and what we’re about to discuss</li>
+<li>Background - Information the audience is required to know in order to understand the project/analyses</li>
+<li>Approach - How the data were analyzed</li>
+<li>Teaching - A quick lesson about a specific topic to ensure the results make sense to the audience</li>
+<li>Conclusion - The end of the slides, wrapping up the presentation</li>
 </ul>
-<p>I generally use .R files (not Rmd files or Jupyter notebooks) since I will likely be moving fast and don’t have a lot of time for formatting. One thing I like to do is add comments when I find something interesting with words I hope will be searchable later. So something like:</p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="week-7.html#cb210-1"></a><span class="co">#########</span></span>
-<span id="cb210-2"><a href="week-7.html#cb210-2"></a><span class="co">### Interesting correlation between x and y</span></span>
-<span id="cb210-3"><a href="week-7.html#cb210-3"></a><span class="co">######### </span></span>
-<span id="cb210-4"><a href="week-7.html#cb210-4"></a><span class="kw">cor</span>(x,y)</span></code></pre></div>
+<p>If we consider background, teaching, and explaining the approach, we see that about 65% of the time was spent providing information to the audience that had nothing to do with the specific new information being presented about this analysis.</p>
+<p><img src="https://docs.google.com/presentation/d/1DW4eO4oQ_0qhAXs0IB-FBp790qeM8gH3ZLq-z58jBYg/export/png?id=1DW4eO4oQ_0qhAXs0IB-FBp790qeM8gH3ZLq-z58jBYg&amp;pageid=g3eb60191d5_0_1241" /></p>
+</div>
+</div>
+<div id="presenting-to-a-technical-audience" class="section level2">
+<h2><span class="header-section-number">13.16</span> Presenting to a Technical Audience</h2>
+<p>When presenting to a technical audience, you’re presenting to an audience of your peers. These are individuals who regularly analyze data and/or are familiar with your work and the way you approach data analysis. This could be other members of your team or other individuals at a conference in your specific field of expertise. As a result, you can often limit the amount of information you provide as introductory material in this type of presentation and really focus on the details of your analysis.</p>
+<div id="the-goal-1" class="section level3">
+<h3><span class="header-section-number">13.16.1</span> The Goal</h3>
+<p>Unlike a general audience presentation where the goal is to teach at a high level what you did, the goal of this type of presentation is to really <strong>explain details of what you did</strong>. The details and caveats of your approach should be the focus here.</p>
+</div>
+<div id="technical-presentation-example" class="section level3">
+<h3><span class="header-section-number">13.16.2</span> Technical Presentation Example</h3>
+<p>Like in the case of a general talk, we’re going to walk through a technical talk. The title of the technical talk we’ll be discussing is “Improving the value of public data with recount2 and phenotype prediction” and the slides are viewable <a href="bit.ly/technical_audience">here</a>. Go to these slides now and scroll through them. Note the mathematical notation on slides 70 through 87 – this level of detail was <em>not</em> included for the general audience (slides 96-110 [here for the general audience comparison(bit.ly/general_audience)]. While the title and presentation details differ from the general audience presentation, the outline of the talk remains the same:</p>
+<ul>
+<li>Introduction</li>
+<li>Part 1: recount</li>
+<li>Part 2: phenopredict</li>
+<li>Part 3: application</li>
+<li>Conclusion</li>
+</ul>
+<p>We’ll break down this talk in the same way that we did the general audience talk.</p>
+<p><img src="https://docs.google.com/presentation/d/1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk/export/png?id=1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk&amp;pageid=g3eb60054e7_0_192" /></p>
+<p>We can see that the bulk of the presentation is spent on background, results, and approach. There is not much teaching in this technical presentation.</p>
+<p><img src="https://docs.google.com/presentation/d/1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk/export/png?id=1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk&amp;pageid=g2bfdb07292_0_151" /></p>
+</div>
+<div id="general-vs-technical" class="section level3">
+<h3><span class="header-section-number">13.16.3</span> General vs Technical</h3>
+<p>Each presentation was on the same topic. Thus, it would be beneficial to compare the two directly.</p>
+<p>Here we see the general presentation visualized at the top and technical beneath it. The focus on teaching and approach in a general talk and the focus on approach and results in a technical talk becomes evident when compared on the same image.</p>
+<p><img src="https://docs.google.com/presentation/d/1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk/export/png?id=1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk&amp;pageid=g3f9d5b130f_0_25" /></p>
+<p>To summarize this graphically, using the same bar plots, here we have the same categories we’ve looked at previously, but we see the results for each type of presentation. General talk is in green. Technical talk is in orange. When we focus on the results and teaching bars, we can see this general talk did a lot more teaching, while the technical talk focused more time presenting results.</p>
+<p><img src="https://docs.google.com/presentation/d/1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk/export/png?id=1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk&amp;pageid=g3eb60054e7_0_188" /></p>
+</div>
 </div>
 <div id="additional-resources" class="section level2">
-<h2><span class="header-section-number">8.5</span> Additional Resources</h2>
+<h2><span class="header-section-number">13.17</span> Additional Resources</h2>
 <div class="resources">
 <ul>
-<li>Karl Broman <a href="https://kbroman.org/AdvData/16_wrangling.pdf">Lecture on Data Wrangling</a></li>
-<li>Roger Peng <a href="https://jhu-advdatasci.github.io/2019/lectures/EDA.pdf">Lecture on EDA</a></li>
+<li>Example talks
+<ul>
+<li><a href="http://jtleek.com/talks/">Jeff/Leekgroup talks</a></li>
+<li><a href="http://kbroman.org/pages/talks.html">Karl Broman</a></li>
+<li><a href="http://zachholman.com/talks">Zach Holmann</a></li>
+<li><a href="https://hilarymason.com/speaking/">Hilary Mason</a></li>
+<li><a href="https://jef.works/talks/">Jean Fan</a></li>
+</ul></li>
+<li>Talk guides
+<ul>
+<li><a href="http://www.howtogiveatalk.com/">http://www.howtogiveatalk.com/</a></li>
+<li><a href="https://zachholman.com/talk/the-talk-on-talks/">The talk on talks</a></li>
+<li><a href="http://www.biostat.wisc.edu/~kbroman/talks/giving_talks.pdf">How to Give a Scientific Presentation</a></li>
+</ul></li>
+<li>Talk software
+<ul>
+<li><a href="https://github.com/yihui/xaringan">xaringan</a></li>
+<li><a href="https://pkg.garrickadenbuie.com/xaringanthemer/">xaringanthemer</a></li>
+</ul></li>
 </ul>
 </div>
 </div>
 <div id="homework" class="section level2">
-<h2><span class="header-section-number">8.6</span> Homework</h2>
+<h2><span class="header-section-number">13.18</span> Homework</h2>
 <div class="homework">
 <ul>
-<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework7" class="uri">https://github.com/advdatasci/homework7</a></li>
-<li><strong>Repo Name</strong>: homework7-ind-yourgithubusername</li>
-<li><strong>Pull Date</strong>: 2020/10/12 9:00AM Baltimore Time</li>
+<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework12" class="uri">https://github.com/advdatasci/homework12</a></li>
+<li><strong>Repo Name</strong>: homework12-ind-yourgithubusername</li>
+<li><strong>Pull Date</strong>: 2020/11/23 9:00AM Baltimore Time</li>
 </ul>
 </div>
 
@@ -787,8 +915,8 @@ measurement to check that they’re correlated
           </div>
         </div>
       </div>
-<a href="week-6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="week-8.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="week-11.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

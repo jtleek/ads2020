@@ -258,13 +258,13 @@ list.files()
 ## [25] "06-week.Rmd"           "07-week.Rmd"           "08-week_cache"        
 ## [28] "08-week_files"         "08-week.Rmd"           "09-week.Rmd"          
 ## [31] "10-week_files"         "10-week.Rmd"           "11-week.Rmd"          
-## [34] "ads2020.rds"           "ads2020.Rproj"         "data"                 
-## [37] "docs"                  "fyi.png"               "index.md"             
-## [40] "index.Rmd"             "index.utf8.md"         "jhsph ads.png"        
-## [43] "key.png"               "Lightbulb.png"         "Live-code.png"        
-## [46] "logo"                  "private"               "README.md"            
-## [49] "render148405cdf79.rds" "style.css"             "test.png"             
-## [52] "Your-turn.png"
+## [34] "12-week.Rmd"           "ads2020.rds"           "ads2020.Rproj"        
+## [37] "data"                  "docs"                  "fyi.png"              
+## [40] "index.md"              "index.Rmd"             "index.utf8.md"        
+## [43] "jhsph ads.png"         "key.png"               "Lightbulb.png"        
+## [46] "Live-code.png"         "logo"                  "private"              
+## [49] "README.md"             "render16a57aa79dd.rds" "style.css"            
+## [52] "test.png"              "Your-turn.png"
 ```
 
 OK so our current location is in the `/cloud/project` directory. Using the here package we can see that here points to this base directory. 
@@ -302,13 +302,13 @@ list.files(here::here())
 ## [25] "06-week.Rmd"           "07-week.Rmd"           "08-week_cache"        
 ## [28] "08-week_files"         "08-week.Rmd"           "09-week.Rmd"          
 ## [31] "10-week_files"         "10-week.Rmd"           "11-week.Rmd"          
-## [34] "ads2020.rds"           "ads2020.Rproj"         "data"                 
-## [37] "docs"                  "fyi.png"               "index.md"             
-## [40] "index.Rmd"             "index.utf8.md"         "jhsph ads.png"        
-## [43] "key.png"               "Lightbulb.png"         "Live-code.png"        
-## [46] "logo"                  "private"               "README.md"            
-## [49] "render148405cdf79.rds" "style.css"             "test.png"             
-## [52] "Your-turn.png"
+## [34] "12-week.Rmd"           "ads2020.rds"           "ads2020.Rproj"        
+## [37] "data"                  "docs"                  "fyi.png"              
+## [40] "index.md"              "index.Rmd"             "index.utf8.md"        
+## [43] "jhsph ads.png"         "key.png"               "Lightbulb.png"        
+## [46] "Live-code.png"         "logo"                  "private"              
+## [49] "README.md"             "render16a57aa79dd.rds" "style.css"            
+## [52] "test.png"              "Your-turn.png"
 ```
 
 We can now create a `data` folder if it doesn't already exist and see how to create a link to the data directory using the here package:
@@ -324,8 +324,9 @@ list.files(here("data"))
 ##  [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
 ##  [5] "2020-10-21-cameras.csv"  "2020-10-26-cameras.csv" 
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
-##  [9] "cameras.csv"             "Chinook.sqlite"         
-## [11] "repos.json"
+##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
+## [11] "cameras.csv"             "Chinook.sqlite"         
+## [13] "repos.json"
 ```
 
 Now we see that using the `here::here()` function is a 
@@ -456,7 +457,7 @@ date_downloaded
 ```
 
 ```
-## [1] "2020-11-09"
+## [1] "2020-11-16"
 ```
 
 ```r
@@ -468,8 +469,9 @@ list.files(here("data"))
 ##  [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
 ##  [5] "2020-10-21-cameras.csv"  "2020-10-26-cameras.csv" 
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
-##  [9] "cameras.csv"             "Chinook.sqlite"         
-## [11] "repos.json"
+##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
+## [11] "cameras.csv"             "Chinook.sqlite"         
+## [13] "repos.json"
 ```
 
 Here you will notice I also named the file with the date and/or saved another variable with the downloaded date. The reason is that if you are downloading data directly from the internet, it is likely to update and your results may change. It is a good idea to keep track of the data each time you download. 
@@ -1232,8 +1234,9 @@ list.files(here("data"))
 ##  [3] "2020-10-11-cameras.csv"  "2020-10-12-cameras.csv" 
 ##  [5] "2020-10-21-cameras.csv"  "2020-10-26-cameras.csv" 
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
-##  [9] "cameras.csv"             "Chinook.sqlite"         
-## [11] "repos.json"
+##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
+## [11] "cameras.csv"             "Chinook.sqlite"         
+## [13] "repos.json"
 ```
 
 The main workhorse packages that we will use are 
@@ -1664,7 +1667,7 @@ req
 
 ```
 ## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-11-09 15:05
+##   Date: 2020-11-16 02:56
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB
@@ -1673,10 +1676,10 @@ req
 ##   "incomplete_results": false,
 ##   "items": [
 ##     {
-##       "id": 22907468,
-##       "node_id": "MDEwOlJlcG9zaXRvcnkyMjkwNzQ2OA==",
-##       "name": "computel",
-##       "full_name": "lilit-nersisyan/computel",
+##       "id": 22917249,
+##       "node_id": "MDEwOlJlcG9zaXRvcnkyMjkxNzI0OQ==",
+##       "name": "mulTree",
+##       "full_name": "TGuillerme/mulTree",
 ##       "private": false,
 ## ...
 ```
@@ -1757,9 +1760,9 @@ h
 
 ```
 ## {html_document}
-## <html lang="en-us" class="a-no-js" data-19ax5a9jf="dingo">
-## [1] <head>\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
-## [2] <body>\n<span id="cr-state-object" data-state='{"asin":"0387981403","devi ...
+## <html class="a-no-js" lang="en-us">
+## [1] <head>\n<meta http-equiv="content-type" content="text/html; charset=UTF-8 ...
+## [2] <body>\n\n<!--\n        To discuss automated access to Amazon data please ...
 ```
 
 How can you actually pull the interesting 
@@ -1797,17 +1800,7 @@ h %>%
 ```
 
 ```
-## {xml_nodeset (10)}
-##  [1] <span>Must-have reference for R graphics</span>
-##  [2] <span>Still a great package and highly worth learning - but the text is  ...
-##  [3] <span>Excellent</span>
-##  [4] <span>Nice resource, but already out of date</span>
-##  [5] <span>The best guide to the best graphics (I think) out there.</span>
-##  [6] <span>Graphing in R</span>
-##  [7] <span>Excellent content, poor adaptation to kindle</span>
-##  [8] <span>Excellent R resource for the Kindle</span>
-##  [9] <span>Great book, outdated</span>
-## [10] <span>Indispensable resource for ggplot2 users</span>
+## {xml_nodeset (0)}
 ```
 
 But you need the text from each of these, not the full tags. Pipe to the `html_text` function to pull these out:
@@ -1821,16 +1814,7 @@ review_titles
 ```
 
 ```
-##  [1] "Must-have reference for R graphics"                                                          
-##  [2] "Still a great package and highly worth learning - but the text is getting quite out of date."
-##  [3] "Excellent"                                                                                   
-##  [4] "Nice resource, but already out of date"                                                      
-##  [5] "The best guide to the best graphics (I think) out there."                                    
-##  [6] "Graphing in R"                                                                               
-##  [7] "Excellent content, poor adaptation to kindle"                                                
-##  [8] "Excellent R resource for the Kindle"                                                         
-##  [9] "Great book, outdated"                                                                        
-## [10] "Indispensable resource for ggplot2 users"
+## character(0)
 ```
 
 Now we've extracted something useful! Similarly, 
@@ -1846,7 +1830,7 @@ h %>%
 ```
 
 ```
-## character(0)
+## [1] "\n          © 1996-2014, Amazon.com, Inc. or its affiliates\n          \n           if (true === true) {\n             document.write('<img src=\"https://fls-na.amaz'+'on.com/'+'1/oc-csi/1/OP/requestId=V5A24KGHGWV68JVKKFF8&js=1\" />');\n           };\n          \n            \n        "
 ```
 
 Now, we may be annoyed that it always
@@ -1863,7 +1847,7 @@ formats
 ```
 
 ```
-## character(0)
+## [1] "\n          © 1996-2014, Amazon.com, Inc. or its affiliates\n          \n           if (true === true) {\n             document.write('<img src=\"https://fls-na.amaz'+'on.com/'+'1/oc-csi/1/OP/requestId=V5A24KGHGWV68JVKKFF8&js=1\" />');\n           };\n          \n            \n        "
 ```
 
 We could do similar exercise for extracting
