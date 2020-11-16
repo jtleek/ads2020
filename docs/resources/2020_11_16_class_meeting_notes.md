@@ -1,6 +1,8 @@
 # Class Meeting Schedule
 
 0. Check in on how everyone is doing
+0a. Check out this awesome paper:
+  - https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-020-02133-w.pdf
 1. Schedule for rest of term
   - Lectures
     x 11/09 - writing methods papers (moderate effort)
