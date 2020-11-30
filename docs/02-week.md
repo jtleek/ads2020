@@ -164,7 +164,7 @@ axes_json[[1]]
 ```
 
 ```
-## [1] "{\"word\":\"axe\",\"countrycode\":\"US\",\"timestamp\":\"2017-03-05 19:06:46.78258 UTC\",\"recognized\":true,\"key_id\":\"4605270401482752\",\"drawing\":[[[35,10,8,0],[27,199,255,240]],[[39,46,71,77,78,74,64,49,37],[29,20,8,1,8,49,104,86,64]]]}"
+## [1] "{\"word\":\"axe\",\"countrycode\":\"PT\",\"timestamp\":\"2017-03-05 22:57:31.79679 UTC\",\"recognized\":true,\"key_id\":\"5454978309160960\",\"drawing\":[[[2,67,151,160,190,237,241,241,214,208,165,149,138,81,29,24,0],[231,122,2,0,25,56,60,66,133,139,96,87,89,164,255,254,238]]]}"
 ```
 
 The next thing I did was google “quick draw data ndjson rstats”. I found a [tutorial](https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/) and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do. 
@@ -183,22 +183,26 @@ first_axe
 ```
 
 ```
-## # A tibble: 13 x 5
+## # A tibble: 17 x 5
 ##    line      x     y drawing          row_id
 ##    <chr> <dbl> <dbl> <chr>             <int>
-##  1 1        35    27 4605270401482752      1
-##  2 1        10   199 4605270401482752      2
-##  3 1         8   255 4605270401482752      3
-##  4 1         0   240 4605270401482752      4
-##  5 2        39    29 4605270401482752      5
-##  6 2        46    20 4605270401482752      6
-##  7 2        71     8 4605270401482752      7
-##  8 2        77     1 4605270401482752      8
-##  9 2        78     8 4605270401482752      9
-## 10 2        74    49 4605270401482752     10
-## 11 2        64   104 4605270401482752     11
-## 12 2        49    86 4605270401482752     12
-## 13 2        37    64 4605270401482752     13
+##  1 1         2   231 5454978309160960      1
+##  2 1        67   122 5454978309160960      2
+##  3 1       151     2 5454978309160960      3
+##  4 1       160     0 5454978309160960      4
+##  5 1       190    25 5454978309160960      5
+##  6 1       237    56 5454978309160960      6
+##  7 1       241    60 5454978309160960      7
+##  8 1       241    66 5454978309160960      8
+##  9 1       214   133 5454978309160960      9
+## 10 1       208   139 5454978309160960     10
+## 11 1       165    96 5454978309160960     11
+## 12 1       149    87 5454978309160960     12
+## 13 1       138    89 5454978309160960     13
+## 14 1        81   164 5454978309160960     14
+## 15 1        29   255 5454978309160960     15
+## 16 1        24   254 5454978309160960     16
+## 17 1         0   238 5454978309160960     17
 ```
 
 
@@ -330,14 +334,14 @@ grid_axe = grid_axe %>%
 
 small_axe = grid_axe %>% 
     group_by(xgroup,ygroup) %>%
-    summarise(pixel=mean(pixel))
+    summarise(pixel=mean(pixel),
+              .groups = "drop")
 
 small_axe
 ```
 
 ```
 ## # A tibble: 256 x 3
-## # Groups:   xgroup [16]
 ##    xgroup ygroup pixel
 ##     <dbl>  <dbl> <dbl>
 ##  1      1      1     0
@@ -399,7 +403,8 @@ for(i in 1:100){
         mutate(xgroup = as.numeric(as.character(xgroup)) - 7.5) %>%
         mutate(ygroup = as.numeric(as.character(ygroup)) - 7.5) %>%
     group_by(xgroup,ygroup) %>%
-    summarise(pixel=mean(pixel)) %>% ungroup() %>%
+    summarise(pixel=mean(pixel),
+              .groups = "drop") %>%
         select(pixel) %>%
         mutate(type="axe",drawing=i,pixel_number=row_number())
     img_dat = img_dat %>% bind_rows(small_draw)
@@ -419,7 +424,8 @@ for(i in 1:100){
         mutate(xgroup = as.numeric(as.character(xgroup)) - 7.5) %>%
         mutate(ygroup = as.numeric(as.character(ygroup)) - 7.5) %>%
     group_by(xgroup,ygroup) %>%
-    summarise(pixel=mean(pixel)) %>% ungroup() %>%
+    summarise(pixel=mean(pixel),
+              .groups = "drop") %>%
         select(pixel) %>%
         mutate(type="cloud",drawing=i,pixel_number=row_number())
     img_dat = img_dat %>% bind_rows(small_draw)
@@ -437,18 +443,18 @@ img_final
 
 ```
 ## # A tibble: 200 x 258
-##    type  drawing  pixel1  pixel2  pixel3 pixel4  pixel5  pixel6  pixel7 pixel8
-##    <chr>   <int>   <dbl>   <dbl>   <dbl>  <dbl>   <dbl>   <dbl>   <dbl>  <dbl>
-##  1 axe         1 0       0       0.0232       0 0       0       0            0
-##  2 axe         2 0       0.00368 0            0 0       0       0            0
-##  3 axe         3 0.00391 0       0            0 0       0       0.00781      0
-##  4 axe         4 0       0       0            0 0       0       0            0
-##  5 axe         5 0       0.00781 0.00391      0 0       0       0            0
-##  6 axe         6 0.00368 0       0            0 0       0       0            0
-##  7 axe         7 0.00391 0.00391 0            0 0       0       0            0
-##  8 axe         8 0       0       0            0 0.00391 0.00391 0            0
-##  9 axe         9 0       0       0            0 0.00391 0       0            0
-## 10 axe        10 0       0       0            0 0       0.00368 0            0
+##    type  drawing  pixel1  pixel2  pixel3  pixel4  pixel5  pixel6  pixel7  pixel8
+##    <chr>   <int>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+##  1 axe         1 0       0       0       0       0       0       0       0      
+##  2 axe         2 0       0       0       0       0       0.00391 0.00391 0      
+##  3 axe         3 0       0.00368 0       0       0       0       0       0.00368
+##  4 axe         4 0       0       0       0       0       0       0       0      
+##  5 axe         5 0       0.00391 0.00781 0       0.00781 0.00391 0       0      
+##  6 axe         6 0       0       0       0       0       0       0       0      
+##  7 axe         7 0       0.00391 0       0       0       0       0.00391 0      
+##  8 axe         8 0       0       0       0       0.00391 0.00391 0       0.00391
+##  9 axe         9 0.00781 0.00391 0       0.00781 0.00391 0.00391 0.0117  0.00391
+## 10 axe        10 0       0.0117  0       0       0.00391 0       0       0      
 ## # … with 190 more rows, and 248 more variables: pixel9 <dbl>, pixel10 <dbl>,
 ## #   pixel11 <dbl>, pixel12 <dbl>, pixel13 <dbl>, pixel14 <dbl>, pixel15 <dbl>,
 ## #   pixel16 <dbl>, pixel17 <dbl>, pixel18 <dbl>, pixel19 <dbl>, pixel20 <dbl>,
@@ -487,18 +493,18 @@ train_dat
 
 ```
 ## # A tibble: 100 x 258
-##    type  drawing  pixel1  pixel2 pixel3  pixel4  pixel5  pixel6  pixel7 pixel8
-##    <chr>   <int>   <dbl>   <dbl>  <dbl>   <dbl>   <dbl>   <dbl>   <dbl>  <dbl>
-##  1 axe         2 0       0.00368      0 0       0       0       0            0
-##  2 axe         3 0.00391 0            0 0       0       0       0.00781      0
-##  3 axe         4 0       0            0 0       0       0       0            0
-##  4 axe         8 0       0            0 0       0.00391 0.00391 0            0
-##  5 axe         9 0       0            0 0       0.00391 0       0            0
-##  6 axe        10 0       0            0 0       0       0.00368 0            0
-##  7 axe        11 0       0            0 0       0.00781 0       0            0
-##  8 axe        13 0.00368 0            0 0       0       0.00368 0            0
-##  9 axe        14 0       0.00391      0 0       0       0       0            0
-## 10 axe        15 0.00391 0.0156       0 0.00391 0.00391 0       0            0
+##    type  drawing  pixel1  pixel2  pixel3  pixel4  pixel5  pixel6  pixel7  pixel8
+##    <chr>   <int>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+##  1 axe         1 0       0       0       0       0       0       0       0      
+##  2 axe         3 0       0.00368 0       0       0       0       0       0.00368
+##  3 axe         5 0       0.00391 0.00781 0       0.00781 0.00391 0       0      
+##  4 axe         6 0       0       0       0       0       0       0       0      
+##  5 axe         7 0       0.00391 0       0       0       0       0.00391 0      
+##  6 axe         9 0.00781 0.00391 0       0.00781 0.00391 0.00391 0.0117  0.00391
+##  7 axe        11 0       0       0       0       0       0       0       0      
+##  8 axe        15 0       0.0117  0.00391 0       0.00781 0       0.00391 0      
+##  9 axe        18 0       0       0       0       0       0       0.00368 0.00368
+## 10 axe        19 0       0       0       0       0       0       0       0      
 ## # … with 90 more rows, and 248 more variables: pixel9 <dbl>, pixel10 <dbl>,
 ## #   pixel11 <dbl>, pixel12 <dbl>, pixel13 <dbl>, pixel14 <dbl>, pixel15 <dbl>,
 ## #   pixel16 <dbl>, pixel17 <dbl>, pixel18 <dbl>, pixel19 <dbl>, pixel20 <dbl>,
@@ -564,26 +570,26 @@ confusionMatrix(as.factor(test_dat$type),predict(mod,test_dat))
 ## 
 ##           Reference
 ## Prediction axe cloud
-##      axe    43     7
-##      cloud   7    43
+##      axe    45     5
+##      cloud  10    40
 ##                                           
-##                Accuracy : 0.86            
-##                  95% CI : (0.7763, 0.9213)
-##     No Information Rate : 0.5             
-##     P-Value [Acc > NIR] : 4.142e-14       
+##                Accuracy : 0.85            
+##                  95% CI : (0.7647, 0.9135)
+##     No Information Rate : 0.55            
+##     P-Value [Acc > NIR] : 1.716e-10       
 ##                                           
-##                   Kappa : 0.72            
+##                   Kappa : 0.7             
 ##                                           
-##  Mcnemar's Test P-Value : 1               
+##  Mcnemar's Test P-Value : 0.3017          
 ##                                           
-##             Sensitivity : 0.86            
-##             Specificity : 0.86            
-##          Pos Pred Value : 0.86            
-##          Neg Pred Value : 0.86            
-##              Prevalence : 0.50            
-##          Detection Rate : 0.43            
-##    Detection Prevalence : 0.50            
-##       Balanced Accuracy : 0.86            
+##             Sensitivity : 0.8182          
+##             Specificity : 0.8889          
+##          Pos Pred Value : 0.9000          
+##          Neg Pred Value : 0.8000          
+##              Prevalence : 0.5500          
+##          Detection Rate : 0.4500          
+##    Detection Prevalence : 0.5000          
+##       Balanced Accuracy : 0.8535          
 ##                                           
 ##        'Positive' Class : axe             
 ## 

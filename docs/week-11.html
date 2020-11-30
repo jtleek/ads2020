@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Week 11 | Week 1</title>
+  <title>12 Week 11 | Week 13 - Debugging Data Analyses</title>
   <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Week 11 | Week 1" />
+  <meta property="og:title" content="12 Week 11 | Week 13 - Debugging Data Analyses" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Week 11 | Week 1" />
+  <meta name="twitter:title" content="12 Week 11 | Week 13 - Debugging Data Analyses" />
   
   <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="week-10.html"/>
 <link rel="next" href="week-12.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,22 +52,23 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="libs/table1-1.0/table1_defaults.css" rel="stylesheet" />
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -86,7 +88,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -135,25 +137,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <img src ="ads2020-small.png" class="center">
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#assumptions-and-pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Assumptions and pre-requisites</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning Objectives</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#course-staff"><i class="fa fa-check"></i><b>1.3</b> Course Staff</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-logistics"><i class="fa fa-check"></i><b>1.4</b> Course logistics</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment-due-dates"><i class="fa fa-check"></i><b>1.5</b> Assignment Due Dates</a></li>
 <li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-pandemic"><i class="fa fa-check"></i><b>1.6</b> The Pandemic</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a><ul>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a>
+<ul>
 <li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#philosophy"><i class="fa fa-check"></i><b>1.7.1</b> Philosophy</a></li>
 <li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#relative-weights"><i class="fa fa-check"></i><b>1.7.2</b> Relative weights</a></li>
 </ul></li>
-<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a><ul>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a>
+<ul>
 <li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#submitting-assignments"><i class="fa fa-check"></i><b>1.8.1</b> Submitting assignments</a></li>
 <li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#data-analysis-assignments"><i class="fa fa-check"></i><b>1.8.2</b> Data Analysis Assignments</a></li>
 <li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>1.8.3</b> Reproducibility</a></li>
 <li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.4</b> Data Analysis Reviews</a></li>
 <li class="chapter" data-level="1.8.5" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.5</b> Reviewing Code of Conduct</a></li>
 </ul></li>
-<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a><ul>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a>
+<ul>
 <li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i><b>1.9.1</b> Need Help?</a></li>
 <li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#feedback"><i class="fa fa-check"></i><b>1.9.2</b> Feedback</a></li>
 <li class="chapter" data-level="1.9.3" data-path="index.html"><a href="index.html#license-and-attribution"><i class="fa fa-check"></i><b>1.9.3</b> License and attribution</a></li>
@@ -164,14 +170,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#previous-versions-of-the-class"><i class="fa fa-check"></i><b>1.13</b> Previous versions of the class</a></li>
 <li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#typos-and-corrections"><i class="fa fa-check"></i><b>1.14</b> Typos and corrections</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a><ul>
+<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="week-1.html"><a href="week-1.html#week-1-learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Week 1 Learning objectives</a></li>
-<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a><ul>
+<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a>
+<ul>
 <li class="chapter" data-level="2.2.1" data-path="week-1.html"><a href="week-1.html#maybe-we-should-start-by-defining-data-science."><i class="fa fa-check"></i><b>2.2.1</b> Maybe we should start by defining data science….</a></li>
 <li class="chapter" data-level="2.2.2" data-path="week-1.html"><a href="week-1.html#data-science-is-hard-but-not-like-math-is-hard"><i class="fa fa-check"></i><b>2.2.2</b> Data Science is hard, but not like math is hard</a></li>
 <li class="chapter" data-level="2.2.3" data-path="week-1.html"><a href="week-1.html#so-what-is-advanced-data-science"><i class="fa fa-check"></i><b>2.2.3</b> So what is advanced data science?</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a><ul>
+<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="week-1.html"><a href="week-1.html#descriptive"><i class="fa fa-check"></i><b>2.3.1</b> Descriptive</a></li>
 <li class="chapter" data-level="2.3.2" data-path="week-1.html"><a href="week-1.html#exploratory"><i class="fa fa-check"></i><b>2.3.2</b> Exploratory</a></li>
 <li class="chapter" data-level="2.3.3" data-path="week-1.html"><a href="week-1.html#inferential"><i class="fa fa-check"></i><b>2.3.3</b> Inferential</a></li>
@@ -179,7 +188,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.5" data-path="week-1.html"><a href="week-1.html#causal"><i class="fa fa-check"></i><b>2.3.5</b> Causal</a></li>
 <li class="chapter" data-level="2.3.6" data-path="week-1.html"><a href="week-1.html#mechanistic"><i class="fa fa-check"></i><b>2.3.6</b> Mechanistic</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a><ul>
+<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a>
+<ul>
 <li class="chapter" data-level="2.4.1" data-path="week-1.html"><a href="week-1.html#answering-the-question"><i class="fa fa-check"></i><b>2.4.1</b> Answering the question</a></li>
 <li class="chapter" data-level="2.4.2" data-path="week-1.html"><a href="week-1.html#checking-the-data"><i class="fa fa-check"></i><b>2.4.2</b> Checking the data</a></li>
 <li class="chapter" data-level="2.4.3" data-path="week-1.html"><a href="week-1.html#tidying-the-data"><i class="fa fa-check"></i><b>2.4.3</b> Tidying the data</a></li>
@@ -190,16 +200,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.8" data-path="week-1.html"><a href="week-1.html#written-analyses"><i class="fa fa-check"></i><b>2.4.8</b> Written analyses</a></li>
 <li class="chapter" data-level="2.4.9" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>2.4.9</b> Figures</a></li>
 <li class="chapter" data-level="2.4.10" data-path="week-1.html"><a href="week-1.html#presentations"><i class="fa fa-check"></i><b>2.4.10</b> Presentations</a></li>
-<li class="chapter" data-level="2.4.11" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
+<li class="chapter" data-level="2.4.11" data-path="week-1.html"><a href="week-1.html#reproducibility-1"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
 <li class="chapter" data-level="2.4.12" data-path="week-1.html"><a href="week-1.html#r-packages"><i class="fa fa-check"></i><b>2.4.12</b> R packages</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="week-1.html"><a href="week-1.html#your-first-assignment---deconstructing-an-analysis"><i class="fa fa-check"></i><b>2.5</b> Your first assignment - deconstructing an analysis</a></li>
 <li class="chapter" data-level="2.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>2.6</b> Additional Resources</a></li>
 <li class="chapter" data-level="2.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>2.7</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a><ul>
+<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="week-2.html"><a href="week-2.html#week-2-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Week 2 Learning objectives</a></li>
-<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a><ul>
+<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="week-2.html"><a href="week-2.html#defining-the-question"><i class="fa fa-check"></i><b>3.2.1</b> Defining the question</a></li>
 <li class="chapter" data-level="3.2.2" data-path="week-2.html"><a href="week-2.html#defining-the-ideal-data-set"><i class="fa fa-check"></i><b>3.2.2</b> Defining the ideal data set</a></li>
 <li class="chapter" data-level="3.2.3" data-path="week-2.html"><a href="week-2.html#determine-the-data-you-can-access"><i class="fa fa-check"></i><b>3.2.3</b> Determine the data you can access</a></li>
@@ -213,21 +225,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.11" data-path="week-2.html"><a href="week-2.html#create-reproducible-code"><i class="fa fa-check"></i><b>3.2.11</b> Create reproducible code</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="week-2.html"><a href="week-2.html#raw-informal-and-formal-data-science"><i class="fa fa-check"></i><b>3.3</b> Raw, informal, and formal data science</a></li>
-<li class="chapter" data-level="3.4" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
-<li class="chapter" data-level="3.5" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
+<li class="chapter" data-level="3.4" data-path="week-2.html"><a href="week-2.html#additional-resources-1"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.5" data-path="week-2.html"><a href="week-2.html#homework-1"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="week-3.html"><a href="week-3.html"><i class="fa fa-check"></i><b>4</b> Week 3</a><ul>
+<li class="chapter" data-level="4" data-path="week-3.html"><a href="week-3.html"><i class="fa fa-check"></i><b>4</b> Week 3</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="week-3.html"><a href="week-3.html#week-3-learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Week 3 Learning Objectives</a></li>
-<li class="chapter" data-level="4.2" data-path="week-3.html"><a href="week-3.html#organizing-a-data-analysis"><i class="fa fa-check"></i><b>4.2</b> Organizing a data analysis</a><ul>
+<li class="chapter" data-level="4.2" data-path="week-3.html"><a href="week-3.html#organizing-a-data-analysis"><i class="fa fa-check"></i><b>4.2</b> Organizing a data analysis</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="week-3.html"><a href="week-3.html#motivation---the-stick"><i class="fa fa-check"></i><b>4.2.1</b> Motivation - the stick</a></li>
 <li class="chapter" data-level="4.2.2" data-path="week-3.html"><a href="week-3.html#motivation---the-carrot"><i class="fa fa-check"></i><b>4.2.2</b> Motivation - the carrot</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="week-3.html"><a href="week-3.html#project-organization"><i class="fa fa-check"></i><b>4.3</b> Project Organization</a><ul>
+<li class="chapter" data-level="4.3" data-path="week-3.html"><a href="week-3.html#project-organization"><i class="fa fa-check"></i><b>4.3</b> Project Organization</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="week-3.html"><a href="week-3.html#readme.md"><i class="fa fa-check"></i><b>4.3.1</b> README.md</a></li>
 <li class="chapter" data-level="4.3.2" data-path="week-3.html"><a href="week-3.html#gitignore"><i class="fa fa-check"></i><b>4.3.2</b> .gitignore</a></li>
 <li class="chapter" data-level="4.3.3" data-path="week-3.html"><a href="week-3.html#data"><i class="fa fa-check"></i><b>4.3.3</b> data/</a></li>
 <li class="chapter" data-level="4.3.4" data-path="week-3.html"><a href="week-3.html#code"><i class="fa fa-check"></i><b>4.3.4</b> code/</a></li>
-<li class="chapter" data-level="4.3.5" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>4.3.5</b> figures</a></li>
+<li class="chapter" data-level="4.3.5" data-path="week-3.html"><a href="week-3.html#figures-1"><i class="fa fa-check"></i><b>4.3.5</b> figures</a></li>
 <li class="chapter" data-level="4.3.6" data-path="week-3.html"><a href="week-3.html#products"><i class="fa fa-check"></i><b>4.3.6</b> products/</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="week-3.html"><a href="week-3.html#file-naming"><i class="fa fa-check"></i><b>4.4</b> File naming</a></li>
@@ -237,21 +252,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.8" data-path="week-3.html"><a href="week-3.html#coding-style"><i class="fa fa-check"></i><b>4.8</b> Coding style</a></li>
 <li class="chapter" data-level="4.9" data-path="week-3.html"><a href="week-3.html#chain-of-custody-for-data"><i class="fa fa-check"></i><b>4.9</b> Chain of Custody for Data</a></li>
 <li class="chapter" data-level="4.10" data-path="week-3.html"><a href="week-3.html#version-control"><i class="fa fa-check"></i><b>4.10</b> Version Control</a></li>
-<li class="chapter" data-level="4.11" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>4.11</b> Additional Resources</a></li>
-<li class="chapter" data-level="4.12" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>4.12</b> Homework</a></li>
+<li class="chapter" data-level="4.11" data-path="week-3.html"><a href="week-3.html#additional-resources-2"><i class="fa fa-check"></i><b>4.11</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.12" data-path="week-3.html"><a href="week-3.html#homework-2"><i class="fa fa-check"></i><b>4.12</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="week-4.html"><a href="week-4.html"><i class="fa fa-check"></i><b>5</b> Week 4</a><ul>
+<li class="chapter" data-level="5" data-path="week-4.html"><a href="week-4.html"><i class="fa fa-check"></i><b>5</b> Week 4</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="week-4.html"><a href="week-4.html#week-4-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Week 4 Learning Objectives</a></li>
 <li class="chapter" data-level="5.2" data-path="week-4.html"><a href="week-4.html#the-optimality-paradox"><i class="fa fa-check"></i><b>5.2</b> The optimality paradox</a></li>
-<li class="chapter" data-level="5.3" data-path="week-4.html"><a href="week-4.html#an-example-of-the-art-of-data-science"><i class="fa fa-check"></i><b>5.3</b> An example of the art of data science</a><ul>
+<li class="chapter" data-level="5.3" data-path="week-4.html"><a href="week-4.html#an-example-of-the-art-of-data-science"><i class="fa fa-check"></i><b>5.3</b> An example of the art of data science</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="week-4.html"><a href="week-4.html#an-important-subtlety---analyst-decisions-change-the-question"><i class="fa fa-check"></i><b>5.3.1</b> An important subtlety - analyst decisions change the question</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="week-4.html"><a href="week-4.html#reproducibility-2"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
 <li class="chapter" data-level="5.4.2" data-path="week-4.html"><a href="week-4.html#replicability"><i class="fa fa-check"></i><b>5.4.2</b> Replicability</a></li>
 <li class="chapter" data-level="5.4.3" data-path="week-4.html"><a href="week-4.html#false-discovery"><i class="fa fa-check"></i><b>5.4.3</b> False discovery</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="week-4.html"><a href="week-4.html#a-theory-of-data-science-success"><i class="fa fa-check"></i><b>5.5</b> A theory of data science success</a><ul>
+<li class="chapter" data-level="5.5" data-path="week-4.html"><a href="week-4.html#a-theory-of-data-science-success"><i class="fa fa-check"></i><b>5.5</b> A theory of data science success</a>
+<ul>
 <li class="chapter" data-level="5.5.1" data-path="week-4.html"><a href="week-4.html#elements-of-data-science"><i class="fa fa-check"></i><b>5.5.1</b> Elements of Data Science</a></li>
 <li class="chapter" data-level="5.5.2" data-path="week-4.html"><a href="week-4.html#principles-of-data-science"><i class="fa fa-check"></i><b>5.5.2</b> Principles of Data Science</a></li>
 <li class="chapter" data-level="5.5.3" data-path="week-4.html"><a href="week-4.html#data-matching"><i class="fa fa-check"></i><b>5.5.3</b> Data matching</a></li>
@@ -264,13 +283,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6" data-path="week-4.html"><a href="week-4.html#a-successful-data-analysis"><i class="fa fa-check"></i><b>5.6</b> A successful data analysis</a></li>
 <li class="chapter" data-level="5.7" data-path="week-4.html"><a href="week-4.html#constraints-and-expectation-matching"><i class="fa fa-check"></i><b>5.7</b> Constraints and expectation matching</a></li>
 <li class="chapter" data-level="5.8" data-path="week-4.html"><a href="week-4.html#what-about-being-correct"><i class="fa fa-check"></i><b>5.8</b> What about being correct?</a></li>
-<li class="chapter" data-level="5.9" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>5.9</b> Additional Resources</a></li>
-<li class="chapter" data-level="5.10" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>5.10</b> Homework</a></li>
+<li class="chapter" data-level="5.9" data-path="week-4.html"><a href="week-4.html#additional-resources-3"><i class="fa fa-check"></i><b>5.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.10" data-path="week-4.html"><a href="week-4.html#homework-3"><i class="fa fa-check"></i><b>5.10</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="week-5.html"><a href="week-5.html"><i class="fa fa-check"></i><b>6</b> Week 5</a><ul>
+<li class="chapter" data-level="6" data-path="week-5.html"><a href="week-5.html"><i class="fa fa-check"></i><b>6</b> Week 5</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="week-5.html"><a href="week-5.html#week-5-learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Week 5 Learning Objectives</a></li>
 <li class="chapter" data-level="6.2" data-path="week-5.html"><a href="week-5.html#skepticism-vs.-discovery"><i class="fa fa-check"></i><b>6.2</b> Skepticism vs. Discovery</a></li>
-<li class="chapter" data-level="6.3" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>6.3</b> Figures</a><ul>
+<li class="chapter" data-level="6.3" data-path="week-5.html"><a href="week-5.html#figures-2"><i class="fa fa-check"></i><b>6.3</b> Figures</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="week-5.html"><a href="week-5.html#just-modeling-results---show-the-data"><i class="fa fa-check"></i><b>6.3.1</b> Just modeling results -&gt; show the data!</a></li>
 <li class="chapter" data-level="6.3.2" data-path="week-5.html"><a href="week-5.html#dynamite-plots---scatterplots"><i class="fa fa-check"></i><b>6.3.2</b> Dynamite plots -&gt; scatterplots</a></li>
 <li class="chapter" data-level="6.3.3" data-path="week-5.html"><a href="week-5.html#ridiculograms---clustering-diagrams"><i class="fa fa-check"></i><b>6.3.3</b> Ridiculograms -&gt; clustering diagrams</a></li>
@@ -285,62 +306,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3.12" data-path="week-5.html"><a href="week-5.html#legends-hard-to-follow---use-labels"><i class="fa fa-check"></i><b>6.3.12</b> Legends hard to follow -&gt; use labels</a></li>
 <li class="chapter" data-level="6.3.13" data-path="week-5.html"><a href="week-5.html#confounders-arent-clear---color-by-confounder"><i class="fa fa-check"></i><b>6.3.13</b> Confounders aren’t clear -&gt; color by confounder</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="week-5.html"><a href="week-5.html#common-data-analytic-fallacies"><i class="fa fa-check"></i><b>6.4</b> Common data analytic fallacies</a><ul>
+<li class="chapter" data-level="6.4" data-path="week-5.html"><a href="week-5.html#common-data-analytic-fallacies"><i class="fa fa-check"></i><b>6.4</b> Common data analytic fallacies</a>
+<ul>
 <li class="chapter" data-level="6.4.1" data-path="week-5.html"><a href="week-5.html#spurious-correlation"><i class="fa fa-check"></i><b>6.4.1</b> Spurious correlation</a></li>
 <li class="chapter" data-level="6.4.2" data-path="week-5.html"><a href="week-5.html#outliers"><i class="fa fa-check"></i><b>6.4.2</b> Outliers</a></li>
 <li class="chapter" data-level="6.4.3" data-path="week-5.html"><a href="week-5.html#reversing-cause-and-effect"><i class="fa fa-check"></i><b>6.4.3</b> Reversing Cause and Effect</a></li>
 <li class="chapter" data-level="6.4.4" data-path="week-5.html"><a href="week-5.html#confounders"><i class="fa fa-check"></i><b>6.4.4</b> Confounders</a></li>
 <li class="chapter" data-level="6.4.5" data-path="week-5.html"><a href="week-5.html#simpsons-paradox"><i class="fa fa-check"></i><b>6.4.5</b> Simpson’s Paradox</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="week-5.html"><a href="week-5.html#over-skepticism"><i class="fa fa-check"></i><b>6.5</b> Over-skepticism</a><ul>
+<li class="chapter" data-level="6.5" data-path="week-5.html"><a href="week-5.html#over-skepticism"><i class="fa fa-check"></i><b>6.5</b> Over-skepticism</a>
+<ul>
 <li class="chapter" data-level="6.5.1" data-path="week-5.html"><a href="week-5.html#everything-must-be-causal"><i class="fa fa-check"></i><b>6.5.1</b> Everything must be causal</a></li>
 <li class="chapter" data-level="6.5.2" data-path="week-5.html"><a href="week-5.html#nothing-can-be-causal"><i class="fa fa-check"></i><b>6.5.2</b> Nothing can be causal</a></li>
 <li class="chapter" data-level="6.5.3" data-path="week-5.html"><a href="week-5.html#you-should-answer-my-question-not-yours"><i class="fa fa-check"></i><b>6.5.3</b> You should answer my question, not yours</a></li>
 <li class="chapter" data-level="6.5.4" data-path="week-5.html"><a href="week-5.html#you-used-insert-method-i-dont-use-therefore-the-analysis-is-wrong"><i class="fa fa-check"></i><b>6.5.4</b> You used (insert method I don’t use) therefore the analysis is wrong</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>6.6</b> Additional Resources</a></li>
-<li class="chapter" data-level="6.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
+<li class="chapter" data-level="6.6" data-path="week-5.html"><a href="week-5.html#additional-resources-4"><i class="fa fa-check"></i><b>6.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.7" data-path="week-5.html"><a href="week-5.html#homework-4"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="week-6.html"><a href="week-6.html"><i class="fa fa-check"></i><b>7</b> Week 6</a><ul>
+<li class="chapter" data-level="7" data-path="week-6.html"><a href="week-6.html"><i class="fa fa-check"></i><b>7</b> Week 6</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="week-6.html"><a href="week-6.html#week-6-learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Week 6 Learning objectives</a></li>
 <li class="chapter" data-level="7.2" data-path="week-6.html"><a href="week-6.html#what-you-wish-data-looked-like"><i class="fa fa-check"></i><b>7.2</b> What you wish data looked like</a></li>
 <li class="chapter" data-level="7.3" data-path="week-6.html"><a href="week-6.html#what-it-actually-looks-like"><i class="fa fa-check"></i><b>7.3</b> What it actually looks like</a></li>
-<li class="chapter" data-level="7.4" data-path="week-6.html"><a href="week-6.html#background-on-getting-data"><i class="fa fa-check"></i><b>7.4</b> Background on getting data</a><ul>
+<li class="chapter" data-level="7.4" data-path="week-6.html"><a href="week-6.html#background-on-getting-data"><i class="fa fa-check"></i><b>7.4</b> Background on getting data</a>
+<ul>
 <li class="chapter" data-level="7.4.1" data-path="week-6.html"><a href="week-6.html#where-do-data-live"><i class="fa fa-check"></i><b>7.4.1</b> Where do data live?</a></li>
 <li class="chapter" data-level="7.4.2" data-path="week-6.html"><a href="week-6.html#best-practices-on-sharing-data"><i class="fa fa-check"></i><b>7.4.2</b> Best practices on sharing data</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="week-6.html"><a href="week-6.html#relative-versus-absolute-paths"><i class="fa fa-check"></i><b>7.5</b> Relative versus absolute paths</a><ul>
+<li class="chapter" data-level="7.5" data-path="week-6.html"><a href="week-6.html#relative-versus-absolute-paths"><i class="fa fa-check"></i><b>7.5</b> Relative versus absolute paths</a>
+<ul>
 <li class="chapter" data-level="7.5.1" data-path="week-6.html"><a href="week-6.html#the-here-package"><i class="fa fa-check"></i><b>7.5.1</b> The <code>here</code> package</a></li>
 <li class="chapter" data-level="7.5.2" data-path="week-6.html"><a href="week-6.html#finding-and-creating-files-locally"><i class="fa fa-check"></i><b>7.5.2</b> Finding and creating files locally</a></li>
 <li class="chapter" data-level="7.5.3" data-path="week-6.html"><a href="week-6.html#downloading-files"><i class="fa fa-check"></i><b>7.5.3</b> Downloading files</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="week-6.html"><a href="week-6.html#reading-files"><i class="fa fa-check"></i><b>7.6</b> Reading files</a><ul>
+<li class="chapter" data-level="7.6" data-path="week-6.html"><a href="week-6.html#reading-files"><i class="fa fa-check"></i><b>7.6</b> Reading files</a>
+<ul>
 <li class="chapter" data-level="7.6.1" data-path="week-6.html"><a href="week-6.html#reading-in-csv-files"><i class="fa fa-check"></i><b>7.6.1</b> Reading in CSV files</a></li>
 <li class="chapter" data-level="7.6.2" data-path="week-6.html"><a href="week-6.html#reading-in-excel-files"><i class="fa fa-check"></i><b>7.6.2</b> Reading in Excel files</a></li>
 <li class="chapter" data-level="7.6.3" data-path="week-6.html"><a href="week-6.html#reading-in-json-files"><i class="fa fa-check"></i><b>7.6.3</b> Reading in JSON Files</a></li>
 <li class="chapter" data-level="7.6.4" data-path="week-6.html"><a href="week-6.html#using-github-api"><i class="fa fa-check"></i><b>7.6.4</b> Using GitHub API</a></li>
 </ul></li>
 <li class="chapter" data-level="7.7" data-path="week-6.html"><a href="week-6.html#google-sheets"><i class="fa fa-check"></i><b>7.7</b> Google Sheets</a></li>
-<li class="chapter" data-level="7.8" data-path="week-6.html"><a href="week-6.html#databases"><i class="fa fa-check"></i><b>7.8</b> Databases</a><ul>
+<li class="chapter" data-level="7.8" data-path="week-6.html"><a href="week-6.html#databases"><i class="fa fa-check"></i><b>7.8</b> Databases</a>
+<ul>
 <li class="chapter" data-level="7.8.1" data-path="week-6.html"><a href="week-6.html#querying-with-dplyr-syntax"><i class="fa fa-check"></i><b>7.8.1</b> Querying with <code>dplyr</code> syntax</a></li>
 <li class="chapter" data-level="7.8.2" data-path="week-6.html"><a href="week-6.html#delayed-execution"><i class="fa fa-check"></i><b>7.8.2</b> Delayed execution</a></li>
 </ul></li>
 <li class="chapter" data-level="7.9" data-path="week-6.html"><a href="week-6.html#apis"><i class="fa fa-check"></i><b>7.9</b> APIs</a></li>
-<li class="chapter" data-level="7.10" data-path="week-6.html"><a href="week-6.html#webscraping"><i class="fa fa-check"></i><b>7.10</b> Webscraping</a><ul>
+<li class="chapter" data-level="7.10" data-path="week-6.html"><a href="week-6.html#webscraping"><i class="fa fa-check"></i><b>7.10</b> Webscraping</a>
+<ul>
 <li class="chapter" data-level="7.10.1" data-path="week-6.html"><a href="week-6.html#css-selectors"><i class="fa fa-check"></i><b>7.10.1</b> CSS Selectors</a></li>
 </ul></li>
 <li class="chapter" data-level="7.11" data-path="week-6.html"><a href="week-6.html#google-ing"><i class="fa fa-check"></i><b>7.11</b> Google-ing</a></li>
-<li class="chapter" data-level="7.12" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>7.12</b> Additional Resources</a></li>
-<li class="chapter" data-level="7.13" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>7.13</b> Homework</a></li>
+<li class="chapter" data-level="7.12" data-path="week-6.html"><a href="week-6.html#additional-resources-5"><i class="fa fa-check"></i><b>7.12</b> Additional Resources</a></li>
+<li class="chapter" data-level="7.13" data-path="week-6.html"><a href="week-6.html#homework-5"><i class="fa fa-check"></i><b>7.13</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="week-7.html"><a href="week-7.html"><i class="fa fa-check"></i><b>8</b> Week 7</a><ul>
+<li class="chapter" data-level="8" data-path="week-7.html"><a href="week-7.html"><i class="fa fa-check"></i><b>8</b> Week 7</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="week-7.html"><a href="week-7.html#week-7-learning-objectives"><i class="fa fa-check"></i><b>8.1</b> Week 7 Learning objectives</a></li>
-<li class="chapter" data-level="8.2" data-path="week-7.html"><a href="week-7.html#a-framework-for-exploratory-analysis"><i class="fa fa-check"></i><b>8.2</b> A framework for exploratory analysis</a><ul>
+<li class="chapter" data-level="8.2" data-path="week-7.html"><a href="week-7.html#a-framework-for-exploratory-analysis"><i class="fa fa-check"></i><b>8.2</b> A framework for exploratory analysis</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-question"><i class="fa fa-check"></i><b>8.2.1</b> Do you have the right question?</a></li>
 <li class="chapter" data-level="8.2.2" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-data"><i class="fa fa-check"></i><b>8.2.2</b> Do you have the right data?</a></li>
 <li class="chapter" data-level="8.2.3" data-path="week-7.html"><a href="week-7.html#can-you-sketch-a-solution-to-the-question-you-care-about"><i class="fa fa-check"></i><b>8.2.3</b> Can you sketch a solution to the question you care about?</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="week-7.html"><a href="week-7.html#some-general-eda-principles"><i class="fa fa-check"></i><b>8.3</b> Some general EDA principles</a><ul>
+<li class="chapter" data-level="8.3" data-path="week-7.html"><a href="week-7.html#some-general-eda-principles"><i class="fa fa-check"></i><b>8.3</b> Some general EDA principles</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="week-7.html"><a href="week-7.html#check-the-packaging"><i class="fa fa-check"></i><b>8.3.1</b> Check the packaging</a></li>
 <li class="chapter" data-level="8.3.2" data-path="week-7.html"><a href="week-7.html#rectangle-your-data"><i class="fa fa-check"></i><b>8.3.2</b> Rectangle your data</a></li>
 <li class="chapter" data-level="8.3.3" data-path="week-7.html"><a href="week-7.html#look-at-the-top-and-bottom"><i class="fa fa-check"></i><b>8.3.3</b> Look at the top and bottom</a></li>
@@ -351,12 +383,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.8" data-path="week-7.html"><a href="week-7.html#follow-up"><i class="fa fa-check"></i><b>8.3.8</b> Follow up</a></li>
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="week-7.html"><a href="week-7.html#organizing-an-eda"><i class="fa fa-check"></i><b>8.4</b> Organizing an EDA</a></li>
-<li class="chapter" data-level="8.5" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>8.5</b> Additional Resources</a></li>
-<li class="chapter" data-level="8.6" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>8.6</b> Homework</a></li>
+<li class="chapter" data-level="8.5" data-path="week-7.html"><a href="week-7.html#additional-resources-6"><i class="fa fa-check"></i><b>8.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.6" data-path="week-7.html"><a href="week-7.html#homework-6"><i class="fa fa-check"></i><b>8.6</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="week-8.html"><a href="week-8.html"><i class="fa fa-check"></i><b>9</b> Week 8</a><ul>
+<li class="chapter" data-level="9" data-path="week-8.html"><a href="week-8.html"><i class="fa fa-check"></i><b>9</b> Week 8</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="week-8.html"><a href="week-8.html#week-8-learning-objectives"><i class="fa fa-check"></i><b>9.1</b> Week 8 Learning objectives</a></li>
-<li class="chapter" data-level="9.2" data-path="week-8.html"><a href="week-8.html#a-framework-for-modeling"><i class="fa fa-check"></i><b>9.2</b> A framework for modeling</a><ul>
+<li class="chapter" data-level="9.2" data-path="week-8.html"><a href="week-8.html#a-framework-for-modeling"><i class="fa fa-check"></i><b>9.2</b> A framework for modeling</a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="week-8.html"><a href="week-8.html#identify-your-goal"><i class="fa fa-check"></i><b>9.2.1</b> Identify your goal</a></li>
 <li class="chapter" data-level="9.2.2" data-path="week-8.html"><a href="week-8.html#form-an-analysis-plan"><i class="fa fa-check"></i><b>9.2.2</b> Form an analysis plan</a></li>
 <li class="chapter" data-level="9.2.3" data-path="week-8.html"><a href="week-8.html#model-signal"><i class="fa fa-check"></i><b>9.2.3</b> Model signal</a></li>
@@ -366,19 +400,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.7" data-path="week-8.html"><a href="week-8.html#compare-to-your-analysis-plan"><i class="fa fa-check"></i><b>9.2.7</b> Compare to your analysis plan</a></li>
 <li class="chapter" data-level="9.2.8" data-path="week-8.html"><a href="week-8.html#understand-incentives"><i class="fa fa-check"></i><b>9.2.8</b> Understand incentives</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>9.3</b> Additional Resources</a></li>
-<li class="chapter" data-level="9.4" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>9.4</b> Homework</a></li>
+<li class="chapter" data-level="9.3" data-path="week-8.html"><a href="week-8.html#additional-resources-7"><i class="fa fa-check"></i><b>9.3</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.4" data-path="week-8.html"><a href="week-8.html#homework-7"><i class="fa fa-check"></i><b>9.4</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="week-9.html"><a href="week-9.html"><i class="fa fa-check"></i><b>10</b> Week 9</a><ul>
+<li class="chapter" data-level="10" data-path="week-9.html"><a href="week-9.html"><i class="fa fa-check"></i><b>10</b> Week 9</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="week-9.html"><a href="week-9.html#week-9-learning-objectives"><i class="fa fa-check"></i><b>10.1</b> Week 9 Learning objectives</a></li>
-<li class="chapter" data-level="10.2" data-path="week-9.html"><a href="week-9.html#story-telling-in-data-analysis"><i class="fa fa-check"></i><b>10.2</b> Story Telling in Data Analysis</a><ul>
+<li class="chapter" data-level="10.2" data-path="week-9.html"><a href="week-9.html#story-telling-in-data-analysis"><i class="fa fa-check"></i><b>10.2</b> Story Telling in Data Analysis</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="week-9.html"><a href="week-9.html#the-central-dramatic-argument"><i class="fa fa-check"></i><b>10.2.1</b> The Central Dramatic Argument</a></li>
 <li class="chapter" data-level="10.2.2" data-path="week-9.html"><a href="week-9.html#thematic-structure-and-causality"><i class="fa fa-check"></i><b>10.2.2</b> Thematic structure and causality</a></li>
 <li class="chapter" data-level="10.2.3" data-path="week-9.html"><a href="week-9.html#format"><i class="fa fa-check"></i><b>10.2.3</b> Format</a></li>
 <li class="chapter" data-level="10.2.4" data-path="week-9.html"><a href="week-9.html#trust-and-belief"><i class="fa fa-check"></i><b>10.2.4</b> Trust and Belief</a></li>
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="week-9.html"><a href="week-9.html#the-journey-to-interesting-and-true"><i class="fa fa-check"></i><b>10.3</b> The journey to interesting and true</a></li>
-<li class="chapter" data-level="10.4" data-path="week-9.html"><a href="week-9.html#data-analysis-papers"><i class="fa fa-check"></i><b>10.4</b> Data Analysis Papers</a><ul>
+<li class="chapter" data-level="10.4" data-path="week-9.html"><a href="week-9.html#data-analysis-papers"><i class="fa fa-check"></i><b>10.4</b> Data Analysis Papers</a>
+<ul>
 <li class="chapter" data-level="10.4.1" data-path="week-9.html"><a href="week-9.html#how-do-you-know-when-to-start-writing"><i class="fa fa-check"></i><b>10.4.1</b> How do you know when to start writing?</a></li>
 <li class="chapter" data-level="10.4.2" data-path="week-9.html"><a href="week-9.html#structure"><i class="fa fa-check"></i><b>10.4.2</b> Structure</a></li>
 <li class="chapter" data-level="10.4.3" data-path="week-9.html"><a href="week-9.html#titles"><i class="fa fa-check"></i><b>10.4.3</b> Titles</a></li>
@@ -390,13 +427,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.4.9" data-path="week-9.html"><a href="week-9.html#supplementary-material"><i class="fa fa-check"></i><b>10.4.9</b> Supplementary material</a></li>
 </ul></li>
 <li class="chapter" data-level="10.5" data-path="week-9.html"><a href="week-9.html#a-few-matters-of-form"><i class="fa fa-check"></i><b>10.5</b> A few matters of form</a></li>
-<li class="chapter" data-level="10.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>10.6</b> Additional Resources</a></li>
-<li class="chapter" data-level="10.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>10.7</b> Homework</a></li>
+<li class="chapter" data-level="10.6" data-path="week-9.html"><a href="week-9.html#additional-resources-8"><i class="fa fa-check"></i><b>10.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="10.7" data-path="week-9.html"><a href="week-9.html#homework-8"><i class="fa fa-check"></i><b>10.7</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="week-10.html"><a href="week-10.html"><i class="fa fa-check"></i><b>11</b> Week 10</a><ul>
+<li class="chapter" data-level="11" data-path="week-10.html"><a href="week-10.html"><i class="fa fa-check"></i><b>11</b> Week 10</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="week-10.html"><a href="week-10.html#week-10-learning-objectives"><i class="fa fa-check"></i><b>11.1</b> Week 10 Learning objectives</a></li>
 <li class="chapter" data-level="11.2" data-path="week-10.html"><a href="week-10.html#exploratoy-vs-expository"><i class="fa fa-check"></i><b>11.2</b> Exploratoy vs expository</a></li>
-<li class="chapter" data-level="11.3" data-path="week-10.html"><a href="week-10.html#creating-expository-graphs"><i class="fa fa-check"></i><b>11.3</b> Creating Expository Graphs</a><ul>
+<li class="chapter" data-level="11.3" data-path="week-10.html"><a href="week-10.html#creating-expository-graphs"><i class="fa fa-check"></i><b>11.3</b> Creating Expository Graphs</a>
+<ul>
 <li class="chapter" data-level="11.3.1" data-path="week-10.html"><a href="week-10.html#background-color"><i class="fa fa-check"></i><b>11.3.1</b> Background color</a></li>
 <li class="chapter" data-level="11.3.2" data-path="week-10.html"><a href="week-10.html#axis-titles-and-axis-labels"><i class="fa fa-check"></i><b>11.3.2</b> Axis titles and axis labels</a></li>
 <li class="chapter" data-level="11.3.3" data-path="week-10.html"><a href="week-10.html#legends-or-not"><i class="fa fa-check"></i><b>11.3.3</b> Legends (or not!)</a></li>
@@ -407,82 +446,117 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.3.8" data-path="week-10.html"><a href="week-10.html#multi-panel-plots"><i class="fa fa-check"></i><b>11.3.8</b> Multi-panel plots</a></li>
 <li class="chapter" data-level="11.3.9" data-path="week-10.html"><a href="week-10.html#miscellaneous-advice"><i class="fa fa-check"></i><b>11.3.9</b> Miscellaneous Advice</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="week-10.html"><a href="week-10.html#creating-expository-tables"><i class="fa fa-check"></i><b>11.4</b> Creating Expository Tables</a><ul>
+<li class="chapter" data-level="11.4" data-path="week-10.html"><a href="week-10.html#creating-expository-tables"><i class="fa fa-check"></i><b>11.4</b> Creating Expository Tables</a>
+<ul>
 <li class="chapter" data-level="11.4.1" data-path="week-10.html"><a href="week-10.html#table-1"><i class="fa fa-check"></i><b>11.4.1</b> Table 1</a></li>
 <li class="chapter" data-level="11.4.2" data-path="week-10.html"><a href="week-10.html#color-in-tables"><i class="fa fa-check"></i><b>11.4.2</b> Color in tables</a></li>
 <li class="chapter" data-level="11.4.3" data-path="week-10.html"><a href="week-10.html#captions"><i class="fa fa-check"></i><b>11.4.3</b> Captions</a></li>
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="week-10.html"><a href="week-10.html#scientific-graphics-vs-infographics"><i class="fa fa-check"></i><b>11.5</b> Scientific graphics vs infographics</a></li>
-<li class="chapter" data-level="11.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>11.6</b> Additional Resources</a></li>
-<li class="chapter" data-level="11.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>11.7</b> Homework</a></li>
+<li class="chapter" data-level="11.6" data-path="week-10.html"><a href="week-10.html#additional-resources-9"><i class="fa fa-check"></i><b>11.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="11.7" data-path="week-10.html"><a href="week-10.html#homework-9"><i class="fa fa-check"></i><b>11.7</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="week-11.html"><a href="week-11.html"><i class="fa fa-check"></i><b>12</b> Week 11</a><ul>
+<li class="chapter" data-level="12" data-path="week-11.html"><a href="week-11.html"><i class="fa fa-check"></i><b>12</b> Week 11</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="week-11.html"><a href="week-11.html#week-11-learning-objectives"><i class="fa fa-check"></i><b>12.1</b> Week 11 Learning objectives</a></li>
 <li class="chapter" data-level="12.2" data-path="week-11.html"><a href="week-11.html#methodology-vs-data-analysis"><i class="fa fa-check"></i><b>12.2</b> Methodology vs Data Analysis</a></li>
-<li class="chapter" data-level="12.3" data-path="week-11.html"><a href="week-11.html#the-sections-of-a-methodological-paper"><i class="fa fa-check"></i><b>12.3</b> The sections of a methodological paper</a><ul>
-<li class="chapter" data-level="12.3.1" data-path="week-9.html"><a href="week-9.html#abstracts"><i class="fa fa-check"></i><b>12.3.1</b> Abstracts</a></li>
-<li class="chapter" data-level="12.3.2" data-path="week-9.html"><a href="week-9.html#introductions"><i class="fa fa-check"></i><b>12.3.2</b> Introductions</a></li>
+<li class="chapter" data-level="12.3" data-path="week-11.html"><a href="week-11.html#the-sections-of-a-methodological-paper"><i class="fa fa-check"></i><b>12.3</b> The sections of a methodological paper</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="week-11.html"><a href="week-11.html#abstracts-1"><i class="fa fa-check"></i><b>12.3.1</b> Abstracts</a></li>
+<li class="chapter" data-level="12.3.2" data-path="week-11.html"><a href="week-11.html#introductions-1"><i class="fa fa-check"></i><b>12.3.2</b> Introductions</a></li>
 <li class="chapter" data-level="12.3.3" data-path="week-11.html"><a href="week-11.html#description-of-your-method"><i class="fa fa-check"></i><b>12.3.3</b> Description of your method</a></li>
 <li class="chapter" data-level="12.3.4" data-path="week-11.html"><a href="week-11.html#simulation-results"><i class="fa fa-check"></i><b>12.3.4</b> Simulation results</a></li>
 <li class="chapter" data-level="12.3.5" data-path="week-11.html"><a href="week-11.html#empirical-results"><i class="fa fa-check"></i><b>12.3.5</b> Empirical results</a></li>
-<li class="chapter" data-level="12.3.6" data-path="week-9.html"><a href="week-9.html#conclusions-and-discussion"><i class="fa fa-check"></i><b>12.3.6</b> Conclusions and discussion</a></li>
+<li class="chapter" data-level="12.3.6" data-path="week-11.html"><a href="week-11.html#conclusions-and-discussion-1"><i class="fa fa-check"></i><b>12.3.6</b> Conclusions and discussion</a></li>
 </ul></li>
 <li class="chapter" data-level="12.4" data-path="week-11.html"><a href="week-11.html#comparisons"><i class="fa fa-check"></i><b>12.4</b> Comparisons</a></li>
 <li class="chapter" data-level="12.5" data-path="week-11.html"><a href="week-11.html#transparency"><i class="fa fa-check"></i><b>12.5</b> Transparency</a></li>
 <li class="chapter" data-level="12.6" data-path="week-11.html"><a href="week-11.html#software"><i class="fa fa-check"></i><b>12.6</b> Software</a></li>
-<li class="chapter" data-level="12.7" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>12.7</b> Additional Resources</a></li>
-<li class="chapter" data-level="12.8" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>12.8</b> Homework</a></li>
+<li class="chapter" data-level="12.7" data-path="week-11.html"><a href="week-11.html#additional-resources-10"><i class="fa fa-check"></i><b>12.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.8" data-path="week-11.html"><a href="week-11.html#homework-10"><i class="fa fa-check"></i><b>12.8</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="week-12.html"><a href="week-12.html"><i class="fa fa-check"></i><b>13</b> Week 12</a><ul>
+<li class="chapter" data-level="13" data-path="week-12.html"><a href="week-12.html"><i class="fa fa-check"></i><b>13</b> Week 12</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="week-12.html"><a href="week-12.html#week-12-learning-objectives"><i class="fa fa-check"></i><b>13.1</b> Week 12 Learning objectives</a></li>
-<li class="chapter" data-level="13.2" data-path="week-12.html"><a href="week-12.html#why-give-data-analytic-presentations"><i class="fa fa-check"></i><b>13.2</b> Why give data analytic presentations?</a><ul>
+<li class="chapter" data-level="13.2" data-path="week-12.html"><a href="week-12.html#why-give-data-analytic-presentations"><i class="fa fa-check"></i><b>13.2</b> Why give data analytic presentations?</a>
+<ul>
 <li class="chapter" data-level="13.2.1" data-path="week-12.html"><a href="week-12.html#why-is-this-part-of-advanced-data-science"><i class="fa fa-check"></i><b>13.2.1</b> Why is this part of advanced data science?</a></li>
 </ul></li>
 <li class="chapter" data-level="13.3" data-path="week-12.html"><a href="week-12.html#types-of-data-analytic-presentations"><i class="fa fa-check"></i><b>13.3</b> Types of data analytic presentations</a></li>
-<li class="chapter" data-level="13.4" data-path="week-12.html"><a href="week-12.html#structure-of-your-talk"><i class="fa fa-check"></i><b>13.4</b> Structure of your talk</a><ul>
+<li class="chapter" data-level="13.4" data-path="week-12.html"><a href="week-12.html#structure-of-your-talk"><i class="fa fa-check"></i><b>13.4</b> Structure of your talk</a>
+<ul>
 <li class="chapter" data-level="13.4.1" data-path="week-12.html"><a href="week-12.html#flash-talk-structure"><i class="fa fa-check"></i><b>13.4.1</b> Flash talk structure</a></li>
 <li class="chapter" data-level="13.4.2" data-path="week-12.html"><a href="week-12.html#short-form-talk-structure"><i class="fa fa-check"></i><b>13.4.2</b> Short form talk structure</a></li>
 <li class="chapter" data-level="13.4.3" data-path="week-12.html"><a href="week-12.html#long-form-talk-structure"><i class="fa fa-check"></i><b>13.4.3</b> Long form talk structure</a></li>
 </ul></li>
-<li class="chapter" data-level="13.5" data-path="week-12.html"><a href="week-12.html#slide-style"><i class="fa fa-check"></i><b>13.5</b> Slide style</a><ul>
+<li class="chapter" data-level="13.5" data-path="week-12.html"><a href="week-12.html#slide-style"><i class="fa fa-check"></i><b>13.5</b> Slide style</a>
+<ul>
 <li class="chapter" data-level="13.5.1" data-path="week-12.html"><a href="week-12.html#text"><i class="fa fa-check"></i><b>13.5.1</b> Text</a></li>
 <li class="chapter" data-level="13.5.2" data-path="week-12.html"><a href="week-12.html#fonts"><i class="fa fa-check"></i><b>13.5.2</b> Fonts</a></li>
 <li class="chapter" data-level="13.5.3" data-path="week-12.html"><a href="week-12.html#size"><i class="fa fa-check"></i><b>13.5.3</b> Size</a></li>
 <li class="chapter" data-level="13.5.4" data-path="week-12.html"><a href="week-12.html#colors"><i class="fa fa-check"></i><b>13.5.4</b> Colors</a></li>
 <li class="chapter" data-level="13.5.5" data-path="week-12.html"><a href="week-12.html#alignment"><i class="fa fa-check"></i><b>13.5.5</b> Alignment</a></li>
 </ul></li>
-<li class="chapter" data-level="13.6" data-path="week-12.html"><a href="week-12.html#presenting"><i class="fa fa-check"></i><b>13.6</b> Presenting</a><ul>
+<li class="chapter" data-level="13.6" data-path="week-12.html"><a href="week-12.html#presenting"><i class="fa fa-check"></i><b>13.6</b> Presenting</a>
+<ul>
 <li class="chapter" data-level="13.6.1" data-path="week-12.html"><a href="week-12.html#be-prepared"><i class="fa fa-check"></i><b>13.6.1</b> Be prepared</a></li>
 </ul></li>
 <li class="chapter" data-level="13.7" data-path="week-12.html"><a href="week-12.html#equations"><i class="fa fa-check"></i><b>13.7</b> Equations</a></li>
-<li class="chapter" data-level="13.8" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>13.8</b> Figures</a></li>
+<li class="chapter" data-level="13.8" data-path="week-12.html"><a href="week-12.html#figures-3"><i class="fa fa-check"></i><b>13.8</b> Figures</a></li>
 <li class="chapter" data-level="13.9" data-path="week-12.html"><a href="week-12.html#job-talk-specific-issues"><i class="fa fa-check"></i><b>13.9</b> Job talk specific issues</a></li>
-<li class="chapter" data-level="13.10" data-path="week-12.html"><a href="week-12.html#answering-hard-questions"><i class="fa fa-check"></i><b>13.10</b> Answering hard questions</a><ul>
+<li class="chapter" data-level="13.10" data-path="week-12.html"><a href="week-12.html#answering-hard-questions"><i class="fa fa-check"></i><b>13.10</b> Answering hard questions</a>
+<ul>
 <li class="chapter" data-level="13.10.1" data-path="week-12.html"><a href="week-12.html#that-one-person-who-keeps-going-bonkers-on-you"><i class="fa fa-check"></i><b>13.10.1</b> That one person who keeps going bonkers on you</a></li>
 </ul></li>
 <li class="chapter" data-level="13.11" data-path="week-12.html"><a href="week-12.html#finishing-on-time"><i class="fa fa-check"></i><b>13.11</b> Finishing on time</a></li>
 <li class="chapter" data-level="13.12" data-path="week-12.html"><a href="week-12.html#where-you-should-put-your-talk"><i class="fa fa-check"></i><b>13.12</b> Where you should put your talk</a></li>
-<li class="chapter" data-level="13.13" data-path="week-12.html"><a href="week-12.html#example-presentation-methods"><i class="fa fa-check"></i><b>13.13</b> Example Presentation: Methods</a><ul>
+<li class="chapter" data-level="13.13" data-path="week-12.html"><a href="week-12.html#example-presentation-methods"><i class="fa fa-check"></i><b>13.13</b> Example Presentation: Methods</a>
+<ul>
 <li class="chapter" data-level="13.13.1" data-path="week-12.html"><a href="week-12.html#talk-outline"><i class="fa fa-check"></i><b>13.13.1</b> Talk Outline</a></li>
 <li class="chapter" data-level="13.13.2" data-path="week-12.html"><a href="week-12.html#slide-design"><i class="fa fa-check"></i><b>13.13.2</b> Slide Design</a></li>
 <li class="chapter" data-level="13.13.3" data-path="week-12.html"><a href="week-12.html#presentation"><i class="fa fa-check"></i><b>13.13.3</b> Presentation</a></li>
 </ul></li>
-<li class="chapter" data-level="13.14" data-path="week-12.html"><a href="week-12.html#example-presentation-analysis"><i class="fa fa-check"></i><b>13.14</b> Example Presentation: Analysis</a><ul>
+<li class="chapter" data-level="13.14" data-path="week-12.html"><a href="week-12.html#example-presentation-analysis"><i class="fa fa-check"></i><b>13.14</b> Example Presentation: Analysis</a>
+<ul>
 <li class="chapter" data-level="13.14.1" data-path="week-12.html"><a href="week-12.html#talk-outline-1"><i class="fa fa-check"></i><b>13.14.1</b> Talk Outline</a></li>
 <li class="chapter" data-level="13.14.2" data-path="week-12.html"><a href="week-12.html#slide-design-1"><i class="fa fa-check"></i><b>13.14.2</b> Slide Design</a></li>
 <li class="chapter" data-level="13.14.3" data-path="week-12.html"><a href="week-12.html#presentation-1"><i class="fa fa-check"></i><b>13.14.3</b> Presentation</a></li>
 </ul></li>
-<li class="chapter" data-level="13.15" data-path="week-12.html"><a href="week-12.html#presenting-to-a-general-audience"><i class="fa fa-check"></i><b>13.15</b> Presenting to a General Audience</a><ul>
+<li class="chapter" data-level="13.15" data-path="week-12.html"><a href="week-12.html#presenting-to-a-general-audience"><i class="fa fa-check"></i><b>13.15</b> Presenting to a General Audience</a>
+<ul>
 <li class="chapter" data-level="13.15.1" data-path="week-12.html"><a href="week-12.html#the-goal"><i class="fa fa-check"></i><b>13.15.1</b> The Goal</a></li>
 <li class="chapter" data-level="13.15.2" data-path="week-12.html"><a href="week-12.html#general-presentation-example"><i class="fa fa-check"></i><b>13.15.2</b> General Presentation Example</a></li>
 </ul></li>
-<li class="chapter" data-level="13.16" data-path="week-12.html"><a href="week-12.html#presenting-to-a-technical-audience"><i class="fa fa-check"></i><b>13.16</b> Presenting to a Technical Audience</a><ul>
+<li class="chapter" data-level="13.16" data-path="week-12.html"><a href="week-12.html#presenting-to-a-technical-audience"><i class="fa fa-check"></i><b>13.16</b> Presenting to a Technical Audience</a>
+<ul>
 <li class="chapter" data-level="13.16.1" data-path="week-12.html"><a href="week-12.html#the-goal-1"><i class="fa fa-check"></i><b>13.16.1</b> The Goal</a></li>
 <li class="chapter" data-level="13.16.2" data-path="week-12.html"><a href="week-12.html#technical-presentation-example"><i class="fa fa-check"></i><b>13.16.2</b> Technical Presentation Example</a></li>
 <li class="chapter" data-level="13.16.3" data-path="week-12.html"><a href="week-12.html#general-vs-technical"><i class="fa fa-check"></i><b>13.16.3</b> General vs Technical</a></li>
 </ul></li>
-<li class="chapter" data-level="13.17" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>13.17</b> Additional Resources</a></li>
-<li class="chapter" data-level="13.18" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>13.18</b> Homework</a></li>
+<li class="chapter" data-level="13.17" data-path="week-12.html"><a href="week-12.html#additional-resources-11"><i class="fa fa-check"></i><b>13.17</b> Additional Resources</a></li>
+<li class="chapter" data-level="13.18" data-path="week-12.html"><a href="week-12.html#homework-11"><i class="fa fa-check"></i><b>13.18</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="week-13.html"><a href="week-13.html"><i class="fa fa-check"></i><b>14</b> Week 13</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="week-13.html"><a href="week-13.html#week-13-learning-objectives"><i class="fa fa-check"></i><b>14.1</b> Week 13 Learning objectives</a></li>
+<li class="chapter" data-level="14.2" data-path="week-13.html"><a href="week-13.html#introduction"><i class="fa fa-check"></i><b>14.2</b> Introduction</a></li>
+<li class="chapter" data-level="14.3" data-path="week-13.html"><a href="week-13.html#basic-data-analytic-iteration"><i class="fa fa-check"></i><b>14.3</b> Basic Data Analytic Iteration</a></li>
+<li class="chapter" data-level="14.4" data-path="week-13.html"><a href="week-13.html#statistical-methods-systems"><i class="fa fa-check"></i><b>14.4</b> Statistical Methods Systems</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="week-13.html"><a href="week-13.html#example-a-simple-linear-model-system"><i class="fa fa-check"></i><b>14.4.1</b> Example: A Simple Linear Model System</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="week-13.html"><a href="week-13.html#sec:expectations"><i class="fa fa-check"></i><b>14.5</b> The Set of Expected Outcomes</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="week-13.html"><a href="week-13.html#sec:expectedmean"><i class="fa fa-check"></i><b>14.5.1</b> Example: Expected Outcomes for the Sample Mean</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="week-13.html"><a href="week-13.html#sec:faultpoints"><i class="fa fa-check"></i><b>14.6</b> Anomaly Space</a></li>
+<li class="chapter" data-level="14.7" data-path="week-13.html"><a href="week-13.html#debugging-anomalies"><i class="fa fa-check"></i><b>14.7</b> Debugging Anomalies</a>
+<ul>
+<li class="chapter" data-level="14.7.1" data-path="week-13.html"><a href="week-13.html#basic-example"><i class="fa fa-check"></i><b>14.7.1</b> Basic Example</a></li>
+<li class="chapter" data-level="14.7.2" data-path="week-13.html"><a href="week-13.html#example-debugging-a-simple-linear-model-system"><i class="fa fa-check"></i><b>14.7.2</b> Example: Debugging a Simple Linear Model System</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="week-13.html"><a href="week-13.html#summarizing-root-causes"><i class="fa fa-check"></i><b>14.8</b> Summarizing Root Causes</a></li>
+<li class="chapter" data-level="14.9" data-path="week-13.html"><a href="week-13.html#homework-12"><i class="fa fa-check"></i><b>14.9</b> Homework</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -504,9 +578,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-11" class="section level1">
+<div id="week-11" class="section level1" number="12">
 <h1><span class="header-section-number">12</span> Week 11</h1>
-<div id="week-11-learning-objectives" class="section level2">
+<div id="week-11-learning-objectives" class="section level2" number="12.1">
 <h2><span class="header-section-number">12.1</span> Week 11 Learning objectives</h2>
 <div class="keyidea">
 <p>At the end of this lesson you will be able to:</p>
@@ -518,7 +592,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 </div>
-<div id="methodology-vs-data-analysis" class="section level2">
+<div id="methodology-vs-data-analysis" class="section level2" number="12.2">
 <h2><span class="header-section-number">12.2</span> Methodology vs Data Analysis</h2>
 <p>This course is primarily focused on performing and communicating data analysis. But it is also incredibly common for a data scientist to be called on to create new techniques or methodologies to answer important scientific questions. Just as there is an accepted structure for communicating a data analysis, there is also standard structure for communicating a new technique or methodology.</p>
 <p>Before we go into this standard structure it is a good idea to describe what we mean by a new “methodology”. In (bio)statistics methodology often involves the development of a new mathematical model. As Leo Breiman puts it in his classic paper <a href="https://projecteuclid.org/euclid.ss/1009213726">Statistical Modeling: The Two Cultures</a></p>
@@ -536,7 +610,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>With traditional statistical development, we can rely on purely mathematical arguments about optimality. One challenge of the broader definition of methodological development is that it can be harder to know what makes a method “good”. In this context the comparison and evaluation will largely be empirical and will need to follow the same best practices as any thoughtful data analysis.</p>
 <p>However the purpose of a methodological paper or report is very different than a standard data analysis. The primary difference is that the scientific question you are trying to answer is about how well the proposed method will behave in a variety of contexts. Direct answers to a scientific question may be a piece of that puzzle, but they are not sufficient by themselves to know that a method works or is good.</p>
 </div>
-<div id="the-sections-of-a-methodological-paper" class="section level2">
+<div id="the-sections-of-a-methodological-paper" class="section level2" number="12.3">
 <h2><span class="header-section-number">12.3</span> The sections of a methodological paper</h2>
 <p>As we discussed in <a href="http://jtleek.com/ads2020/week-9.html">week 9</a>; a scientific paper can be distilled into four parts:</p>
 <ul>
@@ -558,7 +632,7 @@ Describes a method, justifying decisions based on how they are connected to the 
 <li>Includes well-documented scripts and data that perform the analyses presented in the paper.</li>
 </ol>
 </blockquote>
-<div id="abstracts" class="section level3">
+<div id="abstracts-1" class="section level3" number="12.3.1">
 <h3><span class="header-section-number">12.3.1</span> Abstracts</h3>
 <p>Recall the generic structure for an abstract from Nature:</p>
 <p><img src="images/week9/nature.png" /></p>
@@ -573,14 +647,14 @@ Describes a method, justifying decisions based on how they are connected to the 
 <li><strong>Method sharing:</strong> Here you should describe how others can get access to your work - typically in the form of a piece of software</li>
 </ol>
 </div>
-<div id="introductions" class="section level3">
+<div id="introductions-1" class="section level3" number="12.3.2">
 <h3><span class="header-section-number">12.3.2</span> Introductions</h3>
 <p>An introduction should be a more lengthy (1-3 pages) explanation of the scientific problem motivating your methodology, why there is still a need for methodological development and people should care, how your method works, and a comparison to the state of the art. Always start with the big picture! Provide the audience with enough background that they understand <em>why</em> you are tackling this problem and what others have done.</p>
 <p>Another important structural element is that introductions should go from general to specific. So you should start by putting the idea in its general context, e.g. “we need methods to help us address confounding in genomics experiments” and then narrow down to the problem you are addressing specifically, e.g. “we need methods to correct for batch effects”.</p>
 <p>One device you can use in the introduction or the beginning of the methods section is to create a simple simulated, or fake, example where the problem is illustrated more clearly than it would be in real data. Brad Efron is an example of a statistician who <a href="http://statweb.stanford.edu/~ckirby/brad/papers/2008EBestimates.pdf">often</a> <a href="http://statweb.stanford.edu/~ckirby/brad/papers/2008RowColumn.pdf">uses</a> <a href="http://statweb.stanford.edu/~ckirby/brad/papers/2012ModelSelection.pdf">this</a> <a href="http://statweb.stanford.edu/~ckirby/brad/papers/2010FDRsandCNV.pdf">technique</a> very effectively. It helps to orient the reader before you launch into more complicated statistical or computational ideas.</p>
 <p>You should also briefly review what other people have done in the area. The most critical thing is never underestimate how little people know or care about what you are working on. It is your job to explain to them why they should.</p>
 </div>
-<div id="description-of-your-method" class="section level3">
+<div id="description-of-your-method" class="section level3" number="12.3.3">
 <h3><span class="header-section-number">12.3.3</span> Description of your method</h3>
 <p>One of the biggest differences with a standard data analytic paper is that the methods <em>are the results</em> in a methodological paper. So most methodological journals and reports will flip the order of methods and results, putting the methods first.</p>
 <p>When describing your method you should remember that the audience needs to know three things:</p>
@@ -598,7 +672,7 @@ Describes a method, justifying decisions based on how they are connected to the 
 </ul>
 <p>You may also be describing a workflow or a set of computational steps that a user must perform. You migtht be doing nothing more than combining a set of previously developed software in a particular order, or applying software from a new field to your area of application. When describing software steps you will often use <a href="https://en.wikipedia.org/wiki/Pseudocode">pseudocode</a> which outline the steps that are being performed. The difficult tradeoff with pseudocode is between simplicity and ensuring that all steps are concretely documented. Regardless, if you are describing software or workflows, then you should ensure your code is made available.</p>
 </div>
-<div id="simulation-results" class="section level3">
+<div id="simulation-results" class="section level3" number="12.3.4">
 <h3><span class="header-section-number">12.3.4</span> Simulation results</h3>
 <p>A key component of methodological papers is simulation results. Simulated data is “made up data” that you control completely. Simulation is commonly used by statisticians/data analysts to: (1) <a href="http://en.wikipedia.org/wiki/Bootstrapping_(statistics)">estimate variability/improve predictors</a>, (2) <a href="http://en.wikipedia.org/wiki/Monte_Carlo_method">to evaluate the space of potential outcomes</a>, and (3) to evaluate the properties of new algorithms or procedures. It can be really useful for understanding when a method works and doesn’t work. Simulated data can come in different flavors like:</p>
 <ul>
@@ -636,7 +710,7 @@ Describes a method, justifying decisions based on how they are connected to the 
 <p>The first type of simulation is easy to come up with - generally you can just simulate from the model. The second type is much harder. You have to creatively think about reasonable ways that your model can fail. I’ve found that using real data for simulations can be the best way to start coming up with ideas to try - but I usually find that it is worth building on those ideas to imagine even more extreme circumstances. Playing the <a href="http://en.wikipedia.org/wiki/Evil_demon">evil demon</a> for my own methods often leads me to new ideas/improvements I hadn’t thought of before. It also helps me to evaluate the work of other people - since I’ve tried to explore the contexts where methods likely fail.</p>
 <p>In any case, simulation sections are most believable when they show both where a method is likely to work and where it is likely to fail.</p>
 </div>
-<div id="empirical-results" class="section level3">
+<div id="empirical-results" class="section level3" number="12.3.5">
 <h3><span class="header-section-number">12.3.5</span> Empirical results</h3>
 <p>Most methodological papers will also include results on actual empirical data in addition to simulation. Typically, we won’t know the “right” answer on these data so the analysis is typically done for illustration purposes. Though in some cases, there will be a data set that is designed specifically for evaluation purposes, with signal “spiked in” so that one can determine if the method is able to capture it.</p>
 <p>Empirical results sections are often shorter in methodological papers but are critically important. They show that the method works out in the wild, without the simplification of simulation. A good empirical results section:</p>
@@ -646,14 +720,14 @@ Describes a method, justifying decisions based on how they are connected to the 
 <li>Describes the results, especially in comparison to the state of the art.</li>
 </ul>
 </div>
-<div id="conclusions-and-discussion" class="section level3">
+<div id="conclusions-and-discussion-1" class="section level3" number="12.3.6">
 <h3><span class="header-section-number">12.3.6</span> Conclusions and discussion</h3>
 <p>Remember <em>“tell them what you are going to tell them, tell them, then tell them what you told them”</em>. In your introduction you explained what you were going to tell your audience, in the methods and results you told them, and in the conclusions and discussion you should start with a summary of what you told them.
 It is then a good idea to highlight potential limitations of your methods and to provide a fair assessment of how they perform relative to others. Be honest! It builds trust when a methods paper highlights potential issues for you, so that you don’t have to discover them yourself.</p>
 <p>After you have explained the limitations you can conclude with the strengths of your method and the potential next steps for your audience - often with a reminder to where they can find your tool or software.</p>
 </div>
 </div>
-<div id="comparisons" class="section level2">
+<div id="comparisons" class="section level2" number="12.4">
 <h2><span class="header-section-number">12.4</span> Comparisons</h2>
 <p>In some very rare cases, you will propose a method to address a problem that no one has ever thought of before. But the majority of the time, you will need to compare your method to existing software, tools, workflows, or statistical models. A common criteria used to evaluate methodds is how well they stack up against the “state of the art”. The most sophisticated methodological journals, like <a href="https://genomebiology.biomedcentral.com/submission-guidelines/preparing-your-manuscript/method">Genome Biology</a>, make it an explicit requirement for publication:</p>
 <blockquote>
@@ -665,7 +739,7 @@ It is then a good idea to highlight potential limitations of your methods and to
 <p>One of the most obvious “failure modes” for methological papers is the lack of a sufficiently robust comparison to existing methodology. These comparisons involve both a literature review - to discover your potential competitors - and a simulation or empirical study - where you apply your method and the other methods to the same data. A good comparison does both of these steps well.</p>
 <p>One of the challenges you may run into is that competitor methods may not have software available. In this case, a fair comparison is simply to state that software for that method does not exist. You aren’t expected to create software for competivive methods.</p>
 </div>
-<div id="transparency" class="section level2">
+<div id="transparency" class="section level2" number="12.5">
 <h2><span class="header-section-number">12.5</span> Transparency</h2>
 <p>Data science methods can often have major implications financially, medically, culturally, and ethically. It is therefore critical that we can evaluate these methods in as complete a manner as possible. When developing a method, it is critical that you provide the code and data from your work for others to test and build on.</p>
 <p>Recently a group from Google <a href="https://www.nature.com/articles/s41586-019-1799-6">proposed</a> an artificial intelligence approach for diagnosing breast cancer from mammography screens they claimed was superior to clinical judgement:</p>
@@ -678,7 +752,7 @@ It is then a good idea to highlight potential limitations of your methods and to
 </blockquote>
 <p>To be transparent, you should at minimum include the code you used in your analysis, all simulated data, and a way to request access to empirical data.</p>
 </div>
-<div id="software" class="section level2">
+<div id="software" class="section level2" number="12.6">
 <h2><span class="header-section-number">12.6</span> Software</h2>
 <p>Incentives in academia lean heavily toward producing papers and less toward producing and maintaining software. However, to really make your methodological contribution useful for others you will need to wrap it into user friendly software that is well documented.</p>
 <p>But there are some real reasons to write software as a data scientist that are critically important:</p>
@@ -690,7 +764,7 @@ It is then a good idea to highlight potential limitations of your methods and to
 <p>If you write in R, there are a number of good guides for creating R packages. In Jeff’s research group they use <a href="https://github.com/jtleek/rpackages">this guide</a>. One thing to keep in mind is that even if your code is a bit messy or hard to use, it can often be rescued with good documentation:</p>
 <p><img src="https://camo.githubusercontent.com/65e7fb031b778b5bc7a7b80011352763d193fe1c84d8d9e258db29dc27236c0b/68747470733a2f2f7261772e6769746875622e636f6d2f6a746c65656b2f727061636b616765732f6d61737465722f646f63756d656e746174696f6e2e706e67" /></p>
 </div>
-<div id="additional-resources" class="section level2">
+<div id="additional-resources-10" class="section level2" number="12.7">
 <h2><span class="header-section-number">12.7</span> Additional Resources</h2>
 <div class="resources">
 <ul>
@@ -701,7 +775,7 @@ It is then a good idea to highlight potential limitations of your methods and to
 </ul>
 </div>
 </div>
-<div id="homework" class="section level2">
+<div id="homework-10" class="section level2" number="12.8">
 <h2><span class="header-section-number">12.8</span> Homework</h2>
 <div class="homework">
 <ul>

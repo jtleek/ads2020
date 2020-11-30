@@ -239,7 +239,7 @@ getwd()
 ```
 
 ```
-## [1] "/cloud/project"
+## [1] "/Users/rdpeng/projects/ads2020"
 ```
 
 ```r
@@ -247,24 +247,25 @@ list.files()
 ```
 
 ```
-##  [1] "_book"                 "_bookdown_files"       "_bookdown.yml"        
-##  [4] "_output.yml"           "01-week_files"         "01-week.md"           
-##  [7] "01-week.Rmd"           "01-week.utf8.md"       "02-week_cache"        
-## [10] "02-week_files"         "02-week.md"            "02-week.Rmd"          
-## [13] "02-week.utf8.md"       "03-week.md"            "03-week.Rmd"          
-## [16] "03-week.utf8.md"       "04-week.md"            "04-week.Rmd"          
-## [19] "04-week.utf8.md"       "05-week_files"         "05-week.md"           
-## [22] "05-week.Rmd"           "05-week.utf8.md"       "06-week_files"        
-## [25] "06-week.Rmd"           "07-week.Rmd"           "08-week_cache"        
-## [28] "08-week_files"         "08-week.Rmd"           "09-week.Rmd"          
-## [31] "10-week_files"         "10-week.Rmd"           "11-week.Rmd"          
-## [34] "12-week.Rmd"           "ads2020.rds"           "ads2020.Rproj"        
-## [37] "data"                  "docs"                  "fyi.png"              
-## [40] "index.md"              "index.Rmd"             "index.utf8.md"        
-## [43] "jhsph ads.png"         "key.png"               "Lightbulb.png"        
-## [46] "Live-code.png"         "logo"                  "private"              
-## [49] "README.md"             "render16a57aa79dd.rds" "style.css"            
-## [52] "test.png"              "Your-turn.png"
+##  [1] "_book"                  "_bookdown_files"        "_bookdown.yml"         
+##  [4] "_output.yml"            "01-week.md"             "01-week.Rmd"           
+##  [7] "01-week.utf8.md"        "02-week_cache"          "02-week_files"         
+## [10] "02-week.md"             "02-week.Rmd"            "02-week.utf8.md"       
+## [13] "03-week.md"             "03-week.Rmd"            "03-week.utf8.md"       
+## [16] "04-week.md"             "04-week.Rmd"            "04-week.utf8.md"       
+## [19] "05-week_files"          "05-week.md"             "05-week.Rmd"           
+## [22] "05-week.utf8.md"        "06-week_files"          "06-week.Rmd"           
+## [25] "07-week.Rmd"            "08-week_cache"          "08-week_files"         
+## [28] "08-week.Rmd"            "09-week.Rmd"            "10-week_files"         
+## [31] "10-week.Rmd"            "11-week.Rmd"            "12-week.Rmd"           
+## [34] "13-week.Rmd"            "ads2020.rds"            "ads2020.Rproj"         
+## [37] "basicsystem.png"        "data"                   "docs"                  
+## [40] "fyi.png"                "index.md"               "index.Rmd"             
+## [43] "index.utf8.md"          "jhsph ads.png"          "key.png"               
+## [46] "Lightbulb.png"          "Live-code.png"          "logo"                  
+## [49] "modelSLR.png"           "README.md"              "render90e23fe240a6.rds"
+## [52] "style.css"              "test.png"               "tmpstuff.Rmd"          
+## [55] "Your-turn.png"
 ```
 
 OK so our current location is in the `/cloud/project` directory. Using the here package we can see that here points to this base directory. 
@@ -275,7 +276,7 @@ library(here)
 ```
 
 ```
-## here() starts at /cloud/project
+## here() starts at /Users/rdpeng/projects/ads2020
 ```
 
 ```r
@@ -283,7 +284,7 @@ here()
 ```
 
 ```
-## [1] "/cloud/project"
+## [1] "/Users/rdpeng/projects/ads2020"
 ```
 
 ```r
@@ -291,24 +292,25 @@ list.files(here::here())
 ```
 
 ```
-##  [1] "_book"                 "_bookdown_files"       "_bookdown.yml"        
-##  [4] "_output.yml"           "01-week_files"         "01-week.md"           
-##  [7] "01-week.Rmd"           "01-week.utf8.md"       "02-week_cache"        
-## [10] "02-week_files"         "02-week.md"            "02-week.Rmd"          
-## [13] "02-week.utf8.md"       "03-week.md"            "03-week.Rmd"          
-## [16] "03-week.utf8.md"       "04-week.md"            "04-week.Rmd"          
-## [19] "04-week.utf8.md"       "05-week_files"         "05-week.md"           
-## [22] "05-week.Rmd"           "05-week.utf8.md"       "06-week_files"        
-## [25] "06-week.Rmd"           "07-week.Rmd"           "08-week_cache"        
-## [28] "08-week_files"         "08-week.Rmd"           "09-week.Rmd"          
-## [31] "10-week_files"         "10-week.Rmd"           "11-week.Rmd"          
-## [34] "12-week.Rmd"           "ads2020.rds"           "ads2020.Rproj"        
-## [37] "data"                  "docs"                  "fyi.png"              
-## [40] "index.md"              "index.Rmd"             "index.utf8.md"        
-## [43] "jhsph ads.png"         "key.png"               "Lightbulb.png"        
-## [46] "Live-code.png"         "logo"                  "private"              
-## [49] "README.md"             "render16a57aa79dd.rds" "style.css"            
-## [52] "test.png"              "Your-turn.png"
+##  [1] "_book"                  "_bookdown_files"        "_bookdown.yml"         
+##  [4] "_output.yml"            "01-week.md"             "01-week.Rmd"           
+##  [7] "01-week.utf8.md"        "02-week_cache"          "02-week_files"         
+## [10] "02-week.md"             "02-week.Rmd"            "02-week.utf8.md"       
+## [13] "03-week.md"             "03-week.Rmd"            "03-week.utf8.md"       
+## [16] "04-week.md"             "04-week.Rmd"            "04-week.utf8.md"       
+## [19] "05-week_files"          "05-week.md"             "05-week.Rmd"           
+## [22] "05-week.utf8.md"        "06-week_files"          "06-week.Rmd"           
+## [25] "07-week.Rmd"            "08-week_cache"          "08-week_files"         
+## [28] "08-week.Rmd"            "09-week.Rmd"            "10-week_files"         
+## [31] "10-week.Rmd"            "11-week.Rmd"            "12-week.Rmd"           
+## [34] "13-week.Rmd"            "ads2020.rds"            "ads2020.Rproj"         
+## [37] "basicsystem.png"        "data"                   "docs"                  
+## [40] "fyi.png"                "index.md"               "index.Rmd"             
+## [43] "index.utf8.md"          "jhsph ads.png"          "key.png"               
+## [46] "Lightbulb.png"          "Live-code.png"          "logo"                  
+## [49] "modelSLR.png"           "README.md"              "render90e23fe240a6.rds"
+## [52] "style.css"              "test.png"               "tmpstuff.Rmd"          
+## [55] "Your-turn.png"
 ```
 
 We can now create a `data` folder if it doesn't already exist and see how to create a link to the data directory using the here package:
@@ -325,8 +327,9 @@ list.files(here("data"))
 ##  [5] "2020-10-21-cameras.csv"  "2020-10-26-cameras.csv" 
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
 ##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
-## [11] "cameras.csv"             "Chinook.sqlite"         
-## [13] "repos.json"
+## [11] "2020-11-27-cameras.csv"  "2020-11-29-cameras.csv" 
+## [13] "cameras.csv"             "Chinook.sqlite"         
+## [15] "repos.json"
 ```
 
 Now we see that using the `here::here()` function is a 
@@ -338,7 +341,8 @@ df <- readr::read_csv(here("data", "cameras.csv"))
 ```
 
 ```
-## Parsed with column specification:
+## 
+## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   address = col_character(),
 ##   direction = col_character(),
@@ -381,7 +385,7 @@ here("data", "cameras.csv")
 ```
 
 ```
-## [1] "/cloud/project/data/cameras.csv"
+## [1] "/Users/rdpeng/projects/ads2020/data/cameras.csv"
 ```
 
 The nice thing about the `here` package is that the above code creates the "correct" path relative to the home directory, regardless of whether the folder is on your computer or not. 
@@ -457,7 +461,7 @@ date_downloaded
 ```
 
 ```
-## [1] "2020-11-16"
+## [1] "2020-11-29"
 ```
 
 ```r
@@ -470,8 +474,9 @@ list.files(here("data"))
 ##  [5] "2020-10-21-cameras.csv"  "2020-10-26-cameras.csv" 
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
 ##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
-## [11] "cameras.csv"             "Chinook.sqlite"         
-## [13] "repos.json"
+## [11] "2020-11-27-cameras.csv"  "2020-11-29-cameras.csv" 
+## [13] "cameras.csv"             "Chinook.sqlite"         
+## [15] "repos.json"
 ```
 
 Here you will notice I also named the file with the date and/or saved another variable with the downloaded date. The reason is that if you are downloading data directly from the internet, it is likely to update and your results may change. It is a good idea to keep track of the data each time you download. 
@@ -499,7 +504,8 @@ cameras <- readr::read_csv(here("data", "cameras.csv"))
 ```
 
 ```
-## Parsed with column specification:
+## 
+## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   address = col_character(),
 ##   direction = col_character(),
@@ -1235,8 +1241,9 @@ list.files(here("data"))
 ##  [5] "2020-10-21-cameras.csv"  "2020-10-26-cameras.csv" 
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
 ##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
-## [11] "cameras.csv"             "Chinook.sqlite"         
-## [13] "repos.json"
+## [11] "2020-11-27-cameras.csv"  "2020-11-29-cameras.csv" 
+## [13] "cameras.csv"             "Chinook.sqlite"         
+## [15] "repos.json"
 ```
 
 The main workhorse packages that we will use are 
@@ -1270,7 +1277,7 @@ conn
 
 ```
 ## <SQLiteConnection>
-##   Path: /cloud/project/data/Chinook.sqlite
+##   Path: /Users/rdpeng/projects/ads2020/data/Chinook.sqlite
 ##   Extensions: TRUE
 ```
 
@@ -1346,7 +1353,7 @@ src_dbi(conn)
 ```
 
 ```
-## src:  sqlite 3.33.0 [/cloud/project/data/Chinook.sqlite]
+## src:  sqlite 3.33.0 [/Users/rdpeng/projects/ads2020/data/Chinook.sqlite]
 ## tbls: Album, Artist, Customer, Employee, Genre, Invoice, InvoiceLine,
 ##   MediaType, Playlist, PlaylistTrack, Track
 ```
@@ -1369,7 +1376,7 @@ tbl(conn, "Album") %>%
 
 ```
 ## # Source:   lazy query [?? x 3]
-## # Database: sqlite 3.33.0 [/cloud/project/data/Chinook.sqlite]
+## # Database: sqlite 3.33.0 [/Users/rdpeng/projects/ads2020/data/Chinook.sqlite]
 ##    AlbumId Title                                 ArtistId
 ##      <int> <chr>                                    <int>
 ##  1       1 For Those About To Rock We Salute You        1
@@ -1467,7 +1474,7 @@ tbl(conn, "Album") %>%
 
 ```
 ## # Source:   lazy query [?? x 2]
-## # Database: sqlite 3.33.0 [/cloud/project/data/Chinook.sqlite]
+## # Database: sqlite 3.33.0 [/Users/rdpeng/projects/ads2020/data/Chinook.sqlite]
 ##    ArtistId     n
 ##       <int> <int>
 ##  1        1     2
@@ -1531,7 +1538,7 @@ test
 
 ```
 ## # Source:   table<Album> [?? x 3]
-## # Database: sqlite 3.33.0 [/cloud/project/data/Chinook.sqlite]
+## # Database: sqlite 3.33.0 [/Users/rdpeng/projects/ads2020/data/Chinook.sqlite]
 ##    AlbumId Title                                 ArtistId
 ##      <int> <chr>                                    <int>
 ##  1       1 For Those About To Rock We Salute You        1
@@ -1556,7 +1563,7 @@ test %>% count()
 
 ```
 ## # Source:   lazy query [?? x 1]
-## # Database: sqlite 3.33.0 [/cloud/project/data/Chinook.sqlite]
+## # Database: sqlite 3.33.0 [/Users/rdpeng/projects/ads2020/data/Chinook.sqlite]
 ##       n
 ##   <int>
 ## 1   347
@@ -1667,7 +1674,7 @@ req
 
 ```
 ## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-11-16 02:56
+##   Date: 2020-11-29 17:58
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB
@@ -1760,9 +1767,9 @@ h
 
 ```
 ## {html_document}
-## <html class="a-no-js" lang="en-us">
-## [1] <head>\n<meta http-equiv="content-type" content="text/html; charset=UTF-8 ...
-## [2] <body>\n\n<!--\n        To discuss automated access to Amazon data please ...
+## <html lang="en-us" class="a-no-js" data-19ax5a9jf="dingo">
+## [1] <head>\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
+## [2] <body>\n<span id="cr-state-object" data-state='{"asin":"0387981403","devi ...
 ```
 
 How can you actually pull the interesting 
@@ -1800,7 +1807,17 @@ h %>%
 ```
 
 ```
-## {xml_nodeset (0)}
+## {xml_nodeset (10)}
+##  [1] <span>Must-have reference for R graphics</span>
+##  [2] <span>Still a great package and highly worth learning - but the text is  ...
+##  [3] <span>Excellent</span>
+##  [4] <span>Nice resource, but already out of date</span>
+##  [5] <span>The best guide to the best graphics (I think) out there.</span>
+##  [6] <span>Graphing in R</span>
+##  [7] <span>Excellent content, poor adaptation to kindle</span>
+##  [8] <span>Excellent R resource for the Kindle</span>
+##  [9] <span>Great book, outdated</span>
+## [10] <span>Indispensable resource for ggplot2 users</span>
 ```
 
 But you need the text from each of these, not the full tags. Pipe to the `html_text` function to pull these out:
@@ -1814,7 +1831,16 @@ review_titles
 ```
 
 ```
-## character(0)
+##  [1] "Must-have reference for R graphics"                                                          
+##  [2] "Still a great package and highly worth learning - but the text is getting quite out of date."
+##  [3] "Excellent"                                                                                   
+##  [4] "Nice resource, but already out of date"                                                      
+##  [5] "The best guide to the best graphics (I think) out there."                                    
+##  [6] "Graphing in R"                                                                               
+##  [7] "Excellent content, poor adaptation to kindle"                                                
+##  [8] "Excellent R resource for the Kindle"                                                         
+##  [9] "Great book, outdated"                                                                        
+## [10] "Indispensable resource for ggplot2 users"
 ```
 
 Now we've extracted something useful! Similarly, 
@@ -1830,7 +1856,7 @@ h %>%
 ```
 
 ```
-## [1] "\n          © 1996-2014, Amazon.com, Inc. or its affiliates\n          \n           if (true === true) {\n             document.write('<img src=\"https://fls-na.amaz'+'on.com/'+'1/oc-csi/1/OP/requestId=V5A24KGHGWV68JVKKFF8&js=1\" />');\n           };\n          \n            \n        "
+## character(0)
 ```
 
 Now, we may be annoyed that it always
@@ -1847,7 +1873,7 @@ formats
 ```
 
 ```
-## [1] "\n          © 1996-2014, Amazon.com, Inc. or its affiliates\n          \n           if (true === true) {\n             document.write('<img src=\"https://fls-na.amaz'+'on.com/'+'1/oc-csi/1/OP/requestId=V5A24KGHGWV68JVKKFF8&js=1\" />');\n           };\n          \n            \n        "
+## character(0)
 ```
 
 We could do similar exercise for extracting

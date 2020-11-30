@@ -274,7 +274,8 @@ grid_axe = grid_axe %>%
 
 small_axe = grid_axe %>% 
     group_by(xgroup,ygroup) %>%
-    summarise(pixel=mean(pixel))
+    summarise(pixel=mean(pixel),
+              .groups = "drop")
 
 small_axe
 ```
@@ -318,7 +319,8 @@ for(i in 1:100){
         mutate(xgroup = as.numeric(as.character(xgroup)) - 7.5) %>%
         mutate(ygroup = as.numeric(as.character(ygroup)) - 7.5) %>%
     group_by(xgroup,ygroup) %>%
-    summarise(pixel=mean(pixel)) %>% ungroup() %>%
+    summarise(pixel=mean(pixel),
+              .groups = "drop") %>%
         select(pixel) %>%
         mutate(type="axe",drawing=i,pixel_number=row_number())
     img_dat = img_dat %>% bind_rows(small_draw)
@@ -338,7 +340,8 @@ for(i in 1:100){
         mutate(xgroup = as.numeric(as.character(xgroup)) - 7.5) %>%
         mutate(ygroup = as.numeric(as.character(ygroup)) - 7.5) %>%
     group_by(xgroup,ygroup) %>%
-    summarise(pixel=mean(pixel)) %>% ungroup() %>%
+    summarise(pixel=mean(pixel),
+              .groups = "drop") %>%
         select(pixel) %>%
         mutate(type="cloud",drawing=i,pixel_number=row_number())
     img_dat = img_dat %>% bind_rows(small_draw)
