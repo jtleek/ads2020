@@ -409,7 +409,7 @@ res %>%
 <img src="05-week_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 It is just a mathematical fact that if we observe 
-10000 random correlations that are expected to
+10^{4} random correlations that are expected to
 be 0 but have a standard error of 
 0.204, the largest one will be
 close 1. 
@@ -1116,7 +1116,7 @@ res
 ##   <chr>                    <dbl>   <dbl>
 ## 1 Earth/life sciences   -0.101    0.0367
 ## 2 Medical sciences      -0.0762   0.0175
-## 3 Physics               -0.0464   1     
+## 3 Physics               -0.0464   1.00  
 ## 4 Social sciences       -0.0380   0.127 
 ## 5 Chemical sciences     -0.00865  1     
 ## 6 Physical sciences      0.0382   0.651 

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>13 Week 12 | Week 13 - Debugging Data Analyses</title>
+  <title>13 Week 12 | Week 1</title>
   <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="13 Week 12 | Week 13 - Debugging Data Analyses" />
+  <meta property="og:title" content="13 Week 12 | Week 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="13 Week 12 | Week 13 - Debugging Data Analyses" />
+  <meta name="twitter:title" content="13 Week 12 | Week 1" />
   
   <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-11-29" />
+<meta name="date" content="2020-12-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 <link rel="prev" href="week-11.html"/>
 <link rel="next" href="week-13.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,23 +51,22 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="libs/table1-1.0/table1_defaults.css" rel="stylesheet" />
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -88,7 +86,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -137,29 +135,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <img src ="ads2020-small.png" class="center">
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a>
-<ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#assumptions-and-pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Assumptions and pre-requisites</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning Objectives</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#course-staff"><i class="fa fa-check"></i><b>1.3</b> Course Staff</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-logistics"><i class="fa fa-check"></i><b>1.4</b> Course logistics</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment-due-dates"><i class="fa fa-check"></i><b>1.5</b> Assignment Due Dates</a></li>
 <li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-pandemic"><i class="fa fa-check"></i><b>1.6</b> The Pandemic</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a>
-<ul>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a><ul>
 <li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#philosophy"><i class="fa fa-check"></i><b>1.7.1</b> Philosophy</a></li>
 <li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#relative-weights"><i class="fa fa-check"></i><b>1.7.2</b> Relative weights</a></li>
 </ul></li>
-<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a>
-<ul>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a><ul>
 <li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#submitting-assignments"><i class="fa fa-check"></i><b>1.8.1</b> Submitting assignments</a></li>
 <li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#data-analysis-assignments"><i class="fa fa-check"></i><b>1.8.2</b> Data Analysis Assignments</a></li>
 <li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>1.8.3</b> Reproducibility</a></li>
 <li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.4</b> Data Analysis Reviews</a></li>
 <li class="chapter" data-level="1.8.5" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.5</b> Reviewing Code of Conduct</a></li>
 </ul></li>
-<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a>
-<ul>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a><ul>
 <li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i><b>1.9.1</b> Need Help?</a></li>
 <li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#feedback"><i class="fa fa-check"></i><b>1.9.2</b> Feedback</a></li>
 <li class="chapter" data-level="1.9.3" data-path="index.html"><a href="index.html#license-and-attribution"><i class="fa fa-check"></i><b>1.9.3</b> License and attribution</a></li>
@@ -170,17 +164,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#previous-versions-of-the-class"><i class="fa fa-check"></i><b>1.13</b> Previous versions of the class</a></li>
 <li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#typos-and-corrections"><i class="fa fa-check"></i><b>1.14</b> Typos and corrections</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a>
-<ul>
+<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a><ul>
 <li class="chapter" data-level="2.1" data-path="week-1.html"><a href="week-1.html#week-1-learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Week 1 Learning objectives</a></li>
-<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a>
-<ul>
+<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="week-1.html"><a href="week-1.html#maybe-we-should-start-by-defining-data-science."><i class="fa fa-check"></i><b>2.2.1</b> Maybe we should start by defining data science….</a></li>
 <li class="chapter" data-level="2.2.2" data-path="week-1.html"><a href="week-1.html#data-science-is-hard-but-not-like-math-is-hard"><i class="fa fa-check"></i><b>2.2.2</b> Data Science is hard, but not like math is hard</a></li>
 <li class="chapter" data-level="2.2.3" data-path="week-1.html"><a href="week-1.html#so-what-is-advanced-data-science"><i class="fa fa-check"></i><b>2.2.3</b> So what is advanced data science?</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a>
-<ul>
+<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="week-1.html"><a href="week-1.html#descriptive"><i class="fa fa-check"></i><b>2.3.1</b> Descriptive</a></li>
 <li class="chapter" data-level="2.3.2" data-path="week-1.html"><a href="week-1.html#exploratory"><i class="fa fa-check"></i><b>2.3.2</b> Exploratory</a></li>
 <li class="chapter" data-level="2.3.3" data-path="week-1.html"><a href="week-1.html#inferential"><i class="fa fa-check"></i><b>2.3.3</b> Inferential</a></li>
@@ -188,8 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.5" data-path="week-1.html"><a href="week-1.html#causal"><i class="fa fa-check"></i><b>2.3.5</b> Causal</a></li>
 <li class="chapter" data-level="2.3.6" data-path="week-1.html"><a href="week-1.html#mechanistic"><i class="fa fa-check"></i><b>2.3.6</b> Mechanistic</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a>
-<ul>
+<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="week-1.html"><a href="week-1.html#answering-the-question"><i class="fa fa-check"></i><b>2.4.1</b> Answering the question</a></li>
 <li class="chapter" data-level="2.4.2" data-path="week-1.html"><a href="week-1.html#checking-the-data"><i class="fa fa-check"></i><b>2.4.2</b> Checking the data</a></li>
 <li class="chapter" data-level="2.4.3" data-path="week-1.html"><a href="week-1.html#tidying-the-data"><i class="fa fa-check"></i><b>2.4.3</b> Tidying the data</a></li>
@@ -200,18 +190,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.8" data-path="week-1.html"><a href="week-1.html#written-analyses"><i class="fa fa-check"></i><b>2.4.8</b> Written analyses</a></li>
 <li class="chapter" data-level="2.4.9" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>2.4.9</b> Figures</a></li>
 <li class="chapter" data-level="2.4.10" data-path="week-1.html"><a href="week-1.html#presentations"><i class="fa fa-check"></i><b>2.4.10</b> Presentations</a></li>
-<li class="chapter" data-level="2.4.11" data-path="week-1.html"><a href="week-1.html#reproducibility-1"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
+<li class="chapter" data-level="2.4.11" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
 <li class="chapter" data-level="2.4.12" data-path="week-1.html"><a href="week-1.html#r-packages"><i class="fa fa-check"></i><b>2.4.12</b> R packages</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="week-1.html"><a href="week-1.html#your-first-assignment---deconstructing-an-analysis"><i class="fa fa-check"></i><b>2.5</b> Your first assignment - deconstructing an analysis</a></li>
 <li class="chapter" data-level="2.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>2.6</b> Additional Resources</a></li>
 <li class="chapter" data-level="2.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>2.7</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a>
-<ul>
+<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a><ul>
 <li class="chapter" data-level="3.1" data-path="week-2.html"><a href="week-2.html#week-2-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Week 2 Learning objectives</a></li>
-<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a>
-<ul>
+<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a><ul>
 <li class="chapter" data-level="3.2.1" data-path="week-2.html"><a href="week-2.html#defining-the-question"><i class="fa fa-check"></i><b>3.2.1</b> Defining the question</a></li>
 <li class="chapter" data-level="3.2.2" data-path="week-2.html"><a href="week-2.html#defining-the-ideal-data-set"><i class="fa fa-check"></i><b>3.2.2</b> Defining the ideal data set</a></li>
 <li class="chapter" data-level="3.2.3" data-path="week-2.html"><a href="week-2.html#determine-the-data-you-can-access"><i class="fa fa-check"></i><b>3.2.3</b> Determine the data you can access</a></li>
@@ -225,24 +213,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.11" data-path="week-2.html"><a href="week-2.html#create-reproducible-code"><i class="fa fa-check"></i><b>3.2.11</b> Create reproducible code</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="week-2.html"><a href="week-2.html#raw-informal-and-formal-data-science"><i class="fa fa-check"></i><b>3.3</b> Raw, informal, and formal data science</a></li>
-<li class="chapter" data-level="3.4" data-path="week-2.html"><a href="week-2.html#additional-resources-1"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
-<li class="chapter" data-level="3.5" data-path="week-2.html"><a href="week-2.html#homework-1"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
+<li class="chapter" data-level="3.4" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.5" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="week-3.html"><a href="week-3.html"><i class="fa fa-check"></i><b>4</b> Week 3</a>
-<ul>
+<li class="chapter" data-level="4" data-path="week-3.html"><a href="week-3.html"><i class="fa fa-check"></i><b>4</b> Week 3</a><ul>
 <li class="chapter" data-level="4.1" data-path="week-3.html"><a href="week-3.html#week-3-learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Week 3 Learning Objectives</a></li>
-<li class="chapter" data-level="4.2" data-path="week-3.html"><a href="week-3.html#organizing-a-data-analysis"><i class="fa fa-check"></i><b>4.2</b> Organizing a data analysis</a>
-<ul>
+<li class="chapter" data-level="4.2" data-path="week-3.html"><a href="week-3.html#organizing-a-data-analysis"><i class="fa fa-check"></i><b>4.2</b> Organizing a data analysis</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="week-3.html"><a href="week-3.html#motivation---the-stick"><i class="fa fa-check"></i><b>4.2.1</b> Motivation - the stick</a></li>
 <li class="chapter" data-level="4.2.2" data-path="week-3.html"><a href="week-3.html#motivation---the-carrot"><i class="fa fa-check"></i><b>4.2.2</b> Motivation - the carrot</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="week-3.html"><a href="week-3.html#project-organization"><i class="fa fa-check"></i><b>4.3</b> Project Organization</a>
-<ul>
+<li class="chapter" data-level="4.3" data-path="week-3.html"><a href="week-3.html#project-organization"><i class="fa fa-check"></i><b>4.3</b> Project Organization</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="week-3.html"><a href="week-3.html#readme.md"><i class="fa fa-check"></i><b>4.3.1</b> README.md</a></li>
 <li class="chapter" data-level="4.3.2" data-path="week-3.html"><a href="week-3.html#gitignore"><i class="fa fa-check"></i><b>4.3.2</b> .gitignore</a></li>
 <li class="chapter" data-level="4.3.3" data-path="week-3.html"><a href="week-3.html#data"><i class="fa fa-check"></i><b>4.3.3</b> data/</a></li>
 <li class="chapter" data-level="4.3.4" data-path="week-3.html"><a href="week-3.html#code"><i class="fa fa-check"></i><b>4.3.4</b> code/</a></li>
-<li class="chapter" data-level="4.3.5" data-path="week-3.html"><a href="week-3.html#figures-1"><i class="fa fa-check"></i><b>4.3.5</b> figures</a></li>
+<li class="chapter" data-level="4.3.5" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>4.3.5</b> figures</a></li>
 <li class="chapter" data-level="4.3.6" data-path="week-3.html"><a href="week-3.html#products"><i class="fa fa-check"></i><b>4.3.6</b> products/</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="week-3.html"><a href="week-3.html#file-naming"><i class="fa fa-check"></i><b>4.4</b> File naming</a></li>
@@ -252,25 +237,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.8" data-path="week-3.html"><a href="week-3.html#coding-style"><i class="fa fa-check"></i><b>4.8</b> Coding style</a></li>
 <li class="chapter" data-level="4.9" data-path="week-3.html"><a href="week-3.html#chain-of-custody-for-data"><i class="fa fa-check"></i><b>4.9</b> Chain of Custody for Data</a></li>
 <li class="chapter" data-level="4.10" data-path="week-3.html"><a href="week-3.html#version-control"><i class="fa fa-check"></i><b>4.10</b> Version Control</a></li>
-<li class="chapter" data-level="4.11" data-path="week-3.html"><a href="week-3.html#additional-resources-2"><i class="fa fa-check"></i><b>4.11</b> Additional Resources</a></li>
-<li class="chapter" data-level="4.12" data-path="week-3.html"><a href="week-3.html#homework-2"><i class="fa fa-check"></i><b>4.12</b> Homework</a></li>
+<li class="chapter" data-level="4.11" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>4.11</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.12" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>4.12</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="week-4.html"><a href="week-4.html"><i class="fa fa-check"></i><b>5</b> Week 4</a>
-<ul>
+<li class="chapter" data-level="5" data-path="week-4.html"><a href="week-4.html"><i class="fa fa-check"></i><b>5</b> Week 4</a><ul>
 <li class="chapter" data-level="5.1" data-path="week-4.html"><a href="week-4.html#week-4-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Week 4 Learning Objectives</a></li>
 <li class="chapter" data-level="5.2" data-path="week-4.html"><a href="week-4.html#the-optimality-paradox"><i class="fa fa-check"></i><b>5.2</b> The optimality paradox</a></li>
-<li class="chapter" data-level="5.3" data-path="week-4.html"><a href="week-4.html#an-example-of-the-art-of-data-science"><i class="fa fa-check"></i><b>5.3</b> An example of the art of data science</a>
-<ul>
+<li class="chapter" data-level="5.3" data-path="week-4.html"><a href="week-4.html#an-example-of-the-art-of-data-science"><i class="fa fa-check"></i><b>5.3</b> An example of the art of data science</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="week-4.html"><a href="week-4.html#an-important-subtlety---analyst-decisions-change-the-question"><i class="fa fa-check"></i><b>5.3.1</b> An important subtlety - analyst decisions change the question</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a>
-<ul>
-<li class="chapter" data-level="5.4.1" data-path="week-4.html"><a href="week-4.html#reproducibility-2"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
 <li class="chapter" data-level="5.4.2" data-path="week-4.html"><a href="week-4.html#replicability"><i class="fa fa-check"></i><b>5.4.2</b> Replicability</a></li>
 <li class="chapter" data-level="5.4.3" data-path="week-4.html"><a href="week-4.html#false-discovery"><i class="fa fa-check"></i><b>5.4.3</b> False discovery</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="week-4.html"><a href="week-4.html#a-theory-of-data-science-success"><i class="fa fa-check"></i><b>5.5</b> A theory of data science success</a>
-<ul>
+<li class="chapter" data-level="5.5" data-path="week-4.html"><a href="week-4.html#a-theory-of-data-science-success"><i class="fa fa-check"></i><b>5.5</b> A theory of data science success</a><ul>
 <li class="chapter" data-level="5.5.1" data-path="week-4.html"><a href="week-4.html#elements-of-data-science"><i class="fa fa-check"></i><b>5.5.1</b> Elements of Data Science</a></li>
 <li class="chapter" data-level="5.5.2" data-path="week-4.html"><a href="week-4.html#principles-of-data-science"><i class="fa fa-check"></i><b>5.5.2</b> Principles of Data Science</a></li>
 <li class="chapter" data-level="5.5.3" data-path="week-4.html"><a href="week-4.html#data-matching"><i class="fa fa-check"></i><b>5.5.3</b> Data matching</a></li>
@@ -283,15 +264,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6" data-path="week-4.html"><a href="week-4.html#a-successful-data-analysis"><i class="fa fa-check"></i><b>5.6</b> A successful data analysis</a></li>
 <li class="chapter" data-level="5.7" data-path="week-4.html"><a href="week-4.html#constraints-and-expectation-matching"><i class="fa fa-check"></i><b>5.7</b> Constraints and expectation matching</a></li>
 <li class="chapter" data-level="5.8" data-path="week-4.html"><a href="week-4.html#what-about-being-correct"><i class="fa fa-check"></i><b>5.8</b> What about being correct?</a></li>
-<li class="chapter" data-level="5.9" data-path="week-4.html"><a href="week-4.html#additional-resources-3"><i class="fa fa-check"></i><b>5.9</b> Additional Resources</a></li>
-<li class="chapter" data-level="5.10" data-path="week-4.html"><a href="week-4.html#homework-3"><i class="fa fa-check"></i><b>5.10</b> Homework</a></li>
+<li class="chapter" data-level="5.9" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>5.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.10" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>5.10</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="week-5.html"><a href="week-5.html"><i class="fa fa-check"></i><b>6</b> Week 5</a>
-<ul>
+<li class="chapter" data-level="6" data-path="week-5.html"><a href="week-5.html"><i class="fa fa-check"></i><b>6</b> Week 5</a><ul>
 <li class="chapter" data-level="6.1" data-path="week-5.html"><a href="week-5.html#week-5-learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Week 5 Learning Objectives</a></li>
 <li class="chapter" data-level="6.2" data-path="week-5.html"><a href="week-5.html#skepticism-vs.-discovery"><i class="fa fa-check"></i><b>6.2</b> Skepticism vs. Discovery</a></li>
-<li class="chapter" data-level="6.3" data-path="week-5.html"><a href="week-5.html#figures-2"><i class="fa fa-check"></i><b>6.3</b> Figures</a>
-<ul>
+<li class="chapter" data-level="6.3" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>6.3</b> Figures</a><ul>
 <li class="chapter" data-level="6.3.1" data-path="week-5.html"><a href="week-5.html#just-modeling-results---show-the-data"><i class="fa fa-check"></i><b>6.3.1</b> Just modeling results -&gt; show the data!</a></li>
 <li class="chapter" data-level="6.3.2" data-path="week-5.html"><a href="week-5.html#dynamite-plots---scatterplots"><i class="fa fa-check"></i><b>6.3.2</b> Dynamite plots -&gt; scatterplots</a></li>
 <li class="chapter" data-level="6.3.3" data-path="week-5.html"><a href="week-5.html#ridiculograms---clustering-diagrams"><i class="fa fa-check"></i><b>6.3.3</b> Ridiculograms -&gt; clustering diagrams</a></li>
@@ -306,73 +285,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3.12" data-path="week-5.html"><a href="week-5.html#legends-hard-to-follow---use-labels"><i class="fa fa-check"></i><b>6.3.12</b> Legends hard to follow -&gt; use labels</a></li>
 <li class="chapter" data-level="6.3.13" data-path="week-5.html"><a href="week-5.html#confounders-arent-clear---color-by-confounder"><i class="fa fa-check"></i><b>6.3.13</b> Confounders aren’t clear -&gt; color by confounder</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="week-5.html"><a href="week-5.html#common-data-analytic-fallacies"><i class="fa fa-check"></i><b>6.4</b> Common data analytic fallacies</a>
-<ul>
+<li class="chapter" data-level="6.4" data-path="week-5.html"><a href="week-5.html#common-data-analytic-fallacies"><i class="fa fa-check"></i><b>6.4</b> Common data analytic fallacies</a><ul>
 <li class="chapter" data-level="6.4.1" data-path="week-5.html"><a href="week-5.html#spurious-correlation"><i class="fa fa-check"></i><b>6.4.1</b> Spurious correlation</a></li>
 <li class="chapter" data-level="6.4.2" data-path="week-5.html"><a href="week-5.html#outliers"><i class="fa fa-check"></i><b>6.4.2</b> Outliers</a></li>
 <li class="chapter" data-level="6.4.3" data-path="week-5.html"><a href="week-5.html#reversing-cause-and-effect"><i class="fa fa-check"></i><b>6.4.3</b> Reversing Cause and Effect</a></li>
 <li class="chapter" data-level="6.4.4" data-path="week-5.html"><a href="week-5.html#confounders"><i class="fa fa-check"></i><b>6.4.4</b> Confounders</a></li>
 <li class="chapter" data-level="6.4.5" data-path="week-5.html"><a href="week-5.html#simpsons-paradox"><i class="fa fa-check"></i><b>6.4.5</b> Simpson’s Paradox</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="week-5.html"><a href="week-5.html#over-skepticism"><i class="fa fa-check"></i><b>6.5</b> Over-skepticism</a>
-<ul>
+<li class="chapter" data-level="6.5" data-path="week-5.html"><a href="week-5.html#over-skepticism"><i class="fa fa-check"></i><b>6.5</b> Over-skepticism</a><ul>
 <li class="chapter" data-level="6.5.1" data-path="week-5.html"><a href="week-5.html#everything-must-be-causal"><i class="fa fa-check"></i><b>6.5.1</b> Everything must be causal</a></li>
 <li class="chapter" data-level="6.5.2" data-path="week-5.html"><a href="week-5.html#nothing-can-be-causal"><i class="fa fa-check"></i><b>6.5.2</b> Nothing can be causal</a></li>
 <li class="chapter" data-level="6.5.3" data-path="week-5.html"><a href="week-5.html#you-should-answer-my-question-not-yours"><i class="fa fa-check"></i><b>6.5.3</b> You should answer my question, not yours</a></li>
 <li class="chapter" data-level="6.5.4" data-path="week-5.html"><a href="week-5.html#you-used-insert-method-i-dont-use-therefore-the-analysis-is-wrong"><i class="fa fa-check"></i><b>6.5.4</b> You used (insert method I don’t use) therefore the analysis is wrong</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="week-5.html"><a href="week-5.html#additional-resources-4"><i class="fa fa-check"></i><b>6.6</b> Additional Resources</a></li>
-<li class="chapter" data-level="6.7" data-path="week-5.html"><a href="week-5.html#homework-4"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
+<li class="chapter" data-level="6.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>6.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="week-6.html"><a href="week-6.html"><i class="fa fa-check"></i><b>7</b> Week 6</a>
-<ul>
+<li class="chapter" data-level="7" data-path="week-6.html"><a href="week-6.html"><i class="fa fa-check"></i><b>7</b> Week 6</a><ul>
 <li class="chapter" data-level="7.1" data-path="week-6.html"><a href="week-6.html#week-6-learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Week 6 Learning objectives</a></li>
 <li class="chapter" data-level="7.2" data-path="week-6.html"><a href="week-6.html#what-you-wish-data-looked-like"><i class="fa fa-check"></i><b>7.2</b> What you wish data looked like</a></li>
 <li class="chapter" data-level="7.3" data-path="week-6.html"><a href="week-6.html#what-it-actually-looks-like"><i class="fa fa-check"></i><b>7.3</b> What it actually looks like</a></li>
-<li class="chapter" data-level="7.4" data-path="week-6.html"><a href="week-6.html#background-on-getting-data"><i class="fa fa-check"></i><b>7.4</b> Background on getting data</a>
-<ul>
+<li class="chapter" data-level="7.4" data-path="week-6.html"><a href="week-6.html#background-on-getting-data"><i class="fa fa-check"></i><b>7.4</b> Background on getting data</a><ul>
 <li class="chapter" data-level="7.4.1" data-path="week-6.html"><a href="week-6.html#where-do-data-live"><i class="fa fa-check"></i><b>7.4.1</b> Where do data live?</a></li>
 <li class="chapter" data-level="7.4.2" data-path="week-6.html"><a href="week-6.html#best-practices-on-sharing-data"><i class="fa fa-check"></i><b>7.4.2</b> Best practices on sharing data</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="week-6.html"><a href="week-6.html#relative-versus-absolute-paths"><i class="fa fa-check"></i><b>7.5</b> Relative versus absolute paths</a>
-<ul>
+<li class="chapter" data-level="7.5" data-path="week-6.html"><a href="week-6.html#relative-versus-absolute-paths"><i class="fa fa-check"></i><b>7.5</b> Relative versus absolute paths</a><ul>
 <li class="chapter" data-level="7.5.1" data-path="week-6.html"><a href="week-6.html#the-here-package"><i class="fa fa-check"></i><b>7.5.1</b> The <code>here</code> package</a></li>
 <li class="chapter" data-level="7.5.2" data-path="week-6.html"><a href="week-6.html#finding-and-creating-files-locally"><i class="fa fa-check"></i><b>7.5.2</b> Finding and creating files locally</a></li>
 <li class="chapter" data-level="7.5.3" data-path="week-6.html"><a href="week-6.html#downloading-files"><i class="fa fa-check"></i><b>7.5.3</b> Downloading files</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="week-6.html"><a href="week-6.html#reading-files"><i class="fa fa-check"></i><b>7.6</b> Reading files</a>
-<ul>
+<li class="chapter" data-level="7.6" data-path="week-6.html"><a href="week-6.html#reading-files"><i class="fa fa-check"></i><b>7.6</b> Reading files</a><ul>
 <li class="chapter" data-level="7.6.1" data-path="week-6.html"><a href="week-6.html#reading-in-csv-files"><i class="fa fa-check"></i><b>7.6.1</b> Reading in CSV files</a></li>
 <li class="chapter" data-level="7.6.2" data-path="week-6.html"><a href="week-6.html#reading-in-excel-files"><i class="fa fa-check"></i><b>7.6.2</b> Reading in Excel files</a></li>
 <li class="chapter" data-level="7.6.3" data-path="week-6.html"><a href="week-6.html#reading-in-json-files"><i class="fa fa-check"></i><b>7.6.3</b> Reading in JSON Files</a></li>
 <li class="chapter" data-level="7.6.4" data-path="week-6.html"><a href="week-6.html#using-github-api"><i class="fa fa-check"></i><b>7.6.4</b> Using GitHub API</a></li>
 </ul></li>
 <li class="chapter" data-level="7.7" data-path="week-6.html"><a href="week-6.html#google-sheets"><i class="fa fa-check"></i><b>7.7</b> Google Sheets</a></li>
-<li class="chapter" data-level="7.8" data-path="week-6.html"><a href="week-6.html#databases"><i class="fa fa-check"></i><b>7.8</b> Databases</a>
-<ul>
+<li class="chapter" data-level="7.8" data-path="week-6.html"><a href="week-6.html#databases"><i class="fa fa-check"></i><b>7.8</b> Databases</a><ul>
 <li class="chapter" data-level="7.8.1" data-path="week-6.html"><a href="week-6.html#querying-with-dplyr-syntax"><i class="fa fa-check"></i><b>7.8.1</b> Querying with <code>dplyr</code> syntax</a></li>
 <li class="chapter" data-level="7.8.2" data-path="week-6.html"><a href="week-6.html#delayed-execution"><i class="fa fa-check"></i><b>7.8.2</b> Delayed execution</a></li>
 </ul></li>
 <li class="chapter" data-level="7.9" data-path="week-6.html"><a href="week-6.html#apis"><i class="fa fa-check"></i><b>7.9</b> APIs</a></li>
-<li class="chapter" data-level="7.10" data-path="week-6.html"><a href="week-6.html#webscraping"><i class="fa fa-check"></i><b>7.10</b> Webscraping</a>
-<ul>
+<li class="chapter" data-level="7.10" data-path="week-6.html"><a href="week-6.html#webscraping"><i class="fa fa-check"></i><b>7.10</b> Webscraping</a><ul>
 <li class="chapter" data-level="7.10.1" data-path="week-6.html"><a href="week-6.html#css-selectors"><i class="fa fa-check"></i><b>7.10.1</b> CSS Selectors</a></li>
 </ul></li>
 <li class="chapter" data-level="7.11" data-path="week-6.html"><a href="week-6.html#google-ing"><i class="fa fa-check"></i><b>7.11</b> Google-ing</a></li>
-<li class="chapter" data-level="7.12" data-path="week-6.html"><a href="week-6.html#additional-resources-5"><i class="fa fa-check"></i><b>7.12</b> Additional Resources</a></li>
-<li class="chapter" data-level="7.13" data-path="week-6.html"><a href="week-6.html#homework-5"><i class="fa fa-check"></i><b>7.13</b> Homework</a></li>
+<li class="chapter" data-level="7.12" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>7.12</b> Additional Resources</a></li>
+<li class="chapter" data-level="7.13" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>7.13</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="week-7.html"><a href="week-7.html"><i class="fa fa-check"></i><b>8</b> Week 7</a>
-<ul>
+<li class="chapter" data-level="8" data-path="week-7.html"><a href="week-7.html"><i class="fa fa-check"></i><b>8</b> Week 7</a><ul>
 <li class="chapter" data-level="8.1" data-path="week-7.html"><a href="week-7.html#week-7-learning-objectives"><i class="fa fa-check"></i><b>8.1</b> Week 7 Learning objectives</a></li>
-<li class="chapter" data-level="8.2" data-path="week-7.html"><a href="week-7.html#a-framework-for-exploratory-analysis"><i class="fa fa-check"></i><b>8.2</b> A framework for exploratory analysis</a>
-<ul>
+<li class="chapter" data-level="8.2" data-path="week-7.html"><a href="week-7.html#a-framework-for-exploratory-analysis"><i class="fa fa-check"></i><b>8.2</b> A framework for exploratory analysis</a><ul>
 <li class="chapter" data-level="8.2.1" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-question"><i class="fa fa-check"></i><b>8.2.1</b> Do you have the right question?</a></li>
 <li class="chapter" data-level="8.2.2" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-data"><i class="fa fa-check"></i><b>8.2.2</b> Do you have the right data?</a></li>
 <li class="chapter" data-level="8.2.3" data-path="week-7.html"><a href="week-7.html#can-you-sketch-a-solution-to-the-question-you-care-about"><i class="fa fa-check"></i><b>8.2.3</b> Can you sketch a solution to the question you care about?</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="week-7.html"><a href="week-7.html#some-general-eda-principles"><i class="fa fa-check"></i><b>8.3</b> Some general EDA principles</a>
-<ul>
+<li class="chapter" data-level="8.3" data-path="week-7.html"><a href="week-7.html#some-general-eda-principles"><i class="fa fa-check"></i><b>8.3</b> Some general EDA principles</a><ul>
 <li class="chapter" data-level="8.3.1" data-path="week-7.html"><a href="week-7.html#check-the-packaging"><i class="fa fa-check"></i><b>8.3.1</b> Check the packaging</a></li>
 <li class="chapter" data-level="8.3.2" data-path="week-7.html"><a href="week-7.html#rectangle-your-data"><i class="fa fa-check"></i><b>8.3.2</b> Rectangle your data</a></li>
 <li class="chapter" data-level="8.3.3" data-path="week-7.html"><a href="week-7.html#look-at-the-top-and-bottom"><i class="fa fa-check"></i><b>8.3.3</b> Look at the top and bottom</a></li>
@@ -383,14 +351,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.8" data-path="week-7.html"><a href="week-7.html#follow-up"><i class="fa fa-check"></i><b>8.3.8</b> Follow up</a></li>
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="week-7.html"><a href="week-7.html#organizing-an-eda"><i class="fa fa-check"></i><b>8.4</b> Organizing an EDA</a></li>
-<li class="chapter" data-level="8.5" data-path="week-7.html"><a href="week-7.html#additional-resources-6"><i class="fa fa-check"></i><b>8.5</b> Additional Resources</a></li>
-<li class="chapter" data-level="8.6" data-path="week-7.html"><a href="week-7.html#homework-6"><i class="fa fa-check"></i><b>8.6</b> Homework</a></li>
+<li class="chapter" data-level="8.5" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>8.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.6" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>8.6</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="week-8.html"><a href="week-8.html"><i class="fa fa-check"></i><b>9</b> Week 8</a>
-<ul>
+<li class="chapter" data-level="9" data-path="week-8.html"><a href="week-8.html"><i class="fa fa-check"></i><b>9</b> Week 8</a><ul>
 <li class="chapter" data-level="9.1" data-path="week-8.html"><a href="week-8.html#week-8-learning-objectives"><i class="fa fa-check"></i><b>9.1</b> Week 8 Learning objectives</a></li>
-<li class="chapter" data-level="9.2" data-path="week-8.html"><a href="week-8.html#a-framework-for-modeling"><i class="fa fa-check"></i><b>9.2</b> A framework for modeling</a>
-<ul>
+<li class="chapter" data-level="9.2" data-path="week-8.html"><a href="week-8.html#a-framework-for-modeling"><i class="fa fa-check"></i><b>9.2</b> A framework for modeling</a><ul>
 <li class="chapter" data-level="9.2.1" data-path="week-8.html"><a href="week-8.html#identify-your-goal"><i class="fa fa-check"></i><b>9.2.1</b> Identify your goal</a></li>
 <li class="chapter" data-level="9.2.2" data-path="week-8.html"><a href="week-8.html#form-an-analysis-plan"><i class="fa fa-check"></i><b>9.2.2</b> Form an analysis plan</a></li>
 <li class="chapter" data-level="9.2.3" data-path="week-8.html"><a href="week-8.html#model-signal"><i class="fa fa-check"></i><b>9.2.3</b> Model signal</a></li>
@@ -400,22 +366,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.7" data-path="week-8.html"><a href="week-8.html#compare-to-your-analysis-plan"><i class="fa fa-check"></i><b>9.2.7</b> Compare to your analysis plan</a></li>
 <li class="chapter" data-level="9.2.8" data-path="week-8.html"><a href="week-8.html#understand-incentives"><i class="fa fa-check"></i><b>9.2.8</b> Understand incentives</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="week-8.html"><a href="week-8.html#additional-resources-7"><i class="fa fa-check"></i><b>9.3</b> Additional Resources</a></li>
-<li class="chapter" data-level="9.4" data-path="week-8.html"><a href="week-8.html#homework-7"><i class="fa fa-check"></i><b>9.4</b> Homework</a></li>
+<li class="chapter" data-level="9.3" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>9.3</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.4" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>9.4</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="week-9.html"><a href="week-9.html"><i class="fa fa-check"></i><b>10</b> Week 9</a>
-<ul>
+<li class="chapter" data-level="10" data-path="week-9.html"><a href="week-9.html"><i class="fa fa-check"></i><b>10</b> Week 9</a><ul>
 <li class="chapter" data-level="10.1" data-path="week-9.html"><a href="week-9.html#week-9-learning-objectives"><i class="fa fa-check"></i><b>10.1</b> Week 9 Learning objectives</a></li>
-<li class="chapter" data-level="10.2" data-path="week-9.html"><a href="week-9.html#story-telling-in-data-analysis"><i class="fa fa-check"></i><b>10.2</b> Story Telling in Data Analysis</a>
-<ul>
+<li class="chapter" data-level="10.2" data-path="week-9.html"><a href="week-9.html#story-telling-in-data-analysis"><i class="fa fa-check"></i><b>10.2</b> Story Telling in Data Analysis</a><ul>
 <li class="chapter" data-level="10.2.1" data-path="week-9.html"><a href="week-9.html#the-central-dramatic-argument"><i class="fa fa-check"></i><b>10.2.1</b> The Central Dramatic Argument</a></li>
 <li class="chapter" data-level="10.2.2" data-path="week-9.html"><a href="week-9.html#thematic-structure-and-causality"><i class="fa fa-check"></i><b>10.2.2</b> Thematic structure and causality</a></li>
 <li class="chapter" data-level="10.2.3" data-path="week-9.html"><a href="week-9.html#format"><i class="fa fa-check"></i><b>10.2.3</b> Format</a></li>
 <li class="chapter" data-level="10.2.4" data-path="week-9.html"><a href="week-9.html#trust-and-belief"><i class="fa fa-check"></i><b>10.2.4</b> Trust and Belief</a></li>
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="week-9.html"><a href="week-9.html#the-journey-to-interesting-and-true"><i class="fa fa-check"></i><b>10.3</b> The journey to interesting and true</a></li>
-<li class="chapter" data-level="10.4" data-path="week-9.html"><a href="week-9.html#data-analysis-papers"><i class="fa fa-check"></i><b>10.4</b> Data Analysis Papers</a>
-<ul>
+<li class="chapter" data-level="10.4" data-path="week-9.html"><a href="week-9.html#data-analysis-papers"><i class="fa fa-check"></i><b>10.4</b> Data Analysis Papers</a><ul>
 <li class="chapter" data-level="10.4.1" data-path="week-9.html"><a href="week-9.html#how-do-you-know-when-to-start-writing"><i class="fa fa-check"></i><b>10.4.1</b> How do you know when to start writing?</a></li>
 <li class="chapter" data-level="10.4.2" data-path="week-9.html"><a href="week-9.html#structure"><i class="fa fa-check"></i><b>10.4.2</b> Structure</a></li>
 <li class="chapter" data-level="10.4.3" data-path="week-9.html"><a href="week-9.html#titles"><i class="fa fa-check"></i><b>10.4.3</b> Titles</a></li>
@@ -427,15 +390,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.4.9" data-path="week-9.html"><a href="week-9.html#supplementary-material"><i class="fa fa-check"></i><b>10.4.9</b> Supplementary material</a></li>
 </ul></li>
 <li class="chapter" data-level="10.5" data-path="week-9.html"><a href="week-9.html#a-few-matters-of-form"><i class="fa fa-check"></i><b>10.5</b> A few matters of form</a></li>
-<li class="chapter" data-level="10.6" data-path="week-9.html"><a href="week-9.html#additional-resources-8"><i class="fa fa-check"></i><b>10.6</b> Additional Resources</a></li>
-<li class="chapter" data-level="10.7" data-path="week-9.html"><a href="week-9.html#homework-8"><i class="fa fa-check"></i><b>10.7</b> Homework</a></li>
+<li class="chapter" data-level="10.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>10.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="10.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>10.7</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="week-10.html"><a href="week-10.html"><i class="fa fa-check"></i><b>11</b> Week 10</a>
-<ul>
+<li class="chapter" data-level="11" data-path="week-10.html"><a href="week-10.html"><i class="fa fa-check"></i><b>11</b> Week 10</a><ul>
 <li class="chapter" data-level="11.1" data-path="week-10.html"><a href="week-10.html#week-10-learning-objectives"><i class="fa fa-check"></i><b>11.1</b> Week 10 Learning objectives</a></li>
 <li class="chapter" data-level="11.2" data-path="week-10.html"><a href="week-10.html#exploratoy-vs-expository"><i class="fa fa-check"></i><b>11.2</b> Exploratoy vs expository</a></li>
-<li class="chapter" data-level="11.3" data-path="week-10.html"><a href="week-10.html#creating-expository-graphs"><i class="fa fa-check"></i><b>11.3</b> Creating Expository Graphs</a>
-<ul>
+<li class="chapter" data-level="11.3" data-path="week-10.html"><a href="week-10.html#creating-expository-graphs"><i class="fa fa-check"></i><b>11.3</b> Creating Expository Graphs</a><ul>
 <li class="chapter" data-level="11.3.1" data-path="week-10.html"><a href="week-10.html#background-color"><i class="fa fa-check"></i><b>11.3.1</b> Background color</a></li>
 <li class="chapter" data-level="11.3.2" data-path="week-10.html"><a href="week-10.html#axis-titles-and-axis-labels"><i class="fa fa-check"></i><b>11.3.2</b> Axis titles and axis labels</a></li>
 <li class="chapter" data-level="11.3.3" data-path="week-10.html"><a href="week-10.html#legends-or-not"><i class="fa fa-check"></i><b>11.3.3</b> Legends (or not!)</a></li>
@@ -446,117 +407,125 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.3.8" data-path="week-10.html"><a href="week-10.html#multi-panel-plots"><i class="fa fa-check"></i><b>11.3.8</b> Multi-panel plots</a></li>
 <li class="chapter" data-level="11.3.9" data-path="week-10.html"><a href="week-10.html#miscellaneous-advice"><i class="fa fa-check"></i><b>11.3.9</b> Miscellaneous Advice</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="week-10.html"><a href="week-10.html#creating-expository-tables"><i class="fa fa-check"></i><b>11.4</b> Creating Expository Tables</a>
-<ul>
+<li class="chapter" data-level="11.4" data-path="week-10.html"><a href="week-10.html#creating-expository-tables"><i class="fa fa-check"></i><b>11.4</b> Creating Expository Tables</a><ul>
 <li class="chapter" data-level="11.4.1" data-path="week-10.html"><a href="week-10.html#table-1"><i class="fa fa-check"></i><b>11.4.1</b> Table 1</a></li>
 <li class="chapter" data-level="11.4.2" data-path="week-10.html"><a href="week-10.html#color-in-tables"><i class="fa fa-check"></i><b>11.4.2</b> Color in tables</a></li>
 <li class="chapter" data-level="11.4.3" data-path="week-10.html"><a href="week-10.html#captions"><i class="fa fa-check"></i><b>11.4.3</b> Captions</a></li>
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="week-10.html"><a href="week-10.html#scientific-graphics-vs-infographics"><i class="fa fa-check"></i><b>11.5</b> Scientific graphics vs infographics</a></li>
-<li class="chapter" data-level="11.6" data-path="week-10.html"><a href="week-10.html#additional-resources-9"><i class="fa fa-check"></i><b>11.6</b> Additional Resources</a></li>
-<li class="chapter" data-level="11.7" data-path="week-10.html"><a href="week-10.html#homework-9"><i class="fa fa-check"></i><b>11.7</b> Homework</a></li>
+<li class="chapter" data-level="11.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>11.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="11.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>11.7</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="week-11.html"><a href="week-11.html"><i class="fa fa-check"></i><b>12</b> Week 11</a>
-<ul>
+<li class="chapter" data-level="12" data-path="week-11.html"><a href="week-11.html"><i class="fa fa-check"></i><b>12</b> Week 11</a><ul>
 <li class="chapter" data-level="12.1" data-path="week-11.html"><a href="week-11.html#week-11-learning-objectives"><i class="fa fa-check"></i><b>12.1</b> Week 11 Learning objectives</a></li>
 <li class="chapter" data-level="12.2" data-path="week-11.html"><a href="week-11.html#methodology-vs-data-analysis"><i class="fa fa-check"></i><b>12.2</b> Methodology vs Data Analysis</a></li>
-<li class="chapter" data-level="12.3" data-path="week-11.html"><a href="week-11.html#the-sections-of-a-methodological-paper"><i class="fa fa-check"></i><b>12.3</b> The sections of a methodological paper</a>
-<ul>
-<li class="chapter" data-level="12.3.1" data-path="week-11.html"><a href="week-11.html#abstracts-1"><i class="fa fa-check"></i><b>12.3.1</b> Abstracts</a></li>
-<li class="chapter" data-level="12.3.2" data-path="week-11.html"><a href="week-11.html#introductions-1"><i class="fa fa-check"></i><b>12.3.2</b> Introductions</a></li>
+<li class="chapter" data-level="12.3" data-path="week-11.html"><a href="week-11.html#the-sections-of-a-methodological-paper"><i class="fa fa-check"></i><b>12.3</b> The sections of a methodological paper</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="week-9.html"><a href="week-9.html#abstracts"><i class="fa fa-check"></i><b>12.3.1</b> Abstracts</a></li>
+<li class="chapter" data-level="12.3.2" data-path="week-9.html"><a href="week-9.html#introductions"><i class="fa fa-check"></i><b>12.3.2</b> Introductions</a></li>
 <li class="chapter" data-level="12.3.3" data-path="week-11.html"><a href="week-11.html#description-of-your-method"><i class="fa fa-check"></i><b>12.3.3</b> Description of your method</a></li>
 <li class="chapter" data-level="12.3.4" data-path="week-11.html"><a href="week-11.html#simulation-results"><i class="fa fa-check"></i><b>12.3.4</b> Simulation results</a></li>
 <li class="chapter" data-level="12.3.5" data-path="week-11.html"><a href="week-11.html#empirical-results"><i class="fa fa-check"></i><b>12.3.5</b> Empirical results</a></li>
-<li class="chapter" data-level="12.3.6" data-path="week-11.html"><a href="week-11.html#conclusions-and-discussion-1"><i class="fa fa-check"></i><b>12.3.6</b> Conclusions and discussion</a></li>
+<li class="chapter" data-level="12.3.6" data-path="week-9.html"><a href="week-9.html#conclusions-and-discussion"><i class="fa fa-check"></i><b>12.3.6</b> Conclusions and discussion</a></li>
 </ul></li>
 <li class="chapter" data-level="12.4" data-path="week-11.html"><a href="week-11.html#comparisons"><i class="fa fa-check"></i><b>12.4</b> Comparisons</a></li>
 <li class="chapter" data-level="12.5" data-path="week-11.html"><a href="week-11.html#transparency"><i class="fa fa-check"></i><b>12.5</b> Transparency</a></li>
 <li class="chapter" data-level="12.6" data-path="week-11.html"><a href="week-11.html#software"><i class="fa fa-check"></i><b>12.6</b> Software</a></li>
-<li class="chapter" data-level="12.7" data-path="week-11.html"><a href="week-11.html#additional-resources-10"><i class="fa fa-check"></i><b>12.7</b> Additional Resources</a></li>
-<li class="chapter" data-level="12.8" data-path="week-11.html"><a href="week-11.html#homework-10"><i class="fa fa-check"></i><b>12.8</b> Homework</a></li>
+<li class="chapter" data-level="12.7" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>12.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.8" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>12.8</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="week-12.html"><a href="week-12.html"><i class="fa fa-check"></i><b>13</b> Week 12</a>
-<ul>
+<li class="chapter" data-level="13" data-path="week-12.html"><a href="week-12.html"><i class="fa fa-check"></i><b>13</b> Week 12</a><ul>
 <li class="chapter" data-level="13.1" data-path="week-12.html"><a href="week-12.html#week-12-learning-objectives"><i class="fa fa-check"></i><b>13.1</b> Week 12 Learning objectives</a></li>
-<li class="chapter" data-level="13.2" data-path="week-12.html"><a href="week-12.html#why-give-data-analytic-presentations"><i class="fa fa-check"></i><b>13.2</b> Why give data analytic presentations?</a>
-<ul>
+<li class="chapter" data-level="13.2" data-path="week-12.html"><a href="week-12.html#why-give-data-analytic-presentations"><i class="fa fa-check"></i><b>13.2</b> Why give data analytic presentations?</a><ul>
 <li class="chapter" data-level="13.2.1" data-path="week-12.html"><a href="week-12.html#why-is-this-part-of-advanced-data-science"><i class="fa fa-check"></i><b>13.2.1</b> Why is this part of advanced data science?</a></li>
 </ul></li>
 <li class="chapter" data-level="13.3" data-path="week-12.html"><a href="week-12.html#types-of-data-analytic-presentations"><i class="fa fa-check"></i><b>13.3</b> Types of data analytic presentations</a></li>
-<li class="chapter" data-level="13.4" data-path="week-12.html"><a href="week-12.html#structure-of-your-talk"><i class="fa fa-check"></i><b>13.4</b> Structure of your talk</a>
-<ul>
+<li class="chapter" data-level="13.4" data-path="week-12.html"><a href="week-12.html#structure-of-your-talk"><i class="fa fa-check"></i><b>13.4</b> Structure of your talk</a><ul>
 <li class="chapter" data-level="13.4.1" data-path="week-12.html"><a href="week-12.html#flash-talk-structure"><i class="fa fa-check"></i><b>13.4.1</b> Flash talk structure</a></li>
 <li class="chapter" data-level="13.4.2" data-path="week-12.html"><a href="week-12.html#short-form-talk-structure"><i class="fa fa-check"></i><b>13.4.2</b> Short form talk structure</a></li>
 <li class="chapter" data-level="13.4.3" data-path="week-12.html"><a href="week-12.html#long-form-talk-structure"><i class="fa fa-check"></i><b>13.4.3</b> Long form talk structure</a></li>
 </ul></li>
-<li class="chapter" data-level="13.5" data-path="week-12.html"><a href="week-12.html#slide-style"><i class="fa fa-check"></i><b>13.5</b> Slide style</a>
-<ul>
+<li class="chapter" data-level="13.5" data-path="week-12.html"><a href="week-12.html#slide-style"><i class="fa fa-check"></i><b>13.5</b> Slide style</a><ul>
 <li class="chapter" data-level="13.5.1" data-path="week-12.html"><a href="week-12.html#text"><i class="fa fa-check"></i><b>13.5.1</b> Text</a></li>
 <li class="chapter" data-level="13.5.2" data-path="week-12.html"><a href="week-12.html#fonts"><i class="fa fa-check"></i><b>13.5.2</b> Fonts</a></li>
 <li class="chapter" data-level="13.5.3" data-path="week-12.html"><a href="week-12.html#size"><i class="fa fa-check"></i><b>13.5.3</b> Size</a></li>
 <li class="chapter" data-level="13.5.4" data-path="week-12.html"><a href="week-12.html#colors"><i class="fa fa-check"></i><b>13.5.4</b> Colors</a></li>
 <li class="chapter" data-level="13.5.5" data-path="week-12.html"><a href="week-12.html#alignment"><i class="fa fa-check"></i><b>13.5.5</b> Alignment</a></li>
 </ul></li>
-<li class="chapter" data-level="13.6" data-path="week-12.html"><a href="week-12.html#presenting"><i class="fa fa-check"></i><b>13.6</b> Presenting</a>
-<ul>
+<li class="chapter" data-level="13.6" data-path="week-12.html"><a href="week-12.html#presenting"><i class="fa fa-check"></i><b>13.6</b> Presenting</a><ul>
 <li class="chapter" data-level="13.6.1" data-path="week-12.html"><a href="week-12.html#be-prepared"><i class="fa fa-check"></i><b>13.6.1</b> Be prepared</a></li>
 </ul></li>
 <li class="chapter" data-level="13.7" data-path="week-12.html"><a href="week-12.html#equations"><i class="fa fa-check"></i><b>13.7</b> Equations</a></li>
-<li class="chapter" data-level="13.8" data-path="week-12.html"><a href="week-12.html#figures-3"><i class="fa fa-check"></i><b>13.8</b> Figures</a></li>
+<li class="chapter" data-level="13.8" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>13.8</b> Figures</a></li>
 <li class="chapter" data-level="13.9" data-path="week-12.html"><a href="week-12.html#job-talk-specific-issues"><i class="fa fa-check"></i><b>13.9</b> Job talk specific issues</a></li>
-<li class="chapter" data-level="13.10" data-path="week-12.html"><a href="week-12.html#answering-hard-questions"><i class="fa fa-check"></i><b>13.10</b> Answering hard questions</a>
-<ul>
+<li class="chapter" data-level="13.10" data-path="week-12.html"><a href="week-12.html#answering-hard-questions"><i class="fa fa-check"></i><b>13.10</b> Answering hard questions</a><ul>
 <li class="chapter" data-level="13.10.1" data-path="week-12.html"><a href="week-12.html#that-one-person-who-keeps-going-bonkers-on-you"><i class="fa fa-check"></i><b>13.10.1</b> That one person who keeps going bonkers on you</a></li>
 </ul></li>
 <li class="chapter" data-level="13.11" data-path="week-12.html"><a href="week-12.html#finishing-on-time"><i class="fa fa-check"></i><b>13.11</b> Finishing on time</a></li>
 <li class="chapter" data-level="13.12" data-path="week-12.html"><a href="week-12.html#where-you-should-put-your-talk"><i class="fa fa-check"></i><b>13.12</b> Where you should put your talk</a></li>
-<li class="chapter" data-level="13.13" data-path="week-12.html"><a href="week-12.html#example-presentation-methods"><i class="fa fa-check"></i><b>13.13</b> Example Presentation: Methods</a>
-<ul>
+<li class="chapter" data-level="13.13" data-path="week-12.html"><a href="week-12.html#example-presentation-methods"><i class="fa fa-check"></i><b>13.13</b> Example Presentation: Methods</a><ul>
 <li class="chapter" data-level="13.13.1" data-path="week-12.html"><a href="week-12.html#talk-outline"><i class="fa fa-check"></i><b>13.13.1</b> Talk Outline</a></li>
 <li class="chapter" data-level="13.13.2" data-path="week-12.html"><a href="week-12.html#slide-design"><i class="fa fa-check"></i><b>13.13.2</b> Slide Design</a></li>
 <li class="chapter" data-level="13.13.3" data-path="week-12.html"><a href="week-12.html#presentation"><i class="fa fa-check"></i><b>13.13.3</b> Presentation</a></li>
 </ul></li>
-<li class="chapter" data-level="13.14" data-path="week-12.html"><a href="week-12.html#example-presentation-analysis"><i class="fa fa-check"></i><b>13.14</b> Example Presentation: Analysis</a>
-<ul>
+<li class="chapter" data-level="13.14" data-path="week-12.html"><a href="week-12.html#example-presentation-analysis"><i class="fa fa-check"></i><b>13.14</b> Example Presentation: Analysis</a><ul>
 <li class="chapter" data-level="13.14.1" data-path="week-12.html"><a href="week-12.html#talk-outline-1"><i class="fa fa-check"></i><b>13.14.1</b> Talk Outline</a></li>
 <li class="chapter" data-level="13.14.2" data-path="week-12.html"><a href="week-12.html#slide-design-1"><i class="fa fa-check"></i><b>13.14.2</b> Slide Design</a></li>
 <li class="chapter" data-level="13.14.3" data-path="week-12.html"><a href="week-12.html#presentation-1"><i class="fa fa-check"></i><b>13.14.3</b> Presentation</a></li>
 </ul></li>
-<li class="chapter" data-level="13.15" data-path="week-12.html"><a href="week-12.html#presenting-to-a-general-audience"><i class="fa fa-check"></i><b>13.15</b> Presenting to a General Audience</a>
-<ul>
+<li class="chapter" data-level="13.15" data-path="week-12.html"><a href="week-12.html#presenting-to-a-general-audience"><i class="fa fa-check"></i><b>13.15</b> Presenting to a General Audience</a><ul>
 <li class="chapter" data-level="13.15.1" data-path="week-12.html"><a href="week-12.html#the-goal"><i class="fa fa-check"></i><b>13.15.1</b> The Goal</a></li>
 <li class="chapter" data-level="13.15.2" data-path="week-12.html"><a href="week-12.html#general-presentation-example"><i class="fa fa-check"></i><b>13.15.2</b> General Presentation Example</a></li>
 </ul></li>
-<li class="chapter" data-level="13.16" data-path="week-12.html"><a href="week-12.html#presenting-to-a-technical-audience"><i class="fa fa-check"></i><b>13.16</b> Presenting to a Technical Audience</a>
-<ul>
+<li class="chapter" data-level="13.16" data-path="week-12.html"><a href="week-12.html#presenting-to-a-technical-audience"><i class="fa fa-check"></i><b>13.16</b> Presenting to a Technical Audience</a><ul>
 <li class="chapter" data-level="13.16.1" data-path="week-12.html"><a href="week-12.html#the-goal-1"><i class="fa fa-check"></i><b>13.16.1</b> The Goal</a></li>
 <li class="chapter" data-level="13.16.2" data-path="week-12.html"><a href="week-12.html#technical-presentation-example"><i class="fa fa-check"></i><b>13.16.2</b> Technical Presentation Example</a></li>
 <li class="chapter" data-level="13.16.3" data-path="week-12.html"><a href="week-12.html#general-vs-technical"><i class="fa fa-check"></i><b>13.16.3</b> General vs Technical</a></li>
 </ul></li>
-<li class="chapter" data-level="13.17" data-path="week-12.html"><a href="week-12.html#additional-resources-11"><i class="fa fa-check"></i><b>13.17</b> Additional Resources</a></li>
-<li class="chapter" data-level="13.18" data-path="week-12.html"><a href="week-12.html#homework-11"><i class="fa fa-check"></i><b>13.18</b> Homework</a></li>
+<li class="chapter" data-level="13.17" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>13.17</b> Additional Resources</a></li>
+<li class="chapter" data-level="13.18" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>13.18</b> Homework</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="week-13.html"><a href="week-13.html"><i class="fa fa-check"></i><b>14</b> Week 13</a>
-<ul>
+<li class="chapter" data-level="14" data-path="week-13.html"><a href="week-13.html"><i class="fa fa-check"></i><b>14</b> Week 13</a><ul>
 <li class="chapter" data-level="14.1" data-path="week-13.html"><a href="week-13.html#week-13-learning-objectives"><i class="fa fa-check"></i><b>14.1</b> Week 13 Learning objectives</a></li>
 <li class="chapter" data-level="14.2" data-path="week-13.html"><a href="week-13.html#introduction"><i class="fa fa-check"></i><b>14.2</b> Introduction</a></li>
 <li class="chapter" data-level="14.3" data-path="week-13.html"><a href="week-13.html#basic-data-analytic-iteration"><i class="fa fa-check"></i><b>14.3</b> Basic Data Analytic Iteration</a></li>
-<li class="chapter" data-level="14.4" data-path="week-13.html"><a href="week-13.html#statistical-methods-systems"><i class="fa fa-check"></i><b>14.4</b> Statistical Methods Systems</a>
-<ul>
+<li class="chapter" data-level="14.4" data-path="week-13.html"><a href="week-13.html#statistical-methods-systems"><i class="fa fa-check"></i><b>14.4</b> Statistical Methods Systems</a><ul>
 <li class="chapter" data-level="14.4.1" data-path="week-13.html"><a href="week-13.html#example-a-simple-linear-model-system"><i class="fa fa-check"></i><b>14.4.1</b> Example: A Simple Linear Model System</a></li>
 </ul></li>
-<li class="chapter" data-level="14.5" data-path="week-13.html"><a href="week-13.html#sec:expectations"><i class="fa fa-check"></i><b>14.5</b> The Set of Expected Outcomes</a>
-<ul>
+<li class="chapter" data-level="14.5" data-path="week-13.html"><a href="week-13.html#sec:expectations"><i class="fa fa-check"></i><b>14.5</b> The Set of Expected Outcomes</a><ul>
 <li class="chapter" data-level="14.5.1" data-path="week-13.html"><a href="week-13.html#sec:expectedmean"><i class="fa fa-check"></i><b>14.5.1</b> Example: Expected Outcomes for the Sample Mean</a></li>
 </ul></li>
 <li class="chapter" data-level="14.6" data-path="week-13.html"><a href="week-13.html#sec:faultpoints"><i class="fa fa-check"></i><b>14.6</b> Anomaly Space</a></li>
-<li class="chapter" data-level="14.7" data-path="week-13.html"><a href="week-13.html#debugging-anomalies"><i class="fa fa-check"></i><b>14.7</b> Debugging Anomalies</a>
-<ul>
+<li class="chapter" data-level="14.7" data-path="week-13.html"><a href="week-13.html#debugging-anomalies"><i class="fa fa-check"></i><b>14.7</b> Debugging Anomalies</a><ul>
 <li class="chapter" data-level="14.7.1" data-path="week-13.html"><a href="week-13.html#basic-example"><i class="fa fa-check"></i><b>14.7.1</b> Basic Example</a></li>
 <li class="chapter" data-level="14.7.2" data-path="week-13.html"><a href="week-13.html#example-debugging-a-simple-linear-model-system"><i class="fa fa-check"></i><b>14.7.2</b> Example: Debugging a Simple Linear Model System</a></li>
 </ul></li>
 <li class="chapter" data-level="14.8" data-path="week-13.html"><a href="week-13.html#summarizing-root-causes"><i class="fa fa-check"></i><b>14.8</b> Summarizing Root Causes</a></li>
-<li class="chapter" data-level="14.9" data-path="week-13.html"><a href="week-13.html#homework-12"><i class="fa fa-check"></i><b>14.9</b> Homework</a></li>
+<li class="chapter" data-level="14.9" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>14.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="week-14.html"><a href="week-14.html"><i class="fa fa-check"></i><b>15</b> Week 14</a><ul>
+<li class="chapter" data-level="15.1" data-path="week-14.html"><a href="week-14.html#week-14-learning-objectives"><i class="fa fa-check"></i><b>15.1</b> Week 14 Learning objectives</a></li>
+<li class="chapter" data-level="15.2" data-path="week-14.html"><a href="week-14.html#what-does-collaboration-mean"><i class="fa fa-check"></i><b>15.2</b> What does collaboration mean?</a></li>
+<li class="chapter" data-level="15.3" data-path="week-14.html"><a href="week-14.html#the-reviewing-relationship"><i class="fa fa-check"></i><b>15.3</b> The reviewing relationship</a><ul>
+<li class="chapter" data-level="15.3.1" data-path="week-14.html"><a href="week-14.html#do"><i class="fa fa-check"></i><b>15.3.1</b> Do</a></li>
+<li class="chapter" data-level="15.3.2" data-path="week-14.html"><a href="week-14.html#dont"><i class="fa fa-check"></i><b>15.3.2</b> Don’t</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="week-14.html"><a href="week-14.html#the-consulting-relationship"><i class="fa fa-check"></i><b>15.4</b> The consulting relationship</a><ul>
+<li class="chapter" data-level="15.4.1" data-path="week-14.html"><a href="week-14.html#what-am-i-paying-you-for"><i class="fa fa-check"></i><b>15.4.1</b> What am I paying you for?</a></li>
+<li class="chapter" data-level="15.4.2" data-path="week-14.html"><a href="week-14.html#authorship-and-credit-issues"><i class="fa fa-check"></i><b>15.4.2</b> Authorship and credit issues</a></li>
+<li class="chapter" data-level="15.4.3" data-path="week-14.html"><a href="week-14.html#but-this-is-just-so-important-for-science"><i class="fa fa-check"></i><b>15.4.3</b> But this is just so important for science…</a></li>
+<li class="chapter" data-level="15.4.4" data-path="week-14.html"><a href="week-14.html#this-should-be-really-quick"><i class="fa fa-check"></i><b>15.4.4</b> This should be really quick</a></li>
+<li class="chapter" data-level="15.4.5" data-path="week-14.html"><a href="week-14.html#do-1"><i class="fa fa-check"></i><b>15.4.5</b> Do</a></li>
+<li class="chapter" data-level="15.4.6" data-path="week-14.html"><a href="week-14.html#dont-1"><i class="fa fa-check"></i><b>15.4.6</b> Don’t</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="week-14.html"><a href="week-14.html#the-collaborative-relationship"><i class="fa fa-check"></i><b>15.5</b> The collaborative relationship</a><ul>
+<li class="chapter" data-level="15.5.1" data-path="week-14.html"><a href="week-14.html#finding-good-collaborators"><i class="fa fa-check"></i><b>15.5.1</b> Finding Good Collaborators</a></li>
+<li class="chapter" data-level="15.5.2" data-path="week-14.html"><a href="week-14.html#care-and-feeding-of-your-collaborators"><i class="fa fa-check"></i><b>15.5.2</b> Care and feeding of your collaborators</a></li>
+<li class="chapter" data-level="15.5.3" data-path="week-14.html"><a href="week-14.html#a-collaboration-is-a-relationship"><i class="fa fa-check"></i><b>15.5.3</b> A collaboration is a relationship</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="week-14.html"><a href="week-14.html#a-shared-vision"><i class="fa fa-check"></i><b>15.6</b> A shared vision</a></li>
+<li class="chapter" data-level="15.7" data-path="week-14.html"><a href="week-14.html#sharing-work"><i class="fa fa-check"></i><b>15.7</b> Sharing work</a></li>
+<li class="chapter" data-level="15.8" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>15.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="15.9" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>15.9</b> Homework</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -578,9 +547,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-12" class="section level1" number="13">
+<div id="week-12" class="section level1">
 <h1><span class="header-section-number">13</span> Week 12</h1>
-<div id="week-12-learning-objectives" class="section level2" number="13.1">
+<div id="week-12-learning-objectives" class="section level2">
 <h2><span class="header-section-number">13.1</span> Week 12 Learning objectives</h2>
 <div class="keyidea">
 <p>At the end of this lesson you will be able to:</p>
@@ -593,7 +562,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p><em>This lecture borrows significantly from <a href="http://www.shanellis.com/">Shannon Ellis’</a> excellent work in creating the lectures for <a href="https://leanpub.com/universities/courses/jhu/cbds-communication">Written and Oral Communication in Data Science</a>.</em></p>
 </div>
-<div id="why-give-data-analytic-presentations" class="section level2" number="13.2">
+<div id="why-give-data-analytic-presentations" class="section level2">
 <h2><span class="header-section-number">13.2</span> Why give data analytic presentations?</h2>
 <p>When you are first starting out you should accept pretty much every opportunity to speak about your research you get. In approximate order of importance, the value of talks early in your career are:</p>
 <ol style="list-style-type: decimal">
@@ -612,12 +581,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>If you entertain people <strong>they might go read your paper/use your code</strong> which is the best way to achieve goal 3.</li>
 </ul>
 <p>That being said, be very careful to avoid giving a <a href="https://www.ted.com/talks/browse">TED talk</a> (unless you are giving a Ted talk!). If you are giving a scientific presentation the goal is to communicate scientific ideas. So while you are entertaining, don’t forget why you are entertaining.</p>
-<div id="why-is-this-part-of-advanced-data-science" class="section level3" number="13.2.1">
+<div id="why-is-this-part-of-advanced-data-science" class="section level3">
 <h3><span class="header-section-number">13.2.1</span> Why is this part of advanced data science?</h3>
 <p>The technical components of data science (statistics, computing, databases, etc.) are usually the first things you learn in the field. You might take a course in R programming or in biostatistics to learn how to fit regression models. There is sometimes the mistaken impression when you are taught these tools for the first time that because data science is empirical it means that it isn’t a human enterprise. But as we discussed in Week 9, the more advanced you become in data analysis, the more it becomes a communication artform. Just as with written data analyses, it is critical that you are able to convey your data analysis message in oral presentations. Without effective communication the technical, statistical, and computational analyses you perform will not have any impact.</p>
 </div>
 </div>
-<div id="types-of-data-analytic-presentations" class="section level2" number="13.3">
+<div id="types-of-data-analytic-presentations" class="section level2">
 <h2><span class="header-section-number">13.3</span> Types of data analytic presentations</h2>
 <p>There are a few different types of data analytic presentations that you will give over the course of your career. The big categories include:</p>
 <ul>
@@ -652,7 +621,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>There are three “typical” lengths with a little bit of wiggle room on the exact timing: flash (2-5 minutes), short form conference talks or research group updates (15-20 min), and long form seminar talks (50min-1hr). While this description is pretty specific to academic style talks; getting good at each of these forms of presentation is critical, whether you are in academia, industry or government.</p>
 <p>Elevator pitches in industry, like flash talks in academia, are how you get your foot in the door with potential funders, collaborators, employees, employers, or bosses. Short form talks are a part of updates whether you are in a research group or as a part of a presentation to your management teams. Long form talks are probably a little less common in industry (based on my convenience sample of industry folks) but it is worth learning how to present well anyway in case you want to end up on the keynote lecture circuit and raise your profile in industry.</p>
 </div>
-<div id="structure-of-your-talk" class="section level2" number="13.4">
+<div id="structure-of-your-talk" class="section level2">
 <h2><span class="header-section-number">13.4</span> Structure of your talk</h2>
 <p>The biggest trap in giving a talk is assuming that other people will follow you because you follow the talk. In general it is always better to assume your audience knows less than you think they do. People like to feel smart. I have rarely heard complaints about people who went too basic in their explanations, but frequently hear complaints about people being lost. That being said, here are some structural tips. Your mileage may vary.</p>
 <ul>
@@ -662,7 +631,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>When presenting results, make sure you are telling a story.</li>
 </ul>
 <p>The last point is particularly important. Usually by the results section people are getting a little antsy. So a completely disparate set of results with little story behind them is going to drive people bonkers. Make sure you explain up front where the results are going (e.g. “Results will show our method is the fastest/most accurate/best ever”), then make sure that your results are divided into sections by what point they are making and organized just like they would be if you were telling a story.</p>
-<div id="flash-talk-structure" class="section level3" number="13.4.1">
+<div id="flash-talk-structure" class="section level3">
 <h3><span class="header-section-number">13.4.1</span> Flash talk structure</h3>
 <p>As a person who has been stuck in a large number of interminable flash talks, the main piece of structural advice is to not go long! Typically a flash talk will consist of between 2-5 slides.</p>
 <ul>
@@ -672,7 +641,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>A key problem people often run into with flash talks (as they are often required to introduce yourself generally to an audience) is that they try to cover too much ground. A flash talk should only have one take home message.</p>
 </div>
-<div id="short-form-talk-structure" class="section level3" number="13.4.2">
+<div id="short-form-talk-structure" class="section level3">
 <h3><span class="header-section-number">13.4.2</span> Short form talk structure</h3>
 <p>In 15 minutes you have very little time to get into detail. Typically you might expand the scope of your talk into:</p>
 <ul>
@@ -684,7 +653,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>A shorter conference talk may have a couple of key messages, but with this little time, you will likely not have any room to get into detail. The purpose of the talk is to get the audience hooked so that they will read whatever follow up material you point them to, approach you and talk to you after the conference, or invite you to speak in a longer form format.</p>
 </div>
-<div id="long-form-talk-structure" class="section level3" number="13.4.3">
+<div id="long-form-talk-structure" class="section level3">
 <h3><span class="header-section-number">13.4.3</span> Long form talk structure</h3>
 <p>A long form talk allows you more space to introduce your topic more thoroughly. But remember, even in 50 minutes, it will be hard to explain everything you did. Nor should you! Remember a data analytic presentation is about telling a story, so you want to keep the same sort of arc:</p>
 <ul>
@@ -697,10 +666,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Some of the more painful talks to attend are those that fail to touch one or more of these key points - say by only covering background and methods, or by only describing the results. The point is to take the listener along through the story so they can see the main conclusions, then give them something to do after.</p>
 </div>
 </div>
-<div id="slide-style" class="section level2" number="13.5">
+<div id="slide-style" class="section level2">
 <h2><span class="header-section-number">13.5</span> Slide style</h2>
 <p>Now that you’ve outlined <em>what</em> you’ll talk about in your presentation, it’s time to decide <em>how</em> you’re going to put those ideas onto slides. There are many things to consider when designing visually-appealing slides.</p>
-<div id="text" class="section level3" number="13.5.1">
+<div id="text" class="section level3">
 <h3><span class="header-section-number">13.5.1</span> Text</h3>
 <p>A few guidelines when deciding the words you’ll include on slides:</p>
 <ul>
@@ -711,19 +680,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Do not try to cram all your ideas onto a single slide. And, everything you say does <em>not</em> have to be up on the slides. You’re speaking for a reason. The slides should help guide you along in telling your story, but your audience should have to listen to what you’re saying to get the full picture of your story.</p>
 </div>
-<div id="fonts" class="section level3" number="13.5.2">
+<div id="fonts" class="section level3">
 <h3><span class="header-section-number">13.5.2</span> Fonts</h3>
 <p>To convey textual information to your audience, choosing a good font is important. It’s generally safe to <strong>stick to Sans Serif font</strong>. Sans Serif fonts can be searched through at <a href="https://fonts.google.com/">Google Fonts</a>. And, when in doubt, <strong>Helvetica is a safe font choice</strong>. Further, use consistent fonts throughout your talk. More than one font <em>can</em> be used to draw viewers attention to something, but typically there should be a consistent font used throughout the presentation. Finally, as with most rules, there are exceptions, so take time deciding on what font looks best for each part of your presentation.</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_86" /></p>
 </div>
-<div id="size" class="section level3" number="13.5.3">
+<div id="size" class="section level3">
 <h3><span class="header-section-number">13.5.3</span> Size</h3>
 <p>Regardless of what font you choose for your text, your <strong>text should be very large</strong>. It’s often argued that you should design your slides for the back of the room.</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_287" /></p>
 <p>The same goes for images. There’s no need to leave empty space on your slides around images. <strong>Expand your images</strong> to take up as much space on the slide as possible.</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_297" /></p>
 </div>
-<div id="colors" class="section level3" number="13.5.4">
+<div id="colors" class="section level3">
 <h3><span class="header-section-number">13.5.4</span> Colors</h3>
 <p>Finally, with regards to slide design, colors matter. Choosing a dark background (such as dark gray) means that your text should be light (maybe white). If your background is light, your text should be dark. Contrast will make it easier on your audience to read.</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_307" /></p>
@@ -731,13 +700,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_328" /></p>
 <p>The same goes for figures and plots. All images should have colors that are viewable and distinguishable by every person in your audience. Consider color blindness. Consider colors that tend not to project well (such as yellows or light pastels). Then, design your slides using colors that will work for your audience.</p>
 </div>
-<div id="alignment" class="section level3" number="13.5.5">
+<div id="alignment" class="section level3">
 <h3><span class="header-section-number">13.5.5</span> Alignment</h3>
 <p>Visually, things should be aligned. Center things in the middle of your slide. Make sure text boxes that should line up do line up. It may seem trivial, but it’s important to line things up so viewers aren’t distracted by something like alignment and can instead focus on your talk.</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_339" /></p>
 </div>
 </div>
-<div id="presenting" class="section level2" number="13.6">
+<div id="presenting" class="section level2">
 <h2><span class="header-section-number">13.6</span> Presenting</h2>
 <p>When it comes time to give the presentation, there are a few things to keep in mind. First and foremost, <strong>speak clearly</strong>. Whether you are a loud-talker, a soft-speaker, someone who speaks slowly, or a fast-talker, the most important thing is to make sure that the words you say are clear to your audience.</p>
 <p>Second, you should <strong>be excited</strong>. If you’re not excited or passionate about what you’re talking about, why would your audience be? If you’re not excited, it may be best to <em>reconsider your outline</em> and re-work your story until you are.</p>
@@ -746,14 +715,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_81" /></p>
 <p>Finally, when presenting it’s important to remember that <strong>you’ve seen the data and figures you’re presenting many times, but your audience has not</strong>. They’ll need time to get up to speed! Thus, it’s important to always introduce your axes (tell your audience what is on the x-axis and what is on the y-axis), explain the colors on your plot, <em>and</em> walk the audience through the figure you’re presenting.</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g4039734916_0_0" /></p>
-<div id="be-prepared" class="section level3" number="13.6.1">
+<div id="be-prepared" class="section level3">
 <h3><span class="header-section-number">13.6.1</span> Be prepared</h3>
 <p>The day of your presentation, things may go wrong. Power goes out, projectors don’t always present your material exactly the same way it looks on your computer screen. Technology doesn’t always behave as we expect it too. In these cases, you just have to roll with the punches.</p>
 <p>To avoid any big issues, it’s best to bring a copy of your talk on a USB drive, carry any adapters you may need should you have to (or choose to) present from your own computer. Don’t expect the location to have the adapter you need. And, be sure your phone is on silent. After that, just roll with anything that goes wrong. The audience will be forgiving, as they all know that technology can sometimes act unexpectedly.</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_364" /></p>
 </div>
 </div>
-<div id="equations" class="section level2" number="13.7">
+<div id="equations" class="section level2">
 <h2><span class="header-section-number">13.7</span> Equations</h2>
 <p>If you are giving a data science talk you will probably have some equations. That is ok. But the way you present them is critically important to giving an understandable talk. Here are a few important points:</p>
 <ul>
@@ -769,7 +738,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Try to avoid subscripts, and no more than two are allowed.</li>
 </ul>
 </div>
-<div id="figures-3" class="section level2" number="13.8">
+<div id="figures" class="section level2">
 <h2><span class="header-section-number">13.8</span> Figures</h2>
 <p>If you have a figure in your talk you should present it in the following way.</p>
 <ul>
@@ -778,7 +747,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Explain what trends the audience should look for (e.g. “curves that go straight up at zero and across the top of the plot are best”)</li>
 </ul>
 </div>
-<div id="job-talk-specific-issues" class="section level2" number="13.9">
+<div id="job-talk-specific-issues" class="section level2">
 <h2><span class="header-section-number">13.9</span> Job talk specific issues</h2>
 <p>When giving a job talk you have an additional job on top of the four main goals we talked about above. The goal is to present your complete professional persona to a bunch of people who (mostly) won’t know who you are. You should tailor this a little bit to the place you are applying to a job, but don’t try to pretend to be something you are not. You can show a little more theory at a theory place and a few more results at an applied place, but don’t claim you are proving theorems all the time if you aren’t.</p>
 <p>You should include both at the beginning and the end of the talk brief summaries of all the stuff you have worked on and plan to work on so they get an idea of who you are in a complete sense. <strong>But only talk about one specific project when giving the talk</strong>. There is nothing more detrimental to your chances of getting a job than going way over time or not getting to give your whole talk.</p>
@@ -790,7 +759,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Traditionally in data science, (bio)statistics and computer science departments, people demonstrated #2 by showing that they could prove really hard theorems or do really difficult computations. At some places, that is still a really good thing to do. Other things that might make you unique are the ability to write amazing R packages that get used, the ability to analyze massive data sets other people can’t, the ability to teach courses that students will want to take but the department doesn’t have, or ideas about a brand new research area (with some data to back them up).</p>
 <p>Before giving a job talk ask around and get a feel for the sorts of things that people have heard about the place you are applying so you can be smart about your choices of how/what to present.</p>
 </div>
-<div id="answering-hard-questions" class="section level2" number="13.10">
+<div id="answering-hard-questions" class="section level2">
 <h2><span class="header-section-number">13.10</span> Answering hard questions</h2>
 <p>Inevitably you will get hard questions during your talk. The most important point is not to panic and not to get defensive. It is way better to just say <em>I don’t know</em>, then to get upset. When you get asked a really hard question you should:</p>
 <ul>
@@ -800,24 +769,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>The key is to distinguish what kind of response you are giving. Are you giving a response where you know the answer because you actually looked into that? Are you giving a complete guess where you have no idea? Or, what is more likely, are you somewhere in between?</p>
 <p>Most importantly, don’t feel embarrassed! Hard questions happen to everyone and if you are polite, explain how sure you are about your answer, and try your best it won’t be a problem.</p>
-<div id="that-one-person-who-keeps-going-bonkers-on-you" class="section level3" number="13.10.1">
+<div id="that-one-person-who-keeps-going-bonkers-on-you" class="section level3">
 <h3><span class="header-section-number">13.10.1</span> That one person who keeps going bonkers on you</h3>
 <p>Almost everywhere you give a talk there will be a person who is upset/intense/aggressive. <strong>Do not fall into the temptation to be aggressive in return</strong>. Answer their first questions politely just like everyone else. If they keep asking really aggressive/lots of questions, you are within your rightst to say: “You are bringing up a lot of good issues, I’d be happy to discuss with you after the presentation more in depth, but in the interest of time I’m going to move on to the next part of my talk”. It is ok to keep things moving and to finish on time.</p>
 </div>
 </div>
-<div id="finishing-on-time" class="section level2" number="13.11">
+<div id="finishing-on-time" class="section level2">
 <h2><span class="header-section-number">13.11</span> Finishing on time</h2>
 <p>Do it. People will love you for it. If you are the last speaker in a session and others have gone long, adapt and go shorter. The value you gain by making your audience happy &gt;&gt;&gt;&gt; the extra 5 minutes of details you could have explained</p>
 </div>
-<div id="where-you-should-put-your-talk" class="section level2" number="13.12">
+<div id="where-you-should-put-your-talk" class="section level2">
 <h2><span class="header-section-number">13.12</span> Where you should put your talk</h2>
 <p>If you have weblinks in your talk you need to post it online. There is no way people will write down any of the links in your talk. Two good places to put your talks are <a href="https://speakerdeck.com/" class="uri">https://speakerdeck.com/</a> or <a href="http://www.slideshare.net/" class="uri">http://www.slideshare.net/</a>. But then link to all the talks from one, single, memorable site you can show people at the very end of your talk. All my talks are at <a href="http://jtleek.com/talks/" class="uri">http://jtleek.com/talks/</a>. You are welcome to send a pull request with your talk there if it is Leek group related, or you can put them on your own short and sweet web link.</p>
 <p>I personally like Slideshare a little better these days because the slides are much easier to view on mobile phones and iPads, which is the most likely place someone will read your talk.</p>
 </div>
-<div id="example-presentation-methods" class="section level2" number="13.13">
+<div id="example-presentation-methods" class="section level2">
 <h2><span class="header-section-number">13.13</span> Example Presentation: Methods</h2>
 <p>To walk you through an example of a data science presentation, we’re going to use a talk presented at a statistics conference by <a href="(https://www.lucymcgowan.com/)">Lucy D’Agostino McGowan</a>, a well-known biostatistician and R programmer. The slides used in the talk and a video of the talk itself (!) can be found <a href="https://www.lucymcgowan.com/talk/asa_joint_statistical_meeting_2018/">here</a>. The title of Lucy’s talk was “Harnessing the Power of the Web via R Clients for Web APIs.” In this talk she discussed accessing information from APIs using the <code>httr</code> package. So, if you need a refresher on this topic, <a href="https://www.lucymcgowan.com/talk/asa_joint_statistical_meeting_2018/">the slides and video here</a> would be a great reference!</p>
-<div id="talk-outline" class="section level3" number="13.13.1">
+<div id="talk-outline" class="section level3">
 <h3><span class="header-section-number">13.13.1</span> Talk Outline</h3>
 <p>In the introduction, Lucy expresses her excitement and gives her audience an outline of the talk. The three topics she’s going to cover are:</p>
 <ul>
@@ -828,7 +797,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e029efc87_0_29" /></p>
 <p>We didn’t discuss this above; however, a general rule of thumb is that <strong>three main topics is about the most you should include in a talk</strong>, as humans’ attention spans are not very long. Lucy nailed this one with exactly three main topics to discuss, all of which tie together into a story about how to get information from Web APIs!</p>
 </div>
-<div id="slide-design" class="section level3" number="13.13.2">
+<div id="slide-design" class="section level3">
 <h3><span class="header-section-number">13.13.2</span> Slide Design</h3>
 <p>As Lucy dives into the content of her talk, she follows many of the best practices discussed above. We’ll pull a few slides from the talk to discuss here; however, do reference the whole talk to see it in its entirety!</p>
 <p>Lucy uses large fonts and colors that can be distinguished by anyone in the audience and that present well. As a result, everyone in the room, no matter where there seat was, was able to learn and be entertained.</p>
@@ -838,17 +807,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Additionally, Lucy’s slides guided what she was going to say but didn’t include all the words on the slides. Here, we see large font and large images but no words. This allowed the audience to listen to what she was saying rather than read all the words on the slides!</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e029efc87_0_19" /></p>
 </div>
-<div id="presentation" class="section level3" number="13.13.3">
+<div id="presentation" class="section level3">
 <h3><span class="header-section-number">13.13.3</span> Presentation</h3>
 <p>In addition to having well-designed slides, Lucy was excited as she spoke, was clear in her speech, spoke at an easy-to-listen-to pace, and her personality came through as she spoke. This is all evident if you listen to the video of her presentation. Lucy being true to her personality helps make it a wonderful presentation. If your personality is different than Lucy’s, that’s totally ok! Just be sure that when you present, you’re presenting in a way that you’re most comfortable!</p>
 </div>
 </div>
-<div id="example-presentation-analysis" class="section level2" number="13.14">
+<div id="example-presentation-analysis" class="section level2">
 <h2><span class="header-section-number">13.14</span> Example Presentation: Analysis</h2>
 <p>Lucy’s presentation is an example of a wonderful, educational, and helpful talk; however, her goal wasn’t to talk in depth about an analysis she’s done. Often, as a data scientist, you’ll be tasked with presenting an analysis you’ve done. To do so, you’ll want to use the same guidelines we previously discussed, but with a focus on <strong>presenting the story of your data analysis</strong>. This includes the plots, analytical approach, and findings of your project. That said, your slides should still be well-designed, you should still tell a story, and your text and colors should all be readable when projected; however, in this case, there are a few additional caveats to consider.</p>
 <p>To discuss these, we’ll use an example presentation from Julia Silge, who is a data scientist at Stack Overflow and a wonderful presenter. In 2017 at the rstudio::conf, <a href="https://juliasilge.com/about/">Julia Silge</a> presented “Text Mining the tidy Way”. The <a href="https://www.rstudio.com/resources/videos/text-mining-the-tidy-way/">video</a> and <a href="https://speakerd.s3.amazonaws.com/presentations/d6041c6b704d4bf7bfa9d0973ae2d006/rstudio_conf.pdf">visuals</a> from her presentation are available online. This talk discusses the <code>tidytext</code> package (which she and <a href="http://varianceexplained.org/about/">David Robinson</a> developed) and example analyses using this awesome R package. We’ve discussed this package previously, but if you want a refresher on tidytext, how to work with textual data, and sentiment analysis, <a href="https://www.rstudio.com/resources/videos/text-mining-the-tidy-way/">this</a> is a great resource!</p>
 <p>As above, we’ll highlight a few slides from the talk and discuss considerations to make when presenting a data analysis.</p>
-<div id="talk-outline-1" class="section level3" number="13.14.1">
+<div id="talk-outline-1" class="section level3">
 <h3><span class="header-section-number">13.14.1</span> Talk Outline</h3>
 <p>As in Lucy’s talk, Julia Silge, in addition to an introduction and a conclusion, had three main parts to her talk:</p>
 <ul>
@@ -858,7 +827,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>In data analysis talks, it’s often best to start with background information. Julia covers this information when discussing what the <code>tidytext</code> package is. Then, she delves into discussing a few examples of the types of analyses you can do with this package.</p>
 </div>
-<div id="slide-design-1" class="section level3" number="13.14.2">
+<div id="slide-design-1" class="section level3">
 <h3><span class="header-section-number">13.14.2</span> Slide Design</h3>
 <p>As discussed above with Lucy’s presentation, in Julia’s slides, she limits the amount of information she puts on any one slide, thus allowing the audience to listen to the words she’s saying. And, she has text that’s large enough and legible when projected.</p>
 <p>However, what’s different about this presentation is how Julia presents her analyses. When presenting an analysis, it’s generally best to first explain the approach and then present the results. For example, Julia uses TF-IDF to analzze text in Jane Austen’s novels.</p>
@@ -870,7 +839,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_5" /></p>
 <p>Note that Julia does not go into every single detail of every analysis, nor just she talk about all the things she tried in a single presentation. She includes enough information so that her audience learns and can go try this type of analysis on their own, if they’re interested!</p>
 </div>
-<div id="presentation-1" class="section level3" number="13.14.3">
+<div id="presentation-1" class="section level3">
 <h3><span class="header-section-number">13.14.3</span> Presentation</h3>
 <p>Watching the <a href="https://www.rstudio.com/resources/videos/text-mining-the-tidy-way/">18 minute video</a> will give you the best sense of how Julia presented the information in her <code>tidytext</code> presentation; however, we’ll highlight a few things here.</p>
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_17" /></p>
@@ -880,14 +849,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="https://docs.google.com/presentation/d/1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg/export/png?id=1SNcN3sJoZ7i7zXieS5MTRpzrgEi_RFInFp9teYFqpIg&amp;pageid=g3e060237c1_0_39" /></p>
 </div>
 </div>
-<div id="presenting-to-a-general-audience" class="section level2" number="13.15">
+<div id="presenting-to-a-general-audience" class="section level2">
 <h2><span class="header-section-number">13.15</span> Presenting to a General Audience</h2>
 <p>When considering presenting to a general audience, this would be an audience that doesn’t know a lot about data science or quantitative analysis. This would be an audience that generally does not code or analyze data on a regular basis. This could be individuals at your company who are more focused on day-to-day operations or an audience of high schoolers getting their first introduction to data science.</p>
-<div id="the-goal" class="section level3" number="13.15.1">
+<div id="the-goal" class="section level3">
 <h3><span class="header-section-number">13.15.1</span> The Goal</h3>
 <p>Regardless of exactly to whom you’re presenting, the goal of this type of presentation is to <strong>teach at a high level what you did</strong>. Your presentation should still inspire, educate, and entertain, but it should leave out some of the nitty gritty details and keep in more background and general explanation of your approach.</p>
 </div>
-<div id="general-presentation-example" class="section level3" number="13.15.2">
+<div id="general-presentation-example" class="section level3">
 <h3><span class="header-section-number">13.15.2</span> General Presentation Example</h3>
 <p>To discuss giving presentations to a general audience using a specific example, we’re going to walk through a presentation that was given to a general audience. The audience for this presentation was college students with a year of calculus but no particular background in statistics. This means that any statistical concepts would have to be explained, but it could be assumed that the audience was fairly analytical. The slides for this talk can be viewed <a href="https://docs.google.com/presentation/d/1AslQFsTHIz4R50KSDuzQtu75AlofrtCD1ZH80lp5k3A/edit?usp=sharing">here</a>. The title of this talk was “Upcycling genomics data: From publicly-available ‘junk’ to priceless ‘treasure’.”</p>
 <p>The outline of this presentation was as follows:</p>
@@ -915,14 +884,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="https://docs.google.com/presentation/d/1DW4eO4oQ_0qhAXs0IB-FBp790qeM8gH3ZLq-z58jBYg/export/png?id=1DW4eO4oQ_0qhAXs0IB-FBp790qeM8gH3ZLq-z58jBYg&amp;pageid=g3eb60191d5_0_1241" /></p>
 </div>
 </div>
-<div id="presenting-to-a-technical-audience" class="section level2" number="13.16">
+<div id="presenting-to-a-technical-audience" class="section level2">
 <h2><span class="header-section-number">13.16</span> Presenting to a Technical Audience</h2>
 <p>When presenting to a technical audience, you’re presenting to an audience of your peers. These are individuals who regularly analyze data and/or are familiar with your work and the way you approach data analysis. This could be other members of your team or other individuals at a conference in your specific field of expertise. As a result, you can often limit the amount of information you provide as introductory material in this type of presentation and really focus on the details of your analysis.</p>
-<div id="the-goal-1" class="section level3" number="13.16.1">
+<div id="the-goal-1" class="section level3">
 <h3><span class="header-section-number">13.16.1</span> The Goal</h3>
 <p>Unlike a general audience presentation where the goal is to teach at a high level what you did, the goal of this type of presentation is to really <strong>explain details of what you did</strong>. The details and caveats of your approach should be the focus here.</p>
 </div>
-<div id="technical-presentation-example" class="section level3" number="13.16.2">
+<div id="technical-presentation-example" class="section level3">
 <h3><span class="header-section-number">13.16.2</span> Technical Presentation Example</h3>
 <p>Like in the case of a general talk, we’re going to walk through a technical talk. The title of the technical talk we’ll be discussing is “Improving the value of public data with recount2 and phenotype prediction” and the slides are viewable <a href="bit.ly/technical_audience">here</a>. Go to these slides now and scroll through them. Note the mathematical notation on slides 70 through 87 – this level of detail was <em>not</em> included for the general audience (slides 96-110 [here for the general audience comparison(bit.ly/general_audience)]. While the title and presentation details differ from the general audience presentation, the outline of the talk remains the same:</p>
 <ul>
@@ -937,7 +906,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We can see that the bulk of the presentation is spent on background, results, and approach. There is not much teaching in this technical presentation.</p>
 <p><img src="https://docs.google.com/presentation/d/1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk/export/png?id=1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk&amp;pageid=g2bfdb07292_0_151" /></p>
 </div>
-<div id="general-vs-technical" class="section level3" number="13.16.3">
+<div id="general-vs-technical" class="section level3">
 <h3><span class="header-section-number">13.16.3</span> General vs Technical</h3>
 <p>Each presentation was on the same topic. Thus, it would be beneficial to compare the two directly.</p>
 <p>Here we see the general presentation visualized at the top and technical beneath it. The focus on teaching and approach in a general talk and the focus on approach and results in a technical talk becomes evident when compared on the same image.</p>
@@ -946,7 +915,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="https://docs.google.com/presentation/d/1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk/export/png?id=1EromtzNJS1mzKLOHzV4Cwes4XhrMR23dMXtjqOCUVzk&amp;pageid=g3eb60054e7_0_188" /></p>
 </div>
 </div>
-<div id="additional-resources-11" class="section level2" number="13.17">
+<div id="additional-resources" class="section level2">
 <h2><span class="header-section-number">13.17</span> Additional Resources</h2>
 <div class="resources">
 <ul>
@@ -972,7 +941,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 </div>
-<div id="homework-11" class="section level2" number="13.18">
+<div id="homework" class="section level2">
 <h2><span class="header-section-number">13.18</span> Homework</h2>
 <div class="homework">
 <ul>

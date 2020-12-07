@@ -164,7 +164,7 @@ axes_json[[1]]
 ```
 
 ```
-## [1] "{\"word\":\"axe\",\"countrycode\":\"PT\",\"timestamp\":\"2017-03-05 22:57:31.79679 UTC\",\"recognized\":true,\"key_id\":\"5454978309160960\",\"drawing\":[[[2,67,151,160,190,237,241,241,214,208,165,149,138,81,29,24,0],[231,122,2,0,25,56,60,66,133,139,96,87,89,164,255,254,238]]]}"
+## [1] "{\"word\":\"axe\",\"countrycode\":\"SG\",\"timestamp\":\"2017-03-25 12:14:28.51961 UTC\",\"recognized\":true,\"key_id\":\"5735662189805568\",\"drawing\":[[[84,87,88,67,50,26,2,1,10,19,29,65,78],[255,249,56,56,49,30,0,118,121,105,99,96,100]]]}"
 ```
 
 The next thing I did was google “quick draw data ndjson rstats”. I found a [tutorial](https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/) and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do. 
@@ -183,26 +183,22 @@ first_axe
 ```
 
 ```
-## # A tibble: 17 x 5
+## # A tibble: 13 x 5
 ##    line      x     y drawing          row_id
 ##    <chr> <dbl> <dbl> <chr>             <int>
-##  1 1         2   231 5454978309160960      1
-##  2 1        67   122 5454978309160960      2
-##  3 1       151     2 5454978309160960      3
-##  4 1       160     0 5454978309160960      4
-##  5 1       190    25 5454978309160960      5
-##  6 1       237    56 5454978309160960      6
-##  7 1       241    60 5454978309160960      7
-##  8 1       241    66 5454978309160960      8
-##  9 1       214   133 5454978309160960      9
-## 10 1       208   139 5454978309160960     10
-## 11 1       165    96 5454978309160960     11
-## 12 1       149    87 5454978309160960     12
-## 13 1       138    89 5454978309160960     13
-## 14 1        81   164 5454978309160960     14
-## 15 1        29   255 5454978309160960     15
-## 16 1        24   254 5454978309160960     16
-## 17 1         0   238 5454978309160960     17
+##  1 1        84   255 5735662189805568      1
+##  2 1        87   249 5735662189805568      2
+##  3 1        88    56 5735662189805568      3
+##  4 1        67    56 5735662189805568      4
+##  5 1        50    49 5735662189805568      5
+##  6 1        26    30 5735662189805568      6
+##  7 1         2     0 5735662189805568      7
+##  8 1         1   118 5735662189805568      8
+##  9 1        10   121 5735662189805568      9
+## 10 1        19   105 5735662189805568     10
+## 11 1        29    99 5735662189805568     11
+## 12 1        65    96 5735662189805568     12
+## 13 1        78   100 5735662189805568     13
 ```
 
 
@@ -342,18 +338,18 @@ small_axe
 
 ```
 ## # A tibble: 256 x 3
-##    xgroup ygroup pixel
-##     <dbl>  <dbl> <dbl>
-##  1      1      1     0
-##  2      1     17     0
-##  3      1     33     0
-##  4      1     49     0
-##  5      1     65     0
-##  6      1     81     0
-##  7      1     97     0
-##  8      1    113     0
-##  9      1    129     0
-## 10      1    145     0
+##    xgroup ygroup   pixel
+##     <dbl>  <dbl>   <dbl>
+##  1      1      1 0      
+##  2      1     17 0      
+##  3      1     33 0      
+##  4      1     49 0      
+##  5      1     65 0      
+##  6      1     81 0      
+##  7      1     97 0      
+##  8      1    113 0.00781
+##  9      1    129 0      
+## 10      1    145 0      
 ## # … with 246 more rows
 ```
 
@@ -443,18 +439,18 @@ img_final
 
 ```
 ## # A tibble: 200 x 258
-##    type  drawing  pixel1  pixel2  pixel3  pixel4  pixel5  pixel6  pixel7  pixel8
-##    <chr>   <int>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-##  1 axe         1 0       0       0       0       0       0       0       0      
-##  2 axe         2 0       0       0       0       0       0.00391 0.00391 0      
-##  3 axe         3 0       0.00368 0       0       0       0       0       0.00368
-##  4 axe         4 0       0       0       0       0       0       0       0      
-##  5 axe         5 0       0.00391 0.00781 0       0.00781 0.00391 0       0      
-##  6 axe         6 0       0       0       0       0       0       0       0      
-##  7 axe         7 0       0.00391 0       0       0       0       0.00391 0      
-##  8 axe         8 0       0       0       0       0.00391 0.00391 0       0.00391
-##  9 axe         9 0.00781 0.00391 0       0.00781 0.00391 0.00391 0.0117  0.00391
-## 10 axe        10 0       0.0117  0       0       0.00391 0       0       0      
+##    type  drawing  pixel1  pixel2  pixel3  pixel4 pixel5  pixel6 pixel7  pixel8
+##    <chr>   <int>   <dbl>   <dbl>   <dbl>   <dbl>  <dbl>   <dbl>  <dbl>   <dbl>
+##  1 axe         1 0       0       0       0            0 0            0 0.00781
+##  2 axe         2 0       0       0       0            0 0            0 0      
+##  3 axe         3 0       0.00781 0       0            0 0            0 0      
+##  4 axe         4 0       0       0.00781 0.00391      0 0            0 0      
+##  5 axe         5 0       0       0.00391 0            0 0.00391      0 0.00391
+##  6 axe         6 0.00391 0.00391 0       0.00391      0 0            0 0.00391
+##  7 axe         7 0.00781 0       0       0            0 0            0 0.00781
+##  8 axe         8 0       0       0       0.00391      0 0.00391      0 0      
+##  9 axe         9 0       0       0       0.00391      0 0            0 0      
+## 10 axe        10 0       0.00391 0       0            0 0            0 0      
 ## # … with 190 more rows, and 248 more variables: pixel9 <dbl>, pixel10 <dbl>,
 ## #   pixel11 <dbl>, pixel12 <dbl>, pixel13 <dbl>, pixel14 <dbl>, pixel15 <dbl>,
 ## #   pixel16 <dbl>, pixel17 <dbl>, pixel18 <dbl>, pixel19 <dbl>, pixel20 <dbl>,
@@ -493,18 +489,18 @@ train_dat
 
 ```
 ## # A tibble: 100 x 258
-##    type  drawing  pixel1  pixel2  pixel3  pixel4  pixel5  pixel6  pixel7  pixel8
-##    <chr>   <int>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-##  1 axe         1 0       0       0       0       0       0       0       0      
-##  2 axe         3 0       0.00368 0       0       0       0       0       0.00368
-##  3 axe         5 0       0.00391 0.00781 0       0.00781 0.00391 0       0      
-##  4 axe         6 0       0       0       0       0       0       0       0      
-##  5 axe         7 0       0.00391 0       0       0       0       0.00391 0      
-##  6 axe         9 0.00781 0.00391 0       0.00781 0.00391 0.00391 0.0117  0.00391
-##  7 axe        11 0       0       0       0       0       0       0       0      
-##  8 axe        15 0       0.0117  0.00391 0       0.00781 0       0.00391 0      
-##  9 axe        18 0       0       0       0       0       0       0.00368 0.00368
-## 10 axe        19 0       0       0       0       0       0       0       0      
+##    type  drawing  pixel1  pixel2  pixel3 pixel4  pixel5  pixel6 pixel7  pixel8
+##    <chr>   <int>   <dbl>   <dbl>   <dbl>  <dbl>   <dbl>   <dbl>  <dbl>   <dbl>
+##  1 axe         2 0       0       0            0 0       0            0 0      
+##  2 axe         3 0       0.00781 0            0 0       0            0 0      
+##  3 axe         5 0       0       0.00391      0 0       0.00391      0 0.00391
+##  4 axe         7 0.00781 0       0            0 0       0            0 0.00781
+##  5 axe        10 0       0.00391 0            0 0       0            0 0      
+##  6 axe        11 0.0117  0       0            0 0.00391 0.00391      0 0      
+##  7 axe        12 0       0       0            0 0       0            0 0      
+##  8 axe        13 0       0.00391 0            0 0       0            0 0      
+##  9 axe        17 0.00391 0       0            0 0       0            0 0      
+## 10 axe        18 0       0       0            0 0.00781 0.00391      0 0      
 ## # … with 90 more rows, and 248 more variables: pixel9 <dbl>, pixel10 <dbl>,
 ## #   pixel11 <dbl>, pixel12 <dbl>, pixel13 <dbl>, pixel14 <dbl>, pixel15 <dbl>,
 ## #   pixel16 <dbl>, pixel17 <dbl>, pixel18 <dbl>, pixel19 <dbl>, pixel20 <dbl>,
@@ -570,26 +566,26 @@ confusionMatrix(as.factor(test_dat$type),predict(mod,test_dat))
 ## 
 ##           Reference
 ## Prediction axe cloud
-##      axe    45     5
-##      cloud  10    40
+##      axe    46     4
+##      cloud   8    42
 ##                                           
-##                Accuracy : 0.85            
-##                  95% CI : (0.7647, 0.9135)
-##     No Information Rate : 0.55            
-##     P-Value [Acc > NIR] : 1.716e-10       
+##                Accuracy : 0.88            
+##                  95% CI : (0.7998, 0.9364)
+##     No Information Rate : 0.54            
+##     P-Value [Acc > NIR] : 3.152e-13       
 ##                                           
-##                   Kappa : 0.7             
+##                   Kappa : 0.76            
 ##                                           
-##  Mcnemar's Test P-Value : 0.3017          
+##  Mcnemar's Test P-Value : 0.3865          
 ##                                           
-##             Sensitivity : 0.8182          
-##             Specificity : 0.8889          
-##          Pos Pred Value : 0.9000          
-##          Neg Pred Value : 0.8000          
-##              Prevalence : 0.5500          
-##          Detection Rate : 0.4500          
+##             Sensitivity : 0.8519          
+##             Specificity : 0.9130          
+##          Pos Pred Value : 0.9200          
+##          Neg Pred Value : 0.8400          
+##              Prevalence : 0.5400          
+##          Detection Rate : 0.4600          
 ##    Detection Prevalence : 0.5000          
-##       Balanced Accuracy : 0.8535          
+##       Balanced Accuracy : 0.8824          
 ##                                           
 ##        'Positive' Class : axe             
 ## 
