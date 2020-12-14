@@ -6,7 +6,6 @@ pagetitle: "Week 15 - Data science ethics"
 
 ## Week 15 Learning objectives
 
-Data science 
 
 :::keyidea
 
