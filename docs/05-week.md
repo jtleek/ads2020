@@ -192,10 +192,6 @@ In general if you see comparisons like this where the axes aren't on the same sc
 pcombined & ylim(-1,28) 
 ```
 
-```
-## Warning: Removed 1 rows containing non-finite values (stat_boxplot).
-```
-
 <img src="05-week_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 

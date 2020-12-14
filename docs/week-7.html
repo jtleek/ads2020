@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-12-07" />
+<meta name="date" content="2020-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -527,6 +527,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.8" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>15.8</b> Additional Resources</a></li>
 <li class="chapter" data-level="15.9" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>15.9</b> Homework</a></li>
 </ul></li>
+<li class="chapter" data-level="16" data-path="week-15.html"><a href="week-15.html"><i class="fa fa-check"></i><b>16</b> Week 15</a><ul>
+<li class="chapter" data-level="16.1" data-path="week-15.html"><a href="week-15.html#week-15-learning-objectives"><i class="fa fa-check"></i><b>16.1</b> Week 15 Learning objectives</a></li>
+<li class="chapter" data-level="16.2" data-path="week-15.html"><a href="week-15.html#the-ethics-of-data-science"><i class="fa fa-check"></i><b>16.2</b> The ethics of data science</a></li>
+<li class="chapter" data-level="16.3" data-path="week-15.html"><a href="week-15.html#ethics-in-experimental-design"><i class="fa fa-check"></i><b>16.3</b> Ethics in experimental design</a></li>
+<li class="chapter" data-level="16.4" data-path="week-15.html"><a href="week-15.html#ethics-in-data-collection"><i class="fa fa-check"></i><b>16.4</b> Ethics in data collection</a><ul>
+<li class="chapter" data-level="16.4.1" data-path="week-15.html"><a href="week-15.html#sampling-bias"><i class="fa fa-check"></i><b>16.4.1</b> Sampling bias</a></li>
+<li class="chapter" data-level="16.4.2" data-path="week-15.html"><a href="week-15.html#privacy"><i class="fa fa-check"></i><b>16.4.2</b> Privacy</a></li>
+<li class="chapter" data-level="16.4.3" data-path="week-15.html"><a href="week-15.html#surveillance"><i class="fa fa-check"></i><b>16.4.3</b> Surveillance</a></li>
+</ul></li>
+<li class="chapter" data-level="16.5" data-path="week-15.html"><a href="week-15.html#ethics-in-objective-functions"><i class="fa fa-check"></i><b>16.5</b> Ethics in objective functions</a><ul>
+<li class="chapter" data-level="16.5.1" data-path="week-15.html"><a href="week-15.html#varying-objectives"><i class="fa fa-check"></i><b>16.5.1</b> Varying objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="16.6" data-path="week-15.html"><a href="week-15.html#ethics-in-algorithms"><i class="fa fa-check"></i><b>16.6</b> Ethics in algorithms</a></li>
+<li class="chapter" data-level="16.7" data-path="week-15.html"><a href="week-15.html#ethics-in-interfaces"><i class="fa fa-check"></i><b>16.7</b> Ethics in interfaces</a><ul>
+<li class="chapter" data-level="16.7.1" data-path="week-15.html"><a href="week-15.html#the-exchange"><i class="fa fa-check"></i><b>16.7.1</b> “The exchange”</a></li>
+</ul></li>
+<li class="chapter" data-level="16.8" data-path="week-15.html"><a href="week-15.html#ethics-in-data-decision-making"><i class="fa fa-check"></i><b>16.8</b> Ethics in data decision making</a></li>
+<li class="chapter" data-level="16.9" data-path="week-15.html"><a href="week-15.html#what-you-should-do"><i class="fa fa-check"></i><b>16.9</b> What you should do</a></li>
+<li class="chapter" data-level="16.10" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>16.10</b> Additional Resources</a></li>
+<li class="chapter" data-level="16.11" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>16.11</b> Homework</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -799,10 +820,10 @@ measurement to check that they’re correlated
 <li>1_first_plots.R</li>
 </ul>
 <p>I generally use .R files (not Rmd files or Jupyter notebooks) since I will likely be moving fast and don’t have a lot of time for formatting. One thing I like to do is add comments when I find something interesting with words I hope will be searchable later. So something like:</p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="week-7.html#cb210-1"></a><span class="co">#########</span></span>
-<span id="cb210-2"><a href="week-7.html#cb210-2"></a><span class="co">### Interesting correlation between x and y</span></span>
-<span id="cb210-3"><a href="week-7.html#cb210-3"></a><span class="co">######### </span></span>
-<span id="cb210-4"><a href="week-7.html#cb210-4"></a><span class="kw">cor</span>(x,y)</span></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="week-7.html#cb209-1"></a><span class="co">#########</span></span>
+<span id="cb209-2"><a href="week-7.html#cb209-2"></a><span class="co">### Interesting correlation between x and y</span></span>
+<span id="cb209-3"><a href="week-7.html#cb209-3"></a><span class="co">######### </span></span>
+<span id="cb209-4"><a href="week-7.html#cb209-4"></a><span class="kw">cor</span>(x,y)</span></code></pre></div>
 </div>
 <div id="additional-resources" class="section level2">
 <h2><span class="header-section-number">8.5</span> Additional Resources</h2>

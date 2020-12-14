@@ -1,0 +1,20 @@
+---
+title: "Reviewer feedback form"
+author: [INSERT NAME]
+output: github_document
+params:
+  q1_score: [INSERT SCORE]
+---
+
+
+## Instructions
+
+Enter your feedback for each question below. Please replace `[INSERT SCORE]` in the `q*_score` fields in the YAML with the scores you give the author for each question.
+
+Please keep your review comments constructive and professional.
+
+## Feedback
+
+#### 1. On a scale from 1 to 10 how easy was it to write your one pager given the analysis [max. 10 points]
+
+Your response goes here...

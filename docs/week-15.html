@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>16 Week 15 | Week 15 - Data science ethics</title>
+  <meta name="description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="16 Week 15 | Week 15 - Data science ethics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="16 Week 15 | Week 15 - Data science ethics" />
+  
+  <meta name="twitter:description" content="This book provides course material for Biostatistics 140.711 at the Johns Hopkins Bloomberg School of Public Health." />
+  
+
+<meta name="author" content="Jeff Leek and Roger D. Peng" />
+
+
+<meta name="date" content="2020-12-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="week-14.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/table1-1.0/table1_defaults.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<img src ="ads2020-small.png" class="center">
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome and Syllabus</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#assumptions-and-pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Assumptions and pre-requisites</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#course-staff"><i class="fa fa-check"></i><b>1.3</b> Course Staff</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-logistics"><i class="fa fa-check"></i><b>1.4</b> Course logistics</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment-due-dates"><i class="fa fa-check"></i><b>1.5</b> Assignment Due Dates</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-pandemic"><i class="fa fa-check"></i><b>1.6</b> The Pandemic</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.7</b> Grading</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#philosophy"><i class="fa fa-check"></i><b>1.7.1</b> Philosophy</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#relative-weights"><i class="fa fa-check"></i><b>1.7.2</b> Relative weights</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.8</b> Assignments</a><ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#submitting-assignments"><i class="fa fa-check"></i><b>1.8.1</b> Submitting assignments</a></li>
+<li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#data-analysis-assignments"><i class="fa fa-check"></i><b>1.8.2</b> Data Analysis Assignments</a></li>
+<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>1.8.3</b> Reproducibility</a></li>
+<li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#data-analysis-reviews"><i class="fa fa-check"></i><b>1.8.4</b> Data Analysis Reviews</a></li>
+<li class="chapter" data-level="1.8.5" data-path="index.html"><a href="index.html#reviewing-code-of-conduct"><i class="fa fa-check"></i><b>1.8.5</b> Reviewing Code of Conduct</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i><b>1.9</b> Code of Conduct</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i><b>1.9.1</b> Need Help?</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#feedback"><i class="fa fa-check"></i><b>1.9.2</b> Feedback</a></li>
+<li class="chapter" data-level="1.9.3" data-path="index.html"><a href="index.html#license-and-attribution"><i class="fa fa-check"></i><b>1.9.3</b> License and attribution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#academic-ethics"><i class="fa fa-check"></i><b>1.10</b> Academic Ethics</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#disability-support-services"><i class="fa fa-check"></i><b>1.11</b> Disability support services</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#email-alerts"><i class="fa fa-check"></i><b>1.12</b> Email alerts</a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#previous-versions-of-the-class"><i class="fa fa-check"></i><b>1.13</b> Previous versions of the class</a></li>
+<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#typos-and-corrections"><i class="fa fa-check"></i><b>1.14</b> Typos and corrections</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a><ul>
+<li class="chapter" data-level="2.1" data-path="week-1.html"><a href="week-1.html#week-1-learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Week 1 Learning objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="week-1.html"><a href="week-1.html#what-is-advanced-data-science-anyway"><i class="fa fa-check"></i><b>2.2</b> What is advanced data science anyway?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="week-1.html"><a href="week-1.html#maybe-we-should-start-by-defining-data-science."><i class="fa fa-check"></i><b>2.2.1</b> Maybe we should start by defining data science….</a></li>
+<li class="chapter" data-level="2.2.2" data-path="week-1.html"><a href="week-1.html#data-science-is-hard-but-not-like-math-is-hard"><i class="fa fa-check"></i><b>2.2.2</b> Data Science is hard, but not like math is hard</a></li>
+<li class="chapter" data-level="2.2.3" data-path="week-1.html"><a href="week-1.html#so-what-is-advanced-data-science"><i class="fa fa-check"></i><b>2.2.3</b> So what is advanced data science?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="week-1.html"><a href="week-1.html#types-of-data-analytic-questions"><i class="fa fa-check"></i><b>2.3</b> Types of data analytic questions</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="week-1.html"><a href="week-1.html#descriptive"><i class="fa fa-check"></i><b>2.3.1</b> Descriptive</a></li>
+<li class="chapter" data-level="2.3.2" data-path="week-1.html"><a href="week-1.html#exploratory"><i class="fa fa-check"></i><b>2.3.2</b> Exploratory</a></li>
+<li class="chapter" data-level="2.3.3" data-path="week-1.html"><a href="week-1.html#inferential"><i class="fa fa-check"></i><b>2.3.3</b> Inferential</a></li>
+<li class="chapter" data-level="2.3.4" data-path="week-1.html"><a href="week-1.html#predictive"><i class="fa fa-check"></i><b>2.3.4</b> Predictive</a></li>
+<li class="chapter" data-level="2.3.5" data-path="week-1.html"><a href="week-1.html#causal"><i class="fa fa-check"></i><b>2.3.5</b> Causal</a></li>
+<li class="chapter" data-level="2.3.6" data-path="week-1.html"><a href="week-1.html#mechanistic"><i class="fa fa-check"></i><b>2.3.6</b> Mechanistic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="week-1.html"><a href="week-1.html#a-data-analytic-rubric"><i class="fa fa-check"></i><b>2.4</b> A data analytic rubric</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="week-1.html"><a href="week-1.html#answering-the-question"><i class="fa fa-check"></i><b>2.4.1</b> Answering the question</a></li>
+<li class="chapter" data-level="2.4.2" data-path="week-1.html"><a href="week-1.html#checking-the-data"><i class="fa fa-check"></i><b>2.4.2</b> Checking the data</a></li>
+<li class="chapter" data-level="2.4.3" data-path="week-1.html"><a href="week-1.html#tidying-the-data"><i class="fa fa-check"></i><b>2.4.3</b> Tidying the data</a></li>
+<li class="chapter" data-level="2.4.4" data-path="week-1.html"><a href="week-1.html#exploratory-analysis"><i class="fa fa-check"></i><b>2.4.4</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="2.4.5" data-path="week-1.html"><a href="week-1.html#inference"><i class="fa fa-check"></i><b>2.4.5</b> Inference</a></li>
+<li class="chapter" data-level="2.4.6" data-path="week-1.html"><a href="week-1.html#prediction"><i class="fa fa-check"></i><b>2.4.6</b> Prediction</a></li>
+<li class="chapter" data-level="2.4.7" data-path="week-1.html"><a href="week-1.html#causality"><i class="fa fa-check"></i><b>2.4.7</b> Causality</a></li>
+<li class="chapter" data-level="2.4.8" data-path="week-1.html"><a href="week-1.html#written-analyses"><i class="fa fa-check"></i><b>2.4.8</b> Written analyses</a></li>
+<li class="chapter" data-level="2.4.9" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>2.4.9</b> Figures</a></li>
+<li class="chapter" data-level="2.4.10" data-path="week-1.html"><a href="week-1.html#presentations"><i class="fa fa-check"></i><b>2.4.10</b> Presentations</a></li>
+<li class="chapter" data-level="2.4.11" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>2.4.11</b> Reproducibility</a></li>
+<li class="chapter" data-level="2.4.12" data-path="week-1.html"><a href="week-1.html#r-packages"><i class="fa fa-check"></i><b>2.4.12</b> R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="week-1.html"><a href="week-1.html#your-first-assignment---deconstructing-an-analysis"><i class="fa fa-check"></i><b>2.5</b> Your first assignment - deconstructing an analysis</a></li>
+<li class="chapter" data-level="2.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>2.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>2.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a><ul>
+<li class="chapter" data-level="3.1" data-path="week-2.html"><a href="week-2.html#week-2-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Week 2 Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2.html"><a href="week-2.html#the-steps-in-a-data-analysis"><i class="fa fa-check"></i><b>3.2</b> The steps in a data analysis</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="week-2.html"><a href="week-2.html#defining-the-question"><i class="fa fa-check"></i><b>3.2.1</b> Defining the question</a></li>
+<li class="chapter" data-level="3.2.2" data-path="week-2.html"><a href="week-2.html#defining-the-ideal-data-set"><i class="fa fa-check"></i><b>3.2.2</b> Defining the ideal data set</a></li>
+<li class="chapter" data-level="3.2.3" data-path="week-2.html"><a href="week-2.html#determine-the-data-you-can-access"><i class="fa fa-check"></i><b>3.2.3</b> Determine the data you can access</a></li>
+<li class="chapter" data-level="3.2.4" data-path="week-2.html"><a href="week-2.html#obtain-the-data"><i class="fa fa-check"></i><b>3.2.4</b> Obtain the data</a></li>
+<li class="chapter" data-level="3.2.5" data-path="week-2.html"><a href="week-2.html#clean-the-data"><i class="fa fa-check"></i><b>3.2.5</b> Clean the data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="week-2.html"><a href="week-2.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>3.2.6</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="3.2.7" data-path="week-2.html"><a href="week-2.html#statistical-predictionmodeling"><i class="fa fa-check"></i><b>3.2.7</b> Statistical prediction/modeling</a></li>
+<li class="chapter" data-level="3.2.8" data-path="week-2.html"><a href="week-2.html#interpret-results"><i class="fa fa-check"></i><b>3.2.8</b> Interpret results</a></li>
+<li class="chapter" data-level="3.2.9" data-path="week-2.html"><a href="week-2.html#challenge-results"><i class="fa fa-check"></i><b>3.2.9</b> Challenge results</a></li>
+<li class="chapter" data-level="3.2.10" data-path="week-2.html"><a href="week-2.html#synthesizewrite-up-results"><i class="fa fa-check"></i><b>3.2.10</b> Synthesize/write up results</a></li>
+<li class="chapter" data-level="3.2.11" data-path="week-2.html"><a href="week-2.html#create-reproducible-code"><i class="fa fa-check"></i><b>3.2.11</b> Create reproducible code</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="week-2.html"><a href="week-2.html#raw-informal-and-formal-data-science"><i class="fa fa-check"></i><b>3.3</b> Raw, informal, and formal data science</a></li>
+<li class="chapter" data-level="3.4" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>3.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.5" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="week-3.html"><a href="week-3.html"><i class="fa fa-check"></i><b>4</b> Week 3</a><ul>
+<li class="chapter" data-level="4.1" data-path="week-3.html"><a href="week-3.html#week-3-learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Week 3 Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="week-3.html"><a href="week-3.html#organizing-a-data-analysis"><i class="fa fa-check"></i><b>4.2</b> Organizing a data analysis</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="week-3.html"><a href="week-3.html#motivation---the-stick"><i class="fa fa-check"></i><b>4.2.1</b> Motivation - the stick</a></li>
+<li class="chapter" data-level="4.2.2" data-path="week-3.html"><a href="week-3.html#motivation---the-carrot"><i class="fa fa-check"></i><b>4.2.2</b> Motivation - the carrot</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="week-3.html"><a href="week-3.html#project-organization"><i class="fa fa-check"></i><b>4.3</b> Project Organization</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="week-3.html"><a href="week-3.html#readme.md"><i class="fa fa-check"></i><b>4.3.1</b> README.md</a></li>
+<li class="chapter" data-level="4.3.2" data-path="week-3.html"><a href="week-3.html#gitignore"><i class="fa fa-check"></i><b>4.3.2</b> .gitignore</a></li>
+<li class="chapter" data-level="4.3.3" data-path="week-3.html"><a href="week-3.html#data"><i class="fa fa-check"></i><b>4.3.3</b> data/</a></li>
+<li class="chapter" data-level="4.3.4" data-path="week-3.html"><a href="week-3.html#code"><i class="fa fa-check"></i><b>4.3.4</b> code/</a></li>
+<li class="chapter" data-level="4.3.5" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>4.3.5</b> figures</a></li>
+<li class="chapter" data-level="4.3.6" data-path="week-3.html"><a href="week-3.html#products"><i class="fa fa-check"></i><b>4.3.6</b> products/</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="week-3.html"><a href="week-3.html#file-naming"><i class="fa fa-check"></i><b>4.4</b> File naming</a></li>
+<li class="chapter" data-level="4.5" data-path="week-3.html"><a href="week-3.html#absolute-vs.-relative-paths"><i class="fa fa-check"></i><b>4.5</b> Absolute vs. relative paths</a></li>
+<li class="chapter" data-level="4.6" data-path="week-3.html"><a href="week-3.html#coding-variables"><i class="fa fa-check"></i><b>4.6</b> Coding Variables</a></li>
+<li class="chapter" data-level="4.7" data-path="week-3.html"><a href="week-3.html#project-management-software"><i class="fa fa-check"></i><b>4.7</b> Project management software</a></li>
+<li class="chapter" data-level="4.8" data-path="week-3.html"><a href="week-3.html#coding-style"><i class="fa fa-check"></i><b>4.8</b> Coding style</a></li>
+<li class="chapter" data-level="4.9" data-path="week-3.html"><a href="week-3.html#chain-of-custody-for-data"><i class="fa fa-check"></i><b>4.9</b> Chain of Custody for Data</a></li>
+<li class="chapter" data-level="4.10" data-path="week-3.html"><a href="week-3.html#version-control"><i class="fa fa-check"></i><b>4.10</b> Version Control</a></li>
+<li class="chapter" data-level="4.11" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>4.11</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.12" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>4.12</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="week-4.html"><a href="week-4.html"><i class="fa fa-check"></i><b>5</b> Week 4</a><ul>
+<li class="chapter" data-level="5.1" data-path="week-4.html"><a href="week-4.html#week-4-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Week 4 Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="week-4.html"><a href="week-4.html#the-optimality-paradox"><i class="fa fa-check"></i><b>5.2</b> The optimality paradox</a></li>
+<li class="chapter" data-level="5.3" data-path="week-4.html"><a href="week-4.html#an-example-of-the-art-of-data-science"><i class="fa fa-check"></i><b>5.3</b> An example of the art of data science</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="week-4.html"><a href="week-4.html#an-important-subtlety---analyst-decisions-change-the-question"><i class="fa fa-check"></i><b>5.3.1</b> An important subtlety - analyst decisions change the question</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="week-4.html"><a href="week-4.html#early-definitions-of-success"><i class="fa fa-check"></i><b>5.4</b> Early definitions of success</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="index.html"><a href="index.html#reproducibility"><i class="fa fa-check"></i><b>5.4.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="5.4.2" data-path="week-4.html"><a href="week-4.html#replicability"><i class="fa fa-check"></i><b>5.4.2</b> Replicability</a></li>
+<li class="chapter" data-level="5.4.3" data-path="week-4.html"><a href="week-4.html#false-discovery"><i class="fa fa-check"></i><b>5.4.3</b> False discovery</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="week-4.html"><a href="week-4.html#a-theory-of-data-science-success"><i class="fa fa-check"></i><b>5.5</b> A theory of data science success</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="week-4.html"><a href="week-4.html#elements-of-data-science"><i class="fa fa-check"></i><b>5.5.1</b> Elements of Data Science</a></li>
+<li class="chapter" data-level="5.5.2" data-path="week-4.html"><a href="week-4.html#principles-of-data-science"><i class="fa fa-check"></i><b>5.5.2</b> Principles of Data Science</a></li>
+<li class="chapter" data-level="5.5.3" data-path="week-4.html"><a href="week-4.html#data-matching"><i class="fa fa-check"></i><b>5.5.3</b> Data matching</a></li>
+<li class="chapter" data-level="5.5.4" data-path="week-4.html"><a href="week-4.html#exhaustive"><i class="fa fa-check"></i><b>5.5.4</b> Exhaustive</a></li>
+<li class="chapter" data-level="5.5.5" data-path="week-4.html"><a href="week-4.html#skeptical"><i class="fa fa-check"></i><b>5.5.5</b> Skeptical</a></li>
+<li class="chapter" data-level="5.5.6" data-path="week-4.html"><a href="week-4.html#second-order"><i class="fa fa-check"></i><b>5.5.6</b> Second order</a></li>
+<li class="chapter" data-level="5.5.7" data-path="week-4.html"><a href="week-4.html#transparent"><i class="fa fa-check"></i><b>5.5.7</b> Transparent</a></li>
+<li class="chapter" data-level="5.5.8" data-path="week-4.html"><a href="week-4.html#reproducible"><i class="fa fa-check"></i><b>5.5.8</b> Reproducible</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="week-4.html"><a href="week-4.html#a-successful-data-analysis"><i class="fa fa-check"></i><b>5.6</b> A successful data analysis</a></li>
+<li class="chapter" data-level="5.7" data-path="week-4.html"><a href="week-4.html#constraints-and-expectation-matching"><i class="fa fa-check"></i><b>5.7</b> Constraints and expectation matching</a></li>
+<li class="chapter" data-level="5.8" data-path="week-4.html"><a href="week-4.html#what-about-being-correct"><i class="fa fa-check"></i><b>5.8</b> What about being correct?</a></li>
+<li class="chapter" data-level="5.9" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>5.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.10" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>5.10</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="week-5.html"><a href="week-5.html"><i class="fa fa-check"></i><b>6</b> Week 5</a><ul>
+<li class="chapter" data-level="6.1" data-path="week-5.html"><a href="week-5.html#week-5-learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Week 5 Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="week-5.html"><a href="week-5.html#skepticism-vs.-discovery"><i class="fa fa-check"></i><b>6.2</b> Skepticism vs. Discovery</a></li>
+<li class="chapter" data-level="6.3" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>6.3</b> Figures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="week-5.html"><a href="week-5.html#just-modeling-results---show-the-data"><i class="fa fa-check"></i><b>6.3.1</b> Just modeling results -&gt; show the data!</a></li>
+<li class="chapter" data-level="6.3.2" data-path="week-5.html"><a href="week-5.html#dynamite-plots---scatterplots"><i class="fa fa-check"></i><b>6.3.2</b> Dynamite plots -&gt; scatterplots</a></li>
+<li class="chapter" data-level="6.3.3" data-path="week-5.html"><a href="week-5.html#ridiculograms---clustering-diagrams"><i class="fa fa-check"></i><b>6.3.3</b> Ridiculograms -&gt; clustering diagrams</a></li>
+<li class="chapter" data-level="6.3.4" data-path="week-5.html"><a href="week-5.html#venn-diagrams---upset-plots"><i class="fa fa-check"></i><b>6.3.4</b> Venn diagrams -&gt; upset plots</a></li>
+<li class="chapter" data-level="6.3.5" data-path="week-5.html"><a href="week-5.html#extreme-variation-in-scales---log-scales"><i class="fa fa-check"></i><b>6.3.5</b> Extreme variation in scales -&gt; log scales</a></li>
+<li class="chapter" data-level="6.3.6" data-path="week-5.html"><a href="week-5.html#correlated-measurements---ma-plots"><i class="fa fa-check"></i><b>6.3.6</b> Correlated measurements -&gt; MA plots</a></li>
+<li class="chapter" data-level="6.3.7" data-path="week-5.html"><a href="week-5.html#axes-cutoff---plot-to-zero"><i class="fa fa-check"></i><b>6.3.7</b> Axes cutoff -&gt; plot to zero</a></li>
+<li class="chapter" data-level="6.3.8" data-path="week-5.html"><a href="week-5.html#d-graphics---just-dont"><i class="fa fa-check"></i><b>6.3.8</b> 3d graphics -&gt; just don’t</a></li>
+<li class="chapter" data-level="6.3.9" data-path="week-5.html"><a href="week-5.html#pie-charts---adjacent-bar-plots"><i class="fa fa-check"></i><b>6.3.9</b> Pie charts -&gt; adjacent bar plots</a></li>
+<li class="chapter" data-level="6.3.10" data-path="week-5.html"><a href="week-5.html#difficult-comparisons---put-things-close-on-linear-axes"><i class="fa fa-check"></i><b>6.3.10</b> Difficult comparisons -&gt; put things close on linear axes</a></li>
+<li class="chapter" data-level="6.3.11" data-path="week-5.html"><a href="week-5.html#comparisons-hard-to-make-between-plots---use-common-axes"><i class="fa fa-check"></i><b>6.3.11</b> Comparisons hard to make between plots -&gt; use common axes</a></li>
+<li class="chapter" data-level="6.3.12" data-path="week-5.html"><a href="week-5.html#legends-hard-to-follow---use-labels"><i class="fa fa-check"></i><b>6.3.12</b> Legends hard to follow -&gt; use labels</a></li>
+<li class="chapter" data-level="6.3.13" data-path="week-5.html"><a href="week-5.html#confounders-arent-clear---color-by-confounder"><i class="fa fa-check"></i><b>6.3.13</b> Confounders aren’t clear -&gt; color by confounder</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="week-5.html"><a href="week-5.html#common-data-analytic-fallacies"><i class="fa fa-check"></i><b>6.4</b> Common data analytic fallacies</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="week-5.html"><a href="week-5.html#spurious-correlation"><i class="fa fa-check"></i><b>6.4.1</b> Spurious correlation</a></li>
+<li class="chapter" data-level="6.4.2" data-path="week-5.html"><a href="week-5.html#outliers"><i class="fa fa-check"></i><b>6.4.2</b> Outliers</a></li>
+<li class="chapter" data-level="6.4.3" data-path="week-5.html"><a href="week-5.html#reversing-cause-and-effect"><i class="fa fa-check"></i><b>6.4.3</b> Reversing Cause and Effect</a></li>
+<li class="chapter" data-level="6.4.4" data-path="week-5.html"><a href="week-5.html#confounders"><i class="fa fa-check"></i><b>6.4.4</b> Confounders</a></li>
+<li class="chapter" data-level="6.4.5" data-path="week-5.html"><a href="week-5.html#simpsons-paradox"><i class="fa fa-check"></i><b>6.4.5</b> Simpson’s Paradox</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="week-5.html"><a href="week-5.html#over-skepticism"><i class="fa fa-check"></i><b>6.5</b> Over-skepticism</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="week-5.html"><a href="week-5.html#everything-must-be-causal"><i class="fa fa-check"></i><b>6.5.1</b> Everything must be causal</a></li>
+<li class="chapter" data-level="6.5.2" data-path="week-5.html"><a href="week-5.html#nothing-can-be-causal"><i class="fa fa-check"></i><b>6.5.2</b> Nothing can be causal</a></li>
+<li class="chapter" data-level="6.5.3" data-path="week-5.html"><a href="week-5.html#you-should-answer-my-question-not-yours"><i class="fa fa-check"></i><b>6.5.3</b> You should answer my question, not yours</a></li>
+<li class="chapter" data-level="6.5.4" data-path="week-5.html"><a href="week-5.html#you-used-insert-method-i-dont-use-therefore-the-analysis-is-wrong"><i class="fa fa-check"></i><b>6.5.4</b> You used (insert method I don’t use) therefore the analysis is wrong</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>6.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="week-6.html"><a href="week-6.html"><i class="fa fa-check"></i><b>7</b> Week 6</a><ul>
+<li class="chapter" data-level="7.1" data-path="week-6.html"><a href="week-6.html#week-6-learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Week 6 Learning objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="week-6.html"><a href="week-6.html#what-you-wish-data-looked-like"><i class="fa fa-check"></i><b>7.2</b> What you wish data looked like</a></li>
+<li class="chapter" data-level="7.3" data-path="week-6.html"><a href="week-6.html#what-it-actually-looks-like"><i class="fa fa-check"></i><b>7.3</b> What it actually looks like</a></li>
+<li class="chapter" data-level="7.4" data-path="week-6.html"><a href="week-6.html#background-on-getting-data"><i class="fa fa-check"></i><b>7.4</b> Background on getting data</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="week-6.html"><a href="week-6.html#where-do-data-live"><i class="fa fa-check"></i><b>7.4.1</b> Where do data live?</a></li>
+<li class="chapter" data-level="7.4.2" data-path="week-6.html"><a href="week-6.html#best-practices-on-sharing-data"><i class="fa fa-check"></i><b>7.4.2</b> Best practices on sharing data</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="week-6.html"><a href="week-6.html#relative-versus-absolute-paths"><i class="fa fa-check"></i><b>7.5</b> Relative versus absolute paths</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="week-6.html"><a href="week-6.html#the-here-package"><i class="fa fa-check"></i><b>7.5.1</b> The <code>here</code> package</a></li>
+<li class="chapter" data-level="7.5.2" data-path="week-6.html"><a href="week-6.html#finding-and-creating-files-locally"><i class="fa fa-check"></i><b>7.5.2</b> Finding and creating files locally</a></li>
+<li class="chapter" data-level="7.5.3" data-path="week-6.html"><a href="week-6.html#downloading-files"><i class="fa fa-check"></i><b>7.5.3</b> Downloading files</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="week-6.html"><a href="week-6.html#reading-files"><i class="fa fa-check"></i><b>7.6</b> Reading files</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="week-6.html"><a href="week-6.html#reading-in-csv-files"><i class="fa fa-check"></i><b>7.6.1</b> Reading in CSV files</a></li>
+<li class="chapter" data-level="7.6.2" data-path="week-6.html"><a href="week-6.html#reading-in-excel-files"><i class="fa fa-check"></i><b>7.6.2</b> Reading in Excel files</a></li>
+<li class="chapter" data-level="7.6.3" data-path="week-6.html"><a href="week-6.html#reading-in-json-files"><i class="fa fa-check"></i><b>7.6.3</b> Reading in JSON Files</a></li>
+<li class="chapter" data-level="7.6.4" data-path="week-6.html"><a href="week-6.html#using-github-api"><i class="fa fa-check"></i><b>7.6.4</b> Using GitHub API</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="week-6.html"><a href="week-6.html#google-sheets"><i class="fa fa-check"></i><b>7.7</b> Google Sheets</a></li>
+<li class="chapter" data-level="7.8" data-path="week-6.html"><a href="week-6.html#databases"><i class="fa fa-check"></i><b>7.8</b> Databases</a><ul>
+<li class="chapter" data-level="7.8.1" data-path="week-6.html"><a href="week-6.html#querying-with-dplyr-syntax"><i class="fa fa-check"></i><b>7.8.1</b> Querying with <code>dplyr</code> syntax</a></li>
+<li class="chapter" data-level="7.8.2" data-path="week-6.html"><a href="week-6.html#delayed-execution"><i class="fa fa-check"></i><b>7.8.2</b> Delayed execution</a></li>
+</ul></li>
+<li class="chapter" data-level="7.9" data-path="week-6.html"><a href="week-6.html#apis"><i class="fa fa-check"></i><b>7.9</b> APIs</a></li>
+<li class="chapter" data-level="7.10" data-path="week-6.html"><a href="week-6.html#webscraping"><i class="fa fa-check"></i><b>7.10</b> Webscraping</a><ul>
+<li class="chapter" data-level="7.10.1" data-path="week-6.html"><a href="week-6.html#css-selectors"><i class="fa fa-check"></i><b>7.10.1</b> CSS Selectors</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="week-6.html"><a href="week-6.html#google-ing"><i class="fa fa-check"></i><b>7.11</b> Google-ing</a></li>
+<li class="chapter" data-level="7.12" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>7.12</b> Additional Resources</a></li>
+<li class="chapter" data-level="7.13" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>7.13</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="week-7.html"><a href="week-7.html"><i class="fa fa-check"></i><b>8</b> Week 7</a><ul>
+<li class="chapter" data-level="8.1" data-path="week-7.html"><a href="week-7.html#week-7-learning-objectives"><i class="fa fa-check"></i><b>8.1</b> Week 7 Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="week-7.html"><a href="week-7.html#a-framework-for-exploratory-analysis"><i class="fa fa-check"></i><b>8.2</b> A framework for exploratory analysis</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-question"><i class="fa fa-check"></i><b>8.2.1</b> Do you have the right question?</a></li>
+<li class="chapter" data-level="8.2.2" data-path="week-7.html"><a href="week-7.html#do-you-have-the-right-data"><i class="fa fa-check"></i><b>8.2.2</b> Do you have the right data?</a></li>
+<li class="chapter" data-level="8.2.3" data-path="week-7.html"><a href="week-7.html#can-you-sketch-a-solution-to-the-question-you-care-about"><i class="fa fa-check"></i><b>8.2.3</b> Can you sketch a solution to the question you care about?</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="week-7.html"><a href="week-7.html#some-general-eda-principles"><i class="fa fa-check"></i><b>8.3</b> Some general EDA principles</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="week-7.html"><a href="week-7.html#check-the-packaging"><i class="fa fa-check"></i><b>8.3.1</b> Check the packaging</a></li>
+<li class="chapter" data-level="8.3.2" data-path="week-7.html"><a href="week-7.html#rectangle-your-data"><i class="fa fa-check"></i><b>8.3.2</b> Rectangle your data</a></li>
+<li class="chapter" data-level="8.3.3" data-path="week-7.html"><a href="week-7.html#look-at-the-top-and-bottom"><i class="fa fa-check"></i><b>8.3.3</b> Look at the top and bottom</a></li>
+<li class="chapter" data-level="8.3.4" data-path="week-7.html"><a href="week-7.html#always-be-counting"><i class="fa fa-check"></i><b>8.3.4</b> Always be counting</a></li>
+<li class="chapter" data-level="8.3.5" data-path="week-7.html"><a href="week-7.html#make-a-plot"><i class="fa fa-check"></i><b>8.3.5</b> Make a plot</a></li>
+<li class="chapter" data-level="8.3.6" data-path="week-7.html"><a href="week-7.html#validate-with-an-external-data-source"><i class="fa fa-check"></i><b>8.3.6</b> Validate with an external data source</a></li>
+<li class="chapter" data-level="8.3.7" data-path="week-7.html"><a href="week-7.html#try-the-easy-solution"><i class="fa fa-check"></i><b>8.3.7</b> Try the easy solution</a></li>
+<li class="chapter" data-level="8.3.8" data-path="week-7.html"><a href="week-7.html#follow-up"><i class="fa fa-check"></i><b>8.3.8</b> Follow up</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="week-7.html"><a href="week-7.html#organizing-an-eda"><i class="fa fa-check"></i><b>8.4</b> Organizing an EDA</a></li>
+<li class="chapter" data-level="8.5" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>8.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.6" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>8.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="week-8.html"><a href="week-8.html"><i class="fa fa-check"></i><b>9</b> Week 8</a><ul>
+<li class="chapter" data-level="9.1" data-path="week-8.html"><a href="week-8.html#week-8-learning-objectives"><i class="fa fa-check"></i><b>9.1</b> Week 8 Learning objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="week-8.html"><a href="week-8.html#a-framework-for-modeling"><i class="fa fa-check"></i><b>9.2</b> A framework for modeling</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="week-8.html"><a href="week-8.html#identify-your-goal"><i class="fa fa-check"></i><b>9.2.1</b> Identify your goal</a></li>
+<li class="chapter" data-level="9.2.2" data-path="week-8.html"><a href="week-8.html#form-an-analysis-plan"><i class="fa fa-check"></i><b>9.2.2</b> Form an analysis plan</a></li>
+<li class="chapter" data-level="9.2.3" data-path="week-8.html"><a href="week-8.html#model-signal"><i class="fa fa-check"></i><b>9.2.3</b> Model signal</a></li>
+<li class="chapter" data-level="9.2.4" data-path="week-8.html"><a href="week-8.html#account-for-artifacts"><i class="fa fa-check"></i><b>9.2.4</b> Account for artifacts</a></li>
+<li class="chapter" data-level="9.2.5" data-path="week-8.html"><a href="week-8.html#build-models-up-sequentially"><i class="fa fa-check"></i><b>9.2.5</b> Build models up sequentially</a></li>
+<li class="chapter" data-level="9.2.6" data-path="week-8.html"><a href="week-8.html#model-uncertainty"><i class="fa fa-check"></i><b>9.2.6</b> Model uncertainty</a></li>
+<li class="chapter" data-level="9.2.7" data-path="week-8.html"><a href="week-8.html#compare-to-your-analysis-plan"><i class="fa fa-check"></i><b>9.2.7</b> Compare to your analysis plan</a></li>
+<li class="chapter" data-level="9.2.8" data-path="week-8.html"><a href="week-8.html#understand-incentives"><i class="fa fa-check"></i><b>9.2.8</b> Understand incentives</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>9.3</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.4" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>9.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="week-9.html"><a href="week-9.html"><i class="fa fa-check"></i><b>10</b> Week 9</a><ul>
+<li class="chapter" data-level="10.1" data-path="week-9.html"><a href="week-9.html#week-9-learning-objectives"><i class="fa fa-check"></i><b>10.1</b> Week 9 Learning objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="week-9.html"><a href="week-9.html#story-telling-in-data-analysis"><i class="fa fa-check"></i><b>10.2</b> Story Telling in Data Analysis</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="week-9.html"><a href="week-9.html#the-central-dramatic-argument"><i class="fa fa-check"></i><b>10.2.1</b> The Central Dramatic Argument</a></li>
+<li class="chapter" data-level="10.2.2" data-path="week-9.html"><a href="week-9.html#thematic-structure-and-causality"><i class="fa fa-check"></i><b>10.2.2</b> Thematic structure and causality</a></li>
+<li class="chapter" data-level="10.2.3" data-path="week-9.html"><a href="week-9.html#format"><i class="fa fa-check"></i><b>10.2.3</b> Format</a></li>
+<li class="chapter" data-level="10.2.4" data-path="week-9.html"><a href="week-9.html#trust-and-belief"><i class="fa fa-check"></i><b>10.2.4</b> Trust and Belief</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="week-9.html"><a href="week-9.html#the-journey-to-interesting-and-true"><i class="fa fa-check"></i><b>10.3</b> The journey to interesting and true</a></li>
+<li class="chapter" data-level="10.4" data-path="week-9.html"><a href="week-9.html#data-analysis-papers"><i class="fa fa-check"></i><b>10.4</b> Data Analysis Papers</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="week-9.html"><a href="week-9.html#how-do-you-know-when-to-start-writing"><i class="fa fa-check"></i><b>10.4.1</b> How do you know when to start writing?</a></li>
+<li class="chapter" data-level="10.4.2" data-path="week-9.html"><a href="week-9.html#structure"><i class="fa fa-check"></i><b>10.4.2</b> Structure</a></li>
+<li class="chapter" data-level="10.4.3" data-path="week-9.html"><a href="week-9.html#titles"><i class="fa fa-check"></i><b>10.4.3</b> Titles</a></li>
+<li class="chapter" data-level="10.4.4" data-path="week-9.html"><a href="week-9.html#abstracts"><i class="fa fa-check"></i><b>10.4.4</b> Abstracts</a></li>
+<li class="chapter" data-level="10.4.5" data-path="week-9.html"><a href="week-9.html#introductions"><i class="fa fa-check"></i><b>10.4.5</b> Introductions</a></li>
+<li class="chapter" data-level="10.4.6" data-path="week-9.html"><a href="week-9.html#results"><i class="fa fa-check"></i><b>10.4.6</b> Results</a></li>
+<li class="chapter" data-level="10.4.7" data-path="week-9.html"><a href="week-9.html#methods-sections"><i class="fa fa-check"></i><b>10.4.7</b> Methods sections</a></li>
+<li class="chapter" data-level="10.4.8" data-path="week-9.html"><a href="week-9.html#conclusions-and-discussion"><i class="fa fa-check"></i><b>10.4.8</b> Conclusions and discussion</a></li>
+<li class="chapter" data-level="10.4.9" data-path="week-9.html"><a href="week-9.html#supplementary-material"><i class="fa fa-check"></i><b>10.4.9</b> Supplementary material</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="week-9.html"><a href="week-9.html#a-few-matters-of-form"><i class="fa fa-check"></i><b>10.5</b> A few matters of form</a></li>
+<li class="chapter" data-level="10.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>10.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="10.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>10.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="week-10.html"><a href="week-10.html"><i class="fa fa-check"></i><b>11</b> Week 10</a><ul>
+<li class="chapter" data-level="11.1" data-path="week-10.html"><a href="week-10.html#week-10-learning-objectives"><i class="fa fa-check"></i><b>11.1</b> Week 10 Learning objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="week-10.html"><a href="week-10.html#exploratoy-vs-expository"><i class="fa fa-check"></i><b>11.2</b> Exploratoy vs expository</a></li>
+<li class="chapter" data-level="11.3" data-path="week-10.html"><a href="week-10.html#creating-expository-graphs"><i class="fa fa-check"></i><b>11.3</b> Creating Expository Graphs</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="week-10.html"><a href="week-10.html#background-color"><i class="fa fa-check"></i><b>11.3.1</b> Background color</a></li>
+<li class="chapter" data-level="11.3.2" data-path="week-10.html"><a href="week-10.html#axis-titles-and-axis-labels"><i class="fa fa-check"></i><b>11.3.2</b> Axis titles and axis labels</a></li>
+<li class="chapter" data-level="11.3.3" data-path="week-10.html"><a href="week-10.html#legends-or-not"><i class="fa fa-check"></i><b>11.3.3</b> Legends (or not!)</a></li>
+<li class="chapter" data-level="11.3.4" data-path="week-10.html"><a href="week-10.html#titles-with-color"><i class="fa fa-check"></i><b>11.3.4</b> Titles (with color!)</a></li>
+<li class="chapter" data-level="11.3.5" data-path="week-10.html"><a href="week-10.html#adding-a-model-fit"><i class="fa fa-check"></i><b>11.3.5</b> Adding a model fit</a></li>
+<li class="chapter" data-level="11.3.6" data-path="week-10.html"><a href="week-10.html#figure-captions"><i class="fa fa-check"></i><b>11.3.6</b> Figure captions</a></li>
+<li class="chapter" data-level="11.3.7" data-path="week-10.html"><a href="week-10.html#colors-and-fonts"><i class="fa fa-check"></i><b>11.3.7</b> Colors and fonts</a></li>
+<li class="chapter" data-level="11.3.8" data-path="week-10.html"><a href="week-10.html#multi-panel-plots"><i class="fa fa-check"></i><b>11.3.8</b> Multi-panel plots</a></li>
+<li class="chapter" data-level="11.3.9" data-path="week-10.html"><a href="week-10.html#miscellaneous-advice"><i class="fa fa-check"></i><b>11.3.9</b> Miscellaneous Advice</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="week-10.html"><a href="week-10.html#creating-expository-tables"><i class="fa fa-check"></i><b>11.4</b> Creating Expository Tables</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="week-10.html"><a href="week-10.html#table-1"><i class="fa fa-check"></i><b>11.4.1</b> Table 1</a></li>
+<li class="chapter" data-level="11.4.2" data-path="week-10.html"><a href="week-10.html#color-in-tables"><i class="fa fa-check"></i><b>11.4.2</b> Color in tables</a></li>
+<li class="chapter" data-level="11.4.3" data-path="week-10.html"><a href="week-10.html#captions"><i class="fa fa-check"></i><b>11.4.3</b> Captions</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="week-10.html"><a href="week-10.html#scientific-graphics-vs-infographics"><i class="fa fa-check"></i><b>11.5</b> Scientific graphics vs infographics</a></li>
+<li class="chapter" data-level="11.6" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>11.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="11.7" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>11.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="week-11.html"><a href="week-11.html"><i class="fa fa-check"></i><b>12</b> Week 11</a><ul>
+<li class="chapter" data-level="12.1" data-path="week-11.html"><a href="week-11.html#week-11-learning-objectives"><i class="fa fa-check"></i><b>12.1</b> Week 11 Learning objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="week-11.html"><a href="week-11.html#methodology-vs-data-analysis"><i class="fa fa-check"></i><b>12.2</b> Methodology vs Data Analysis</a></li>
+<li class="chapter" data-level="12.3" data-path="week-11.html"><a href="week-11.html#the-sections-of-a-methodological-paper"><i class="fa fa-check"></i><b>12.3</b> The sections of a methodological paper</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="week-9.html"><a href="week-9.html#abstracts"><i class="fa fa-check"></i><b>12.3.1</b> Abstracts</a></li>
+<li class="chapter" data-level="12.3.2" data-path="week-9.html"><a href="week-9.html#introductions"><i class="fa fa-check"></i><b>12.3.2</b> Introductions</a></li>
+<li class="chapter" data-level="12.3.3" data-path="week-11.html"><a href="week-11.html#description-of-your-method"><i class="fa fa-check"></i><b>12.3.3</b> Description of your method</a></li>
+<li class="chapter" data-level="12.3.4" data-path="week-11.html"><a href="week-11.html#simulation-results"><i class="fa fa-check"></i><b>12.3.4</b> Simulation results</a></li>
+<li class="chapter" data-level="12.3.5" data-path="week-11.html"><a href="week-11.html#empirical-results"><i class="fa fa-check"></i><b>12.3.5</b> Empirical results</a></li>
+<li class="chapter" data-level="12.3.6" data-path="week-9.html"><a href="week-9.html#conclusions-and-discussion"><i class="fa fa-check"></i><b>12.3.6</b> Conclusions and discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="week-11.html"><a href="week-11.html#comparisons"><i class="fa fa-check"></i><b>12.4</b> Comparisons</a></li>
+<li class="chapter" data-level="12.5" data-path="week-11.html"><a href="week-11.html#transparency"><i class="fa fa-check"></i><b>12.5</b> Transparency</a></li>
+<li class="chapter" data-level="12.6" data-path="week-11.html"><a href="week-11.html#software"><i class="fa fa-check"></i><b>12.6</b> Software</a></li>
+<li class="chapter" data-level="12.7" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>12.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.8" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>12.8</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="week-12.html"><a href="week-12.html"><i class="fa fa-check"></i><b>13</b> Week 12</a><ul>
+<li class="chapter" data-level="13.1" data-path="week-12.html"><a href="week-12.html#week-12-learning-objectives"><i class="fa fa-check"></i><b>13.1</b> Week 12 Learning objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="week-12.html"><a href="week-12.html#why-give-data-analytic-presentations"><i class="fa fa-check"></i><b>13.2</b> Why give data analytic presentations?</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="week-12.html"><a href="week-12.html#why-is-this-part-of-advanced-data-science"><i class="fa fa-check"></i><b>13.2.1</b> Why is this part of advanced data science?</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="week-12.html"><a href="week-12.html#types-of-data-analytic-presentations"><i class="fa fa-check"></i><b>13.3</b> Types of data analytic presentations</a></li>
+<li class="chapter" data-level="13.4" data-path="week-12.html"><a href="week-12.html#structure-of-your-talk"><i class="fa fa-check"></i><b>13.4</b> Structure of your talk</a><ul>
+<li class="chapter" data-level="13.4.1" data-path="week-12.html"><a href="week-12.html#flash-talk-structure"><i class="fa fa-check"></i><b>13.4.1</b> Flash talk structure</a></li>
+<li class="chapter" data-level="13.4.2" data-path="week-12.html"><a href="week-12.html#short-form-talk-structure"><i class="fa fa-check"></i><b>13.4.2</b> Short form talk structure</a></li>
+<li class="chapter" data-level="13.4.3" data-path="week-12.html"><a href="week-12.html#long-form-talk-structure"><i class="fa fa-check"></i><b>13.4.3</b> Long form talk structure</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="week-12.html"><a href="week-12.html#slide-style"><i class="fa fa-check"></i><b>13.5</b> Slide style</a><ul>
+<li class="chapter" data-level="13.5.1" data-path="week-12.html"><a href="week-12.html#text"><i class="fa fa-check"></i><b>13.5.1</b> Text</a></li>
+<li class="chapter" data-level="13.5.2" data-path="week-12.html"><a href="week-12.html#fonts"><i class="fa fa-check"></i><b>13.5.2</b> Fonts</a></li>
+<li class="chapter" data-level="13.5.3" data-path="week-12.html"><a href="week-12.html#size"><i class="fa fa-check"></i><b>13.5.3</b> Size</a></li>
+<li class="chapter" data-level="13.5.4" data-path="week-12.html"><a href="week-12.html#colors"><i class="fa fa-check"></i><b>13.5.4</b> Colors</a></li>
+<li class="chapter" data-level="13.5.5" data-path="week-12.html"><a href="week-12.html#alignment"><i class="fa fa-check"></i><b>13.5.5</b> Alignment</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="week-12.html"><a href="week-12.html#presenting"><i class="fa fa-check"></i><b>13.6</b> Presenting</a><ul>
+<li class="chapter" data-level="13.6.1" data-path="week-12.html"><a href="week-12.html#be-prepared"><i class="fa fa-check"></i><b>13.6.1</b> Be prepared</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="week-12.html"><a href="week-12.html#equations"><i class="fa fa-check"></i><b>13.7</b> Equations</a></li>
+<li class="chapter" data-level="13.8" data-path="week-1.html"><a href="week-1.html#figures"><i class="fa fa-check"></i><b>13.8</b> Figures</a></li>
+<li class="chapter" data-level="13.9" data-path="week-12.html"><a href="week-12.html#job-talk-specific-issues"><i class="fa fa-check"></i><b>13.9</b> Job talk specific issues</a></li>
+<li class="chapter" data-level="13.10" data-path="week-12.html"><a href="week-12.html#answering-hard-questions"><i class="fa fa-check"></i><b>13.10</b> Answering hard questions</a><ul>
+<li class="chapter" data-level="13.10.1" data-path="week-12.html"><a href="week-12.html#that-one-person-who-keeps-going-bonkers-on-you"><i class="fa fa-check"></i><b>13.10.1</b> That one person who keeps going bonkers on you</a></li>
+</ul></li>
+<li class="chapter" data-level="13.11" data-path="week-12.html"><a href="week-12.html#finishing-on-time"><i class="fa fa-check"></i><b>13.11</b> Finishing on time</a></li>
+<li class="chapter" data-level="13.12" data-path="week-12.html"><a href="week-12.html#where-you-should-put-your-talk"><i class="fa fa-check"></i><b>13.12</b> Where you should put your talk</a></li>
+<li class="chapter" data-level="13.13" data-path="week-12.html"><a href="week-12.html#example-presentation-methods"><i class="fa fa-check"></i><b>13.13</b> Example Presentation: Methods</a><ul>
+<li class="chapter" data-level="13.13.1" data-path="week-12.html"><a href="week-12.html#talk-outline"><i class="fa fa-check"></i><b>13.13.1</b> Talk Outline</a></li>
+<li class="chapter" data-level="13.13.2" data-path="week-12.html"><a href="week-12.html#slide-design"><i class="fa fa-check"></i><b>13.13.2</b> Slide Design</a></li>
+<li class="chapter" data-level="13.13.3" data-path="week-12.html"><a href="week-12.html#presentation"><i class="fa fa-check"></i><b>13.13.3</b> Presentation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.14" data-path="week-12.html"><a href="week-12.html#example-presentation-analysis"><i class="fa fa-check"></i><b>13.14</b> Example Presentation: Analysis</a><ul>
+<li class="chapter" data-level="13.14.1" data-path="week-12.html"><a href="week-12.html#talk-outline-1"><i class="fa fa-check"></i><b>13.14.1</b> Talk Outline</a></li>
+<li class="chapter" data-level="13.14.2" data-path="week-12.html"><a href="week-12.html#slide-design-1"><i class="fa fa-check"></i><b>13.14.2</b> Slide Design</a></li>
+<li class="chapter" data-level="13.14.3" data-path="week-12.html"><a href="week-12.html#presentation-1"><i class="fa fa-check"></i><b>13.14.3</b> Presentation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.15" data-path="week-12.html"><a href="week-12.html#presenting-to-a-general-audience"><i class="fa fa-check"></i><b>13.15</b> Presenting to a General Audience</a><ul>
+<li class="chapter" data-level="13.15.1" data-path="week-12.html"><a href="week-12.html#the-goal"><i class="fa fa-check"></i><b>13.15.1</b> The Goal</a></li>
+<li class="chapter" data-level="13.15.2" data-path="week-12.html"><a href="week-12.html#general-presentation-example"><i class="fa fa-check"></i><b>13.15.2</b> General Presentation Example</a></li>
+</ul></li>
+<li class="chapter" data-level="13.16" data-path="week-12.html"><a href="week-12.html#presenting-to-a-technical-audience"><i class="fa fa-check"></i><b>13.16</b> Presenting to a Technical Audience</a><ul>
+<li class="chapter" data-level="13.16.1" data-path="week-12.html"><a href="week-12.html#the-goal-1"><i class="fa fa-check"></i><b>13.16.1</b> The Goal</a></li>
+<li class="chapter" data-level="13.16.2" data-path="week-12.html"><a href="week-12.html#technical-presentation-example"><i class="fa fa-check"></i><b>13.16.2</b> Technical Presentation Example</a></li>
+<li class="chapter" data-level="13.16.3" data-path="week-12.html"><a href="week-12.html#general-vs-technical"><i class="fa fa-check"></i><b>13.16.3</b> General vs Technical</a></li>
+</ul></li>
+<li class="chapter" data-level="13.17" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>13.17</b> Additional Resources</a></li>
+<li class="chapter" data-level="13.18" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>13.18</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="week-13.html"><a href="week-13.html"><i class="fa fa-check"></i><b>14</b> Week 13</a><ul>
+<li class="chapter" data-level="14.1" data-path="week-13.html"><a href="week-13.html#week-13-learning-objectives"><i class="fa fa-check"></i><b>14.1</b> Week 13 Learning objectives</a></li>
+<li class="chapter" data-level="14.2" data-path="week-13.html"><a href="week-13.html#introduction"><i class="fa fa-check"></i><b>14.2</b> Introduction</a></li>
+<li class="chapter" data-level="14.3" data-path="week-13.html"><a href="week-13.html#basic-data-analytic-iteration"><i class="fa fa-check"></i><b>14.3</b> Basic Data Analytic Iteration</a></li>
+<li class="chapter" data-level="14.4" data-path="week-13.html"><a href="week-13.html#statistical-methods-systems"><i class="fa fa-check"></i><b>14.4</b> Statistical Methods Systems</a><ul>
+<li class="chapter" data-level="14.4.1" data-path="week-13.html"><a href="week-13.html#example-a-simple-linear-model-system"><i class="fa fa-check"></i><b>14.4.1</b> Example: A Simple Linear Model System</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="week-13.html"><a href="week-13.html#sec:expectations"><i class="fa fa-check"></i><b>14.5</b> The Set of Expected Outcomes</a><ul>
+<li class="chapter" data-level="14.5.1" data-path="week-13.html"><a href="week-13.html#sec:expectedmean"><i class="fa fa-check"></i><b>14.5.1</b> Example: Expected Outcomes for the Sample Mean</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="week-13.html"><a href="week-13.html#sec:faultpoints"><i class="fa fa-check"></i><b>14.6</b> Anomaly Space</a></li>
+<li class="chapter" data-level="14.7" data-path="week-13.html"><a href="week-13.html#debugging-anomalies"><i class="fa fa-check"></i><b>14.7</b> Debugging Anomalies</a><ul>
+<li class="chapter" data-level="14.7.1" data-path="week-13.html"><a href="week-13.html#basic-example"><i class="fa fa-check"></i><b>14.7.1</b> Basic Example</a></li>
+<li class="chapter" data-level="14.7.2" data-path="week-13.html"><a href="week-13.html#example-debugging-a-simple-linear-model-system"><i class="fa fa-check"></i><b>14.7.2</b> Example: Debugging a Simple Linear Model System</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="week-13.html"><a href="week-13.html#summarizing-root-causes"><i class="fa fa-check"></i><b>14.8</b> Summarizing Root Causes</a></li>
+<li class="chapter" data-level="14.9" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>14.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="week-14.html"><a href="week-14.html"><i class="fa fa-check"></i><b>15</b> Week 14</a><ul>
+<li class="chapter" data-level="15.1" data-path="week-14.html"><a href="week-14.html#week-14-learning-objectives"><i class="fa fa-check"></i><b>15.1</b> Week 14 Learning objectives</a></li>
+<li class="chapter" data-level="15.2" data-path="week-14.html"><a href="week-14.html#what-does-collaboration-mean"><i class="fa fa-check"></i><b>15.2</b> What does collaboration mean?</a></li>
+<li class="chapter" data-level="15.3" data-path="week-14.html"><a href="week-14.html#the-reviewing-relationship"><i class="fa fa-check"></i><b>15.3</b> The reviewing relationship</a><ul>
+<li class="chapter" data-level="15.3.1" data-path="week-14.html"><a href="week-14.html#do"><i class="fa fa-check"></i><b>15.3.1</b> Do</a></li>
+<li class="chapter" data-level="15.3.2" data-path="week-14.html"><a href="week-14.html#dont"><i class="fa fa-check"></i><b>15.3.2</b> Don’t</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="week-14.html"><a href="week-14.html#the-consulting-relationship"><i class="fa fa-check"></i><b>15.4</b> The consulting relationship</a><ul>
+<li class="chapter" data-level="15.4.1" data-path="week-14.html"><a href="week-14.html#what-am-i-paying-you-for"><i class="fa fa-check"></i><b>15.4.1</b> What am I paying you for?</a></li>
+<li class="chapter" data-level="15.4.2" data-path="week-14.html"><a href="week-14.html#authorship-and-credit-issues"><i class="fa fa-check"></i><b>15.4.2</b> Authorship and credit issues</a></li>
+<li class="chapter" data-level="15.4.3" data-path="week-14.html"><a href="week-14.html#but-this-is-just-so-important-for-science"><i class="fa fa-check"></i><b>15.4.3</b> But this is just so important for science…</a></li>
+<li class="chapter" data-level="15.4.4" data-path="week-14.html"><a href="week-14.html#this-should-be-really-quick"><i class="fa fa-check"></i><b>15.4.4</b> This should be really quick</a></li>
+<li class="chapter" data-level="15.4.5" data-path="week-14.html"><a href="week-14.html#do-1"><i class="fa fa-check"></i><b>15.4.5</b> Do</a></li>
+<li class="chapter" data-level="15.4.6" data-path="week-14.html"><a href="week-14.html#dont-1"><i class="fa fa-check"></i><b>15.4.6</b> Don’t</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="week-14.html"><a href="week-14.html#the-collaborative-relationship"><i class="fa fa-check"></i><b>15.5</b> The collaborative relationship</a><ul>
+<li class="chapter" data-level="15.5.1" data-path="week-14.html"><a href="week-14.html#finding-good-collaborators"><i class="fa fa-check"></i><b>15.5.1</b> Finding Good Collaborators</a></li>
+<li class="chapter" data-level="15.5.2" data-path="week-14.html"><a href="week-14.html#care-and-feeding-of-your-collaborators"><i class="fa fa-check"></i><b>15.5.2</b> Care and feeding of your collaborators</a></li>
+<li class="chapter" data-level="15.5.3" data-path="week-14.html"><a href="week-14.html#a-collaboration-is-a-relationship"><i class="fa fa-check"></i><b>15.5.3</b> A collaboration is a relationship</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="week-14.html"><a href="week-14.html#a-shared-vision"><i class="fa fa-check"></i><b>15.6</b> A shared vision</a></li>
+<li class="chapter" data-level="15.7" data-path="week-14.html"><a href="week-14.html#sharing-work"><i class="fa fa-check"></i><b>15.7</b> Sharing work</a></li>
+<li class="chapter" data-level="15.8" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>15.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="15.9" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>15.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="week-15.html"><a href="week-15.html"><i class="fa fa-check"></i><b>16</b> Week 15</a><ul>
+<li class="chapter" data-level="16.1" data-path="week-15.html"><a href="week-15.html#week-15-learning-objectives"><i class="fa fa-check"></i><b>16.1</b> Week 15 Learning objectives</a></li>
+<li class="chapter" data-level="16.2" data-path="week-15.html"><a href="week-15.html#the-ethics-of-data-science"><i class="fa fa-check"></i><b>16.2</b> The ethics of data science</a></li>
+<li class="chapter" data-level="16.3" data-path="week-15.html"><a href="week-15.html#ethics-in-experimental-design"><i class="fa fa-check"></i><b>16.3</b> Ethics in experimental design</a></li>
+<li class="chapter" data-level="16.4" data-path="week-15.html"><a href="week-15.html#ethics-in-data-collection"><i class="fa fa-check"></i><b>16.4</b> Ethics in data collection</a><ul>
+<li class="chapter" data-level="16.4.1" data-path="week-15.html"><a href="week-15.html#sampling-bias"><i class="fa fa-check"></i><b>16.4.1</b> Sampling bias</a></li>
+<li class="chapter" data-level="16.4.2" data-path="week-15.html"><a href="week-15.html#privacy"><i class="fa fa-check"></i><b>16.4.2</b> Privacy</a></li>
+<li class="chapter" data-level="16.4.3" data-path="week-15.html"><a href="week-15.html#surveillance"><i class="fa fa-check"></i><b>16.4.3</b> Surveillance</a></li>
+</ul></li>
+<li class="chapter" data-level="16.5" data-path="week-15.html"><a href="week-15.html#ethics-in-objective-functions"><i class="fa fa-check"></i><b>16.5</b> Ethics in objective functions</a><ul>
+<li class="chapter" data-level="16.5.1" data-path="week-15.html"><a href="week-15.html#varying-objectives"><i class="fa fa-check"></i><b>16.5.1</b> Varying objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="16.6" data-path="week-15.html"><a href="week-15.html#ethics-in-algorithms"><i class="fa fa-check"></i><b>16.6</b> Ethics in algorithms</a></li>
+<li class="chapter" data-level="16.7" data-path="week-15.html"><a href="week-15.html#ethics-in-interfaces"><i class="fa fa-check"></i><b>16.7</b> Ethics in interfaces</a><ul>
+<li class="chapter" data-level="16.7.1" data-path="week-15.html"><a href="week-15.html#the-exchange"><i class="fa fa-check"></i><b>16.7.1</b> “The exchange”</a></li>
+</ul></li>
+<li class="chapter" data-level="16.8" data-path="week-15.html"><a href="week-15.html#ethics-in-data-decision-making"><i class="fa fa-check"></i><b>16.8</b> Ethics in data decision making</a></li>
+<li class="chapter" data-level="16.9" data-path="week-15.html"><a href="week-15.html#what-you-should-do"><i class="fa fa-check"></i><b>16.9</b> What you should do</a></li>
+<li class="chapter" data-level="16.10" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>16.10</b> Additional Resources</a></li>
+<li class="chapter" data-level="16.11" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>16.11</b> Homework</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Data Science 2020</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="week-15" class="section level1">
+<h1><span class="header-section-number">16</span> Week 15</h1>
+<div id="week-15-learning-objectives" class="section level2">
+<h2><span class="header-section-number">16.1</span> Week 15 Learning objectives</h2>
+<p>Data science</p>
+<div class="keyidea">
+<p>At the end of this lesson you will be able to:</p>
+<ul>
+<li>Identify key ethical issues throughout the data science process</li>
+<li>Understand that data science ethics goes beyond training data bias</li>
+<li>Know key people and resources in the field of data science and AI ethics</li>
+<li>Be able to articulate why ethics is a key factor in data science projects</li>
+</ul>
+</div>
+</div>
+<div id="the-ethics-of-data-science" class="section level2">
+<h2><span class="header-section-number">16.2</span> The ethics of data science</h2>
+<p>This is the last lecture of advanced data science and with this lecture we are focusing on one of the most important topics in the field. The ethics of how we collect, use, interpret and automate with data is a subject that could easily take up an entire course. We obviously don’t have time to go into that much detail, so the purpose of this lesson is to highlight some of the key issues that will certaintly affect you as you use data and point you to people and resources that can help guide your decision making in a longer term way.</p>
+<p>Data science ethics, like many subjects around data science, came up too late. Data became cheap to collect and store much faster than we could develop tools, techniques, processes, and legal structures to understand and manage the consequences of these measurements. Fortunately, over the last 5-10 years there has been significant thinking on the topic and the importance of ethical, legal, and regulatory thinking in data science is on the rise.</p>
+<p>Data science ethics is a complicated an multi-faceted topic. But one of the core principles is that much of the data we collect and use has consequences either directly or indirectly for people. The consequences may be about their privacy, their livelihood, their freedom, or their identity. The sneaky thing about data is that by collecting information into numbers in a spreadsheet, it obscures these consequences behind something that seems more scientific and abstract. Remembering that data is collect by, about, and for people is a unifying principle in understanding the ethics of data science. While the implications of data ethics and can do compel codification into formal legal and moral frameworks it is also worth remembering the golden rule - treat other’s data as you would want yours treated.</p>
+<p>In this lecture we are going to cover ethical issues in:</p>
+<ul>
+<li>Experimental Design</li>
+<li>Data Collection</li>
+<li>Defining Objective Functions</li>
+<li>Algorithmic Design</li>
+<li>Data Interaction Interfaces</li>
+<li>Data Decision Making</li>
+</ul>
+<p>As you can imagine we will only be able to briefly touch on each of these topics. Moreover, these are only some of the big issues that will be facing not just you as data scientists, but our society more broadly and deserve deeper attention. In fact, there is almost no area of data science that is more important at this moment in history then helping to decide how we will use data as a society for the next several decades.</p>
+</div>
+<div id="ethics-in-experimental-design" class="section level2">
+<h2><span class="header-section-number">16.3</span> Ethics in experimental design</h2>
+<p>People have been performing experiments that collect data for hundreds of years. The history of experimental design is littered with examples where focus on scientific discovery or business expedience has left human rights wanting. It is therefore no surprise that the ethical considerations in experimental design are some of the most mature of any area of data science. Despite this maturity, major ethical issues in experimenal design are still at the forefront of conversations around data science ethics.</p>
+<p>In the biomedical and behaviorial sciences, these major problems with experimental ethics drove the development of <a href="https://en.wikipedia.org/wiki/Institutional_review_board">Institutional Research Boards</a>:</p>
+<blockquote>
+<p>Formal review procedures for institutional human subject studies were originally developed in direct response to research abuses in the 20th century. Among the most notorious of these abuses were the experiments of Nazi physicians, which became a focus of the post-World War II Doctors’ Trial, the Tuskegee Syphilis Study, a long-term project conducted between 1932 and 1972 by the U.S. Public Health Service, and numerous human radiation experiments conducted during the Cold War. Other controversial U.S. projects undertaken during this era include the Milgram obedience experiment, the Stanford prison experiment, and Project MKULTRA, a series of classified mind control studies organized by the CIA.</p>
+</blockquote>
+<p>IRBs form an important component of protecting human subjects for academic studies subject to these requirements. But the rapid pace of development and the move toward collecting abundant data on technology platforms unregulated by IRBs has led to a new set of concerns. One of these concerns is that most human subjects experiments run today are not run by academics who are subject to IRB requirements. Rather they are run by tech companies who run hundreds or thousands of human subjects experiments every day. These unregulated experiments are not subject to the review of external committees and do not require consent. In fact, you have probably been in a human subjects experiment today if you have logged onto almost any social media or technology site.</p>
+<p>Some of these experiments are relatively benign. But some are more insidious. For example, Facebook <a href="https://www.theguardian.com/technology/2014/jun/29/facebook-users-emotions-news-feeds">ran a human subjects study</a> where they randomized hundreds of thousands of individuals to see sad news and observed a change in their measured emotional state on the platform.</p>
+<p><img src="images/week15/facebook-trial.png" /></p>
+<p>This experiment got a lot of attention - primarily because it was actually published in an academic journal where it was revealed that the researchers did not obtain consent or have IRB oversight.</p>
+<p>While this was upsetting on its own, the thing to be aware of is that randomzied human subjects experiments (called A/B tests) are happening all the time on all internet sites. Sometimes, these experiments are even held up in glowing terms. For example, the Obama re-election campaign received a lot of <a href="https://fortune.com/2015/08/18/mindware-nisbett/">positive attention</a> for optimizing donations to their website using unregulated A/B tests.</p>
+<p><img src="images/week15/obama-ab.png" /></p>
+<p>You will likely run into unregulated human subjects experiments if you do data science in an industrial setting - particularly in consumer focused companies. If you haven’t already, it is worth taking a <a href="https://www.jhsph.edu/offices-and-services/institutional-review-board/training/">course in human subjects research</a> since your role as a data scientist will frequently depend on data collected from human subjects.</p>
+<p>Experimental design goes beyond experiments that are performed on humans. A huge amount of data is also being passively collected about you - from the websites you visit, to the responses you enter into learning management systems, to the ways that you interact with apps, to the health information collected in the course of your treatment.</p>
+<p>This firehose of passively collected information is increasingly used in observational studies that re-purpose the data for research purposes. Think of the examples we saw in class earlier where <a href="https://www.nature.com/articles/s41586-020-2923-3">cell-phone mobility data were used to model Covid impacts of social distancing</a>. But this is also a common practice in epidemiology with electronic health records, fitness apps, and other passively-collected data being turned into research data sets.</p>
+<p>These data represent information collected from humans and are often used in public health to try to better understand how to improve people’s health. But it is worth considering the potential risks of re-purposing unconsented data from hundreds, thousands, or millions of people and to make efforts to minimize risks to participants.</p>
+</div>
+<div id="ethics-in-data-collection" class="section level2">
+<h2><span class="header-section-number">16.4</span> Ethics in data collection</h2>
+<p>If ethics in experimental design are the most well known and most mature in terms of regulation and thinking, ethics in data collection are often foremost in people’s minds when thinking of data science ethics.</p>
+<div id="sampling-bias" class="section level3">
+<h3><span class="header-section-number">16.4.1</span> Sampling bias</h3>
+<p>One of the key issues in data science ethics is actually a core principle of biostatistics as well. Recall the central dogma of machine learning.</p>
+<p><img src="images/week8/cdml.png" /></p>
+<p>An important component of machine learning is that training data are sampled from a population and a predictor is developed based on that sampling. However, both the population being sampled and the sampling scheme can - of course - have a major impact on the results of developing a machine learning algorithm.</p>
+<p>This issue has been overlooked by engineering teams who are able to engineer ML pipelines to make predictions, but don’t seek to understand the sources of variation in their data and potential consequences for people. For example, Amazon built a machine learning model to predict who to hire. But they built the algorithm based on people they had already hired, leading to bias baked into the system - Amazon had mostly hired male engineers! So when they trained their algorithm it <a href="https://slate.com/business/2018/10/amazon-artificial-intelligence-hiring-discrimination-women.html">incorporated that bias into their hiring system</a> .</p>
+<p><img src="images/week15/amazon.png" /></p>
+<p>This same issue has played out in algorithmic sentencing, where predictors for recidivism are based on data from racially biased justice system data.</p>
+<p><img src="images/week15/machine-bias.png" /></p>
+<p>This area of data science ethics is a critical one for facial recognition systems, voice assistants, and any other artificial intelligence interface that interacts with humans. A recent example is a face depixilizer that was trained on primarily Caucasian people and led to images that were depixilized in such a way that they made faces look more Caucasian:</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+Face Depixelizer<br><br>Given a low-resolution input image, model generates high-resolution images that are perceptually realistic and downscale correctly.<br><br>😺GitHub: <a href="https://t.co/0WBxkyWkiK">https://t.co/0WBxkyWkiK</a><br>📙Colab: <a href="https://t.co/q9SIm4ha5p">https://t.co/q9SIm4ha5p</a><br><br>P.S. Colab is based on the<a href="https://t.co/fvEvXKvWk2">https://t.co/fvEvXKvWk2</a> <a href="https://t.co/lplP75yLha">pic.twitter.com/lplP75yLha</a>
+</p>
+— Bomze (<span class="citation">@tg_bomze</span>) <a href="https://twitter.com/tg_bomze/status/1274098682284163072?ref_src=twsrc%5Etfw">June 19, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>This led to a long discussion about the ethicial issues with software like this and a leading figure in AI Ethics pointed out that while dataset bias could play a role here, the problems with software like this go beyond data set bias - to the choices that humans make, the ways they choose to publicize their work, who is involved in the research, what the implications of the research are for people of different backgrounds, and how the tools are used by others.</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+I’m sick of this framing. Tired of it. Many people have tried to explain, many scholars. Listen to us. You can’t just reduce harms caused by ML to dataset bias. <a href="https://t.co/HU0xgzg5Rt">https://t.co/HU0xgzg5Rt</a>
+</p>
+— Timnit Gebru (<span class="citation">@timnitGebru</span>) <a href="https://twitter.com/timnitGebru/status/1274809417653866496?ref_src=twsrc%5Etfw">June 21, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div id="privacy" class="section level3">
+<h3><span class="header-section-number">16.4.2</span> Privacy</h3>
+<p>Data privacy deserves way more attention than we will be able to give it here. The dramatic drop in the price of collecting and storing data has led to an entire underground economy in the data that are collected about you. Apps and websites collect your private information and much of that information is bundled and sold.</p>
+<p>The extent to which you are tracked online may or may not be surprising to you. For example if you use Google Maps or have an Android phone (like your instructor does) you can go to: <a href="https://www.google.com/maps/timeline" class="uri">https://www.google.com/maps/timeline</a> and see that Google has the entire history of everywhere you have traveled.</p>
+<p><img src="images/week15/jeff-location.png" /></p>
+<p>I use Google Maps regularly to give me directions so I’m not surprised or deeply troubled by that app having my location. But many other apps also collect that same information - <a href="https://www.theverge.com/2019/7/3/20681508/tracking-pixel-email-spying-superhuman-web-beacon-open-tracking-read-receipts-location">sometimes unnecessarily</a>.</p>
+<p><img src="images/week15/tracking-pixels.png" /></p>
+<p>This information is then <a href="https://www.propublica.org/article/everything-we-know-about-what-data-brokers-know-about-you">bundled, bought and sold by data brokers</a>. It is frequently used by researches, businesses, and others to understand the behavior of people for everyting from scientific studies to advertising.</p>
+<p>Privacy promises to be a thorny issue going forward. It is hard to imagine we will go back to a version of the world where data is not collected at large scales. But increasingly, the use of data is being regulated. The <a href="https://gdpr-info.eu/">General Data Protection Regulation</a> applies to citizens of the European Union and begins to outline rights you have when it comes to collecting and using people’s data. California has recently passed privacy regulation as well in the form of the <a href="https://oag.ca.gov/privacy/ccpa">California Consumer Privacy Act (CCPA)</a>. However, these laws only apply to individuals from those geographic regions and do not rule out the use of personal information.</p>
+</div>
+<div id="surveillance" class="section level3">
+<h3><span class="header-section-number">16.4.3</span> Surveillance</h3>
+<p>There are parts of the world where facial recognition technology <a href="https://www.usnews.com/news/cities/articles/2020-08-14/the-top-10-most-surveilled-cities-in-the-world">are used extensively</a> to monitor the behavior of individual people. While this can seem futuristic and far off, even here in Baltimore police used drones to conduct <a href="https://www.wired.com/story/cities-curb-surveillance-baltimore-police-took-air/">warrantless surveillance</a> of city residents.</p>
+<p><img src="images/week15/baltimore-drones.png" /></p>
+<p>But this is not the only way that surveillance technology impacts our lives. While facial recognition is an obvious surveillance technology, it may also impact other areas of your life. Credit scores are based on financial transaction data passively collected from credit cards, loan applications, and bank accounts. If you work for financial institutions you may use this data to, for example, decide who has access to financial services.</p>
+</div>
+</div>
+<div id="ethics-in-objective-functions" class="section level2">
+<h2><span class="header-section-number">16.5</span> Ethics in objective functions</h2>
+<p><a href="https://en.wikipedia.org/wiki/Goodhart%27s_law">Goodhardt’s Law</a>, as stated by Marilyn Strathern in its general form is:</p>
+<blockquote>
+<p>When a measure becomes a target, it ceases to be a good measure.</p>
+</blockquote>
+<p>A key issue in data science ethics is in the objective functions we choose to optimize. A recent example is the discovery by Facebook scientists that their platform was increasingly driving division among people.</p>
+<p><img src="images/week15/facebook-division.png" />
+At first there was interest in trying to reduce division. However, it was quickly discovered that the solutions to reducing division also often reduced the amount of time people spend on the Facebook platform. Since the business model of Facebook focuses on serving ads to people on the site, their objective function was to keep people on the site for longer.</p>
+<p>This example is just one of many where the simplification of complex processes into a small number of necessarily limited objectives can have unintended consequences. As data scientists you will be encouraged to identify metrics and targets and to optimize your data collection, algorithms, and inference to optimize for these objectives. But it is important to consider the consequences of narrow optimization.</p>
+<div id="varying-objectives" class="section level3">
+<h3><span class="header-section-number">16.5.1</span> Varying objectives</h3>
+<p>Another key issue with objective functions is that it is important to understand what “good enough” is. For example, screening procedures for rare diseases must have extremely high sensitivity and specificity to avoid overstating false positives. Similarly, I am ok with an AI that sometimes identifies the wrong child among my photos in a search, but would be very uncomfortable with a self-driving car that made a similar number of mistakes.</p>
+<p>Objective functions, by their nature, simplify the goal of a data science process. This simplification can lead to bias both by not considering the alternatives to an objective function and by choosing how to optimize the objective function. For example, US News has given credit to schools with higher average SAT scores. But selecting students with higher SAT scores may also select students for other factors - say the level of resources in their high school. Focusing on simplifications like SAT scores are convenient, but may not give the full picture of the potential of a prospective student. There is also the way that an objective function is optimized - do we optimize over all students? Over a subset of students? Do we apply different weights to legacy students or athletes? All of these choices have real human conseqences, but may be hidden within the objective function.</p>
+<p>One major advantage of the move to quantitative definitions of objective functions is the ability to very clearly explain what you are optimizing and then to understand the consequences of that optimization empirically. But it only works if you do the work of understanding your optimization approach.</p>
+</div>
+</div>
+<div id="ethics-in-algorithms" class="section level2">
+<h2><span class="header-section-number">16.6</span> Ethics in algorithms</h2>
+<p>Algorithms are increasingly being used to determine what financial resources we can get, what colleges we can get into, what jobs we can get, how we are treated by the justice system, or how we receive healthcare. Many of the ethical issues in algorithms can be traced to issues with sampling or to the choice of objective function.</p>
+<p>However, algorithms themselves can create their own ethical issues. This may be surprising, since algorithms are often just collections of linear algebra operations or billions of aggregated summations. How can that lead to ethical issues?</p>
+<p>One of the most common issues with algorithms is that they give the <em>appearance</em> of being objective without actually being objective. As we have discussed, the objective function, the data, and the choices made by the analyst can all have a major impact on the results of any machine learning or inferential aglorithm. However, people automatically tend to assume that algorithms are more objective than humans. This assumption allows people to pass off highly biased or unfair algorithms as objective and beyond reproach. A common example is hiring algorithms which are assumed to be more “fair” than humans. But these algorithms (as the case with Amazon above shows) can be just as biased - sometimes even more so - than the humans they replace.</p>
+<p>Another key issue with algorithms is that algorithms are not designed to understand nuance. An example of this is if you have ever ran into an algorithmic customer service process on a website. It can be extremely frustrating to talk to a computer driven operator who may not understand the more subtle issue that you are having with the companies service. This issue can be mildly annoying for an individual who bought a toaster they don’t like. But it can be life and death for people triaged by algorithms at hospitals, or denied credit or housing on the basis of an unappealable algorithm.</p>
+<p>Moreover, algorithms are often inscrutable and are rarely audited. This is true across a broad range of applications. For example, Google recently wrote a paper describing an algorithm that improved breast cancer screening. However, they <a href="https://arxiv.org/pdf/2003.00898.pdf">did not make either the data or the code</a> for their approach available. If this algorithm is implemented into mammography, the scientific community will not be able to study and evaluate the potential risks of this algorithm without this code. Given the value of this technology it is not surprising the details were not revealed, but this represents another way in which algorithms can be dangerously underspecified and still have major real world consequences.</p>
+<p>One of the most interesting innovations in this area is the idea of model cards. <a href="https://arxiv.org/pdf/1810.03993.pdf">Model cards</a> are a brief summary of the data, algorithm, and applicability of a machine learning model, including specifying to which populations it can be fairly applied.</p>
+<p><img src="images/week15/model-cards.png" /></p>
+<p>This is an example of <a href="https://christophm.github.io/interpretable-ml-book/">interpretable machine learning</a> - another field that is growing in popularity as society grapples with the implications of algorithms that touch many parts of our lives.</p>
+<p>Finally, it is important to note that there is an <a href="https://www.youtube.com/watch?v=f57LbLaOdUY">entire field</a> with significant ongoing research. Understanding how algorithms are optimized and their consequences is beyond the scope of this single lecture but is a growing and important subfield within data science.</p>
+</div>
+<div id="ethics-in-interfaces" class="section level2">
+<h2><span class="header-section-number">16.7</span> Ethics in interfaces</h2>
+<p>Data science ethics extends to the interfaces we use to collect data. There is significant research that shows that websites use “dark patterns”.</p>
+<blockquote>
+<p>Dark patterns are user interface design choices that benefit an online service by coercing, steering, or deceiving users into making unintended and potentially harmful decisions.</p>
+</blockquote>
+<p>This <a href="https://webtransparency.cs.princeton.edu/dark-patterns/">dataset</a> has a collection of such dark patterns across thousands of websites. As a data scientist who may use or analyze these data to help improve customer retention for these companies, it is important to keep in mind how the human on the other end will be interacting with the interface you are optimizing.</p>
+<div id="the-exchange" class="section level3">
+<h3><span class="header-section-number">16.7.1</span> “The exchange”</h3>
+<p>A core exchange at the heart of our current technological revolution goes like this:</p>
+<blockquote>
+<p>“I will give you something for free in exchange for your data, which I will then sell to a third party to make revenue.”</p>
+</blockquote>
+<p>This business model drives most social media companies, search companies, and a variety of other smaller technology startups that you may or may not know about. These companies build technologies that help people do things that they want to do and give it away for free. But the consequence is that their data becomes the product that is sold. This has lead to the <a href="https://slate.com/technology/2018/04/are-you-really-facebooks-product-the-history-of-a-dangerous-idea.html">famous saying</a>:</p>
+<blockquote>
+<p>“If you are not paying for it, you’re not the customer; you’re the product being sold.”</p>
+</blockquote>
+<p>It is important to keep this in mind as many data analytic jobs will be focused in sectors where data has been collected through “the exchange” and your use of that data may be highly profitable, but may also be doing things with the data that the user may never have expected.</p>
+</div>
+</div>
+<div id="ethics-in-data-decision-making" class="section level2">
+<h2><span class="header-section-number">16.8</span> Ethics in data decision making</h2>
+<p>As you continue to analyze data you will often be working with people who have less experience analyzing and working with data than you do. Executives, professors without experience in data analysis, managers, and government officials may rely on your analyses without understanding all of the implications that your data analytic or machine learning choices may have. This is a challenge for the data analyst ethically since the implications of data, algorithm, or application choice can be subtle and difficult to explain.</p>
+<p>These decisions can also be influenced because most data scientist work for someone who is not a data analyst. Their boss may have a motivation to get a certain answer, or re-purpose data in a way that may be compromising. It puts the data scientist in a difficult position since they may have to choose between doing what is right and being fired. A very recent example of this is an AI Ethics researcher at Google who <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">was fired during a dispute</a> about a paper criticizing bias in some of Google’s language models.</p>
+<p>Moreover, people in positions of power may decide to spend data scientific resources (data collection, research, or development) in ways that introduce unfairness or bias. These issues may be very transparent to a data scientist, but not as clear to others without technical insights.</p>
+<p>Finally, algorithms and data are increasingly driving decision making. These decisions are cross cutting and sometimes the data is used well; but sometimes the data is used as a prop to justify discriminatory, unethical, or unfair decisions. It is not possible to work as a practicing data scientist and avoid considering the implications of your work more broadly for society in an era when data touches every aspect of people’s lives.</p>
+</div>
+<div id="what-you-should-do" class="section level2">
+<h2><span class="header-section-number">16.9</span> What you should do</h2>
+<p>This has been an incredibly brief tour of some of the high level data science ethics questions that are part of the advanced data scientist’s life. You will notice that in many of the sections of this lecture there were not specific guidelines for how to handle these ethical considerations. This is for a couple of reasons. First, your instructor is aware of many of these issues but is not an expert. You will find links below to experts and resources that can carry you deeper. Second, each data analysis requires its own careful consideration of the risks and benefits and simplified advice is unlikely to generalize well across cases. Finally, this is an emerging and growing field where consensus is still being built. It is an important and exciting field, and I’d encourage you to read much more than you got in this single lecture.</p>
+<p>One thing to leave you with is that the National Academy of Sciences <a href="https://www.nap.edu/read/25104/chapter/13#119">published a Data Science Oath</a>, which hasn’t received widespread adoption but may be a good place to start:</p>
+<blockquote>
+<p>I swear to fulfill, to the best of my ability and judgment, this covenant:</p>
+<p>I will respect the hard-won scientific gains of those data scientists in whose steps I walk and gladly share such knowledge as is mine with those who follow.</p>
+<p>I will apply, for the benefit of society, all measures which are required, avoiding misrepresentations of data and analysis results.</p>
+<p>I will remember that there is art to data science as well as science and that consistency, candor, and compassion should outweigh the algorithm’s precision or the interventionist’s influence.</p>
+<p>I will not be ashamed to say, “I know not,” nor will I fail to call in my colleagues when the skills of another are needed for solving a problem.</p>
+<p>I will respect the privacy of my data subjects, for their data are not disclosed to me that the world may know, so I will tread with care in matters of privacy and security. If it is given to me to do good with my analyses, all thanks. But it may also be within my power to do harm, and this responsibility must be faced with humbleness and awareness of my own limitations.</p>
+<p>I will remember that my data are not just numbers without meaning or context, but represent real people and situations, and that my work may lead to unintended societal consequences, such as inequality, poverty, and disparities due to algorithmic bias. My responsibility must consider potential consequences of my extraction of meaning from data and ensure my analyses help make better decisions.</p>
+<p>I will perform personalization where appropriate, but I will always look for a path to fair treatment and nondiscrimination.</p>
+<p>I will remember that I remain a member of society, with special obligations to all my fellow human beings, those who need help and those who don’t.</p>
+<p>If I do not violate this oath, may I enjoy vitality and virtuosity, respected for my contributions and remembered for my leadership thereafter. May I always act to preserve the finest traditions of my calling and may I long experience the joy of helping those who can benefit from my work.</p>
+</blockquote>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><span class="header-section-number">16.10</span> Additional Resources</h2>
+<div class="resources">
+<h3 id="resources"><span class="header-section-number">16.10</span> Resources</h3>
+<ul>
+<li><a href="https://ethics.fast.ai/">fast.ai practical data ethics</a></li>
+<li><a href="https://www.youtube.com/watch?v=Q2CSVYD7pYE">Understanding the limits of AI, when algorithms fail</a></li>
+<li><a href="https://www.fast.ai/2019/09/24/metrics/">The problem with metrics</a></li>
+<li><a href="https://www.nature.com/articles/d41586-019-01679-5">Can tracking people through cell phone data save lives</a></li>
+<li><a href="https://vimeo.com/375310799">Abolish Big Data</a></li>
+<li><a href="https://www.theguardian.com/science/2019/aug/16/mathematicians-need-doctor-style-hippocratic-oath-says-academic-hannah-fry">Maths and tech specialists need Hippocratic oath, says academic</a></li>
+<li><a href="https://christophm.github.io/interpretable-ml-book/">Interpretable Machine Learning</a></li>
+<li><a href="https://arxiv.org/pdf/2001.09784.pdf">Algorithmic Fairness</a></li>
+<li><a href="https://electionemails2020.org/">Election Emails</a> and <a href="https://webtransparency.cs.princeton.edu/dark-patterns/">Dark Patterns</a> data sets.</li>
+<li><a href="https://beanumber.github.io/mdsr2e/ch-ethics.html#role-of-data-science-in-society">Data Science Ethics Chapter in Modern Data Science with R</a></li>
+<li><a href="https://d4bl.org/">Data for Black Lives</a></li>
+</ul>
+</div>
+<div class="resources">
+<h3 id="people"><span class="header-section-number">16.10</span> People</h3>
+<ul>
+<li><a href="https://twitter.com/timnitGebru">Timnit Gebru</a> - Ethical AI</li>
+<li><a href="https://alex-hanna.com/">Alex Hanna</a> - Ethical AI</li>
+<li><a href="https://www.cs.princeton.edu/~arvindn/">Arvind Naryanan</a> - Dark Patterns</li>
+<li><a href="https://cs.stanford.edu/~emmap1/">Emma Pierson</a> - Algorithmic Fairness</li>
+<li><a href="https://5harad.com/">Sharad Goel</a> - Discrimination and fairness</li>
+<li><a href="http://drsherrirose.org/">Sherri Rose</a> - Fairness in health policy</li>
+<li><a href="https://twitter.com/CT_Bergstrom">Carl Bergstrom</a> - Disinformation</li>
+<li><a href="https://www.cs.cornell.edu/~red/">Rediet Adebe</a> - Justice and AI</li>
+</ul>
+</div>
+</div>
+<div id="homework" class="section level2">
+<h2><span class="header-section-number">16.11</span> Homework</h2>
+<div class="homework">
+<ul>
+<li><strong>Template Repo</strong>: <a href="https://github.com/advdatasci/homework15" class="uri">https://github.com/advdatasci/homework15</a></li>
+<li><strong>Repo Name</strong>: homework15-ind-yourgithubusername</li>
+<li><strong>Pull Date</strong>: 2020/12/21 9:00AM Baltimore Time</li>
+</ul>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="week-14.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ads2020.pdf", "ads2020.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

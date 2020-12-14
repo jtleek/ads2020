@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-12-07" />
+<meta name="date" content="2020-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -527,6 +527,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.8" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>15.8</b> Additional Resources</a></li>
 <li class="chapter" data-level="15.9" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>15.9</b> Homework</a></li>
 </ul></li>
+<li class="chapter" data-level="16" data-path="week-15.html"><a href="week-15.html"><i class="fa fa-check"></i><b>16</b> Week 15</a><ul>
+<li class="chapter" data-level="16.1" data-path="week-15.html"><a href="week-15.html#week-15-learning-objectives"><i class="fa fa-check"></i><b>16.1</b> Week 15 Learning objectives</a></li>
+<li class="chapter" data-level="16.2" data-path="week-15.html"><a href="week-15.html#the-ethics-of-data-science"><i class="fa fa-check"></i><b>16.2</b> The ethics of data science</a></li>
+<li class="chapter" data-level="16.3" data-path="week-15.html"><a href="week-15.html#ethics-in-experimental-design"><i class="fa fa-check"></i><b>16.3</b> Ethics in experimental design</a></li>
+<li class="chapter" data-level="16.4" data-path="week-15.html"><a href="week-15.html#ethics-in-data-collection"><i class="fa fa-check"></i><b>16.4</b> Ethics in data collection</a><ul>
+<li class="chapter" data-level="16.4.1" data-path="week-15.html"><a href="week-15.html#sampling-bias"><i class="fa fa-check"></i><b>16.4.1</b> Sampling bias</a></li>
+<li class="chapter" data-level="16.4.2" data-path="week-15.html"><a href="week-15.html#privacy"><i class="fa fa-check"></i><b>16.4.2</b> Privacy</a></li>
+<li class="chapter" data-level="16.4.3" data-path="week-15.html"><a href="week-15.html#surveillance"><i class="fa fa-check"></i><b>16.4.3</b> Surveillance</a></li>
+</ul></li>
+<li class="chapter" data-level="16.5" data-path="week-15.html"><a href="week-15.html#ethics-in-objective-functions"><i class="fa fa-check"></i><b>16.5</b> Ethics in objective functions</a><ul>
+<li class="chapter" data-level="16.5.1" data-path="week-15.html"><a href="week-15.html#varying-objectives"><i class="fa fa-check"></i><b>16.5.1</b> Varying objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="16.6" data-path="week-15.html"><a href="week-15.html#ethics-in-algorithms"><i class="fa fa-check"></i><b>16.6</b> Ethics in algorithms</a></li>
+<li class="chapter" data-level="16.7" data-path="week-15.html"><a href="week-15.html#ethics-in-interfaces"><i class="fa fa-check"></i><b>16.7</b> Ethics in interfaces</a><ul>
+<li class="chapter" data-level="16.7.1" data-path="week-15.html"><a href="week-15.html#the-exchange"><i class="fa fa-check"></i><b>16.7.1</b> “The exchange”</a></li>
+</ul></li>
+<li class="chapter" data-level="16.8" data-path="week-15.html"><a href="week-15.html#ethics-in-data-decision-making"><i class="fa fa-check"></i><b>16.8</b> Ethics in data decision making</a></li>
+<li class="chapter" data-level="16.9" data-path="week-15.html"><a href="week-15.html#what-you-should-do"><i class="fa fa-check"></i><b>16.9</b> What you should do</a></li>
+<li class="chapter" data-level="16.10" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>16.10</b> Additional Resources</a></li>
+<li class="chapter" data-level="16.11" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>16.11</b> Homework</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -683,7 +704,7 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb1-3"><a href="week-2.html#cb1-3"></a>axes_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/axes.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-4"><a href="week-2.html#cb1-4"></a>clouds_json =<span class="st"> </span><span class="kw">sample_lines</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;docs/resources/week2/clouds.ndjson&quot;</span>),<span class="dv">100</span>)</span>
 <span id="cb1-5"><a href="week-2.html#cb1-5"></a>axes_json[[<span class="dv">1</span>]]</span></code></pre></div>
-<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;SG\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-25 12:14:28.51961 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;5735662189805568\&quot;,\&quot;drawing\&quot;:[[[84,87,88,67,50,26,2,1,10,19,29,65,78],[255,249,56,56,49,30,0,118,121,105,99,96,100]]]}&quot;</code></pre>
+<pre><code>## [1] &quot;{\&quot;word\&quot;:\&quot;axe\&quot;,\&quot;countrycode\&quot;:\&quot;RS\&quot;,\&quot;timestamp\&quot;:\&quot;2017-03-17 19:59:15.36199 UTC\&quot;,\&quot;recognized\&quot;:true,\&quot;key_id\&quot;:\&quot;4752300671238144\&quot;,\&quot;drawing\&quot;:[[[4,3,9],[255,160,114]],[[4,4],[117,57]],[[1,1],[68,3]],[[4,26,55,90,125,109,67,20],[15,14,0,4,51,56,56,63]],[[28,25,28,26,21],[62,75,197,215,225]]]}&quot;</code></pre>
 <p>The next thing I did was google “quick draw data ndjson rstats”. I found a <a href="https://fronkonstin.com/2018/07/01/exploring-the-quick-draw-dataset-with-r-the-mona-lisa/">tutorial</a> and lifted some code for processing ndjson data into data frames. This is a common step in data cleaning - since it is so bespoke by data type you will often want to use Google to search for the data type and the type of cleaning you want to do.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-2.html#cb3-1"></a><span class="kw">library</span>(dplyr)</span>
 <span id="cb3-2"><a href="week-2.html#cb3-2"></a></span>
@@ -694,22 +715,29 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <span id="cb3-7"><a href="week-2.html#cb3-7"></a>}</span>
 <span id="cb3-8"><a href="week-2.html#cb3-8"></a>first_axe =<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(axes_json[[<span class="dv">1</span>]]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">parse_drawing</span>()</span>
 <span id="cb3-9"><a href="week-2.html#cb3-9"></a>first_axe</span></code></pre></div>
-<pre><code>## # A tibble: 13 x 5
+<pre><code>## # A tibble: 20 x 5
 ##    line      x     y drawing          row_id
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;
-##  1 1        84   255 5735662189805568      1
-##  2 1        87   249 5735662189805568      2
-##  3 1        88    56 5735662189805568      3
-##  4 1        67    56 5735662189805568      4
-##  5 1        50    49 5735662189805568      5
-##  6 1        26    30 5735662189805568      6
-##  7 1         2     0 5735662189805568      7
-##  8 1         1   118 5735662189805568      8
-##  9 1        10   121 5735662189805568      9
-## 10 1        19   105 5735662189805568     10
-## 11 1        29    99 5735662189805568     11
-## 12 1        65    96 5735662189805568     12
-## 13 1        78   100 5735662189805568     13</code></pre>
+##  1 1         4   255 4752300671238144      1
+##  2 1         3   160 4752300671238144      2
+##  3 1         9   114 4752300671238144      3
+##  4 2         4   117 4752300671238144      4
+##  5 2         4    57 4752300671238144      5
+##  6 3         1    68 4752300671238144      6
+##  7 3         1     3 4752300671238144      7
+##  8 4         4    15 4752300671238144      8
+##  9 4        26    14 4752300671238144      9
+## 10 4        55     0 4752300671238144     10
+## 11 4        90     4 4752300671238144     11
+## 12 4       125    51 4752300671238144     12
+## 13 4       109    56 4752300671238144     13
+## 14 4        67    56 4752300671238144     14
+## 15 4        20    63 4752300671238144     15
+## 16 5        28    62 4752300671238144     16
+## 17 5        25    75 4752300671238144     17
+## 18 5        28   197 4752300671238144     18
+## 19 5        26   215 4752300671238144     19
+## 20 5        21   225 4752300671238144     20</code></pre>
 </div>
 <div id="exploratory-data-analysis" class="section level3">
 <h3><span class="header-section-number">3.2.6</span> Exploratory data analysis</h3>
@@ -808,16 +836,16 @@ Robert Gentleman, Genentech: “make big data as small as possible as quick as i
 <pre><code>## # A tibble: 256 x 3
 ##    xgroup ygroup   pixel
 ##     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
-##  1      1      1 0      
+##  1      1      1 0.00781
 ##  2      1     17 0      
 ##  3      1     33 0      
-##  4      1     49 0      
-##  5      1     65 0      
+##  4      1     49 0.00391
+##  5      1     65 0.00391
 ##  6      1     81 0      
 ##  7      1     97 0      
 ##  8      1    113 0.00781
 ##  9      1    129 0      
-## 10      1    145 0      
+## 10      1    145 0.00391
 ## # … with 246 more rows</code></pre>
 <p>Remember this was our original axe</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="week-2.html#cb13-1"></a><span class="kw">ggplot</span>(first_axe,<span class="kw">aes</span>(x, y)) <span class="op">+</span></span>
