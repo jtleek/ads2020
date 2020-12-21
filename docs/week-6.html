@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Leek and Roger D. Peng" />
 
 
-<meta name="date" content="2020-12-14" />
+<meta name="date" content="2020-12-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -548,6 +548,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.10" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>16.10</b> Additional Resources</a></li>
 <li class="chapter" data-level="16.11" data-path="week-1.html"><a href="week-1.html#homework"><i class="fa fa-check"></i><b>16.11</b> Homework</a></li>
 </ul></li>
+<li class="chapter" data-level="17" data-path="week-16.html"><a href="week-16.html"><i class="fa fa-check"></i><b>17</b> Week 16</a><ul>
+<li class="chapter" data-level="17.1" data-path="week-16.html"><a href="week-16.html#week-16-learning-objectives"><i class="fa fa-check"></i><b>17.1</b> Week 16 Learning objectives</a></li>
+<li class="chapter" data-level="17.2" data-path="week-16.html"><a href="week-16.html#data-science"><i class="fa fa-check"></i><b>17.2</b> Data Science</a></li>
+<li class="chapter" data-level="17.3" data-path="week-1.html"><a href="week-1.html#additional-resources"><i class="fa fa-check"></i><b>17.3</b> Additional Resources</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -779,18 +784,18 @@ working directory path and the files available using <code>list.file()</code></p
 ## [31] &quot;10-week_files&quot;             &quot;10-week.Rmd&quot;              
 ## [33] &quot;11-week.Rmd&quot;               &quot;12-week.Rmd&quot;              
 ## [35] &quot;13-week.Rmd&quot;               &quot;14-week.Rmd&quot;              
-## [37] &quot;15-week.Rmd&quot;               &quot;ads2020.rds&quot;              
-## [39] &quot;ads2020.Rproj&quot;             &quot;basicsystem.png&quot;          
-## [41] &quot;data&quot;                      &quot;docs&quot;                     
-## [43] &quot;feedback_blank_review.Rmd&quot; &quot;fyi.png&quot;                  
-## [45] &quot;index.md&quot;                  &quot;index.Rmd&quot;                
-## [47] &quot;index.utf8.md&quot;             &quot;jhsph ads.png&quot;            
-## [49] &quot;key.png&quot;                   &quot;Lightbulb.png&quot;            
-## [51] &quot;Live-code.png&quot;             &quot;logo&quot;                     
-## [53] &quot;modelSLR.png&quot;              &quot;private&quot;                  
-## [55] &quot;README.md&quot;                 &quot;render1457d5f766f.rds&quot;    
-## [57] &quot;style.css&quot;                 &quot;test.png&quot;                 
-## [59] &quot;Your-turn.png&quot;</code></pre>
+## [37] &quot;15-week.Rmd&quot;               &quot;16-week.Rmd&quot;              
+## [39] &quot;ads2020.rds&quot;               &quot;ads2020.Rproj&quot;            
+## [41] &quot;basicsystem.png&quot;           &quot;data&quot;                     
+## [43] &quot;docs&quot;                      &quot;feedback_blank_review.Rmd&quot;
+## [45] &quot;fyi.png&quot;                   &quot;index.md&quot;                 
+## [47] &quot;index.Rmd&quot;                 &quot;index.utf8.md&quot;            
+## [49] &quot;jhsph ads.png&quot;             &quot;key.png&quot;                  
+## [51] &quot;Lightbulb.png&quot;             &quot;Live-code.png&quot;            
+## [53] &quot;logo&quot;                      &quot;modelSLR.png&quot;             
+## [55] &quot;private&quot;                   &quot;README.md&quot;                
+## [57] &quot;render12a5e85007d.rds&quot;     &quot;style.css&quot;                
+## [59] &quot;test.png&quot;                  &quot;Your-turn.png&quot;</code></pre>
 <p>OK so our current location is in the <code>/cloud/project</code> directory. Using the here package we can see that here points to this base directory.</p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="week-6.html#cb103-1"></a><span class="kw">library</span>(here)</span></code></pre></div>
 <pre><code>## here() starts at /cloud/project</code></pre>
@@ -815,18 +820,18 @@ working directory path and the files available using <code>list.file()</code></p
 ## [31] &quot;10-week_files&quot;             &quot;10-week.Rmd&quot;              
 ## [33] &quot;11-week.Rmd&quot;               &quot;12-week.Rmd&quot;              
 ## [35] &quot;13-week.Rmd&quot;               &quot;14-week.Rmd&quot;              
-## [37] &quot;15-week.Rmd&quot;               &quot;ads2020.rds&quot;              
-## [39] &quot;ads2020.Rproj&quot;             &quot;basicsystem.png&quot;          
-## [41] &quot;data&quot;                      &quot;docs&quot;                     
-## [43] &quot;feedback_blank_review.Rmd&quot; &quot;fyi.png&quot;                  
-## [45] &quot;index.md&quot;                  &quot;index.Rmd&quot;                
-## [47] &quot;index.utf8.md&quot;             &quot;jhsph ads.png&quot;            
-## [49] &quot;key.png&quot;                   &quot;Lightbulb.png&quot;            
-## [51] &quot;Live-code.png&quot;             &quot;logo&quot;                     
-## [53] &quot;modelSLR.png&quot;              &quot;private&quot;                  
-## [55] &quot;README.md&quot;                 &quot;render1457d5f766f.rds&quot;    
-## [57] &quot;style.css&quot;                 &quot;test.png&quot;                 
-## [59] &quot;Your-turn.png&quot;</code></pre>
+## [37] &quot;15-week.Rmd&quot;               &quot;16-week.Rmd&quot;              
+## [39] &quot;ads2020.rds&quot;               &quot;ads2020.Rproj&quot;            
+## [41] &quot;basicsystem.png&quot;           &quot;data&quot;                     
+## [43] &quot;docs&quot;                      &quot;feedback_blank_review.Rmd&quot;
+## [45] &quot;fyi.png&quot;                   &quot;index.md&quot;                 
+## [47] &quot;index.Rmd&quot;                 &quot;index.utf8.md&quot;            
+## [49] &quot;jhsph ads.png&quot;             &quot;key.png&quot;                  
+## [51] &quot;Lightbulb.png&quot;             &quot;Live-code.png&quot;            
+## [53] &quot;logo&quot;                      &quot;modelSLR.png&quot;             
+## [55] &quot;private&quot;                   &quot;README.md&quot;                
+## [57] &quot;render12a5e85007d.rds&quot;     &quot;style.css&quot;                
+## [59] &quot;test.png&quot;                  &quot;Your-turn.png&quot;</code></pre>
 <p>We can now create a <code>data</code> folder if it doesn’t already exist and see how to create a link to the data directory using the here package:</p>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="week-6.html#cb109-1"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">file.exists</span>(<span class="st">&quot;data&quot;</span>)){<span class="kw">dir.create</span>(<span class="st">&quot;data&quot;</span>)}</span>
 <span id="cb109-2"><a href="week-6.html#cb109-2"></a><span class="kw">list.files</span>(<span class="kw">here</span>(<span class="st">&quot;data&quot;</span>))</span></code></pre></div>
@@ -836,8 +841,8 @@ working directory path and the files available using <code>list.file()</code></p
 ##  [7] &quot;2020-11-02-cameras.csv&quot;  &quot;2020-11-09-cameras.csv&quot; 
 ##  [9] &quot;2020-11-15-cameras.csv&quot;  &quot;2020-11-16-cameras.csv&quot; 
 ## [11] &quot;2020-12-07-cameras.csv&quot;  &quot;2020-12-14-cameras.csv&quot; 
-## [13] &quot;cameras.csv&quot;             &quot;Chinook.sqlite&quot;         
-## [15] &quot;repos.json&quot;</code></pre>
+## [13] &quot;2020-12-21-cameras.csv&quot;  &quot;cameras.csv&quot;            
+## [15] &quot;Chinook.sqlite&quot;          &quot;repos.json&quot;</code></pre>
 <p>Now we see that using the <code>here::here()</code> function is a
 <em>relative</em> path (relative to the <code>.Rproj</code> file in our home directory. We also see there is a <code>cameras.csv</code> file in
 the <code>data</code> folder. Let’s read it into R with the <code>readr</code> package.</p>
@@ -929,7 +934,7 @@ the code above into a <code>!file.exists()</code> function.</p>
 <span id="cb119-10"><a href="week-6.html#cb119-10"></a></span>
 <span id="cb119-11"><a href="week-6.html#cb119-11"></a>date_downloaded =<span class="st"> </span><span class="kw">Sys.Date</span>()</span>
 <span id="cb119-12"><a href="week-6.html#cb119-12"></a>date_downloaded</span></code></pre></div>
-<pre><code>## [1] &quot;2020-12-14&quot;</code></pre>
+<pre><code>## [1] &quot;2020-12-21&quot;</code></pre>
 <div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="week-6.html#cb121-1"></a><span class="kw">list.files</span>(<span class="kw">here</span>(<span class="st">&quot;data&quot;</span>))</span></code></pre></div>
 <pre><code>##  [1] &quot;2020-10-05-cameras.csv&quot;  &quot;2020-10-05-cameras.xlsx&quot;
 ##  [3] &quot;2020-10-11-cameras.csv&quot;  &quot;2020-10-12-cameras.csv&quot; 
@@ -937,8 +942,8 @@ the code above into a <code>!file.exists()</code> function.</p>
 ##  [7] &quot;2020-11-02-cameras.csv&quot;  &quot;2020-11-09-cameras.csv&quot; 
 ##  [9] &quot;2020-11-15-cameras.csv&quot;  &quot;2020-11-16-cameras.csv&quot; 
 ## [11] &quot;2020-12-07-cameras.csv&quot;  &quot;2020-12-14-cameras.csv&quot; 
-## [13] &quot;cameras.csv&quot;             &quot;Chinook.sqlite&quot;         
-## [15] &quot;repos.json&quot;</code></pre>
+## [13] &quot;2020-12-21-cameras.csv&quot;  &quot;cameras.csv&quot;            
+## [15] &quot;Chinook.sqlite&quot;          &quot;repos.json&quot;</code></pre>
 <p>Here you will notice I also named the file with the date and/or saved another variable with the downloaded date. The reason is that if you are downloading data directly from the internet, it is likely to update and your results may change. It is a good idea to keep track of the data each time you download.</p>
 <div class="keyidea">
 <p>Always remember to save the date when you download a file from the internet - usually by naming the file with the date. This can prevent reproducibility errors later if the data are updated between when you collect the data and when you</p>
@@ -1569,8 +1574,8 @@ albums, media tracks, invoices and customers”.</p>
 ##  [7] &quot;2020-11-02-cameras.csv&quot;  &quot;2020-11-09-cameras.csv&quot; 
 ##  [9] &quot;2020-11-15-cameras.csv&quot;  &quot;2020-11-16-cameras.csv&quot; 
 ## [11] &quot;2020-12-07-cameras.csv&quot;  &quot;2020-12-14-cameras.csv&quot; 
-## [13] &quot;cameras.csv&quot;             &quot;Chinook.sqlite&quot;         
-## [15] &quot;repos.json&quot;</code></pre>
+## [13] &quot;2020-12-21-cameras.csv&quot;  &quot;cameras.csv&quot;            
+## [15] &quot;Chinook.sqlite&quot;          &quot;repos.json&quot;</code></pre>
 <p>The main workhorse packages that we will use are
 the <code>DBI</code> and <code>dplyr</code> packages. Let’s look at the
 <code>DBI::dbConnect()</code> help file</p>
@@ -1846,7 +1851,7 @@ album and plot the frequency of each letter.</p>
 <span id="cb191-3"><a href="week-6.html#cb191-3"></a>req =<span class="st"> </span><span class="kw">GET</span>(query_url)</span>
 <span id="cb191-4"><a href="week-6.html#cb191-4"></a>req</span></code></pre></div>
 <pre><code>## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-12-14 05:13
+##   Date: 2020-12-21 02:17
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB

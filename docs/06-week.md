@@ -265,18 +265,18 @@ list.files()
 ## [31] "10-week_files"             "10-week.Rmd"              
 ## [33] "11-week.Rmd"               "12-week.Rmd"              
 ## [35] "13-week.Rmd"               "14-week.Rmd"              
-## [37] "15-week.Rmd"               "ads2020.rds"              
-## [39] "ads2020.Rproj"             "basicsystem.png"          
-## [41] "data"                      "docs"                     
-## [43] "feedback_blank_review.Rmd" "fyi.png"                  
-## [45] "index.md"                  "index.Rmd"                
-## [47] "index.utf8.md"             "jhsph ads.png"            
-## [49] "key.png"                   "Lightbulb.png"            
-## [51] "Live-code.png"             "logo"                     
-## [53] "modelSLR.png"              "private"                  
-## [55] "README.md"                 "render1457d5f766f.rds"    
-## [57] "style.css"                 "test.png"                 
-## [59] "Your-turn.png"
+## [37] "15-week.Rmd"               "16-week.Rmd"              
+## [39] "ads2020.rds"               "ads2020.Rproj"            
+## [41] "basicsystem.png"           "data"                     
+## [43] "docs"                      "feedback_blank_review.Rmd"
+## [45] "fyi.png"                   "index.md"                 
+## [47] "index.Rmd"                 "index.utf8.md"            
+## [49] "jhsph ads.png"             "key.png"                  
+## [51] "Lightbulb.png"             "Live-code.png"            
+## [53] "logo"                      "modelSLR.png"             
+## [55] "private"                   "README.md"                
+## [57] "render12a5e85007d.rds"     "style.css"                
+## [59] "test.png"                  "Your-turn.png"
 ```
 
 OK so our current location is in the `/cloud/project` directory. Using the here package we can see that here points to this base directory. 
@@ -321,18 +321,18 @@ list.files(here::here())
 ## [31] "10-week_files"             "10-week.Rmd"              
 ## [33] "11-week.Rmd"               "12-week.Rmd"              
 ## [35] "13-week.Rmd"               "14-week.Rmd"              
-## [37] "15-week.Rmd"               "ads2020.rds"              
-## [39] "ads2020.Rproj"             "basicsystem.png"          
-## [41] "data"                      "docs"                     
-## [43] "feedback_blank_review.Rmd" "fyi.png"                  
-## [45] "index.md"                  "index.Rmd"                
-## [47] "index.utf8.md"             "jhsph ads.png"            
-## [49] "key.png"                   "Lightbulb.png"            
-## [51] "Live-code.png"             "logo"                     
-## [53] "modelSLR.png"              "private"                  
-## [55] "README.md"                 "render1457d5f766f.rds"    
-## [57] "style.css"                 "test.png"                 
-## [59] "Your-turn.png"
+## [37] "15-week.Rmd"               "16-week.Rmd"              
+## [39] "ads2020.rds"               "ads2020.Rproj"            
+## [41] "basicsystem.png"           "data"                     
+## [43] "docs"                      "feedback_blank_review.Rmd"
+## [45] "fyi.png"                   "index.md"                 
+## [47] "index.Rmd"                 "index.utf8.md"            
+## [49] "jhsph ads.png"             "key.png"                  
+## [51] "Lightbulb.png"             "Live-code.png"            
+## [53] "logo"                      "modelSLR.png"             
+## [55] "private"                   "README.md"                
+## [57] "render12a5e85007d.rds"     "style.css"                
+## [59] "test.png"                  "Your-turn.png"
 ```
 
 We can now create a `data` folder if it doesn't already exist and see how to create a link to the data directory using the here package:
@@ -350,8 +350,8 @@ list.files(here("data"))
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
 ##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
 ## [11] "2020-12-07-cameras.csv"  "2020-12-14-cameras.csv" 
-## [13] "cameras.csv"             "Chinook.sqlite"         
-## [15] "repos.json"
+## [13] "2020-12-21-cameras.csv"  "cameras.csv"            
+## [15] "Chinook.sqlite"          "repos.json"
 ```
 
 Now we see that using the `here::here()` function is a 
@@ -482,7 +482,7 @@ date_downloaded
 ```
 
 ```
-## [1] "2020-12-14"
+## [1] "2020-12-21"
 ```
 
 ```r
@@ -496,8 +496,8 @@ list.files(here("data"))
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
 ##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
 ## [11] "2020-12-07-cameras.csv"  "2020-12-14-cameras.csv" 
-## [13] "cameras.csv"             "Chinook.sqlite"         
-## [15] "repos.json"
+## [13] "2020-12-21-cameras.csv"  "cameras.csv"            
+## [15] "Chinook.sqlite"          "repos.json"
 ```
 
 Here you will notice I also named the file with the date and/or saved another variable with the downloaded date. The reason is that if you are downloading data directly from the internet, it is likely to update and your results may change. It is a good idea to keep track of the data each time you download. 
@@ -1262,8 +1262,8 @@ list.files(here("data"))
 ##  [7] "2020-11-02-cameras.csv"  "2020-11-09-cameras.csv" 
 ##  [9] "2020-11-15-cameras.csv"  "2020-11-16-cameras.csv" 
 ## [11] "2020-12-07-cameras.csv"  "2020-12-14-cameras.csv" 
-## [13] "cameras.csv"             "Chinook.sqlite"         
-## [15] "repos.json"
+## [13] "2020-12-21-cameras.csv"  "cameras.csv"            
+## [15] "Chinook.sqlite"          "repos.json"
 ```
 
 The main workhorse packages that we will use are 
@@ -1694,7 +1694,7 @@ req
 
 ```
 ## Response [https://api.github.com/search/repositories?q=created:2014-08-13+language:r+-user:cran]
-##   Date: 2020-12-14 05:13
+##   Date: 2020-12-21 02:17
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 179 kB
