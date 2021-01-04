@@ -79,7 +79,7 @@ Data science is answering questions with data and it requires a range of skills 
 * __Level 3: Data science tools__: Learning the basic tools of R, loading data of various types, reading data, plotting data. 
 * __Level 4: Real data__: Manipulating different file formats, working with "messy" data, trying to organize multiple data sets into one data set. 
 * __Level 5: Worked examples__: Use real data examples, but work them through from start to finish as case studies, don't make them easy clean data sets, but have a clear path from the beginning of the problem to the end. 
-* __Level 6: Just the question__: Give students a question where you have done a little research to know that it is posisble to get at least some data, but aren't 100% sure it is the right data or that the problem can be perfectly solved. Part of the learning process here is knowing how to define success or failure and when to keep going or when to quit. 
+* __Level 6: Just the question__: Give students a question where you have done a little research to know that it is possible to get at least some data, but aren't 100% sure it is the right data or that the problem can be perfectly solved. Part of the learning process here is knowing how to define success or failure and when to keep going or when to quit. 
 * __Level 7: The student is the scientist__: Have the students come up with their own questions and answer them using data. 
 
 As you move up the hierarchy of data science classes, the emphasis moves away from technological skills and toward synthesis and communication. 
