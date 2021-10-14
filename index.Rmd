@@ -29,7 +29,7 @@ The course is designed for PhD students in the Johns Hopkins Biostatistics Maste
 1. You know the basics of statistics
  - The central dogma (estimates, standard errors, basic distributions, etc.)
  - Key statistical terms and methods
- - Estimtion vs testing vs prediction
+ - Estimation vs testing vs prediction
 2. You know how to fit and interpret statistical models
  - Linear Models
  - Generalized Linear Models
