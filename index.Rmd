@@ -51,7 +51,7 @@ Some resources that may be useful if you feel you may be missing pieces of this 
 
 * __Statistics__ - [Mathematical Biostatistics Bootcamp I (Coursera)](https://www.coursera.org/learn/biostatistics); [Mathematical Biostatistics Bootcamp II (Coursera)](https://www.coursera.org/learn/biostatistics-2)
 * __Basic Data Science__ - [Cloud Data Science (Leanpub)](https://leanpub.com/universities/set/jhu/cloud-based-data-science); [Data Science Specialization (Coursera)](https://www.coursera.org/specializations/jhu-data-science)
-* __Version Control__ - [Github Learning Lab](https://lab.github.com/); [Happy Git and Github for the useR](https://happygitwithr.com/)
+* __Version Control__ - [GitHub Skills](https://skills.github.com/); [Learn Version Control with Git](https://www.git-tower.com/learn); [Happy Git and Github for the useR](https://happygitwithr.com/)
 * __Rmarkdown__ - [Rmarkdown introduction](https://rmarkdown.rstudio.com/lesson-1.html)
 ::: 
 
