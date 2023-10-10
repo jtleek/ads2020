@@ -16,7 +16,7 @@ At the end of this lesson you will be able to:
 
 :::
 
-## Exploratoy vs expository
+## Exploratory vs expository
 
 When you start off analyzing a data set you almost always start with exploratory analysis. This includes quick tables, plots, and graphs for you to explore data characteristics and get a handle on what is going on with the data. Exploratory graphs and tables should be made exceptionally quickly and you should make a ton of them! The only audience of an exploratory graphic is you so you shouldn't worry about things like fonts, axis labels, titles, legends, and labeling. Similarly, exploratory tables may be as simple as a quick `dplyr::count` command and shouldn't be cleaned up and organized. Recall the parable of the [blind men and the elephant](https://en.wikipedia.org/wiki/Blind_men_and_an_elephant) from week 2 of the course:
 
